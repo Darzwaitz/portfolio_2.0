@@ -1,11 +1,24 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "portfolio",
+    element: <Portfolio />,
+  },
+  {
+    path: "contact",
+    element: <Contact />,
+  },
+]);
 function App() {
-  return (
-    <div>
-      <h1 className="text-green-500">First page</h1>
-      <h2 className="text-orange-300  font-medium ">2nd heading</h2>
-      <h3 className=" text-green-600  font-bold ">Tailwind working</h3>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
