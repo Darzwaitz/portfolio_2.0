@@ -7,9 +7,14 @@
   color: #181818;
 }
 
-/* secondary main-black - main bckgrd of active pahe*/
+/* secondary main-black - main bckgrd of active page - suggestion box*/
 .color-black-02 {
   color: #1f1f1f;
+}
+
+/* suggestion box - grey-borders */
+.color-grey-04 {
+  color: #3b3b3b;
 }
 
 /* tertiary main-black - watermark logo*/
@@ -41,6 +46,21 @@
 .color-grey-02 {
   color: #d2d2d2;
 }
+
+/* grey-borders */
+.color-grey-03 {
+  color: #313131;
+}
+
+/* active bcgrd-grey hover nav & terminal icons hover  */
+.color-grey-04 {
+  color: #2c2d2d;
+}
+
+/* active bcgrd-grey hover nav & terminal icons hover 
+.color-grey-04 {
+  color: #2c2d2d;
+} */
 
 /* bash terminal-green */
 .color-green-01 {
