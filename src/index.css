@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
---color-blue-01 {
-  color: #75beff;
+/* main dark-black*/
+.color-black-01 {
+  color: #181818;
+}
+
+/* secondary main-black - main bckgrd of active pahe*/
+.color-black-02 {
+  color: #1f1f1f;
+}
+
+/* tertiary main-black - watermark logo*/
+.color-black-03 {
+  color: #161616;
+}
+
+/* search bar - nav page display main-black*/
+.color-black-04 {
+  color: #252525;
+}
+
+/* hover border & button-blue - open remote window button - vscode logo main dark-blue*/
+.color-blue-01 {
+  color: #0078d4;
+}
+
+/* vscode logo light-blue*/
+.color-blue-02 {
+  color: #0076b9;
+}
+
+/* nav icons inactive  */
+.color-grey-01 {
+  color: #868686;
+}
+
+/* nav icons hoveractive */
+.color-grey-02 {
+  color: #d2d2d2;
+}
+
+/* bash terminal-green */
+.color-green-01 {
+  color: #0dac6e;
+}
+
+/* bash terminal-pink */
+.color-pink-01 {
+  color: #b24db2;
+}
+
+/* bash terminal-yellow & tilde */
+.color-yellow-01 {
+  color: #d8d610;
+}
+
+/* bash terminal-blue */
+.color-blue-03 {
+  color: #119fc6;
 }

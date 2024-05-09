@@ -1,0 +1,2043 @@
+.vscode-foreground {
+  color: #cccccc;
+}
+.vscode-disabledForeground {
+  color: rgba(204, 204, 204, 0.5);
+}
+.vscode-errorForeground {
+  color: #f85149;
+}
+.vscode-descriptionForeground {
+  color: #9d9d9d;
+}
+.vscode-icon-foreground {
+  color: #cccccc;
+}
+.vscode-focusBorder {
+  color: #0078d4;
+}
+.vscode-textLink-foreground {
+  color: #4daafc;
+}
+.vscode-textLink-activeForeground {
+  color: #4daafc;
+}
+.vscode-textSeparator-foreground {
+  color: #21262d;
+}
+.vscode-textPreformat-foreground {
+  color: #d0d0d0;
+}
+.vscode-textPreformat-background {
+  color: #3c3c3c;
+}
+.vscode-textBlockQuote-background {
+  color: #2b2b2b;
+}
+.vscode-textBlockQuote-border {
+  color: #616161;
+}
+.vscode-textCodeBlock-background {
+  color: #2b2b2b;
+}
+.vscode-sash-hoverBorder {
+  color: #0078d4;
+}
+.vscode-badge-background {
+  color: #616161;
+}
+.vscode-badge-foreground {
+  color: #f8f8f8;
+}
+.vscode-scrollbar-shadow {
+  color: #000000;
+}
+.vscode-scrollbarSlider-background {
+  color: rgba(121, 121, 121, 0.4);
+}
+.vscode-scrollbarSlider-hoverBackground {
+  color: rgba(100, 100, 100, 0.7);
+}
+.vscode-scrollbarSlider-activeBackground {
+  color: rgba(191, 191, 191, 0.4);
+}
+.vscode-progressBar-background {
+  color: #0078d4;
+}
+.vscode-editor-background {
+  color: #1f1f1f;
+}
+.vscode-editor-foreground {
+  color: #cccccc;
+}
+.vscode-editorStickyScroll-background {
+  color: #1f1f1f;
+}
+.vscode-editorStickyScrollHover-background {
+  color: #2a2d2e;
+}
+.vscode-editorStickyScroll-shadow {
+  color: #000000;
+}
+.vscode-editorWidget-background {
+  color: #202020;
+}
+.vscode-editorWidget-foreground {
+  color: #cccccc;
+}
+.vscode-editorWidget-border {
+  color: #454545;
+}
+.vscode-editorError-foreground {
+  color: #f14c4c;
+}
+.vscode-editorWarning-foreground {
+  color: #cca700;
+}
+.vscode-editorInfo-foreground {
+  color: #3794ff;
+}
+.vscode-editorHint-foreground {
+  color: rgba(238, 238, 238, 0.7);
+}
+.vscode-editorLink-activeForeground {
+  color: #4e94ce;
+}
+.vscode-editor-selectionBackground {
+  color: #264f78;
+}
+.vscode-editor-inactiveSelectionBackground {
+  color: #3a3d41;
+}
+.vscode-editor-selectionHighlightBackground {
+  color: rgba(173, 214, 255, 0.15);
+}
+.vscode-editor-findMatchBackground {
+  color: #9e6a03;
+}
+.vscode-editor-findMatchHighlightBackground {
+  color: rgba(234, 92, 0, 0.33);
+}
+.vscode-editor-findRangeHighlightBackground {
+  color: rgba(58, 61, 65, 0.4);
+}
+.vscode-editor-hoverHighlightBackground {
+  color: rgba(38, 79, 120, 0.25);
+}
+.vscode-editorHoverWidget-background {
+  color: #202020;
+}
+.vscode-editorHoverWidget-foreground {
+  color: #cccccc;
+}
+.vscode-editorHoverWidget-border {
+  color: #454545;
+}
+.vscode-editorHoverWidget-statusBarBackground {
+  color: #262626;
+}
+.vscode-editorInlayHint-foreground {
+  color: #969696;
+}
+.vscode-editorInlayHint-background {
+  color: rgba(97, 97, 97, 0.1);
+}
+.vscode-editorInlayHint-typeForeground {
+  color: #969696;
+}
+.vscode-editorInlayHint-typeBackground {
+  color: rgba(97, 97, 97, 0.1);
+}
+.vscode-editorInlayHint-parameterForeground {
+  color: #969696;
+}
+.vscode-editorInlayHint-parameterBackground {
+  color: rgba(97, 97, 97, 0.1);
+}
+.vscode-editorLightBulb-foreground {
+  color: #ffcc00;
+}
+.vscode-editorLightBulbAutoFix-foreground {
+  color: #75beff;
+}
+.vscode-editorLightBulbAi-foreground {
+  color: #ffcc00;
+}
+.vscode-editor-snippetTabstopHighlightBackground {
+  color: rgba(124, 124, 124, 0.3);
+}
+.vscode-editor-snippetFinalTabstopHighlightBorder {
+  color: #525252;
+}
+.vscode-diffEditor-insertedTextBackground {
+  color: rgba(156, 204, 44, 0.2);
+}
+.vscode-diffEditor-removedTextBackground {
+  color: rgba(255, 0, 0, 0.2);
+}
+.vscode-diffEditor-insertedLineBackground {
+  color: rgba(155, 185, 85, 0.2);
+}
+.vscode-diffEditor-removedLineBackground {
+  color: rgba(255, 0, 0, 0.2);
+}
+.vscode-diffEditor-diagonalFill {
+  color: rgba(204, 204, 204, 0.2);
+}
+.vscode-diffEditor-unchangedRegionBackground {
+  color: #181818;
+}
+.vscode-diffEditor-unchangedRegionForeground {
+  color: #cccccc;
+}
+.vscode-diffEditor-unchangedCodeBackground {
+  color: rgba(116, 116, 116, 0.16);
+}
+.vscode-widget-shadow {
+  color: rgba(0, 0, 0, 0.36);
+}
+.vscode-widget-border {
+  color: #313131;
+}
+.vscode-toolbar-hoverBackground {
+  color: rgba(90, 93, 94, 0.31);
+}
+.vscode-toolbar-activeBackground {
+  color: rgba(99, 102, 103, 0.31);
+}
+.vscode-breadcrumb-foreground {
+  color: rgba(204, 204, 204, 0.8);
+}
+.vscode-breadcrumb-background {
+  color: #1f1f1f;
+}
+.vscode-breadcrumb-focusForeground {
+  color: #e0e0e0;
+}
+.vscode-breadcrumb-activeSelectionForeground {
+  color: #e0e0e0;
+}
+.vscode-breadcrumbPicker-background {
+  color: #202020;
+}
+.vscode-merge-currentHeaderBackground {
+  color: rgba(64, 200, 174, 0.5);
+}
+.vscode-merge-currentContentBackground {
+  color: rgba(64, 200, 174, 0.2);
+}
+.vscode-merge-incomingHeaderBackground {
+  color: rgba(64, 166, 255, 0.5);
+}
+.vscode-merge-incomingContentBackground {
+  color: rgba(64, 166, 255, 0.2);
+}
+.vscode-merge-commonHeaderBackground {
+  color: rgba(96, 96, 96, 0.4);
+}
+.vscode-merge-commonContentBackground {
+  color: rgba(96, 96, 96, 0.16);
+}
+.vscode-editorOverviewRuler-currentContentForeground {
+  color: rgba(64, 200, 174, 0.5);
+}
+.vscode-editorOverviewRuler-incomingContentForeground {
+  color: rgba(64, 166, 255, 0.5);
+}
+.vscode-editorOverviewRuler-commonContentForeground {
+  color: rgba(96, 96, 96, 0.4);
+}
+.vscode-editorOverviewRuler-findMatchForeground {
+  color: rgba(209, 134, 22, 0.49);
+}
+.vscode-editorOverviewRuler-selectionHighlightForeground {
+  color: rgba(160, 160, 160, 0.8);
+}
+.vscode-problemsErrorIcon-foreground {
+  color: #f14c4c;
+}
+.vscode-problemsWarningIcon-foreground {
+  color: #cca700;
+}
+.vscode-problemsInfoIcon-foreground {
+  color: #3794ff;
+}
+.vscode-input-background {
+  color: #313131;
+}
+.vscode-input-foreground {
+  color: #cccccc;
+}
+.vscode-input-border {
+  color: #3c3c3c;
+}
+.vscode-inputOption-activeBorder {
+  color: #2488db;
+}
+.vscode-inputOption-hoverBackground {
+  color: rgba(90, 93, 94, 0.5);
+}
+.vscode-inputOption-activeBackground {
+  color: rgba(36, 137, 219, 0.51);
+}
+.vscode-inputOption-activeForeground {
+  color: #ffffff;
+}
+.vscode-input-placeholderForeground {
+  color: #989898;
+}
+.vscode-inputValidation-infoBackground {
+  color: #063b49;
+}
+.vscode-inputValidation-infoBorder {
+  color: #007acc;
+}
+.vscode-inputValidation-warningBackground {
+  color: #352a05;
+}
+.vscode-inputValidation-warningBorder {
+  color: #b89500;
+}
+.vscode-inputValidation-errorBackground {
+  color: #5a1d1d;
+}
+.vscode-inputValidation-errorBorder {
+  color: #be1100;
+}
+.vscode-dropdown-background {
+  color: #313131;
+}
+.vscode-dropdown-listBackground {
+  color: #1f1f1f;
+}
+.vscode-dropdown-foreground {
+  color: #cccccc;
+}
+.vscode-dropdown-border {
+  color: #3c3c3c;
+}
+.vscode-button-foreground {
+  color: #ffffff;
+}
+.vscode-button-separator {
+  color: rgba(255, 255, 255, 0.4);
+}
+.vscode-button-background {
+  color: #0078d4;
+}
+.vscode-button-hoverBackground {
+  color: #026ec1;
+}
+.vscode-button-border {
+  color: rgba(255, 255, 255, 0.07);
+}
+.vscode-button-secondaryForeground {
+  color: #cccccc;
+}
+.vscode-button-secondaryBackground {
+  color: #313131;
+}
+.vscode-button-secondaryHoverBackground {
+  color: #3c3c3c;
+}
+.vscode-checkbox-background {
+  color: #313131;
+}
+.vscode-checkbox-selectBackground {
+  color: #202020;
+}
+.vscode-checkbox-foreground {
+  color: #cccccc;
+}
+.vscode-checkbox-border {
+  color: #3c3c3c;
+}
+.vscode-checkbox-selectBorder {
+  color: #cccccc;
+}
+.vscode-keybindingLabel-background {
+  color: rgba(128, 128, 128, 0.17);
+}
+.vscode-keybindingLabel-foreground {
+  color: #cccccc;
+}
+.vscode-keybindingLabel-border {
+  color: rgba(51, 51, 51, 0.6);
+}
+.vscode-keybindingLabel-bottomBorder {
+  color: rgba(68, 68, 68, 0.6);
+}
+.vscode-list-focusOutline {
+  color: #0078d4;
+}
+.vscode-list-activeSelectionBackground {
+  color: #04395e;
+}
+.vscode-list-activeSelectionForeground {
+  color: #ffffff;
+}
+.vscode-list-activeSelectionIconForeground {
+  color: #ffffff;
+}
+.vscode-list-inactiveSelectionBackground {
+  color: #37373d;
+}
+.vscode-list-hoverBackground {
+  color: #2a2d2e;
+}
+.vscode-list-dropBackground {
+  color: #383b3d;
+}
+.vscode-list-dropBetweenBackground {
+  color: #cccccc;
+}
+.vscode-list-highlightForeground {
+  color: #2aaaff;
+}
+.vscode-list-focusHighlightForeground {
+  color: #2aaaff;
+}
+.vscode-list-invalidItemForeground {
+  color: #b89500;
+}
+.vscode-list-errorForeground {
+  color: #f88070;
+}
+.vscode-list-warningForeground {
+  color: #cca700;
+}
+.vscode-listFilterWidget-background {
+  color: #202020;
+}
+.vscode-listFilterWidget-outline {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-listFilterWidget-noMatchesOutline {
+  color: #be1100;
+}
+.vscode-listFilterWidget-shadow {
+  color: rgba(0, 0, 0, 0.36);
+}
+.vscode-list-filterMatchBackground {
+  color: rgba(234, 92, 0, 0.33);
+}
+.vscode-list-deemphasizedForeground {
+  color: #8c8c8c;
+}
+.vscode-tree-indentGuidesStroke {
+  color: #585858;
+}
+.vscode-tree-inactiveIndentGuidesStroke {
+  color: rgba(88, 88, 88, 0.4);
+}
+.vscode-tree-tableColumnsBorder {
+  color: rgba(204, 204, 204, 0.13);
+}
+.vscode-tree-tableOddRowsBackground {
+  color: rgba(204, 204, 204, 0.04);
+}
+.vscode-menu-border {
+  color: #454545;
+}
+.vscode-menu-foreground {
+  color: #cccccc;
+}
+.vscode-menu-background {
+  color: #1f1f1f;
+}
+.vscode-menu-selectionForeground {
+  color: #ffffff;
+}
+.vscode-menu-selectionBackground {
+  color: #0078d4;
+}
+.vscode-menu-separatorBackground {
+  color: #454545;
+}
+.vscode-minimap-findMatchHighlight {
+  color: #d18616;
+}
+.vscode-minimap-selectionOccurrenceHighlight {
+  color: #676767;
+}
+.vscode-minimap-selectionHighlight {
+  color: #264f78;
+}
+.vscode-minimap-infoHighlight {
+  color: #3794ff;
+}
+.vscode-minimap-warningHighlight {
+  color: #cca700;
+}
+.vscode-minimap-errorHighlight {
+  color: rgba(255, 18, 18, 0.7);
+}
+.vscode-minimap-foregroundOpacity {
+  color: #000000;
+}
+.vscode-minimapSlider-background {
+  color: rgba(121, 121, 121, 0.2);
+}
+.vscode-minimapSlider-hoverBackground {
+  color: rgba(100, 100, 100, 0.35);
+}
+.vscode-minimapSlider-activeBackground {
+  color: rgba(191, 191, 191, 0.2);
+}
+.vscode-charts-foreground {
+  color: #cccccc;
+}
+.vscode-charts-lines {
+  color: rgba(204, 204, 204, 0.5);
+}
+.vscode-charts-red {
+  color: #f14c4c;
+}
+.vscode-charts-blue {
+  color: #3794ff;
+}
+.vscode-charts-yellow {
+  color: #cca700;
+}
+.vscode-charts-orange {
+  color: #d18616;
+}
+.vscode-charts-green {
+  color: #89d185;
+}
+.vscode-charts-purple {
+  color: #b180d7;
+}
+.vscode-quickInput-background {
+  color: #222222;
+}
+.vscode-quickInput-foreground {
+  color: #cccccc;
+}
+.vscode-quickInputTitle-background {
+  color: rgba(255, 255, 255, 0.1);
+}
+.vscode-pickerGroup-foreground {
+  color: #3794ff;
+}
+.vscode-pickerGroup-border {
+  color: #3c3c3c;
+}
+.vscode-quickInputList-focusForeground {
+  color: #ffffff;
+}
+.vscode-quickInputList-focusIconForeground {
+  color: #ffffff;
+}
+.vscode-quickInputList-focusBackground {
+  color: #04395e;
+}
+.vscode-search-resultsInfoForeground {
+  color: rgba(204, 204, 204, 0.65);
+}
+.vscode-searchEditor-findMatchBackground {
+  color: rgba(234, 92, 0, 0.22);
+}
+.vscode-multiDiffEditor-headerBackground {
+  color: #262626;
+}
+.vscode-multiDiffEditor-border {
+  color: #2b2b2b;
+}
+.vscode-symbolIcon-arrayForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-booleanForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-classForeground {
+  color: #ee9d28;
+}
+.vscode-symbolIcon-colorForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-constantForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-constructorForeground {
+  color: #b180d7;
+}
+.vscode-symbolIcon-enumeratorForeground {
+  color: #ee9d28;
+}
+.vscode-symbolIcon-enumeratorMemberForeground {
+  color: #75beff;
+}
+.vscode-symbolIcon-eventForeground {
+  color: #ee9d28;
+}
+.vscode-symbolIcon-fieldForeground {
+  color: #75beff;
+}
+.vscode-symbolIcon-fileForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-folderForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-functionForeground {
+  color: #b180d7;
+}
+.vscode-symbolIcon-interfaceForeground {
+  color: #75beff;
+}
+.vscode-symbolIcon-keyForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-keywordForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-methodForeground {
+  color: #b180d7;
+}
+.vscode-symbolIcon-moduleForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-namespaceForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-nullForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-numberForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-objectForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-operatorForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-packageForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-propertyForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-referenceForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-snippetForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-stringForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-structForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-textForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-typeParameterForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-unitForeground {
+  color: #cccccc;
+}
+.vscode-symbolIcon-variableForeground {
+  color: #75beff;
+}
+.vscode-actionBar-toggledBackground {
+  color: #383a49;
+}
+.vscode-editorHoverWidget-highlightForeground {
+  color: #2aaaff;
+}
+.vscode-editor-lineHighlightBorder {
+  color: #282828;
+}
+.vscode-editor-rangeHighlightBackground {
+  color: rgba(255, 255, 255, 0.04);
+}
+.vscode-editor-symbolHighlightBackground {
+  color: rgba(234, 92, 0, 0.33);
+}
+.vscode-editorCursor-foreground {
+  color: #aeafad;
+}
+.vscode-editorMultiCursor-primary-foreground {
+  color: #aeafad;
+}
+.vscode-editorMultiCursor-secondary-foreground {
+  color: #aeafad;
+}
+.vscode-editorWhitespace-foreground {
+  color: rgba(227, 228, 226, 0.16);
+}
+.vscode-editorLineNumber-foreground {
+  color: #6e7681;
+}
+.vscode-editorIndentGuide-background {
+  color: rgba(227, 228, 226, 0.16);
+}
+.vscode-editorIndentGuide-activeBackground {
+  color: rgba(227, 228, 226, 0.16);
+}
+.vscode-editorIndentGuide-background1 {
+  color: #404040;
+}
+.vscode-editorIndentGuide-background2 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-background3 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-background4 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-background5 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-background6 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-activeBackground1 {
+  color: #707070;
+}
+.vscode-editorIndentGuide-activeBackground2 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-activeBackground3 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-activeBackground4 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-activeBackground5 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorIndentGuide-activeBackground6 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorActiveLineNumber-foreground {
+  color: #c6c6c6;
+}
+.vscode-editorLineNumber-activeForeground {
+  color: #cccccc;
+}
+.vscode-editorRuler-foreground {
+  color: #5a5a5a;
+}
+.vscode-editorCodeLens-foreground {
+  color: #999999;
+}
+.vscode-editorBracketMatch-background {
+  color: rgba(0, 100, 0, 0.1);
+}
+.vscode-editorBracketMatch-border {
+  color: #888888;
+}
+.vscode-editorOverviewRuler-border {
+  color: #010409;
+}
+.vscode-editorGutter-background {
+  color: #1f1f1f;
+}
+.vscode-editorUnnecessaryCode-opacity {
+  color: rgba(0, 0, 0, 0.67);
+}
+.vscode-editorGhostText-foreground {
+  color: rgba(255, 255, 255, 0.34);
+}
+.vscode-editorOverviewRuler-rangeHighlightForeground {
+  color: rgba(0, 122, 204, 0.6);
+}
+.vscode-editorOverviewRuler-errorForeground {
+  color: rgba(255, 18, 18, 0.7);
+}
+.vscode-editorOverviewRuler-warningForeground {
+  color: #cca700;
+}
+.vscode-editorOverviewRuler-infoForeground {
+  color: #3794ff;
+}
+.vscode-editorBracketHighlight-foreground1 {
+  color: #ffd700;
+}
+.vscode-editorBracketHighlight-foreground2 {
+  color: #da70d6;
+}
+.vscode-editorBracketHighlight-foreground3 {
+  color: #179fff;
+}
+.vscode-editorBracketHighlight-foreground4 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketHighlight-foreground5 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketHighlight-foreground6 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketHighlight-unexpectedBracket-foreground {
+  color: rgba(255, 18, 18, 0.8);
+}
+.vscode-editorBracketPairGuide-background1 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-background2 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-background3 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-background4 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-background5 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-background6 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-activeBackground1 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-activeBackground2 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-activeBackground3 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-activeBackground4 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-activeBackground5 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorBracketPairGuide-activeBackground6 {
+  color: rgba(0, 0, 0, 0);
+}
+.vscode-editorUnicodeHighlight-border {
+  color: #cca700;
+}
+.vscode-diffEditor-move-border {
+  color: rgba(139, 139, 139, 0.61);
+}
+.vscode-diffEditor-moveActive-border {
+  color: #ffa500;
+}
+.vscode-diffEditor-unchangedRegionShadow {
+  color: #000000;
+}
+.vscode-editorOverviewRuler-bracketMatchForeground {
+  color: #a0a0a0;
+}
+.vscode-editor-foldBackground {
+  color: rgba(38, 79, 120, 0.3);
+}
+.vscode-editorGutter-foldingControlForeground {
+  color: #cccccc;
+}
+.vscode-editor-linkedEditingBackground {
+  color: rgba(255, 0, 0, 0.3);
+}
+.vscode-editor-wordHighlightBackground {
+  color: rgba(87, 87, 87, 0.72);
+}
+.vscode-editor-wordHighlightStrongBackground {
+  color: rgba(0, 73, 114, 0.72);
+}
+.vscode-editor-wordHighlightTextBackground {
+  color: rgba(87, 87, 87, 0.72);
+}
+.vscode-editorOverviewRuler-wordHighlightForeground {
+  color: rgba(160, 160, 160, 0.8);
+}
+.vscode-editorOverviewRuler-wordHighlightStrongForeground {
+  color: rgba(192, 160, 192, 0.8);
+}
+.vscode-editorOverviewRuler-wordHighlightTextForeground {
+  color: rgba(160, 160, 160, 0.8);
+}
+.vscode-peekViewTitle-background {
+  color: #252526;
+}
+.vscode-peekViewTitleLabel-foreground {
+  color: #ffffff;
+}
+.vscode-peekViewTitleDescription-foreground {
+  color: rgba(204, 204, 204, 0.7);
+}
+.vscode-peekView-border {
+  color: #3794ff;
+}
+.vscode-peekViewResult-background {
+  color: #1f1f1f;
+}
+.vscode-peekViewResult-lineForeground {
+  color: #bbbbbb;
+}
+.vscode-peekViewResult-fileForeground {
+  color: #ffffff;
+}
+.vscode-peekViewResult-selectionBackground {
+  color: rgba(51, 153, 255, 0.2);
+}
+.vscode-peekViewResult-selectionForeground {
+  color: #ffffff;
+}
+.vscode-peekViewEditor-background {
+  color: #1f1f1f;
+}
+.vscode-peekViewEditorGutter-background {
+  color: #1f1f1f;
+}
+.vscode-peekViewEditorStickyScroll-background {
+  color: #1f1f1f;
+}
+.vscode-peekViewResult-matchHighlightBackground {
+  color: rgba(187, 128, 9, 0.4);
+}
+.vscode-peekViewEditor-matchHighlightBackground {
+  color: rgba(187, 128, 9, 0.4);
+}
+.vscode-editorMarkerNavigationError-background {
+  color: #f14c4c;
+}
+.vscode-editorMarkerNavigationError-headerBackground {
+  color: rgba(241, 76, 76, 0.1);
+}
+.vscode-editorMarkerNavigationWarning-background {
+  color: #cca700;
+}
+.vscode-editorMarkerNavigationWarning-headerBackground {
+  color: rgba(204, 167, 0, 0.1);
+}
+.vscode-editorMarkerNavigationInfo-background {
+  color: #3794ff;
+}
+.vscode-editorMarkerNavigationInfo-headerBackground {
+  color: rgba(55, 148, 255, 0.1);
+}
+.vscode-editorMarkerNavigation-background {
+  color: #1f1f1f;
+}
+.vscode-editorSuggestWidget-background {
+  color: #202020;
+}
+.vscode-editorSuggestWidget-border {
+  color: #454545;
+}
+.vscode-editorSuggestWidget-foreground {
+  color: #cccccc;
+}
+.vscode-editorSuggestWidget-selectedForeground {
+  color: #ffffff;
+}
+.vscode-editorSuggestWidget-selectedIconForeground {
+  color: #ffffff;
+}
+.vscode-editorSuggestWidget-selectedBackground {
+  color: #04395e;
+}
+.vscode-editorSuggestWidget-highlightForeground {
+  color: #2aaaff;
+}
+.vscode-editorSuggestWidget-focusHighlightForeground {
+  color: #2aaaff;
+}
+.vscode-editorSuggestWidgetStatus-foreground {
+  color: rgba(204, 204, 204, 0.5);
+}
+.vscode-editorWatermark-foreground {
+  color: rgba(204, 204, 204, 0.6);
+}
+.vscode-tab-activeBackground {
+  color: #1f1f1f;
+}
+.vscode-tab-unfocusedActiveBackground {
+  color: #1f1f1f;
+}
+.vscode-tab-inactiveBackground {
+  color: #181818;
+}
+.vscode-tab-unfocusedInactiveBackground {
+  color: #181818;
+}
+.vscode-tab-activeForeground {
+  color: #ffffff;
+}
+.vscode-tab-inactiveForeground {
+  color: #9d9d9d;
+}
+.vscode-tab-unfocusedActiveForeground {
+  color: rgba(255, 255, 255, 0.5);
+}
+.vscode-tab-unfocusedInactiveForeground {
+  color: rgba(157, 157, 157, 0.5);
+}
+.vscode-tab-hoverBackground {
+  color: #1f1f1f;
+}
+.vscode-tab-unfocusedHoverBackground {
+  color: #1f1f1f;
+}
+.vscode-tab-border {
+  color: #2b2b2b;
+}
+.vscode-tab-lastPinnedBorder {
+  color: rgba(204, 204, 204, 0.2);
+}
+.vscode-tab-activeBorder {
+  color: #1f1f1f;
+}
+.vscode-tab-unfocusedActiveBorder {
+  color: #1f1f1f;
+}
+.vscode-tab-activeBorderTop {
+  color: #0078d4;
+}
+.vscode-tab-unfocusedActiveBorderTop {
+  color: #2b2b2b;
+}
+.vscode-tab-dragAndDropBorder {
+  color: #ffffff;
+}
+.vscode-tab-activeModifiedBorder {
+  color: #3399cc;
+}
+.vscode-tab-inactiveModifiedBorder {
+  color: rgba(51, 153, 204, 0.5);
+}
+.vscode-tab-unfocusedActiveModifiedBorder {
+  color: rgba(51, 153, 204, 0.5);
+}
+.vscode-tab-unfocusedInactiveModifiedBorder {
+  color: rgba(51, 153, 204, 0.25);
+}
+.vscode-editorPane-background {
+  color: #1f1f1f;
+}
+.vscode-editorGroupHeader-tabsBackground {
+  color: #181818;
+}
+.vscode-editorGroupHeader-tabsBorder {
+  color: #2b2b2b;
+}
+.vscode-editorGroupHeader-noTabsBackground {
+  color: #1f1f1f;
+}
+.vscode-editorGroup-border {
+  color: rgba(255, 255, 255, 0.09);
+}
+.vscode-editorGroup-dropBackground {
+  color: rgba(83, 89, 93, 0.5);
+}
+.vscode-editorGroup-dropIntoPromptForeground {
+  color: #cccccc;
+}
+.vscode-editorGroup-dropIntoPromptBackground {
+  color: #202020;
+}
+.vscode-sideBySideEditor-horizontalBorder {
+  color: rgba(255, 255, 255, 0.09);
+}
+.vscode-sideBySideEditor-verticalBorder {
+  color: rgba(255, 255, 255, 0.09);
+}
+.vscode-panel-background {
+  color: #181818;
+}
+.vscode-panel-border {
+  color: #2b2b2b;
+}
+.vscode-panelTitle-activeForeground {
+  color: #cccccc;
+}
+.vscode-panelTitle-inactiveForeground {
+  color: #9d9d9d;
+}
+.vscode-panelTitle-activeBorder {
+  color: #0078d4;
+}
+.vscode-panelInput-border {
+  color: #2b2b2b;
+}
+.vscode-panel-dropBorder {
+  color: #cccccc;
+}
+.vscode-panelSection-dropBackground {
+  color: rgba(83, 89, 93, 0.5);
+}
+.vscode-panelSectionHeader-background {
+  color: rgba(128, 128, 128, 0.2);
+}
+.vscode-panelSection-border {
+  color: #2b2b2b;
+}
+.vscode-panelStickyScroll-background {
+  color: #181818;
+}
+.vscode-panelStickyScroll-shadow {
+  color: #000000;
+}
+.vscode-banner-background {
+  color: #04395e;
+}
+.vscode-banner-foreground {
+  color: #ffffff;
+}
+.vscode-banner-iconForeground {
+  color: #3794ff;
+}
+.vscode-statusBar-foreground {
+  color: #cccccc;
+}
+.vscode-statusBar-noFolderForeground {
+  color: #cccccc;
+}
+.vscode-statusBar-background {
+  color: #181818;
+}
+.vscode-statusBar-noFolderBackground {
+  color: #1f1f1f;
+}
+.vscode-statusBar-border {
+  color: #2b2b2b;
+}
+.vscode-statusBar-focusBorder {
+  color: #0078d4;
+}
+.vscode-statusBar-noFolderBorder {
+  color: #2b2b2b;
+}
+.vscode-statusBarItem-activeBackground {
+  color: rgba(255, 255, 255, 0.18);
+}
+.vscode-statusBarItem-focusBorder {
+  color: #0078d4;
+}
+.vscode-statusBarItem-hoverBackground {
+  color: rgba(255, 255, 255, 0.12);
+}
+.vscode-statusBarItem-hoverForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-compactHoverBackground {
+  color: rgba(255, 255, 255, 0.2);
+}
+.vscode-statusBarItem-prominentForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-prominentBackground {
+  color: rgba(110, 118, 129, 0.4);
+}
+.vscode-statusBarItem-prominentHoverForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-prominentHoverBackground {
+  color: rgba(0, 0, 0, 0.3);
+}
+.vscode-statusBarItem-errorBackground {
+  color: #b91007;
+}
+.vscode-statusBarItem-errorForeground {
+  color: #ffffff;
+}
+.vscode-statusBarItem-errorHoverForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-errorHoverBackground {
+  color: rgba(255, 255, 255, 0.12);
+}
+.vscode-statusBarItem-warningBackground {
+  color: #7a6400;
+}
+.vscode-statusBarItem-warningForeground {
+  color: #ffffff;
+}
+.vscode-statusBarItem-warningHoverForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-warningHoverBackground {
+  color: rgba(255, 255, 255, 0.12);
+}
+.vscode-activityBar-background {
+  color: #181818;
+}
+.vscode-activityBar-foreground {
+  color: #d7d7d7;
+}
+.vscode-activityBar-inactiveForeground {
+  color: #868686;
+}
+.vscode-activityBar-border {
+  color: #2b2b2b;
+}
+.vscode-activityBar-activeBorder {
+  color: #0078d4;
+}
+.vscode-activityBar-dropBorder {
+  color: #d7d7d7;
+}
+.vscode-activityBarBadge-background {
+  color: #0078d4;
+}
+.vscode-activityBarBadge-foreground {
+  color: #ffffff;
+}
+.vscode-activityBarTop-foreground {
+  color: #e7e7e7;
+}
+.vscode-activityBarTop-activeBorder {
+  color: #e7e7e7;
+}
+.vscode-activityBarTop-inactiveForeground {
+  color: rgba(231, 231, 231, 0.6);
+}
+.vscode-activityBarTop-dropBorder {
+  color: #e7e7e7;
+}
+.vscode-profileBadge-background {
+  color: #4d4d4d;
+}
+.vscode-profileBadge-foreground {
+  color: #ffffff;
+}
+.vscode-statusBarItem-remoteBackground {
+  color: #0078d4;
+}
+.vscode-statusBarItem-remoteForeground {
+  color: #ffffff;
+}
+.vscode-statusBarItem-remoteHoverForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-remoteHoverBackground {
+  color: rgba(255, 255, 255, 0.12);
+}
+.vscode-statusBarItem-offlineBackground {
+  color: #6c1717;
+}
+.vscode-statusBarItem-offlineForeground {
+  color: #ffffff;
+}
+.vscode-statusBarItem-offlineHoverForeground {
+  color: #cccccc;
+}
+.vscode-statusBarItem-offlineHoverBackground {
+  color: rgba(255, 255, 255, 0.12);
+}
+.vscode-extensionBadge-remoteBackground {
+  color: #0078d4;
+}
+.vscode-extensionBadge-remoteForeground {
+  color: #ffffff;
+}
+.vscode-sideBar-background {
+  color: #181818;
+}
+.vscode-sideBar-foreground {
+  color: #cccccc;
+}
+.vscode-sideBar-border {
+  color: #2b2b2b;
+}
+.vscode-sideBarTitle-background {
+  color: #181818;
+}
+.vscode-sideBarTitle-foreground {
+  color: #cccccc;
+}
+.vscode-sideBar-dropBackground {
+  color: rgba(83, 89, 93, 0.5);
+}
+.vscode-sideBarSectionHeader-background {
+  color: #181818;
+}
+.vscode-sideBarSectionHeader-foreground {
+  color: #cccccc;
+}
+.vscode-sideBarSectionHeader-border {
+  color: #2b2b2b;
+}
+.vscode-sideBarActivityBarTop-border {
+  color: #2b2b2b;
+}
+.vscode-sideBarStickyScroll-background {
+  color: #181818;
+}
+.vscode-sideBarStickyScroll-shadow {
+  color: #000000;
+}
+.vscode-titleBar-activeForeground {
+  color: #cccccc;
+}
+.vscode-titleBar-inactiveForeground {
+  color: #9d9d9d;
+}
+.vscode-titleBar-activeBackground {
+  color: #181818;
+}
+.vscode-titleBar-inactiveBackground {
+  color: #1f1f1f;
+}
+.vscode-titleBar-border {
+  color: #2b2b2b;
+}
+.vscode-menubar-selectionForeground {
+  color: #cccccc;
+}
+.vscode-menubar-selectionBackground {
+  color: rgba(90, 93, 94, 0.31);
+}
+.vscode-commandCenter-foreground {
+  color: #cccccc;
+}
+.vscode-commandCenter-activeForeground {
+  color: #cccccc;
+}
+.vscode-commandCenter-inactiveForeground {
+  color: #9d9d9d;
+}
+.vscode-commandCenter-background {
+  color: rgba(255, 255, 255, 0.05);
+}
+.vscode-commandCenter-activeBackground {
+  color: rgba(255, 255, 255, 0.08);
+}
+.vscode-commandCenter-border {
+  color: rgba(204, 204, 204, 0.2);
+}
+.vscode-commandCenter-activeBorder {
+  color: rgba(204, 204, 204, 0.3);
+}
+.vscode-commandCenter-inactiveBorder {
+  color: rgba(157, 157, 157, 0.25);
+}
+.vscode-notificationCenter-border {
+  color: #313131;
+}
+.vscode-notificationToast-border {
+  color: #313131;
+}
+.vscode-notifications-foreground {
+  color: #cccccc;
+}
+.vscode-notifications-background {
+  color: #1f1f1f;
+}
+.vscode-notificationLink-foreground {
+  color: #4daafc;
+}
+.vscode-notificationCenterHeader-foreground {
+  color: #cccccc;
+}
+.vscode-notificationCenterHeader-background {
+  color: #1f1f1f;
+}
+.vscode-notifications-border {
+  color: #2b2b2b;
+}
+.vscode-notificationsErrorIcon-foreground {
+  color: #f14c4c;
+}
+.vscode-notificationsWarningIcon-foreground {
+  color: #cca700;
+}
+.vscode-notificationsInfoIcon-foreground {
+  color: #3794ff;
+}
+.vscode-chat-requestBorder {
+  color: rgba(255, 255, 255, 0.1);
+}
+.vscode-chat-requestBackground {
+  color: rgba(31, 31, 31, 0.62);
+}
+.vscode-chat-slashCommandBackground {
+  color: #34414b;
+}
+.vscode-chat-slashCommandForeground {
+  color: #40a6ff;
+}
+.vscode-chat-avatarBackground {
+  color: #1f1f1f;
+}
+.vscode-chat-avatarForeground {
+  color: #cccccc;
+}
+.vscode-simpleFindWidget-sashBorder {
+  color: #454545;
+}
+.vscode-commentsView-resolvedIcon {
+  color: rgba(204, 204, 204, 0.5);
+}
+.vscode-commentsView-unresolvedIcon {
+  color: #0078d4;
+}
+.vscode-editorCommentsWidget-replyInputBackground {
+  color: #252526;
+}
+.vscode-editorCommentsWidget-resolvedBorder {
+  color: rgba(204, 204, 204, 0.5);
+}
+.vscode-editorCommentsWidget-unresolvedBorder {
+  color: #0078d4;
+}
+.vscode-editorCommentsWidget-rangeBackground {
+  color: rgba(0, 120, 212, 0.1);
+}
+.vscode-editorCommentsWidget-rangeActiveBackground {
+  color: rgba(0, 120, 212, 0.1);
+}
+.vscode-editorGutter-commentRangeForeground {
+  color: #37373d;
+}
+.vscode-editorOverviewRuler-commentForeground {
+  color: #37373d;
+}
+.vscode-editorOverviewRuler-commentUnresolvedForeground {
+  color: #37373d;
+}
+.vscode-editorGutter-commentGlyphForeground {
+  color: #cccccc;
+}
+.vscode-editorGutter-commentUnresolvedGlyphForeground {
+  color: #cccccc;
+}
+.vscode-debugToolBar-background {
+  color: #181818;
+}
+.vscode-debugIcon-startForeground {
+  color: #89d185;
+}
+.vscode-editor-stackFrameHighlightBackground {
+  color: rgba(255, 255, 0, 0.2);
+}
+.vscode-editor-focusedStackFrameHighlightBackground {
+  color: rgba(122, 189, 122, 0.3);
+}
+.vscode-mergeEditor-change-background {
+  color: rgba(155, 185, 85, 0.2);
+}
+.vscode-mergeEditor-change-word-background {
+  color: rgba(156, 204, 44, 0.2);
+}
+.vscode-mergeEditor-changeBase-background {
+  color: #4b1818;
+}
+.vscode-mergeEditor-changeBase-word-background {
+  color: #6f1313;
+}
+.vscode-mergeEditor-conflict-unhandledUnfocused-border {
+  color: rgba(255, 166, 0, 0.48);
+}
+.vscode-mergeEditor-conflict-unhandledFocused-border {
+  color: #ffa600;
+}
+.vscode-mergeEditor-conflict-handledUnfocused-border {
+  color: rgba(134, 134, 134, 0.29);
+}
+.vscode-mergeEditor-conflict-handledFocused-border {
+  color: rgba(193, 193, 193, 0.8);
+}
+.vscode-mergeEditor-conflict-handled-minimapOverViewRuler {
+  color: rgba(173, 172, 168, 0.93);
+}
+.vscode-mergeEditor-conflict-unhandled-minimapOverViewRuler {
+  color: #fcba03;
+}
+.vscode-mergeEditor-conflictingLines-background {
+  color: rgba(255, 234, 0, 0.28);
+}
+.vscode-mergeEditor-conflict-input1-background {
+  color: rgba(64, 200, 174, 0.2);
+}
+.vscode-mergeEditor-conflict-input2-background {
+  color: rgba(64, 166, 255, 0.2);
+}
+.vscode-settings-headerForeground {
+  color: #ffffff;
+}
+.vscode-settings-settingsHeaderHoverForeground {
+  color: rgba(255, 255, 255, 0.7);
+}
+.vscode-settings-modifiedItemIndicator {
+  color: rgba(187, 128, 9, 0.4);
+}
+.vscode-settings-headerBorder {
+  color: #2b2b2b;
+}
+.vscode-settings-sashBorder {
+  color: #2b2b2b;
+}
+.vscode-settings-dropdownBackground {
+  color: #313131;
+}
+.vscode-settings-dropdownForeground {
+  color: #cccccc;
+}
+.vscode-settings-dropdownBorder {
+  color: #3c3c3c;
+}
+.vscode-settings-dropdownListBorder {
+  color: #454545;
+}
+.vscode-settings-checkboxBackground {
+  color: #313131;
+}
+.vscode-settings-checkboxForeground {
+  color: #cccccc;
+}
+.vscode-settings-checkboxBorder {
+  color: #3c3c3c;
+}
+.vscode-settings-textInputBackground {
+  color: #313131;
+}
+.vscode-settings-textInputForeground {
+  color: #cccccc;
+}
+.vscode-settings-textInputBorder {
+  color: #3c3c3c;
+}
+.vscode-settings-numberInputBackground {
+  color: #313131;
+}
+.vscode-settings-numberInputForeground {
+  color: #cccccc;
+}
+.vscode-settings-numberInputBorder {
+  color: #3c3c3c;
+}
+.vscode-settings-focusedRowBackground {
+  color: rgba(42, 45, 46, 0.6);
+}
+.vscode-settings-rowHoverBackground {
+  color: rgba(42, 45, 46, 0.3);
+}
+.vscode-settings-focusedRowBorder {
+  color: #0078d4;
+}
+.vscode-terminal-foreground {
+  color: #cccccc;
+}
+.vscode-terminal-selectionBackground {
+  color: #264f78;
+}
+.vscode-terminal-inactiveSelectionBackground {
+  color: #3a3d41;
+}
+.vscode-terminalCommandDecoration-defaultBackground {
+  color: rgba(255, 255, 255, 0.25);
+}
+.vscode-terminalCommandDecoration-successBackground {
+  color: #1b81a8;
+}
+.vscode-terminalCommandDecoration-errorBackground {
+  color: #f14c4c;
+}
+.vscode-terminalOverviewRuler-cursorForeground {
+  color: rgba(160, 160, 160, 0.8);
+}
+.vscode-terminal-border {
+  color: #2b2b2b;
+}
+.vscode-terminal-findMatchBackground {
+  color: #9e6a03;
+}
+.vscode-terminal-hoverHighlightBackground {
+  color: rgba(38, 79, 120, 0.13);
+}
+.vscode-terminal-findMatchHighlightBackground {
+  color: rgba(234, 92, 0, 0.33);
+}
+.vscode-terminalOverviewRuler-findMatchForeground {
+  color: rgba(209, 134, 22, 0.49);
+}
+.vscode-terminal-dropBackground {
+  color: rgba(83, 89, 93, 0.5);
+}
+.vscode-terminal-tab-activeBorder {
+  color: #0078d4;
+}
+.vscode-terminalStickyScrollHover-background {
+  color: #2a2d2e;
+}
+.vscode-testing-iconFailed {
+  color: #f14c4c;
+}
+.vscode-testing-iconErrored {
+  color: #f14c4c;
+}
+.vscode-testing-iconPassed {
+  color: #73c991;
+}
+.vscode-testing-runAction {
+  color: #73c991;
+}
+.vscode-testing-iconQueued {
+  color: #cca700;
+}
+.vscode-testing-iconUnset {
+  color: #848484;
+}
+.vscode-testing-iconSkipped {
+  color: #848484;
+}
+.vscode-testing-peekBorder {
+  color: #f14c4c;
+}
+.vscode-testing-messagePeekBorder {
+  color: #3794ff;
+}
+.vscode-testing-peekHeaderBackground {
+  color: rgba(241, 76, 76, 0.1);
+}
+.vscode-testing-messagePeekHeaderBackground {
+  color: rgba(55, 148, 255, 0.1);
+}
+.vscode-testing-coveredBackground {
+  color: rgba(156, 204, 44, 0.2);
+}
+.vscode-testing-coveredBorder {
+  color: rgba(156, 204, 44, 0.15);
+}
+.vscode-testing-coveredGutterBackground {
+  color: rgba(156, 204, 44, 0.12);
+}
+.vscode-testing-uncoveredBranchBackground {
+  color: #781212;
+}
+.vscode-testing-uncoveredBackground {
+  color: rgba(255, 0, 0, 0.2);
+}
+.vscode-testing-uncoveredBorder {
+  color: rgba(255, 0, 0, 0.15);
+}
+.vscode-testing-uncoveredGutterBackground {
+  color: rgba(255, 0, 0, 0.3);
+}
+.vscode-testing-coverCountBadgeBackground {
+  color: #616161;
+}
+.vscode-testing-coverCountBadgeForeground {
+  color: #f8f8f8;
+}
+.vscode-testing-message-error-decorationForeground {
+  color: #f14c4c;
+}
+.vscode-testing-message-error-lineBackground {
+  color: rgba(255, 0, 0, 0.2);
+}
+.vscode-testing-message-info-decorationForeground {
+  color: rgba(204, 204, 204, 0.5);
+}
+.vscode-testing-iconErrored-retired {
+  color: rgba(241, 76, 76, 0.7);
+}
+.vscode-testing-iconFailed-retired {
+  color: rgba(241, 76, 76, 0.7);
+}
+.vscode-testing-iconPassed-retired {
+  color: rgba(115, 201, 145, 0.7);
+}
+.vscode-testing-iconQueued-retired {
+  color: rgba(204, 167, 0, 0.7);
+}
+.vscode-testing-iconUnset-retired {
+  color: rgba(132, 132, 132, 0.7);
+}
+.vscode-testing-iconSkipped-retired {
+  color: rgba(132, 132, 132, 0.7);
+}
+.vscode-welcomePage-tileBackground {
+  color: #2b2b2b;
+}
+.vscode-welcomePage-tileHoverBackground {
+  color: #262626;
+}
+.vscode-welcomePage-tileBorder {
+  color: rgba(255, 255, 255, 0.1);
+}
+.vscode-welcomePage-progress-background {
+  color: #313131;
+}
+.vscode-welcomePage-progress-foreground {
+  color: #0078d4;
+}
+.vscode-walkthrough-stepTitle-foreground {
+  color: #ffffff;
+}
+.vscode-walkThrough-embeddedEditorBackground {
+  color: rgba(0, 0, 0, 0.4);
+}
+.vscode-inlineChat-background {
+  color: #202020;
+}
+.vscode-inlineChat-border {
+  color: #454545;
+}
+.vscode-inlineChat-shadow {
+  color: rgba(0, 0, 0, 0.36);
+}
+.vscode-inlineChat-regionHighlight {
+  color: rgba(38, 79, 120, 0.25);
+}
+.vscode-inlineChatInput-border {
+  color: #454545;
+}
+.vscode-inlineChatInput-focusBorder {
+  color: #0078d4;
+}
+.vscode-inlineChatInput-placeholderForeground {
+  color: #989898;
+}
+.vscode-inlineChatInput-background {
+  color: #313131;
+}
+.vscode-inlineChatDiff-inserted {
+  color: rgba(156, 204, 44, 0.1);
+}
+.vscode-editorOverviewRuler-inlineChatInserted {
+  color: rgba(156, 204, 44, 0.12);
+}
+.vscode-inlineChatDiff-removed {
+  color: rgba(255, 0, 0, 0.1);
+}
+.vscode-editorOverviewRuler-inlineChatRemoved {
+  color: rgba(255, 0, 0, 0.12);
+}
+.vscode-debugExceptionWidget-border {
+  color: #a31515;
+}
+.vscode-debugExceptionWidget-background {
+  color: #420b0d;
+}
+.vscode-statusBar-debuggingBackground {
+  color: #0078d4;
+}
+.vscode-statusBar-debuggingForeground {
+  color: #ffffff;
+}
+.vscode-statusBar-debuggingBorder {
+  color: #2b2b2b;
+}
+.vscode-commandCenter-debuggingBackground {
+  color: rgba(0, 120, 212, 0.26);
+}
+.vscode-keybindingTable-headerBackground {
+  color: rgba(204, 204, 204, 0.04);
+}
+.vscode-keybindingTable-rowsBackground {
+  color: rgba(204, 204, 204, 0.04);
+}
+.vscode-debugIcon-breakpointForeground {
+  color: #e51400;
+}
+.vscode-debugIcon-breakpointDisabledForeground {
+  color: #848484;
+}
+.vscode-debugIcon-breakpointUnverifiedForeground {
+  color: #848484;
+}
+.vscode-debugIcon-breakpointCurrentStackframeForeground {
+  color: #ffcc00;
+}
+.vscode-debugIcon-breakpointStackframeForeground {
+  color: #89d185;
+}
+.vscode-editor-inlineValuesForeground {
+  color: rgba(255, 255, 255, 0.5);
+}
+.vscode-editor-inlineValuesBackground {
+  color: rgba(255, 200, 0, 0.2);
+}
+.vscode-ports-iconRunningProcessForeground {
+  color: #369432;
+}
+.vscode-editorGutter-modifiedBackground {
+  color: #0078d4;
+}
+.vscode-editorGutter-addedBackground {
+  color: #2ea043;
+}
+.vscode-editorGutter-deletedBackground {
+  color: #f85149;
+}
+.vscode-minimapGutter-modifiedBackground {
+  color: #0078d4;
+}
+.vscode-minimapGutter-addedBackground {
+  color: #2ea043;
+}
+.vscode-minimapGutter-deletedBackground {
+  color: #f85149;
+}
+.vscode-editorOverviewRuler-modifiedForeground {
+  color: rgba(0, 120, 212, 0.6);
+}
+.vscode-editorOverviewRuler-addedForeground {
+  color: rgba(46, 160, 67, 0.6);
+}
+.vscode-editorOverviewRuler-deletedForeground {
+  color: rgba(248, 81, 73, 0.6);
+}
+.vscode-debugTokenExpression-name {
+  color: #c586c0;
+}
+.vscode-debugTokenExpression-value {
+  color: rgba(204, 204, 204, 0.6);
+}
+.vscode-debugTokenExpression-string {
+  color: #ce9178;
+}
+.vscode-debugTokenExpression-boolean {
+  color: #4e94ce;
+}
+.vscode-debugTokenExpression-number {
+  color: #b5cea8;
+}
+.vscode-debugTokenExpression-error {
+  color: #f48771;
+}
+.vscode-debugView-exceptionLabelForeground {
+  color: #cccccc;
+}
+.vscode-debugView-exceptionLabelBackground {
+  color: #6c2022;
+}
+.vscode-debugView-stateLabelForeground {
+  color: #cccccc;
+}
+.vscode-debugView-stateLabelBackground {
+  color: rgba(136, 136, 136, 0.27);
+}
+.vscode-debugView-valueChangedHighlight {
+  color: #569cd6;
+}
+.vscode-debugConsole-infoForeground {
+  color: #3794ff;
+}
+.vscode-debugConsole-warningForeground {
+  color: #cca700;
+}
+.vscode-debugConsole-errorForeground {
+  color: #f85149;
+}
+.vscode-debugConsole-sourceForeground {
+  color: #cccccc;
+}
+.vscode-debugConsoleInputIcon-foreground {
+  color: #cccccc;
+}
+.vscode-debugIcon-pauseForeground {
+  color: #75beff;
+}
+.vscode-debugIcon-stopForeground {
+  color: #f48771;
+}
+.vscode-debugIcon-disconnectForeground {
+  color: #f48771;
+}
+.vscode-debugIcon-restartForeground {
+  color: #89d185;
+}
+.vscode-debugIcon-stepOverForeground {
+  color: #75beff;
+}
+.vscode-debugIcon-stepIntoForeground {
+  color: #75beff;
+}
+.vscode-debugIcon-stepOutForeground {
+  color: #75beff;
+}
+.vscode-debugIcon-continueForeground {
+  color: #75beff;
+}
+.vscode-debugIcon-stepBackForeground {
+  color: #75beff;
+}
+.vscode-scm-historyItemStatisticsBorder {
+  color: rgba(204, 204, 204, 0.2);
+}
+.vscode-scm-historyItemSelectedStatisticsBorder {
+  color: rgba(255, 255, 255, 0.2);
+}
+.vscode-extensionButton-background {
+  color: #0078d4;
+}
+.vscode-extensionButton-foreground {
+  color: #ffffff;
+}
+.vscode-extensionButton-hoverBackground {
+  color: #026ec1;
+}
+.vscode-extensionButton-separator {
+  color: rgba(255, 255, 255, 0.4);
+}
+.vscode-extensionButton-prominentBackground {
+  color: #0078d4;
+}
+.vscode-extensionButton-prominentForeground {
+  color: #ffffff;
+}
+.vscode-extensionButton-prominentHoverBackground {
+  color: #026ec1;
+}
+.vscode-extensionIcon-starForeground {
+  color: #ff8e00;
+}
+.vscode-extensionIcon-verifiedForeground {
+  color: #4daafc;
+}
+.vscode-extensionIcon-preReleaseForeground {
+  color: #1d9271;
+}
+.vscode-extensionIcon-sponsorForeground {
+  color: #d758b3;
+}
+.vscode-notebook-cellBorderColor {
+  color: #37373d;
+}
+.vscode-notebook-focusedEditorBorder {
+  color: #0078d4;
+}
+.vscode-notebookStatusSuccessIcon-foreground {
+  color: #89d185;
+}
+.vscode-notebookEditorOverviewRuler-runningCellForeground {
+  color: #89d185;
+}
+.vscode-notebookStatusErrorIcon-foreground {
+  color: #f85149;
+}
+.vscode-notebookStatusRunningIcon-foreground {
+  color: #cccccc;
+}
+.vscode-notebook-cellToolbarSeparator {
+  color: rgba(128, 128, 128, 0.35);
+}
+.vscode-notebook-selectedCellBackground {
+  color: #37373d;
+}
+.vscode-notebook-selectedCellBorder {
+  color: #37373d;
+}
+.vscode-notebook-focusedCellBorder {
+  color: #0078d4;
+}
+.vscode-notebook-inactiveFocusedCellBorder {
+  color: #37373d;
+}
+.vscode-notebook-cellStatusBarItemHoverBackground {
+  color: rgba(255, 255, 255, 0.15);
+}
+.vscode-notebook-cellInsertionIndicator {
+  color: #0078d4;
+}
+.vscode-notebookScrollbarSlider-background {
+  color: rgba(121, 121, 121, 0.4);
+}
+.vscode-notebookScrollbarSlider-hoverBackground {
+  color: rgba(100, 100, 100, 0.7);
+}
+.vscode-notebookScrollbarSlider-activeBackground {
+  color: rgba(191, 191, 191, 0.4);
+}
+.vscode-notebook-symbolHighlightBackground {
+  color: rgba(255, 255, 255, 0.04);
+}
+.vscode-notebook-cellEditorBackground {
+  color: #181818;
+}
+.vscode-notebook-editorBackground {
+  color: #1f1f1f;
+}
+.vscode-interactive-activeCodeBorder {
+  color: #007acc;
+}
+.vscode-interactive-inactiveCodeBorder {
+  color: #37373d;
+}
+.vscode-searchEditor-textInputBorder {
+  color: #3c3c3c;
+}
+.vscode-terminal-ansiBlack {
+  color: #000000;
+}
+.vscode-terminal-ansiRed {
+  color: #cd3131;
+}
+.vscode-terminal-ansiGreen {
+  color: #0dbc79;
+}
+.vscode-terminal-ansiYellow {
+  color: #e5e510;
+}
+.vscode-terminal-ansiBlue {
+  color: #2472c8;
+}
+.vscode-terminal-ansiMagenta {
+  color: #bc3fbc;
+}
+.vscode-terminal-ansiCyan {
+  color: #11a8cd;
+}
+.vscode-terminal-ansiWhite {
+  color: #e5e5e5;
+}
+.vscode-terminal-ansiBrightBlack {
+  color: #666666;
+}
+.vscode-terminal-ansiBrightRed {
+  color: #f14c4c;
+}
+.vscode-terminal-ansiBrightGreen {
+  color: #23d18b;
+}
+.vscode-terminal-ansiBrightYellow {
+  color: #f5f543;
+}
+.vscode-terminal-ansiBrightBlue {
+  color: #3b8eea;
+}
+.vscode-terminal-ansiBrightMagenta {
+  color: #d670d6;
+}
+.vscode-terminal-ansiBrightCyan {
+  color: #29b8db;
+}
+.vscode-terminal-ansiBrightWhite {
+  color: #e5e5e5;
+}
+.vscode-remoteHub-decorations-addedForegroundColor {
+  color: #81b88b;
+}
+.vscode-remoteHub-decorations-modifiedForegroundColor {
+  color: #e2c08d;
+}
+.vscode-remoteHub-decorations-deletedForegroundColor {
+  color: #c74e39;
+}
+.vscode-remoteHub-decorations-submoduleForegroundColor {
+  color: #8db9e2;
+}
+.vscode-remoteHub-decorations-conflictForegroundColor {
+  color: #e4676b;
+}
+.vscode-remoteHub-decorations-incomingAddedForegroundColor {
+  color: #81b88b;
+}
+.vscode-remoteHub-decorations-incomingModifiedForegroundColor {
+  color: #e2c08d;
+}
+.vscode-remoteHub-decorations-incomingDeletedForegroundColor {
+  color: #c74e39;
+}
+.vscode-remoteHub-decorations-incomingRenamedForegroundColor {
+  color: #73c991;
+}
+.vscode-remoteHub-decorations-possibleConflictForegroundColor {
+  color: #cca700;
+}
+.vscode-remoteHub-decorations-ignoredResourceForeground {
+  color: #8c8c8c;
+}
