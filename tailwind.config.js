@@ -27,7 +27,7 @@ export default {
 
             'grey-03': '#313131' /* grey-borders */,
 
-            'grey-04':
+            'grey-05':
                 '#2c2d2d' /* active bcgrd-grey hover nav & terminal icons hover */,
 
             'green-01': '#0dac6e' /* bash terminal-green */,

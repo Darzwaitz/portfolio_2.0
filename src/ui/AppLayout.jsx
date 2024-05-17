@@ -7,9 +7,11 @@ function AppLayout() {
     return (
         <>
             <Header />
-            <main className="flex h-full bg-yellow-400">
+            <main className="flex h-[calc(100vh-72px)] w-full bg-yellow-400">
                 <SidebarNav />
-                <Outlet />
+                <section className="bg-black-01 text-grey-01 w-full">
+                    <Outlet />
+                </section>
             </main>
             <Footer />
         </>

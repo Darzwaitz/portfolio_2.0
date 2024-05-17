@@ -1,9 +1,9 @@
 function Footer() {
-  return (
-    <div className="bg-black text-red-100 fixed bottom-0 left-0 z-20 w-full">
-      Footer section
-    </div>
-  );
+    return (
+        <footer className="text-grey-01 border-t-grey-04 bg-black-01 fixed bottom-0 left-0 z-20 w-full">
+            Footer section
+        </footer>
+    )
 }
 
-export default Footer;
+export default Footer

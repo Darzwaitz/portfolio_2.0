@@ -2,11 +2,7 @@ import { Link } from 'react-router-dom'
 
 function NavTop() {
     return (
-        <nav className="flex gap-5">
-            <Link to="/">File</Link>
-            <Link to="/">Edit</Link>
-            <Link to="/">Selection</Link>
-            <Link to="/">View</Link>
+        <nav className="text-grey-01 flex gap-5">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/portfolio">Portfolio</Link>
