@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
-import NavMain from "./NavMain";
-import Logo from "./Logo";
+import { Link } from 'react-router-dom'
+import NavTop from './NavTop'
+import Logo from './Logo'
 
 function Header() {
-  return (
-    <header className="flex sm:justify-between items-center p-10 border-b border-red-600 flex-wrap bg-neutral-300">
-      <Link to="/">
-        <Logo />
-      </Link>
+    return (
+        <header className="flex flex-wrap items-center border-b border-red-600 bg-neutral-300 p-3 ">
+            <Link to="/">
+                <Logo />
+            </Link>
 
-      <NavMain />
-    </header>
-  );
+            <NavTop />
+        </header>
+    )
 }
 
-export default Header;
+export default Header

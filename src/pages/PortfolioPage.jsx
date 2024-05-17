@@ -1,5 +1,5 @@
-import { portfolioItemList } from "../data/portfolioitems";
-import PortfolioItem from "../ui/portfolio/PortfolioItem";
+import portfolioItemList from '../data/portfolioItemsList'
+import PortfolioItem from '../ui/portfolio/PortfolioItem'
 
 // importing data for each portfolio item
 // const { title, description, tags } = portfolioItemList;
@@ -7,19 +7,19 @@ import PortfolioItem from "../ui/portfolio/PortfolioItem";
 
 // const chosenTag = "wordpress";
 
-function Portfolio() {
-  return (
-    <section>
-      <h1 className="block ">PORTFOLIO PAGE</h1>
-      <div className="flex">
-        {portfolioItemList.map((project, i) => (
-          <PortfolioItem project={project} key={i} />
-        ))}
+function PortfolioPage() {
+    return (
+        <section>
+            <h1 className="block ">PORTFOLIO PAGE</h1>
+            <div className="flex">
+                {portfolioItemList.map((project, i) => (
+                    <PortfolioItem project={project} key={i} />
+                ))}
 
-        <br />
-      </div>
-    </section>
-  );
+                <br />
+            </div>
+        </section>
+    )
 }
 
-export default Portfolio;
+export default PortfolioPage
