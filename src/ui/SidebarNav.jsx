@@ -6,23 +6,19 @@ function SidebarNav() {
     return (
         <aside className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01">
             {/* top nav links */}
-            {/* <div>
-                <h1>sidebar</h1>
-                <h1>sidebar</h1>
-                <h1>sidebar</h1>
-                <h1>sidebar</h1>
-                <h1>sidebar</h1>
-            </div> */}
+            <div>
+                <SvgWrapper size="large">
+                    <UserAccount color="currentColor" />
+                    <UserAccount color="currentColor" />
+                    <UserAccount color="currentColor" />
+                    <UserAccount color="currentColor" />
+                </SvgWrapper>
+            </div>
             {/* bottom nav links */}
 
             <SvgWrapper size="large">
                 <UserAccount color="currentColor" />
-            </SvgWrapper>
-            <SvgWrapper size="medium">
-                <UserAccount color="blue" />
-            </SvgWrapper>
-            <SvgWrapper size="small">
-                <UserAccount color="white" />
+                <UserAccount color="currentColor" />
             </SvgWrapper>
         </aside>
     )
