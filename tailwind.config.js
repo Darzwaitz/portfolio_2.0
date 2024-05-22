@@ -9,6 +9,7 @@ export default {
                 '#181818' /* main dark black secondary main-black - main bckgrd of active page - suggestion box */,
             'black-02':
                 '#1f1f1f' /* secondary main-black - main bckgrd of active page - suggestion box */,
+
             'grey-04': '#3b3b3b' /* suggestion box - grey-borders */,
 
             'black-03': '#161616' /* tertiary main-black - watermark logo */,

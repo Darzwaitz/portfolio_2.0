@@ -1,6 +1,11 @@
 // svg comp. imports
 import SvgWrapper from '../assets/imgs/svgs/SvgWrapper'
 import UserAccount from '../assets/imgs/svgs/UserAccount'
+import SettingsGear from '../assets/imgs/svgs/SettingsGear'
+import ExplorerView from '../assets/imgs/svgs/ExplorerView'
+import Search from '../assets/imgs/svgs/Search'
+import SourceControl from '../assets/imgs/svgs/SourceControl'
+import RemoteExplorer from '../assets/imgs/svgs/RemoteExplorer'
 
 function SidebarNav() {
     return (
@@ -8,18 +13,19 @@ function SidebarNav() {
             {/* top nav links */}
             <div>
                 <SvgWrapper size="large">
-                    <UserAccount color="currentColor" />
-                    <UserAccount color="currentColor" />
-                    <UserAccount color="currentColor" />
-                    <UserAccount color="currentColor" />
+                    <ExplorerView />
+                    <SourceControl />
+                    <Search />
+                    <RemoteExplorer />
                 </SvgWrapper>
             </div>
             {/* bottom nav links */}
-
-            <SvgWrapper size="large">
-                <UserAccount color="currentColor" />
-                <UserAccount color="currentColor" />
-            </SvgWrapper>
+            <div>
+                <SvgWrapper size="large">
+                    <UserAccount />
+                    <SettingsGear />
+                </SvgWrapper>
+            </div>
         </aside>
     )
 }
