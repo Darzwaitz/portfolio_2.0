@@ -7,7 +7,7 @@ function SvgWrapper({ size = 'small', children }) {
     if (size === 'small') (width = 'w-3.5'), (margin = 'm-3')
 
     return (
-        <div className={`flex flex-col gap-4 ${width} ${margin}`}>
+        <div className={`flex flex-col gap-[1.7rem] ${width} ${margin}`}>
             {children}
         </div>
     )

@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="text-grey-01 border-t-grey-04 bg-black-01 fixed bottom-0 left-0 z-20 w-full">
+        <footer className="fixed bottom-0 left-0 z-20 w-full border-t-grey-04 bg-black-01 text-grey-01">
             Footer section
         </footer>
     )
