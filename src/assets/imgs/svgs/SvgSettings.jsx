@@ -1,4 +1,4 @@
-const arrowDirection = 'left'
+const arrowDirection = 'right'
 
 export function SvgSettingsLarge() {
     return {

@@ -1,5 +1,9 @@
 function SvgIconwrapper({ children }) {
-    return <div className="group relative inline-block">{children}</div>
+    return (
+        <div role="icon-wrapper" className="group relative inline-block">
+            {children}
+        </div>
+    )
 }
 
 export default SvgIconwrapper
