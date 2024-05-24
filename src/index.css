@@ -8,9 +8,3 @@
         src: local('CascadiaMono'), url('./assets/fonts/CascadiaMono.ttf');
     }
 }
-
-@layer components {
-    .tooltip {
-        @apply invisible ml-2 mt-2 rounded border border-grey-01  bg-black-02 px-2.5 pb-2 pt-1 font-[inherit] text-grey-02 opacity-0 transition;
-    }
-}
