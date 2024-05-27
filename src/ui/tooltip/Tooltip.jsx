@@ -21,13 +21,14 @@ function Tooltip({ msg, arrowDirection }) {
         )
     if (arrowDirection === 'right')
         return (
+            // grid-template-columns: repeat(3, 1fr);
             <span
                 className="before:solid 
                             after:solid 
                             after:border-l-grey-0 
                             
                             invisible 
-                            absolute right-10 top-[-18%]  flex items-center rounded border border-grey-01 bg-black-02 px-2.5 pb-2 
+                            absolute right-10 top-[-18%]  grid grid-flow-col-dense items-center rounded border border-grey-01 bg-black-02 px-2.5 pb-2 
                             
                             pt-1 
                             font-[inherit]
@@ -48,7 +49,7 @@ function Tooltip({ msg, arrowDirection }) {
                             after:justify-end  after:border-[7px] after:border-b-transparent 
                             after:border-r-transparent after:border-t-transparent group-hover:visible group-hover:opacity-100"
             >
-                <pre role="inner-div" className="-order-1 m-1">
+                <pre role="inner-div" className="font-i -order-1 m-1">
                     {msg}
                 </pre>
             </span>
