@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+    html,
+    pre {
         font-family: 'CascadiaMono', system-ui, sans-serif;
+
         src: local('CascadiaMono'), url('./assets/fonts/CascadiaMono.ttf');
     }
 }
