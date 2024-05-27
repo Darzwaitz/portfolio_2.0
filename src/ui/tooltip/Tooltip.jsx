@@ -31,13 +31,12 @@ function Tooltip({ msg, arrowDirection }) {
                             absolute right-10 top-[-18%]  grid grid-flow-col-dense items-center rounded border border-grey-01 bg-black-02 px-2.5 pb-2 
                             
                             pt-1 
-                            font-[inherit]
+                            font-sans
                             text-grey-02 
-                            opacity-0 
 
-                            transition 
-                             before:flex 
-                            
+                            opacity-0 
+                             transition 
+                            before:flex
                             before:justify-end 
                             before:border-[7px]
                             before:border-b-transparent 
@@ -49,9 +48,9 @@ function Tooltip({ msg, arrowDirection }) {
                             after:justify-end  after:border-[7px] after:border-b-transparent 
                             after:border-r-transparent after:border-t-transparent group-hover:visible group-hover:opacity-100"
             >
-                <pre role="inner-div" className="font-i -order-1 m-1">
+                <p role="inner-div" className=" -order-1 m-1">
                     {msg}
-                </pre>
+                </p>
             </span>
         )
     // <span className="before:solid after:solid before:justify-centerbefore:items-center invisible absolute right-10 top-[-18%] ml-2 mt-2 flex items-center rounded border  border-grey-01 bg-black-02 px-2.5 pb-2 pt-1 font-[inherit] text-grey-02 opacity-0 transition  before:absolute before:top-[50%] before:mt-[-7px] before:flex before:justify-end before:border-[7px] before:border-b-transparent before:border-l-grey-01 before:border-r-transparent before:border-t-transparent before:text-current after:absolute after:top-[50%] after:mt-[-7px] after:border-[7px] after:border-b-transparent after:border-l-grey-02 after:border-r-transparent after:border-t-transparent after:text-current group-hover:visible group-hover:opacity-100">
