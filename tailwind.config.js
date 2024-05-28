@@ -6,9 +6,8 @@ export default {
             transparent: 'transparent',
             current: 'currentColor',
             'black-01':
-                '#181818' /* main dark black secondary main-black - main bckgrd of active page - suggestion box */,
-            'black-02':
-                '#1f1f1f' /* secondary main-black - main bckgrd of active page - suggestion box */,
+                '#181818' /* main dark black secondary main-black - main bckgrd of active page -  */,
+            'black-02': '#1f1f1f' /* secondary main-black - */,
 
             'grey-04': '#3b3b3b' /* suggestion box - grey-borders */,
 
@@ -30,6 +29,8 @@ export default {
 
             'grey-05':
                 '#2c2d2d' /* active bcgrd-grey hover nav & terminal icons hover */,
+            'grey-06': '#cccccc' /*  */,
+            'grey-07': '#74787c' /* suggestion box border */,
 
             'green-01': '#0dac6e' /* bash terminal-green */,
 
