@@ -7,8 +7,6 @@ import Search from '../assets/imgs/svgs/Search'
 import SourceControl from '../assets/imgs/svgs/SourceControl'
 import RemoteExplorer from '../assets/imgs/svgs/RemoteExplorer'
 
-// import Tooltip from './tooltip/Tooltip'
-
 function SidebarNav() {
     return (
         <aside className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01">
@@ -25,7 +23,6 @@ function SidebarNav() {
             {/* bottom nav links */}
             <nav>
                 <SvgWrapper size="large">
-                    <UserAccount />
                     <UserAccount />
                     <SettingsGear />
                 </SvgWrapper>

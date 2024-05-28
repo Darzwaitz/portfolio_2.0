@@ -1,4 +1,7 @@
-const arrowDirection = 'right'
+// TODO to be imported from new column nav comp.
+const arrowDirectionValue = 'left'
+
+const arrowDirection = arrowDirectionValue
 
 export function SvgSettingsLarge() {
     return {
