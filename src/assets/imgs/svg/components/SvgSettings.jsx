@@ -15,7 +15,7 @@ export function SvgSettingsMedium() {
     return {
         defaultColor: 'currentColor',
         // hover: 'hover:fill-grey-02 hover:bg-grey-01',
-        hover: ' hover:bg-grey-01',
+        hover: ' hover:bg-grey-08',
         arrowDirection: 'up',
     }
 }
