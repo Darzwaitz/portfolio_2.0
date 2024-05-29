@@ -1,30 +1,30 @@
-// search.svg
+// files.svg
 import { SvgSettingsLarge } from './SvgSettings'
 const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
 
 import SvgIconwrapper from './SvgIconwrapper'
-import Tooltip from '../../../ui/tooltip/Tooltip'
+import Tooltip from '../../../../features/tooltip/Tooltip'
 
-function SettingsGear() {
+function ExplorerView() {
     return (
         <SvgIconwrapper>
             <svg
-                className={hover}
-                width=""
+                className={`${hover} relative`}
+                width="100%"
                 height=""
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
                 // fill={props.color}
                 fill={defaultColor}
             >
-                <path d="M15.25 0a8.25 8.25 0 0 0-6.18 13.72L1 22.88l1.12 1 8.05-9.12A8.251 8.251 0 1 0 15.25.01V0zm0 15a6.75 6.75 0 1 1 0-13.5 6.75 6.75 0 0 1 0 13.5z" />
+                <path d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z" />
             </svg>
             <Tooltip
-                msg={'Search Projects (Ctrl+Shift+F)'}
+                msg={'Explorer (Ctrl+Shift+E)'}
                 arrowDirection={arrowDirection}
             />
         </SvgIconwrapper>
     )
 }
 
-export default SettingsGear
+export default ExplorerView

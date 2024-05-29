@@ -13,9 +13,8 @@ export function SvgSettingsLarge() {
 
 export function SvgSettingsMedium() {
     return {
-        // defaultColor: 'currentColor',
-        defaultColor: 'text-grey-01',
-        hover: 'hover:fill-',
+        defaultColor: 'currentColor',
+        hover: 'hover:fill-grey-02',
         arrowDirection: 'up',
     }
 }

@@ -3,7 +3,7 @@ import { SvgSettingsLarge } from './SvgSettings'
 const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
 
 import SvgIconwrapper from './SvgIconwrapper'
-import Tooltip from '../../../ui/tooltip/Tooltip'
+import Tooltip from '../../../../features/tooltip/Tooltip'
 
 function SettingsGear() {
     return (
