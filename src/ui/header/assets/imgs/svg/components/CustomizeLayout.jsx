@@ -1,11 +1,8 @@
-import SvgIconwrapper from '../../../../../../assets/imgs/svg/components/SvgIconwrapper'
-// import Tooltip from '../tooltip/Tooltip'
+import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
+import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
 
-// TODO tooltips set in all
-
-import { SvgSettingsMedium } from '../../../../../../assets/imgs/svg/components/SvgSettings'
-// const { defaultColor, hover, arrowDirection } = SvgSettingsMedium()
-const { defaultColor, hover, iconSize } = SvgSettingsMedium()
+import Tooltip from '@/features/tooltip/Tooltip'
 
 // no off for this svg - just hover=already set
 
@@ -24,10 +21,10 @@ function CustomizeLayout() {
                 <path d="M10 10L11 9H14L15 10V13L14 14H11L10 13V10ZM11 10V13H14V10H11Z" />
             </svg>
 
-            {/* <Tooltip
-                msg={'Toggle Primary Sidebar (Ctrl+B)'}
+            <Tooltip
+                msg={'Customize Layout...'}
                 arrowDirection={arrowDirection}
-            /> */}
+            />
         </SvgIconwrapper>
     )
 }
