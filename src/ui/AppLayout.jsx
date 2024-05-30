@@ -13,6 +13,8 @@ function AppLayout() {
                 <section className="w-full bg-black-01 text-grey-01">
                     <Outlet />
                 </section>
+                {/* tmp for testing */}
+                {/* <SidebarNav /> */}
             </main>
             <Footer />
         </>

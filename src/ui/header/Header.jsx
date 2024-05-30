@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import NavTop from './NavTop'
 import Logo from '../Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
-import HeaderTogglepanels from './togglebuttons/TogglePanels'
 import HeaderWindowbuttons from './HeaderWindowbuttons'
+import TogglePanels from '../header/assets/imgs/svg/components/TogglePanels'
 
 function Header() {
     return (
@@ -14,7 +14,7 @@ function Header() {
 
             <NavTop />
             <HeaderSearchnavbar />
-            <HeaderTogglepanels />
+            <TogglePanels />
             <HeaderWindowbuttons />
         </header>
     )

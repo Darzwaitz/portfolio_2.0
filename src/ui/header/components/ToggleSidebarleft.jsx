@@ -1,7 +1,7 @@
-import SvgIconwrapper from '../../../assets/imgs/svg/components/SvgIconwrapper'
+import SvgIconwrapper from '../../../../../../assets/imgs/svg/components/SvgIconwrapper'
 // import Tooltip from '../tooltip/Tooltip'
 
-import { SvgSettingsMedium } from '../../../assets/imgs/svg/components/SvgSettings'
+import { SvgSettingsMedium } from '../../../../../../assets/imgs/svg/components/SvgSettings'
 // const { defaultColor, hover, arrowDirection } = SvgSettingsMedium()
 const { defaultColor, hover, iconSize } = SvgSettingsMedium()
 

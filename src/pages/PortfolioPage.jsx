@@ -1,5 +1,5 @@
 import portfolioItemList from '../data/portfolioItemsList'
-import PortfolioItem from '../ui/portfolio/PortfolioItem'
+import PortfolioItem from '../features/portfolio/PortfolioItem'
 
 // importing data for each portfolio item
 // const { title, description, tags } = portfolioItemList;

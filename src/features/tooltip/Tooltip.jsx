@@ -15,21 +15,33 @@ function Tooltip({ msg, arrowDirection }) {
 
     if (arrowDirection === 'left')
         return (
-            <pre className="before:solid after:solid ${ab} invisible absolute  left-[100%] top-[-25%] ml-2 mt-2 rounded border border-grey-01  bg-black-02 px-2.5 pb-2 pt-1 font-[inherit] text-grey-02 opacity-0 transition before:absolute before:right-[100%] before:top-[50%] before:mt-[-7px] before:border-[7px] before:border-b-transparent before:border-l-transparent before:border-r-grey-01 before:border-t-transparent before:text-current after:absolute after:right-[99.3%] after:top-[50%] after:mt-[-7px] after:border-[7px] after:border-b-transparent after:border-l-transparent after:border-r-black-02 after:border-t-transparent after:text-current group-hover:visible group-hover:opacity-100">
+            <pre className="tooltip before:solid after:solid left-[100%] top-[-25%]  before:absolute before:right-[100%] before:top-[50%] before:mt-[-7px] before:border-[7px] before:border-b-transparent before:border-l-transparent before:border-r-grey-01 before:border-t-transparent before:text-current after:absolute after:right-[99.3%] after:top-[50%] after:mt-[-7px] after:border-[7px] after:border-b-transparent after:border-l-transparent after:border-r-black-02 after:border-t-transparent after:text-current ">
                 <div role="inner-div" className="m-1">
                     {msg}
                 </div>
             </pre>
+            // <pre className="before:solid after:solid ${ab} invisible absolute  left-[100%] top-[-25%] ml-2 mt-2 rounded border border-grey-01  bg-black-02 px-2.5 pb-2 pt-1 font-[inherit] text-grey-02 opacity-0 transition before:absolute before:right-[100%] before:top-[50%] before:mt-[-7px] before:border-[7px] before:border-b-transparent before:border-l-transparent before:border-r-grey-01 before:border-t-transparent before:text-current after:absolute after:right-[99.3%] after:top-[50%] after:mt-[-7px] after:border-[7px] after:border-b-transparent after:border-l-transparent after:border-r-black-02 after:border-t-transparent after:text-current group-hover:visible group-hover:opacity-100">
+            //     <div role="inner-div" className="m-1">
+            //         {msg}
+            //     </div>
+            // </pre>
         )
     if (arrowDirection === 'right')
         return (
-            <span className="border-l-grey-0 invisible absolute right-10 top-[-18%] rounded border border-grey-01 bg-black-02 px-2.5      pb-2 pt-1 font-sans text-grey-02 group-hover:visible group-hover:opacity-100">
+            <span className="tooltip border-l-grey-0 right-10 top-[-18%]">
                 <div className="before:solid after:solid relative grid grid-flow-col-dense items-center transition before:absolute before:right-[-23px] before:top-[32%] before:z-10 before:flex before:justify-end before:border-[7px] before:border-b-transparent before:border-l-black-02 before:border-r-transparent before:border-t-transparent after:absolute after:right-[-24px] after:top-[32%] after:flex after:justify-end after:border-[7px] after:border-b-transparent after:border-l-grey-01 after:border-r-transparent after:border-t-transparent ">
                     <pre role="inner-div" className=" -order-1 m-1">
                         {msg}
                     </pre>
                 </div>
             </span>
+            // <span className="border-l-grey-0 invisible absolute right-10 top-[-18%] rounded border border-grey-01 bg-black-02 px-2.5      pb-2 pt-1 font-sans text-grey-02 group-hover:visible group-hover:opacity-100">
+            //     <div className="before:solid after:solid relative grid grid-flow-col-dense items-center transition before:absolute before:right-[-23px] before:top-[32%] before:z-10 before:flex before:justify-end before:border-[7px] before:border-b-transparent before:border-l-black-02 before:border-r-transparent before:border-t-transparent after:absolute after:right-[-24px] after:top-[32%] after:flex after:justify-end after:border-[7px] after:border-b-transparent after:border-l-grey-01 after:border-r-transparent after:border-t-transparent ">
+            //         <pre role="inner-div" className=" -order-1 m-1">
+            //             {msg}
+            //         </pre>
+            //     </div>
+            // </span>
         )
 }
 
