@@ -29,9 +29,9 @@ export default {
 
             'grey-05':
                 '#2c2d2d' /* active bcgrd-grey hover nav & terminal icons hover */,
-            'grey-06': '#cccccc' /*  */,
+            'grey-06': 'rgb(146, 143, 143)' /*  */,
             'grey-07': '#74787c' /* suggestion box border */,
-            'grey-08': 'rgb(71, 71, 71)' /* suggestion box border */,
+            'grey-08': '#2c2c2c' /* suggestion box border */,
 
             'green-01': '#0dac6e' /* bash terminal-green */,
 
