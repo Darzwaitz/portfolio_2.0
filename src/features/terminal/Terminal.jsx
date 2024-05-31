@@ -1,5 +1,5 @@
 function Terminal() {
-  return <div>Terminal temp.</div>;
+    return <div>Terminal temp.</div>
 }
 
-export default Terminal;
+export default Terminal

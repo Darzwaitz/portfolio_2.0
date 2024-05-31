@@ -1,7 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import Header from './header/Header'
-import Footer from './Footer'
 import SidebarNav from './SidebarNav'
+import Terminal from '../features/terminal/Terminal'
+import Footer from './Footer'
 
 function AppLayout() {
     return (
@@ -16,6 +17,7 @@ function AppLayout() {
                 {/* tmp for testing */}
                 {/* <SidebarNav /> */}
             </main>
+            <Terminal />
             <Footer />
         </>
     )
