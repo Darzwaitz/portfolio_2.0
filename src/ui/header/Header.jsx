@@ -3,7 +3,7 @@ import NavTop from './NavTop'
 import Logo from '../Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
 import HeaderWindowbuttons from './HeaderWindowbuttons'
-import TogglePanels from '../header/assets/imgs/svg/components/TogglePanels'
+import TogglePanels from '../header/TogglePanels'
 
 function Header() {
     return (
