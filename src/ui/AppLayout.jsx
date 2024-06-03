@@ -13,7 +13,7 @@ function AppLayout() {
         toggleRight: false,
     })
     function handleTogglePanels(panel) {
-        setTogglePanels((prevPanel) => ({ ...togglePanels }))
+        setTogglePanels((t) => ({ ...togglePanels }))
     }
     return (
         <>
