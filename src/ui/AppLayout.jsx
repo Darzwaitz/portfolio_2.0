@@ -4,6 +4,7 @@ import Header from './header/Header'
 import SidebarNav from './SidebarNav'
 import Terminal from '../features/terminal/Terminal'
 import Footer from './Footer'
+import { PanelsProvider } from '../contexts/PanelsContext'
 
 function AppLayout() {
     const [togglePanels, setTogglePanels] = useState({
@@ -21,7 +22,7 @@ function AppLayout() {
     }
 
     return (
-        <>
+        <PanelsProvider>
             <Header
                 togglePanels={togglePanels}
                 onSetTogglePanels={handleTogglePanels}
@@ -39,7 +40,7 @@ function AppLayout() {
                 {/* <SidebarNav /> */}
             </main>
             <Footer />
-        </>
+        </PanelsProvider>
     )
 }
 
