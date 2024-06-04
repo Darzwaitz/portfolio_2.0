@@ -12,14 +12,24 @@ function AppLayout() {
         togglePanelOptions: false,
         toggleRight: false,
     })
-    function handleTogglePanels(panel) {
-        setTogglePanels((t) => ({ ...togglePanels }))
+
+    function handleTogglePanels() {
+        console.log('clicked')
+        setTogglePanels((prev) => {
+            return { ...prev, toggleLeft: !togglePanels.toggleLeft }
+        })
     }
+
     return (
         <>
-            <Header />
+            <Header
+                togglePanels={togglePanels}
+                onSetTogglePanels={handleTogglePanels}
+            />
             <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full">
-                <SidebarNav />
+                {/* <SidebarNav onTogglePanels={handleTogglePanels} /> */}
+
+                {togglePanels.toggleLeft === true && <SidebarNav />}
 
                 <section className="relative -z-10 w-full bg-black-01 text-grey-01">
                     <Outlet />

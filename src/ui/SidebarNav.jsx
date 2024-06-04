@@ -7,9 +7,12 @@ import Search from '../assets/imgs/svg/components/Search'
 import SourceControl from '../assets/imgs/svg/components/SourceControl'
 import RemoteExplorer from '../assets/imgs/svg/components/RemoteExplorer'
 
-function SidebarNav() {
+function SidebarNav({ onSetTogglePanels }) {
     return (
-        <aside className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01">
+        <aside
+            onClick={onSetTogglePanels}
+            className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01"
+        >
             {/* top nav links */}
             <nav>
                 <SvgWrapper size="large">
