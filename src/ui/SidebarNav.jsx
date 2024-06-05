@@ -7,10 +7,21 @@ import Search from '../assets/imgs/svg/components/Search'
 import SourceControl from '../assets/imgs/svg/components/SourceControl'
 import RemoteExplorer from '../assets/imgs/svg/components/RemoteExplorer'
 
-function SidebarNav({ onSetTogglePanels }) {
+import { usePanels } from '@/contexts/PanelsContext'
+
+function SidebarNav() {
+    const { togglePanels } = usePanels()
+    // console.log(togglePanels)
+
     return (
         <aside
-            onClick={onSetTogglePanels}
+            // style={${!togglePanels.toggleLeft} ? display: 'none' : '' }
+            style={
+                !togglePanels.toggleLeft
+                    ? { display: 'none' }
+                    : { display: 'flex' }
+            }
+            // onClick={onSetTogglePanels}
             className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01"
         >
             {/* top nav links */}
