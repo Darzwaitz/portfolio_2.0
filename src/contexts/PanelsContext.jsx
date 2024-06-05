@@ -4,27 +4,18 @@ const PanelsContext = createContext()
 
 function PanelsProvider({ children }) {
     const [togglePanels, setTogglePanels] = useState({
-        // const [togglePanels] = useState({
         toggleLeft: true,
         toggleTerminal: false,
         togglePanelOptions: false,
         toggleRight: false,
     })
 
-    // console.log(setTogglePanels)
-
-    function handleTogglePanels() {
-        console.log('setTogglePanels RUN')
+    function handleTogglePanels(e) {
         setTogglePanels((prev) => {
-            console.log(prev)
-            return { ...prev, toggleLeft: !prev.toggleLeft }
-            // return prev
+            return { ...prev, [e]: !prev[e] }
         })
     }
 
-    // function testF() {
-    //     console.log('test RUN')
-    // }
     return (
         <PanelsContext.Provider value={{ togglePanels, handleTogglePanels }}>
             {children}
@@ -40,7 +31,6 @@ function usePanels() {
         )
     return context
 }
-// console.log(usePanels)
 
 // eslint-disable-next-line react-refresh/only-export-components
 export { PanelsProvider, usePanels }

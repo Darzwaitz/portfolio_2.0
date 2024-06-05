@@ -10,30 +10,36 @@ import { usePanels } from '@/contexts/PanelsContext'
 // <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M2 1.00073L1 2.00073V14.0007L2 15.0007H14L15 14.0007V2.00073L14 1.00073H2ZM2 14.0007V2.00073H6V14.0007H2ZM7 14.0007V2.00073H14V14.0007H7Z"/></svg>
 
 function ToggleSidebarLeft() {
-    const { togglePanels, handleTogglePanels } = usePanels()
+    // const { togglePanels, handleTogglePanels } = usePanels()
+    const { togglePanels } = usePanels()
     return (
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             {/* layout-sidebar-left.svg */}
-
+            {/* <div data-panel="svg" className="-z-50"> */}
             <svg
-                onClick={handleTogglePanels}
                 width="22"
+                data-panel="toggleLeft"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
                 fill={defaultColor}
             >
                 {togglePanels.toggleLeft ? (
                     <path
+                        data-panel="svgOn"
                         fillRule="evenodd"
                         clipRule="evenodd"
                         d="M2 1L1 2V14L2 15H14L15 14V2L14 1H2ZM14 14H7V2H14V14Z"
                     />
                 ) : (
                     !togglePanels.toggleLeft && (
-                        <path d="M2 1.00073L1 2.00073V14.0007L2 15.0007H14L15 14.0007V2.00073L14 1.00073H2ZM2 14.0007V2.00073H6V14.0007H2ZM7 14.0007V2.00073H14V14.0007H7Z" />
+                        <path
+                            data-panel="svgOff"
+                            d="M2 1.00073L1 2.00073V14.0007L2 15.0007H14L15 14.0007V2.00073L14 1.00073H2ZM2 14.0007V2.00073H6V14.0007H2ZM7 14.0007V2.00073H14V14.0007H7Z"
+                        />
                     )
                 )}
             </svg>
+            {/* </div> */}
             <Tooltip
                 msg={'Toggle Primary Sidebar (Ctrl+B)'}
                 arrowDirection={arrowDirection}
