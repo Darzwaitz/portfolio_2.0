@@ -1,17 +1,16 @@
 // svg comp. imports
-import SvgWrapper from '../assets/imgs/svg/components/SvgWrapper'
-import UserAccount from '../assets/imgs/svg/components/UserAccount'
-import SettingsGear from '../assets/imgs/svg/components/SettingsGear'
-import ExplorerView from '../assets/imgs/svg/components/ExplorerView'
-import Search from '../assets/imgs/svg/components/Search'
-import SourceControl from '../assets/imgs/svg/components/SourceControl'
-import RemoteExplorer from '../assets/imgs/svg/components/RemoteExplorer'
+import SvgWrapper from '@/assets/imgs/svg/components/SvgWrapper'
+import UserAccount from './assets/imgs/svg/components/UserAccount'
+import SettingsGear from './assets/imgs/svg/components/SettingsGear'
+import ExplorerView from './assets/imgs/svg/components/ExplorerView'
+import Search from './assets/imgs/svg/components/Search'
+import SourceControl from './assets/imgs/svg/components/SourceControl'
+import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 
 import { usePanels } from '@/contexts/PanelsContext'
 
 function SidebarNav() {
     const { togglePanels } = usePanels()
-    // console.log(togglePanels)
 
     return (
         <aside

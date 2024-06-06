@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import Header from './header/Header'
-import SidebarNav from './SidebarNav'
+import SidebarNav from './sidebar/SidebarNav'
 import Terminal from '../features/terminal/Terminal'
 import Footer from './Footer'
 import { PanelsProvider } from '../contexts/PanelsContext'

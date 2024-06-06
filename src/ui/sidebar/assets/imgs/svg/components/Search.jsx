@@ -1,9 +1,9 @@
 // search.svg
-import { SvgSettingsLarge } from './SvgSettings'
+import { SvgSettingsLarge } from '@/assets/imgs/svg/components/SvgSettings'
 const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
 
-import SvgIconwrapper from './SvgIconwrapper'
-import Tooltip from '../../../../features/tooltip/Tooltip'
+import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
+import Tooltip from '@/features/tooltip/Tooltip'
 
 function SettingsGear() {
     return (
