@@ -6,13 +6,40 @@ function PanelsProvider({ children }) {
     const [togglePanels, setTogglePanels] = useState({
         toggleLeft: true,
         toggleTerminal: false,
-        togglePanelOptions: false,
         toggleRight: false,
+        toggleCustomizeLayout: false,
     })
 
-    function handleTogglePanels(e) {
+    function handleTogglePanels(dataset) {
         setTogglePanels((prev) => {
-            return { ...prev, [e]: !prev[e] }
+            switch (dataset) {
+                case 'toggleLeft':
+                    return {
+                        ...prev,
+                        toggleLeft: !prev.toggleLeft,
+                        toggleRight: (prev.toggleRight = false),
+                    }
+                case 'toggleRight':
+                    return {
+                        ...prev,
+                        toggleLeft: (prev.toggleLeft = false),
+                        toggleRight: !prev.toggleRight,
+                    }
+
+                case 'toggleTerminal':
+                    return {
+                        ...prev,
+                        toggleTerminal: !prev.toggleTerminal,
+                    }
+                case 'toggleCustomizeLayout':
+                    console.log('toggleCustomizeLayout pressed')
+                    return {
+                        ...prev,
+                        toggleCustomizeLayout: !prev.toggleCustomizeLayout,
+                    }
+                default:
+                    return
+            }
         })
     }
 

@@ -11,6 +11,8 @@ function CustomizeLayout() {
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             {/* layout.svg */}
             <svg
+                className="pointer-events-none"
+                data-panel="toggleCustomizeLayout"
                 width="22"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
