@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function NavTop() {
     return (
@@ -16,14 +16,17 @@ function NavTop() {
                 ['Portfolio', '/portfolio'],
                 ['Contact', '/contact'],
             ].map(([title, url]) => (
-                <Link
+                <NavLink
                     key={Math.random()}
-                    className="  active:text-grey-08"
+                    // className="  active:text-grey-08"
+                    className={({ isActive }) =>
+                        isActive ? 'text-grey-02' : ''
+                    }
                     // className="text-slate-700 hover:bg-slate-100 hover:text-slate-900 rounded-lg px-3 py-2 font-medium"
                     to={url}
                 >
                     {title}
-                </Link>
+                </NavLink>
             ))}
         </nav>
 
