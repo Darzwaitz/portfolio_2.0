@@ -16,6 +16,10 @@ function SidebarNav() {
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
 
+    function handleToggleExplorer() {
+        return setToggleExplorer()
+    }
+
     return (
         <>
             <aside
@@ -31,7 +35,9 @@ function SidebarNav() {
                 {/* top nav links */}
                 <nav>
                     <SvgWrapper size="large">
-                        <ExplorerView />
+                        <ExplorerView
+                            handleToggleExplorer={setToggleExplorer}
+                        />
                         <SourceControl />
 
                         <Search />
@@ -46,8 +52,9 @@ function SidebarNav() {
                     </SvgWrapper>
                 </nav>
             </aside>
+
             {/* explorer 2nd sidebar section */}
-            <SidebarExplorer />
+            {toggleExplorer && <SidebarExplorer />}
         </>
     )
 }
