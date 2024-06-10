@@ -10,6 +10,7 @@ function ExplorerView() {
         <SvgIconwrapper>
             <svg
                 className={`${hover} relative`}
+                onClick={() => console.log('testyy')}
                 width="100%"
                 height=""
                 viewBox="0 0 24 24"
