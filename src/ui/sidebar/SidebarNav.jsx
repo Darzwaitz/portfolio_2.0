@@ -15,23 +15,28 @@ function SidebarNav() {
     const { togglePanels } = usePanels()
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
-    const flexClassSidebar = false
 
     function handleToggleExplorer() {
-        // if (togglePanels.toggleLeft === false) setToggleExplorer(() => false)
-        if (!togglePanels.toggleLeft) setToggleExplorer(() => false)
-
-        if (!togglePanels.toggleRight)
+        if (togglePanels.toggleLeft || togglePanels.toggleRight)
             setToggleExplorer((show) => (show = !show))
     }
 
     return (
-        togglePanels.toggleLeft && (
+        (togglePanels.toggleLeft || togglePanels.toggleRight) && (
             <aside
-                style={flexClassSidebar ? { order: '2' } : { order: '0' }}
+                style={
+                    togglePanels.toggleRight ? { order: '1' } : { order: '0' }
+                }
                 className="flex"
             >
-                <nav className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01">
+                <nav
+                    style={
+                        togglePanels.toggleRight
+                            ? { order: '1' }
+                            : { order: '0' }
+                    }
+                    className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01"
+                >
                     {/* top nav links */}
                     <div>
                         <SvgWrapper size="large">
