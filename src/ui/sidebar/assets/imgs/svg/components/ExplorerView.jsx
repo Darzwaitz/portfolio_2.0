@@ -1,6 +1,11 @@
 // files.svg
-import { SvgSettingsLarge } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
+import {
+    defaultColor,
+    hover,
+    arrowDirection,
+} from '@/assets/imgs/svg/components/SvgSettings'
+// const { defaultColor, hover, arrowDirection } = SvgSettings()
+// const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
 
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import Tooltip from '@/features/tooltip/Tooltip'

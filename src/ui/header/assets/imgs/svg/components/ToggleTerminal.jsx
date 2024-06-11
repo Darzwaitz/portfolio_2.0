@@ -1,6 +1,11 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
-import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
+// import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+// const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
+import {
+    defaultColor,
+    arrowDirection,
+    iconSize,
+} from '@/assets/imgs/svg/components/SvgSettings'
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
@@ -13,7 +18,7 @@ function ToggleTerminal() {
     const { togglePanels } = usePanels()
 
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
+        <SvgIconwrapper iconSize={iconSize}>
             {/* layout-panel-off.svg */}
             {!togglePanels.toggleTerminal ? (
                 <svg
