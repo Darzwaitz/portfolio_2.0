@@ -15,47 +15,48 @@ function SidebarNav() {
     const { togglePanels } = usePanels()
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
+    const flexClassSidebar = false
 
     function handleToggleExplorer() {
-        return setToggleExplorer()
+        // if (togglePanels.toggleLeft === false) setToggleExplorer(() => false)
+        if (!togglePanels.toggleLeft) setToggleExplorer(() => false)
+
+        if (!togglePanels.toggleRight)
+            setToggleExplorer((show) => (show = !show))
     }
 
     return (
-        <>
+        togglePanels.toggleLeft && (
             <aside
-                // style={${!togglePanels.toggleLeft} ? display: 'none' : '' }
-                style={
-                    !togglePanels.toggleLeft
-                        ? { display: 'none' }
-                        : { display: 'flex' }
-                }
-                // onClick={onSetTogglePanels}
-                className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01"
+                style={flexClassSidebar ? { order: '2' } : { order: '0' }}
+                className="flex"
             >
-                {/* top nav links */}
-                <nav>
-                    <SvgWrapper size="large">
-                        <ExplorerView
-                            handleToggleExplorer={setToggleExplorer}
-                        />
-                        <SourceControl />
+                <nav className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01">
+                    {/* top nav links */}
+                    <div>
+                        <SvgWrapper size="large">
+                            <ExplorerView
+                                onToggleExplorer={handleToggleExplorer}
+                            />
+                            <SourceControl />
 
-                        <Search />
-                        <RemoteExplorer />
-                    </SvgWrapper>
+                            <Search />
+                            <RemoteExplorer />
+                        </SvgWrapper>
+                    </div>
+                    {/* bottom nav links */}
+                    <div>
+                        <SvgWrapper size="large">
+                            <UserAccount />
+                            <SettingsGear />
+                        </SvgWrapper>
+                    </div>
                 </nav>
-                {/* bottom nav links */}
-                <nav>
-                    <SvgWrapper size="large">
-                        <UserAccount />
-                        <SettingsGear />
-                    </SvgWrapper>
-                </nav>
+
+                {/* explorer 2nd sidebar section */}
+                {toggleExplorer && <SidebarExplorer />}
             </aside>
-
-            {/* explorer 2nd sidebar section */}
-            {toggleExplorer && <SidebarExplorer />}
-        </>
+        )
     )
 }
 

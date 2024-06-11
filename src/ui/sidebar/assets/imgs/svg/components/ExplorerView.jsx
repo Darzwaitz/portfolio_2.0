@@ -5,12 +5,12 @@ const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import Tooltip from '@/features/tooltip/Tooltip'
 
-function ExplorerView() {
+function ExplorerView({ onToggleExplorer }) {
     return (
         <SvgIconwrapper>
             <svg
                 className={`${hover} relative`}
-                onClick={() => console.log('testyy')}
+                onClick={onToggleExplorer}
                 width="100%"
                 height=""
                 viewBox="0 0 24 24"

@@ -10,7 +10,7 @@ function PanelsProvider({ children }) {
         toggleCustomizeLayout: false,
     })
 
-    function handleTogglePanels(dataset) {
+    function onTogglePanels(dataset) {
         setTogglePanels((prev) => {
             switch (dataset) {
                 case 'toggleLeft':
@@ -44,7 +44,7 @@ function PanelsProvider({ children }) {
     }
 
     return (
-        <PanelsContext.Provider value={{ togglePanels, handleTogglePanels }}>
+        <PanelsContext.Provider value={{ togglePanels, onTogglePanels }}>
             {children}
         </PanelsContext.Provider>
     )
