@@ -1,13 +1,18 @@
 //  source-control.svg
 import { SvgSettingsLarge } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
+const { defaultColor, hover, iconSize } = SvgSettingsLarge()
 
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import Tooltip from '@/features/tooltip/Tooltip'
 
+import { usePanels } from '@/contexts/PanelsContext'
+
 function SourceControl() {
+    const { togglePanels } = usePanels()
+    let arrDir = togglePanels.tooltipArrDir
+
     return (
-        <SvgIconwrapper>
+        <SvgIconwrapper iconSize={iconSize} hover={hover}>
             <svg
                 className={hover}
                 width=""
@@ -21,7 +26,7 @@ function SourceControl() {
             </svg>
             <Tooltip
                 msg={'All Projects (Ctrl+Shift+G)'}
-                arrowDirection={arrowDirection}
+                arrowDirection={arrDir}
             />
         </SvgIconwrapper>
     )

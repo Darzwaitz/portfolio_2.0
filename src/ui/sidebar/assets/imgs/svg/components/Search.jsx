@@ -1,13 +1,17 @@
 // search.svg
 import { SvgSettingsLarge } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, arrowDirection } = SvgSettingsLarge()
+const { defaultColor, hover, iconSize } = SvgSettingsLarge()
+
+import { usePanels } from '@/contexts/PanelsContext'
 
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import Tooltip from '@/features/tooltip/Tooltip'
 
 function SettingsGear() {
+    const { togglePanels } = usePanels()
+    let arrDir = togglePanels.tooltipArrDir
     return (
-        <SvgIconwrapper>
+        <SvgIconwrapper iconSize={iconSize} hover={hover}>
             <svg
                 className={hover}
                 width=""
@@ -21,7 +25,7 @@ function SettingsGear() {
             </svg>
             <Tooltip
                 msg={'Search Projects (Ctrl+Shift+F)'}
-                arrowDirection={arrowDirection}
+                arrowDirection={arrDir}
             />
         </SvgIconwrapper>
     )

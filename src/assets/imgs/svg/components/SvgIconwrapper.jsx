@@ -10,6 +10,10 @@ function SvgIconwrapper({ iconSize, hover, children }) {
 
         onTogglePanels(elToSend)
     }
+
+    if (iconSize === 'large')
+        return <div className="group relative inline-block">{children}</div>
+
     if (iconSize === 'medium')
         return (
             <div
@@ -21,8 +25,6 @@ function SvgIconwrapper({ iconSize, hover, children }) {
                 </div>
             </div>
         )
-
-    return <div className="group relative inline-block">{children}</div>
 }
 
 export default SvgIconwrapper

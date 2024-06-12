@@ -1,5 +1,6 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+// different arrowDirection settings location for these icons
 const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
 
 import Tooltip from '@/features/tooltip/Tooltip'

@@ -8,6 +8,7 @@ function PanelsProvider({ children }) {
         toggleTerminal: false,
         toggleRight: false,
         toggleCustomizeLayout: false,
+        tooltipArrDir: 'left',
     })
 
     function onTogglePanels(dataset) {
@@ -18,12 +19,14 @@ function PanelsProvider({ children }) {
                         ...prev,
                         toggleLeft: !prev.toggleLeft,
                         toggleRight: (prev.toggleRight = false),
+                        tooltipArrDir: 'left',
                     }
                 case 'toggleRight':
                     return {
                         ...prev,
                         toggleLeft: (prev.toggleLeft = false),
                         toggleRight: !prev.toggleRight,
+                        tooltipArrDir: 'right',
                     }
 
                 case 'toggleTerminal':
