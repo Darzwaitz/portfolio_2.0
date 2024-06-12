@@ -1,3 +1,10 @@
 export default function SidebarExplorer() {
-    return <div>SidebarExplorer</div>
+    return (
+        <ul className="border-l-[1px] border-r-[1px] border-l-grey-04 border-r-grey-04 bg-black-01  text-grey-01">
+            <li>EXPLORER</li>
+            <li>ALL PROJECTS</li>
+            <li>SEARCH PROJECTS</li>
+            <li>SHOWCASE PROJECTS</li>
+        </ul>
+    )
 }
