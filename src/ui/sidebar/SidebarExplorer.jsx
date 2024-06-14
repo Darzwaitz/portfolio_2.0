@@ -1,9 +1,11 @@
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
+import CloseButton from '@/assets/imgs/svg/components/CloseButton'
 
 function ExplorerMenuItem() {
     return (
-        <div>
-            <h1>EXPLORER</h1>
+        <div className="bet flex items-center">
+            <h1 className="pb-0.5">EXPLORER</h1>
+            <CloseButton />
         </div>
     )
 }
