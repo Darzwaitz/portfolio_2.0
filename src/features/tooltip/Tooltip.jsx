@@ -28,7 +28,7 @@ function Tooltip({ msg, arrowDirection }) {
     if (arrowDirection === 'right')
         return (
             <span className="tooltip border-l-grey-0 right-10 top-[-18%]">
-                <div className="before:solid after:solid relative grid grid-flow-col-dense items-center transition before:absolute before:right-[-20px] before:top-[32%] before:z-10 before:flex before:justify-end before:border-[7px] before:border-b-transparent before:border-l-black-02 before:border-r-transparent before:border-t-transparent after:absolute after:right-[-22px] after:top-[32%] after:flex after:justify-end after:border-[7px] after:border-b-transparent after:border-l-grey-01 after:border-r-transparent after:border-t-transparent ">
+                <div className="before:solid after:solid relative grid grid-flow-col-dense items-center transition before:absolute before:right-[-19px] before:top-[32%] before:z-10 before:flex before:justify-end before:border-[7px] before:border-b-transparent before:border-l-black-02 before:border-r-transparent before:border-t-transparent after:absolute after:right-[-21px] after:top-[32%] after:flex after:justify-end after:border-[7px] after:border-b-transparent after:border-l-grey-01 after:border-r-transparent after:border-t-transparent ">
                     <pre role="inner-div" className=" -order-1 m-1">
                         {msg}
                     </pre>
