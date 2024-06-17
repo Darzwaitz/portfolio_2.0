@@ -12,7 +12,11 @@ function SvgIconwrapper({ iconSize, hover, children }) {
     }
 
     if (iconSize === 'large')
-        return <div className="group relative inline-block">{children}</div>
+        return (
+            <div className="group relative inline-block cursor-pointer">
+                {children}
+            </div>
+        )
 
     if (iconSize === 'medium')
         return (

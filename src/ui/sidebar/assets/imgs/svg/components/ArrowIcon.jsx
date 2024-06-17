@@ -1,7 +1,10 @@
 // chevron-right.svg
+
 function ArrowIcon() {
+    const className = 'cursor-text'
     return (
         <svg
+            className={className}
             width=""
             height=""
             viewBox="0 0 16 16"

@@ -1,11 +1,18 @@
-{
-    /* close.svg */
-}
-function CloseButton() {
+/* close.svg */
+import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+const { hover } = SvgSettingsMedium()
+
+// import { usePanels } from '@/contexts/PanelsContext'
+
+function CloseButton({ onToggleExplorer }) {
+    // const { onTogglePanels } = usePanels()
+
     return (
         <svg
-            width="16"
-            height="16"
+            onClick={onToggleExplorer}
+            className={`${hover} cursor-pointer  rounded`}
+            width="18"
+            height="18"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

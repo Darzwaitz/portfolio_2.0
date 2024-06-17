@@ -1,40 +1,48 @@
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import CloseButton from '@/assets/imgs/svg/components/CloseButton'
 
-function ExplorerMenuItem() {
+function ExplorerMenuItem({ onToggleExplorer, title, closebutton, pointer }) {
     return (
-        <div className="bet flex items-center">
-            <h1 className="pb-0.5">EXPLORER</h1>
-            <CloseButton />
+        <div
+            style={pointer && { cursor: 'pointer' }}
+            className="flex w-full items-center justify-between"
+        >
+            <h1 className="pb-0.5">{title}</h1>
+            {closebutton && <CloseButton onToggleExplorer={onToggleExplorer} />}
         </div>
     )
 }
 
-function SidebarExplorer() {
+// onToggleExplorer={handleToggleExplorer} from SidebarNav, not PanelsContext
+function SidebarExplorer({ onToggleExplorer }) {
+    const closebutton = true
+    const pointer = true
     return (
         <section className="w-max border-l-[1px] border-r-[1px] border-l-grey-04  border-r-grey-04 bg-black-01 text-grey-01">
             <ul className=" mt-3 flex flex-col">
-                {/* <li>EXPLORER</li>
-            <li>ALL PROJECTS</li>
-            <li>SEARCH PROJECTS</li>
-            <li>SHOWCASE PROJECTS</li> */}
                 {[
-                    // 'EXPLORER',
-                    <ExplorerMenuItem key={'01'} />,
-                    'ALL PROJECTS',
-                    'SEARCH PROJECTS',
-                    'SHOWCASE PROJECTS',
-                ].map((title) => (
+                    <ExplorerMenuItem
+                        onToggleExplorer={onToggleExplorer}
+                        closebutton={closebutton}
+                        title={'EXPLORER'}
+                        key={'01'}
+                    />,
+                    <ExplorerMenuItem title={'ALL PROJECTS'} key={'02'} />,
+                    <ExplorerMenuItem
+                        title={'SEARCH PROJECTS'}
+                        pointer={pointer}
+                        key={'03'}
+                    />,
+                    <ExplorerMenuItem title={'SHOWCASE PROJECTS'} key={'04'} />,
+                ].map((menuitem) => (
                     <li
-                        key={title}
-                        // className="mb-[2.1rem] flex items-center text-sm text-grey-02 hover:brightness-110"
-                        className="mb-[1.57rem] flex items-center border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
+                        key={menuitem.key}
+                        className="mb-[1.57rem] flex cursor-text items-center border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
                     >
-                        <span className="w-5">
+                        <span className="mr-1 w-5">
                             <ArrowIcon />
                         </span>
-                        {/* <h1 className="pb-0.5">{title}</h1> */}
-                        {title}
+                        {menuitem}
                     </li>
                 ))}
             </ul>

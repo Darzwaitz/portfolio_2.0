@@ -59,7 +59,9 @@ function SidebarNav() {
                 </nav>
 
                 {/* explorer 2nd sidebar section */}
-                {toggleExplorer && <SidebarExplorer />}
+                {toggleExplorer && (
+                    <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
+                )}
             </aside>
         )
     )
