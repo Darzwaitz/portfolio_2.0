@@ -27,7 +27,12 @@ function SidebarNav() {
                 style={
                     togglePanels.toggleRight ? { order: '1' } : { order: '0' }
                 }
-                className="flex"
+                // show border left if sidebar is toggled to right side
+                className={
+                    togglePanels.toggleRight
+                        ? 'flex border-l-[1px] border-l-grey-04'
+                        : 'flex border-r-[1px] border-r-grey-04'
+                }
             >
                 <nav
                     style={
@@ -35,7 +40,7 @@ function SidebarNav() {
                             ? { order: '1' }
                             : { order: '0' }
                     }
-                    className="flex flex-col items-center justify-between border-r-[1px] border-r-grey-04 bg-black-01 text-grey-01"
+                    className="flex flex-col items-center justify-between  bg-black-01 text-grey-01"
                 >
                     {/* top nav links */}
                     <div>
