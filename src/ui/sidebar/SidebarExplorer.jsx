@@ -1,5 +1,6 @@
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import CloseButton from '@/assets/imgs/svg/components/CloseButton'
+import SearchProjects from './SearchProjects'
 
 function ExplorerMenuItem({ onToggleExplorer, title, closebutton, pointer }) {
     return (
@@ -16,7 +17,7 @@ function ExplorerMenuItem({ onToggleExplorer, title, closebutton, pointer }) {
 // onToggleExplorer={handleToggleExplorer} from SidebarNav, not PanelsContext
 function SidebarExplorer({ onToggleExplorer }) {
     const closebutton = true
-    const pointer = true
+    // const pointer = true
     return (
         <section className="w-max border-l-[1px] border-r-[1px] border-l-grey-04  border-r-grey-04 bg-black-01 text-grey-01">
             <ul className=" mt-3 flex flex-col">
@@ -28,11 +29,12 @@ function SidebarExplorer({ onToggleExplorer }) {
                         key={'01'}
                     />,
                     <ExplorerMenuItem title={'ALL PROJECTS'} key={'02'} />,
-                    <ExplorerMenuItem
-                        title={'SEARCH PROJECTS'}
-                        pointer={pointer}
-                        key={'03'}
-                    />,
+                    // <ExplorerMenuItem
+                    //     title={'SEARCH PROJECTS'}
+                    //     pointer={pointer}
+                    //     key={'03'}
+                    // />,
+                    <SearchProjects key={'03'} />,
                     <ExplorerMenuItem title={'SHOWCASE PROJECTS'} key={'04'} />,
                 ].map((menuitem) => (
                     <li
