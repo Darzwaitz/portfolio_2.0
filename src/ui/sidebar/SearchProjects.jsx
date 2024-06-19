@@ -1,13 +1,31 @@
-function SearchProjects() {
-    let reveal = false
+import { useState } from 'react'
+
+function List() {
     return (
-        <div
-            onClick={() => (reveal = !reveal)}
-            // onClick={() => console.log('clikd div')}
-            className="flex w-full items-center justify-between"
-        >
-            <h1 className="pb-0.5">SEARCH PROJECTS</h1>
-            {reveal && <div>test div</div>}
+        <div>
+            <h1>test div</h1>
+        </div>
+    )
+}
+function SearchProjects() {
+    // reveal/hide dropdown menu
+    let [reveal, setReveal] = useState(false)
+
+    function handleReveal() {
+        setReveal(!reveal)
+    }
+
+    return (
+        <div className="flex w-full items-center justify-between">
+            <h1
+                onClick={function () {
+                    handleReveal()
+                }}
+                className="pb-0.5"
+            >
+                SEARCH PROJECTS
+            </h1>
+            <div> {reveal && <List />}</div>
         </div>
     )
 }
