@@ -1,12 +1,6 @@
 import { useState } from 'react'
+import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 
-function List() {
-    return (
-        <div>
-            <h1>test div</h1>
-        </div>
-    )
-}
 function SearchProjects() {
     // reveal/hide dropdown menu
     let [reveal, setReveal] = useState(false)
@@ -16,7 +10,7 @@ function SearchProjects() {
     }
 
     return (
-        <div className="flex w-full items-center justify-between">
+        <div className="block w-full items-center justify-between">
             <h1
                 onClick={function () {
                     handleReveal()
@@ -25,7 +19,11 @@ function SearchProjects() {
             >
                 SEARCH PROJECTS
             </h1>
-            <div> {reveal && <List />}</div>
+            {reveal && (
+                <ul className="block">
+                    <PortfolioFilteritems />
+                </ul>
+            )}
         </div>
     )
 }
