@@ -22,7 +22,13 @@ function PortfolioFilteritems() {
                     key={menuitem.key}
                     className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
                 >
-                    {menuitem}
+                    <input
+                        type="checkbox"
+                        id={menuitem}
+                        name={menuitem}
+                        value={menuitem}
+                    />
+                    <label htmlFor={menuitem}> {menuitem}</label>
                 </PortfolioMenuItem>
             ))}
         </>
