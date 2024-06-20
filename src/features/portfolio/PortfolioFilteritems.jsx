@@ -1,14 +1,30 @@
 function PortfolioFilteritems() {
+    function PortfolioMenuItem({ children }) {
+        return (
+            <li>
+                <h1 className="pb-0.5">{children}</h1>
+            </li>
+        )
+    }
     return (
         <>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
-            <li>Item 7</li>
-            <li>Item 8</li>
+            {[
+                'All',
+                'React',
+                'Vue',
+                'Angular',
+                'JavaScript',
+                'Html, Css, Scss',
+                'Wordpress',
+                'Certifications',
+            ].map((menuitem) => (
+                <PortfolioMenuItem
+                    key={menuitem.key}
+                    className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
+                >
+                    {menuitem}
+                </PortfolioMenuItem>
+            ))}
         </>
     )
 }

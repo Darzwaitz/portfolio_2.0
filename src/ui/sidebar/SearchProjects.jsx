@@ -10,7 +10,8 @@ function SearchProjects() {
     }
 
     return (
-        <div className="block w-full items-center justify-between">
+        // <div className="block w-full items-center justify-between">
+        <div className="w-full">
             <h1
                 onClick={function () {
                     handleReveal()
@@ -20,7 +21,7 @@ function SearchProjects() {
                 SEARCH PROJECTS
             </h1>
             {reveal && (
-                <ul className="block">
+                <ul className="flex flex-col">
                     <PortfolioFilteritems />
                 </ul>
             )}
