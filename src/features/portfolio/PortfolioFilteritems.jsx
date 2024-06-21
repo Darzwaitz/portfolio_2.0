@@ -13,7 +13,7 @@ const listItems = [
 
 function PortfolioFilteritems() {
     const [items, setItems] = useState(listItems)
-    const [isChecked, setIsChecked] = useState(false)
+    // const [isChecked, setIsChecked] = useState(false)
 
     const onHandleChange = (index) => {
         setItems(
@@ -31,11 +31,13 @@ function PortfolioFilteritems() {
                     <input
                         className="mb-1 mr-1.5 accent-grey-04"
                         type="checkbox"
-                        id={menuitem}
-                        name={menuitem}
-                        value={menuitem}
+                        // checked={menuitem.checked}
+                        id={menuitem.name}
+                        name={menuitem.name}
+                        value={menuitem.checked}
+                        onChange={() => onHandleChange(i)}
                     />
-                    <label htmlFor={menuitem}>{menuitem}</label>
+                    <label htmlFor={menuitem.name}>{menuitem.name}</label>
                 </li>
             ))}
         </form>
