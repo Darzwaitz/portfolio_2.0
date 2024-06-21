@@ -45,6 +45,7 @@ function SidebarNav() {
                     {/* top nav links */}
                     <div>
                         <SvgWrapper size="large">
+                            {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
                             <ExplorerView
                                 onToggleExplorer={handleToggleExplorer}
                             />
@@ -63,7 +64,7 @@ function SidebarNav() {
                     </div>
                 </nav>
 
-                {/* explorer 2nd sidebar section */}
+                {/* explorer sub sidebar section */}
                 {toggleExplorer && (
                     <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}

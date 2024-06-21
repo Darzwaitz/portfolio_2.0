@@ -41,7 +41,7 @@ function SidebarExplorer({ onToggleExplorer }) {
                         key={menuitem.key}
                         className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
                     >
-                        <span className="mr-1 w-5 pt-0.5">
+                        <span className="mr-1 w-5 self-start pt-0.5">
                             <ArrowIcon />
                         </span>
                         {menuitem}

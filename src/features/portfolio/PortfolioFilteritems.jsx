@@ -1,37 +1,44 @@
+import { useState } from 'react'
+
+const listItems = [
+    { name: 'All', checked: false },
+    { name: 'React', checked: false },
+    { name: 'Vue', checked: false },
+    { name: 'Angular', checked: false },
+    { name: 'JavaScript', checked: false },
+    { name: 'Html, Css, Scss', checked: false },
+    { name: 'Wordpress', checked: false },
+    { name: 'Certifications', checked: false },
+]
+
 function PortfolioFilteritems() {
-    function PortfolioMenuItem({ children }) {
-        return (
-            <li>
-                <h1 className="pb-0.5">{children}</h1>
-            </li>
+    const [items, setItems] = useState(listItems)
+    const [isChecked, setIsChecked] = useState(false)
+
+    const onHandleChange = (index) => {
+        setItems(
+            items.map((item, curIndex) => {
+                return curIndex === index
+                    ? { ...items, checked: !item.checked }
+                    : item
+            })
         )
     }
     return (
-        <>
-            {[
-                'All',
-                'React',
-                'Vue',
-                'Angular',
-                'JavaScript',
-                'Html, Css, Scss',
-                'Wordpress',
-                'Certifications',
-            ].map((menuitem) => (
-                <PortfolioMenuItem
-                    key={menuitem.key}
-                    className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
-                >
+        <form className="flex flex-col">
+            {listItems.map((menuitem, i) => (
+                <li key={i}>
                     <input
+                        className="mb-1 mr-1.5 accent-grey-04"
                         type="checkbox"
                         id={menuitem}
                         name={menuitem}
                         value={menuitem}
                     />
-                    <label htmlFor={menuitem}> {menuitem}</label>
-                </PortfolioMenuItem>
+                    <label htmlFor={menuitem}>{menuitem}</label>
+                </li>
             ))}
-        </>
+        </form>
     )
 }
 
