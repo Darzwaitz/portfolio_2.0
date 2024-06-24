@@ -13,11 +13,12 @@ const listItems = [
 
 function PortfolioFilteritems() {
     const [items, setItems] = useState(listItems)
-    // const [isChecked, setIsChecked] = useState(false)
+    const [isChecked, setIsChecked] = useState(false)
 
     const onHandleChange = (index) => {
         setItems(
             items.map((item, curIndex) => {
+                // console.log(item)
                 return curIndex === index
                     ? { ...items, checked: !item.checked }
                     : item
