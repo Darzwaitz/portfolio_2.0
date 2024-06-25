@@ -1,5 +1,20 @@
 import { useState } from 'react'
 
+function Checkbox({ isChecked, menuitem, checkHandler, index }) {
+    return (
+        <li>
+            <input
+                className="mb-1 mr-1.5 accent-grey-04"
+                type="checkbox"
+                checked={isChecked}
+                id={index}
+                onChange={checkHandler}
+            />
+            <label htmlFor={index}>{menuitem.name}</label>
+        </li>
+    )
+}
+
 const listItems = [
     { name: 'All', checked: false },
     { name: 'React', checked: false },
@@ -13,34 +28,27 @@ const listItems = [
 
 function PortfolioFilteritems() {
     const [items, setItems] = useState(listItems)
-    const [isChecked, setIsChecked] = useState(false)
 
     const onHandleChange = (index) => {
         setItems(
-            items.map((item, curIndex) => {
+            items.map((item, curIndex) =>
                 // console.log(item)
-                return curIndex === index
-                    ? { ...items, checked: !item.checked }
-                    : item
-            })
+                curIndex === index ? { ...items, checked: !item.checked } : item
+            )
         )
     }
     return (
         <form className="flex flex-col">
             {listItems.map((menuitem, i) => (
-                <li key={i}>
-                    <input
-                        className="mb-1 mr-1.5 accent-grey-04"
-                        type="checkbox"
-                        // checked={menuitem.checked}
-                        id={menuitem.name}
-                        name={menuitem.name}
-                        value={menuitem.checked}
-                        onChange={() => onHandleChange(i)}
-                    />
-                    <label htmlFor={menuitem.name}>{menuitem.name}</label>
-                </li>
+                <Checkbox
+                    key={i}
+                    isChecked={menuitem.checked}
+                    checkHandler={() => onHandleChange(i)}
+                    menuitem={menuitem}
+                    index={i}
+                />
             ))}
+            {/* <pre>{JSON.stringify(listItems, null, 2)}</pre> */}
         </form>
     )
 }
