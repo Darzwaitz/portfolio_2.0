@@ -1,16 +1,16 @@
 import { useState } from 'react'
 
-function Checkbox({ isChecked, menuitem, checkHandler, index }) {
+function Checkbox({ isChecked, label, checkHandler }) {
     return (
         <li>
             <input
                 className="mb-1 mr-1.5 accent-grey-04"
                 type="checkbox"
-                checked={isChecked}
-                id={index}
+                id={label}
+                value={isChecked}
                 onChange={checkHandler}
             />
-            <label htmlFor={index}>{menuitem.name}</label>
+            <label htmlFor={label}>{label}</label>
         </li>
     )
 }
@@ -31,24 +31,24 @@ function PortfolioFilteritems() {
 
     const onHandleChange = (index) => {
         setItems(
-            items.map((item, curIndex) =>
-                // console.log(item)
-                curIndex === index ? { ...items, checked: !item.checked } : item
-            )
+            items.map((item, curIndex) => {
+                return curIndex === index
+                    ? { ...item, checked: !item.checked }
+                    : item
+            })
         )
     }
     return (
         <form className="flex flex-col">
-            {listItems.map((menuitem, i) => (
+            {items.map((menuitem, index) => (
                 <Checkbox
-                    key={i}
+                    key={index}
                     isChecked={menuitem.checked}
-                    checkHandler={() => onHandleChange(i)}
-                    menuitem={menuitem}
-                    index={i}
+                    label={menuitem.name}
+                    checkHandler={() => onHandleChange(index)}
+                    index={index}
                 />
             ))}
-            {/* <pre>{JSON.stringify(listItems, null, 2)}</pre> */}
         </form>
     )
 }
