@@ -7,7 +7,7 @@ function Checkbox({ isChecked, label, checkHandler }) {
                 className="mb-1 mr-1.5 accent-grey-04"
                 type="checkbox"
                 id={label}
-                value={isChecked}
+                checked={isChecked}
                 onChange={checkHandler}
             />
             <label htmlFor={label}>{label}</label>
@@ -30,6 +30,22 @@ function PortfolioFilteritems() {
     const [items, setItems] = useState(listItems)
 
     const onHandleChange = (index) => {
+        // if 'All' is NOT true
+        if (index === 0 && items[index].checked === false)
+            return setItems(
+                items.map((item) => {
+                    return { ...item, checked: true }
+                })
+            )
+        // if 'All' is true
+        if (index === 0 && items[index].checked === true)
+            return setItems(
+                items.map((item) => {
+                    return { ...item, checked: false }
+                })
+            )
+
+        // set individual item
         setItems(
             items.map((item, curIndex) => {
                 return curIndex === index
@@ -38,8 +54,9 @@ function PortfolioFilteritems() {
             })
         )
     }
+
     return (
-        <form className="flex flex-col">
+        <>
             {items.map((menuitem, index) => (
                 <Checkbox
                     key={index}
@@ -49,7 +66,7 @@ function PortfolioFilteritems() {
                     index={index}
                 />
             ))}
-        </form>
+        </>
     )
 }
 
