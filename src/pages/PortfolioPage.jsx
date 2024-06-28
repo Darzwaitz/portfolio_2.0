@@ -9,7 +9,7 @@ import PortfolioItem from '../features/portfolio/PortfolioItem'
 
 function PortfolioPage() {
     return (
-        <section>
+        <>
             <h1 className="block pb-4">PORTFOLIO PAGE</h1>
             {/* items container */}
             <div className="flex w-auto justify-between">
@@ -19,7 +19,7 @@ function PortfolioPage() {
 
                 <br />
             </div>
-        </section>
+        </>
     )
 }
 

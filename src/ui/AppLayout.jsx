@@ -13,7 +13,7 @@ function AppLayout() {
                 {/* {togglePanels.toggleLeft === true && <SidebarNav />} */}
                 <SidebarNav />
 
-                <section className="relative -z-10 w-full bg-black-01 pl-6 pt-5 text-grey-01">
+                <section className="relative -z-10 w-full bg-black-01 pl-14 pt-9 text-grey-01">
                     <Outlet />
                     <Terminal />
                 </section>
