@@ -15,6 +15,11 @@ function portfolioItemList() {
             description: 'This is the item 3 description',
             tags: ['html', 'css', 'javascript'],
         },
+        {
+            title: 'portfolio item 4',
+            description: 'This is the item 4 description',
+            tags: ['html', 'scss', 'css'],
+        },
     ]
 }
 

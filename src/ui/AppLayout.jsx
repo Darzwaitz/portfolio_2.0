@@ -4,7 +4,6 @@ import SidebarNav from './sidebar/SidebarNav'
 import Terminal from '../features/terminal/Terminal'
 import Footer from './Footer'
 import { PanelsProvider } from '../contexts/PanelsContext'
-// console.log(usePanels)
 
 function AppLayout() {
     return (
@@ -14,12 +13,10 @@ function AppLayout() {
                 {/* {togglePanels.toggleLeft === true && <SidebarNav />} */}
                 <SidebarNav />
 
-                <section className="relative -z-10 w-full bg-black-01 text-grey-01">
+                <section className="relative -z-10 w-full bg-black-01 pl-6 pt-5 text-grey-01">
                     <Outlet />
                     <Terminal />
                 </section>
-                {/* tmp for testing */}
-                {/* <SidebarNav /> */}
             </main>
             <Footer />
         </PanelsProvider>

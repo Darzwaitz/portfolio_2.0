@@ -51,6 +51,7 @@ function SidebarNav() {
                             />
                             <SourceControl />
 
+                            {/* SearchProjects */}
                             <Search />
                             <RemoteExplorer />
                         </SvgWrapper>

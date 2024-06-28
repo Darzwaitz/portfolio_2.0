@@ -10,8 +10,9 @@ import PortfolioItem from '../features/portfolio/PortfolioItem'
 function PortfolioPage() {
     return (
         <section>
-            <h1 className="block ">PORTFOLIO PAGE</h1>
-            <div className="flex">
+            <h1 className="block pb-4">PORTFOLIO PAGE</h1>
+            {/* items container */}
+            <div className="flex w-auto justify-between">
                 {portfolioItemList.map((project, i) => (
                     <PortfolioItem project={project} key={i} />
                 ))}
