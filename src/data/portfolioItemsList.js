@@ -8,7 +8,7 @@ function portfolioItemList() {
         {
             title: 'portfolio item 2',
             description: 'This is the item 2 description',
-            tags: ['react', 'wordpress', 'css', 'javascript'],
+            tags: ['wordpress', 'css', 'javascript'],
         },
         {
             title: 'portfolio item 3',
@@ -19,6 +19,16 @@ function portfolioItemList() {
             title: 'portfolio item 4',
             description: 'This is the item 4 description',
             tags: ['html', 'scss', 'css'],
+        },
+        {
+            title: 'portfolio item 5',
+            description: 'This is the item 5 description',
+            tags: ['angular', 'javascript'],
+        },
+        {
+            title: 'portfolio item 6',
+            description: 'This is the item 6 description',
+            tags: ['vue', 'tailwind', 'javascript'],
         },
     ]
 }

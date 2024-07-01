@@ -22,6 +22,7 @@ const listItems = [
     { name: 'Angular', checked: false },
     { name: 'JavaScript', checked: false },
     { name: 'Html, Css, Scss', checked: false },
+    { name: 'Tailwind', checked: false },
     { name: 'Wordpress', checked: false },
     { name: 'Certifications', checked: false },
 ]
