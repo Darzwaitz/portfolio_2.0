@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function Checkbox({ isChecked, label, checkHandler }) {
     return (
-        <li>
+        <li className="mr-5">
             <input
                 className="mb-1 mr-1.5 accent-grey-04"
                 type="checkbox"
