@@ -21,9 +21,11 @@ function SearchProjects() {
                 SEARCH PROJECTS
             </h1>
             {reveal && (
-                <ul className="flex flex-col">
-                    <PortfolioFilteritems />
-                </ul>
+                <>
+                    <ul className="flex flex-col">
+                        <PortfolioFilteritems />
+                    </ul>
+                </>
             )}
         </div>
     )
