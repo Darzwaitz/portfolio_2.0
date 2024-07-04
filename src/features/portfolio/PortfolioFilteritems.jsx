@@ -16,6 +16,7 @@ function Checkbox({ isChecked, label, checkHandler }) {
 }
 
 function PortfolioFilteritems() {
+    // from Context
     const { items, onHandleChange } = useFilter()
 
     return (

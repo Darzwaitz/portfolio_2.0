@@ -20,7 +20,7 @@ function FilteritemsProvider({ children }) {
         if (index === 0 && items[index].checked === false)
             return setItems(
                 items.map((item) => {
-                    return { ...items, ...item, checked: true }
+                    return { ...item, checked: true }
                 })
             )
         // if 'All' is true
@@ -36,7 +36,7 @@ function FilteritemsProvider({ children }) {
             items.map((item, curIndex) => {
                 return curIndex === index
                     ? { ...item, checked: !item.checked }
-                    : { ...item }
+                    : item
             })
         )
     }
