@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-function NavTop() {
+function NavTop({ setCurPageName }) {
     return (
         <nav className="flex gap-5 text-grey-01">
             {[
@@ -11,6 +11,8 @@ function NavTop() {
             ].map(([title, url]) => (
                 <NavLink
                     key={title}
+                    // {() => console.log('test')}
+                    onClick={(e) => setCurPageName(e.target.textContent)}
                     className={({ isActive }) =>
                         !isActive
                             ? ' pb-1 pl-1.5 pr-2 hover:text-grey-02'
