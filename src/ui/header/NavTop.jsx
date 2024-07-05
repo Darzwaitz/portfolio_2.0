@@ -4,15 +4,16 @@ function NavTop({ setCurPageName }) {
     return (
         <nav className="flex gap-5 text-grey-01">
             {[
-                ['Home', '/'],
-                ['About', '/about'],
-                ['Portfolio', '/portfolio'],
-                ['Contact', '/contact'],
-            ].map(([title, url]) => (
+                ['Home', '/', '🏚️'],
+                ['About', '/about', '📃'],
+                ['Portfolio', '/portfolio', '📑'],
+                ['Contact', '/contact', '✉'],
+            ].map(([title, url, icon]) => (
                 <NavLink
                     key={title}
-                    // {() => console.log('test')}
-                    onClick={(e) => setCurPageName(e.target.textContent)}
+                    onClick={(e) => {
+                        setCurPageName(`${icon}  ${e.target.textContent}`)
+                    }}
                     className={({ isActive }) =>
                         !isActive
                             ? ' pb-1 pl-1.5 pr-2 hover:text-grey-02'
