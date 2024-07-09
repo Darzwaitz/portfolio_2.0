@@ -7,7 +7,7 @@ function NavTop({ setCurPageName }) {
                 ['Home', '/', '🏚️'],
                 ['About', '/about', '📃'],
                 ['Portfolio', '/portfolio', '📑'],
-                ['Contact', '/contact', '✉'],
+                ['Contact', '/contact', '📬'],
             ].map(([title, url, icon]) => (
                 <NavLink
                     key={title}

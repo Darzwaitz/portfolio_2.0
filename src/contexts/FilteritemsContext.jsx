@@ -15,7 +15,7 @@ function FilteritemsProvider({ children }) {
         { name: 'Certifications', checked: false },
     ])
 
-    function onHandleChange(index) {
+    function onChangeHandle(index) {
         // if 'All' is NOT true
         if (index === 0 && items[index].checked === false)
             return setItems(
@@ -42,7 +42,7 @@ function FilteritemsProvider({ children }) {
     }
 
     return (
-        <FilteritemsContext.Provider value={{ items, onHandleChange }}>
+        <FilteritemsContext.Provider value={{ items, onChangeHandle }}>
             {children}
         </FilteritemsContext.Provider>
     )
