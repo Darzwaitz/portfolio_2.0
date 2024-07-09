@@ -25,10 +25,29 @@ function SidebarExplorer({ onToggleExplorer }) {
     return (
         <section className="w-max border-l-[1px] border-r-[1px] border-l-grey-04  border-r-grey-04 bg-black-01 text-grey-01">
             <ul className=" mt-3 flex flex-col">
-                <ExplorerSubitem onToggleExplorer={onToggleExplorer} />
-                <SearchProjects />
+                {[
+                    <ExplorerSubitem
+                        key={'01'}
+                        onToggleExplorer={onToggleExplorer}
+                    />,
+                    <SearchProjects key={'03'} />,
+                ].map((menuitem) => (
+                    <li
+                        key={menuitem.key}
+                        className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
+                    >
+                        {menuitem}
+                    </li>
+                ))}
+            </ul>
+        </section>
+    )
+}
 
-                {/*                 
+export default SidebarExplorer
+
+{
+    /*                 
                 {[
                     <ExplorerMenuItem
                         onToggleExplorer={onToggleExplorer}
@@ -54,10 +73,5 @@ function SidebarExplorer({ onToggleExplorer }) {
                         </span>
                         {menuitem}
                     </li>
-                ))} */}
-            </ul>
-        </section>
-    )
+                ))} */
 }
-
-export default SidebarExplorer
