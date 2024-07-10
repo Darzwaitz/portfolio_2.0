@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 
@@ -13,8 +13,8 @@ function SearchProjects() {
     return (
         // <div className="block w-full items-center justify-between">
         // <div className="w-full">
-        <React.Fragment className="w-full">
-            <span className="mr-1 w-5 self-start pt-0.5">
+        <>
+            <span className="mr-1 w-5 self-start ">
                 <ArrowIcon />
             </span>
             <h1
@@ -25,15 +25,14 @@ function SearchProjects() {
             >
                 SEARCH PROJECTS
             </h1>
-            {reveal && (
-                // <>
-                <ul className="flex flex-col">
-                    <PortfolioFilteritems />
-                </ul>
-                // {/* </> */}
-            )}
-        </React.Fragment>
-        // </div>
+            <div>
+                {reveal && (
+                    <ul className="block">
+                        <PortfolioFilteritems />
+                    </ul>
+                )}
+            </div>
+        </>
     )
 }
 

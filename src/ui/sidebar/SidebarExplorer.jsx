@@ -1,6 +1,7 @@
 // import CloseButton from '@/assets/imgs/svg/components/CloseButton'
 import ExplorerSubitem from './ExplorerSubitem'
 import SearchProjects from './SearchProjects'
+import AllProjectsSubitem from './AllProjectsSubitem'
 // import { useState } from 'react'
 
 // function ExplorerMenuItem({ onToggleExplorer, title, closebutton, pointer }) {
@@ -22,6 +23,12 @@ function SidebarExplorer({ onToggleExplorer }) {
 
     // const closebutton = true
     // const pointer = true
+
+    // let [reveal, setReveal] = useState(false)
+
+    // function handleReveal() {
+    //     setReveal(!reveal)
+    // }
     return (
         <section className="w-max border-l-[1px] border-r-[1px] border-l-grey-04  border-r-grey-04 bg-black-01 text-grey-01">
             <ul className=" mt-3 flex flex-col">
@@ -30,11 +37,12 @@ function SidebarExplorer({ onToggleExplorer }) {
                         key={'01'}
                         onToggleExplorer={onToggleExplorer}
                     />,
+                    <AllProjectsSubitem key={'02'} />,
                     <SearchProjects key={'03'} />,
                 ].map((menuitem) => (
                     <li
                         key={menuitem.key}
-                        className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-4 text-sm text-grey-02 hover:brightness-110"
+                        className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-2 text-sm text-grey-02 hover:brightness-110"
                     >
                         {menuitem}
                     </li>
