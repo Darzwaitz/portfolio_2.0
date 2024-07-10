@@ -2,7 +2,7 @@ import { useState } from 'react'
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 
-function SearchProjects() {
+function SearchProjectsSubitem() {
     // reveal/hide dropdown menu
     let [reveal, setReveal] = useState(false)
 
@@ -14,7 +14,7 @@ function SearchProjects() {
         // <div className="block w-full items-center justify-between">
         // <div className="w-full">
         <>
-            <span className="mr-1 w-5 self-start ">
+            <span className="mr-1 w-5 self-center ">
                 <ArrowIcon />
             </span>
             <h1
@@ -36,4 +36,4 @@ function SearchProjects() {
     )
 }
 
-export default SearchProjects
+export default SearchProjectsSubitem

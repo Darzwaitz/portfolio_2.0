@@ -1,7 +1,8 @@
 // import CloseButton from '@/assets/imgs/svg/components/CloseButton'
 import ExplorerSubitem from './ExplorerSubitem'
-import SearchProjects from './SearchProjects'
+import SearchProjectsSubitem from './SearchProjectsSubitem'
 import AllProjectsSubitem from './AllProjectsSubitem'
+import ShowcaseProjectsSubitem from './ShowcaseProjectsSubitem'
 // import { useState } from 'react'
 
 // function ExplorerMenuItem({ onToggleExplorer, title, closebutton, pointer }) {
@@ -38,11 +39,12 @@ function SidebarExplorer({ onToggleExplorer }) {
                         onToggleExplorer={onToggleExplorer}
                     />,
                     <AllProjectsSubitem key={'02'} />,
-                    <SearchProjects key={'03'} />,
+                    <SearchProjectsSubitem key={'03'} />,
+                    <ShowcaseProjectsSubitem key={'04'} />,
                 ].map((menuitem) => (
                     <li
                         key={menuitem.key}
-                        className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-2 text-sm text-grey-02 hover:brightness-110"
+                        className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-3 text-sm text-grey-02 hover:brightness-110"
                     >
                         {menuitem}
                     </li>
