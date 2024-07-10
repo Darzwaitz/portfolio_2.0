@@ -44,7 +44,7 @@ function SidebarExplorer({ onToggleExplorer }) {
                 ].map((menuitem) => (
                     <li
                         key={menuitem.key}
-                        className="mb-[1.57rem] flex cursor-text  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-3 text-sm text-grey-02 hover:brightness-110"
+                        className="mb-[1.57rem] flex cursor-text flex-wrap  border-b-[1px] border-t-[1px] border-b-grey-04 border-t-grey-04 p-1 pr-3 text-sm text-grey-02 hover:brightness-110"
                     >
                         {menuitem}
                     </li>
