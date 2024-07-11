@@ -25,7 +25,7 @@ function SearchProjectsSubitem() {
                     SEARCH PROJECTS
                 </h1>
             </div>
-            <div className="block">
+            <div>
                 {reveal && (
                     <ul>
                         <PortfolioFilteritems />
