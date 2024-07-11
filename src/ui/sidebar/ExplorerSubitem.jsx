@@ -3,7 +3,7 @@ import CloseButton from '@/assets/imgs/svg/components/CloseButton'
 
 function ExplorerSubitem({ onToggleExplorer }) {
     return (
-        <>
+        <div className="listitem flex">
             <span className="mr-1 w-5 self-center">
                 <ArrowIcon />
             </span>
@@ -12,7 +12,7 @@ function ExplorerSubitem({ onToggleExplorer }) {
                 {/* <CloseButton /> */}
                 <CloseButton onToggleExplorer={onToggleExplorer} />
             </span>
-        </>
+        </div>
     )
 }
 
