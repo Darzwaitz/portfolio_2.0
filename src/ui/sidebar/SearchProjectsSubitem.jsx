@@ -33,10 +33,12 @@ function SearchProjectsSubitem() {
                 </ul>
             )}
             {show && (
-                <span className="flex !cursor-pointer ">
-                    <ArrowIcon />
+                <div className="flex">
+                    <span className="mr-1 w-5 !cursor-pointer ">
+                        <ArrowIcon />
+                    </span>
                     <h1>Submit</h1>
-                </span>
+                </div>
             )}
         </div>
     )
