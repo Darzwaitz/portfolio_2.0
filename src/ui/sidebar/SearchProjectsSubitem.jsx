@@ -5,6 +5,7 @@ import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 function SearchProjectsSubitem() {
     // reveal/hide dropdown menu
     let [reveal, setReveal] = useState(false)
+    let show = true
 
     function handleReveal() {
         setReveal(!reveal)
@@ -25,13 +26,18 @@ function SearchProjectsSubitem() {
                     SEARCH PROJECTS
                 </h1>
             </div>
-            <div>
-                {reveal && (
-                    <ul>
-                        <PortfolioFilteritems />
-                    </ul>
-                )}
-            </div>
+
+            {reveal && (
+                <ul className="ml-6">
+                    <PortfolioFilteritems />
+                </ul>
+            )}
+            {show && (
+                <span className="flex !cursor-pointer ">
+                    <ArrowIcon />
+                    <h1>Submit</h1>
+                </span>
+            )}
         </div>
     )
 }
