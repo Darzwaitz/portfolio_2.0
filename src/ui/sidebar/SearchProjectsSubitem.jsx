@@ -1,11 +1,15 @@
 import { useState } from 'react'
+import { useFilter } from '../../contexts/FilteritemsContext'
+
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 
 function SearchProjectsSubitem() {
+    // from Context
+    const { showSubmit } = useFilter()
+
     // reveal/hide dropdown menu
     let [reveal, setReveal] = useState(false)
-    let show = true
 
     function handleReveal() {
         setReveal(!reveal)
@@ -32,12 +36,12 @@ function SearchProjectsSubitem() {
                     <PortfolioFilteritems />
                 </ul>
             )}
-            {show && (
-                <div className="flex items-center">
-                    <span className="mr-1 w-5 !cursor-pointer ">
+            {showSubmit && (
+                <div className="mt-1 flex items-center">
+                    <span className="mr-1 w-5">
                         <ArrowIcon />
                     </span>
-                    <h1>Submit</h1>
+                    <h1 className="mb-px cursor-pointer text-sm">Submit</h1>
                 </div>
             )}
         </div>

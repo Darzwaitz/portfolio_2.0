@@ -15,6 +15,9 @@ function FilteritemsProvider({ children }) {
         { name: 'Certifications', checked: false },
     ])
 
+    // show submit button in filter items list
+    const [showSubmit, setShowSubmit] = useState(false)
+
     function onChangeHandle(index) {
         // if 'All' is NOT true
         if (index === 0 && items[index].checked === false)
@@ -39,10 +42,32 @@ function FilteritemsProvider({ children }) {
                     : item
             })
         )
+
+        setShowSubmit(true)
+    }
+
+    function checkItemsListBoolean(secondItemsList) {
+        // function checkItem(item) {
+        //     return item.checked === false
+        // }
+        // if (items.every(checkItem)) console.log('checkd')
+
+        // console.log(items)
+
+        console.log(secondItemsList)
+
+        // function checkItem() {
+        //     console.log('testy')
+        // }
+        // checkItem()
+
+        // if (items.every(checkItem)) setShowSubmit(true)
     }
 
     return (
-        <FilteritemsContext.Provider value={{ items, onChangeHandle }}>
+        <FilteritemsContext.Provider
+            value={{ items, onChangeHandle, showSubmit, checkItemsListBoolean }}
+        >
             {children}
         </FilteritemsContext.Provider>
     )

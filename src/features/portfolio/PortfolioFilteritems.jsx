@@ -9,7 +9,7 @@ function Checkbox({ isChecked, label, checkHandler }) {
                 id={label}
                 checked={isChecked}
                 onChange={checkHandler}
-                onClick={() => console.log('clikdd')}
+                // onClick={() => console.log(checkHandler)}
             />
             <label htmlFor={label}>{label}</label>
         </li>
@@ -19,15 +19,19 @@ function Checkbox({ isChecked, label, checkHandler }) {
 function PortfolioFilteritems() {
     // from Context
     const { items, onChangeHandle } = useFilter()
+    // const { items, onChangeHandle, checkItemsListBoolean } = useFilter()
 
     return (
         <>
             {items.map((menuitem, index) => (
                 <Checkbox
-                    key={index}
                     isChecked={menuitem.checked}
                     label={menuitem.name}
-                    checkHandler={() => onChangeHandle(index)}
+                    checkHandler={() => {
+                        onChangeHandle(index)
+                        // checkItemsListBoolean()
+                    }}
+                    key={index}
                     // index={index}
                 />
             ))}
