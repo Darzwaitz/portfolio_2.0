@@ -5,16 +5,22 @@ import Terminal from '../features/terminal/Terminal'
 import Footer from './Footer'
 import { PanelsProvider } from '../contexts/PanelsContext'
 import { FilteritemsProvider } from '../contexts/FilteritemsContext'
+import { CurPageProvider } from '../contexts/CurPageContext'
 
 function AppLayout() {
     return (
         <PanelsProvider>
             <FilteritemsProvider>
-                <Header />
+                <CurPageProvider>
+                    <Header />
+                </CurPageProvider>
+
                 <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full">
                     {/* portfolio items filter state - needed for sub sidebar and portfolio page */}
                     {/* {togglePanels.toggleLeft === true && <SidebarNav />} */}
-                    <SidebarNav />
+                    <CurPageProvider>
+                        <SidebarNav />
+                    </CurPageProvider>
 
                     <section className="relative w-full bg-black-01 pl-14 pt-9 text-grey-01">
                         <Outlet />
