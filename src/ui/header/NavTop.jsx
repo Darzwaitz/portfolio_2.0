@@ -1,17 +1,22 @@
-import { useCurPage } from '../../contexts/CurPageContext'
+import { useCurPage } from '@/contexts/CurPageContext'
 import { NavLink } from 'react-router-dom'
 
-function NavTop({ setCurPageName }) {
-    const { curPageName } = useCurPage()
+function NavTop() {
+    const { curPageList, handleSetCurPageName } = useCurPage()
 
     return (
         <nav className="flex gap-5 text-grey-01">
-            {curPageName.map(([title, url, icon]) => (
+            {curPageList.map(([title, url]) => (
+                // {curPageList.map(([title, url, icon]) => (
                 <NavLink
                     key={title}
-                    onClick={(e) => {
-                        setCurPageName(`${icon}  ${e.target.textContent}`)
-                    }}
+                    // onClick={(e) => {
+                    //     console.log(e)
+                    //     console.log(title, url, icon)
+
+                    //     // setcurPageList(`${icon}  ${e.target.textContent}`)
+                    // }}
+                    onClick={(e) => handleSetCurPageName(e)}
                     className={({ isActive }) =>
                         !isActive
                             ? ' pb-1 pl-1.5 pr-2 hover:text-grey-02'
