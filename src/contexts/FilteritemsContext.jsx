@@ -19,31 +19,50 @@ function FilteritemsProvider({ children }) {
     const [showSubmit, setShowSubmit] = useState(false)
 
     function onChangeHandle(index) {
-        // if 'All' is NOT true
-        if (index === 0 && items[index].checked === false)
-            return setItems(
-                items.map((item) => {
-                    return { ...item, checked: true }
+        function innerFunct() {
+            // if 'All' is NOT true
+            if (index === 0 && items[index].checked === false) {
+                outerFunc()
+                return setItems(
+                    items.map((item) => {
+                        return { ...item, checked: true }
+                    })
+                )
+            }
+            // if 'All' is true
+            if (index === 0 && items[index].checked === true) {
+                return setItems(
+                    items.map((item) => {
+                        return { ...item, checked: false }
+                    })
+                )
+            }
+
+            // set individual item
+            setItems(
+                items.map((item, curIndex) => {
+                    return curIndex === index
+                        ? { ...item, checked: !item.checked }
+                        : item
                 })
             )
-        // if 'All' is true
-        if (index === 0 && items[index].checked === true)
-            return setItems(
-                items.map((item) => {
-                    return { ...item, checked: false }
-                })
-            )
+        }
+        innerFunct()
+        // setShowSubmit(true)
 
-        // set individual item
-        setItems(
-            items.map((item, curIndex) => {
-                return curIndex === index
-                    ? { ...item, checked: !item.checked }
-                    : item
-            })
-        )
+        function outerFunc() {
+            setShowSubmit(true)
+            console.log('outerFunc called')
+        }
+        function hideSubmit() {
+            // if 'All' is NOT true
+            if (index === 0 && items[index].checked === false) {
+                setShowSubmit(false)
+            }
+        }
+        hideSubmit()
 
-        setShowSubmit(true)
+        // console.log('testee')
     }
 
     function checkItemsListBoolean(secondItemsList) {

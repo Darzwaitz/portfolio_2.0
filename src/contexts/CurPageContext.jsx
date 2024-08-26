@@ -10,24 +10,24 @@ function CurPageProvider({ children }) {
         ['Contact', '/contact', '📬'],
     ])
 
-    let [curPageName, setCurPageName] = useState('Home')
+    // create custom hook
+    // let [curPageName, setCurPageName] = useState('Home')
+    // function handleSetCurPageName(e) {
+    //     // setCurPageName = e?.target.innerText
+    //     setCurPageName = e?.target.innerText
+    //     console.log(setCurPageName)
 
-    function handleSetCurPageName(e) {
-        // setCurPageName = e?.target.innerText
-        setCurPageName = e?.target.innerText
-        console.log(setCurPageName)
-
-        return curPageName
-    }
+    //     return curPageName
+    // }
 
     return (
         <CurPageContext.Provider
             value={{
                 curPageList,
                 setCurPageList,
-                curPageName,
-                setCurPageName,
-                handleSetCurPageName,
+                // curPageName,
+                // setCurPageName,
+                // handleSetCurPageName,
             }}
         >
             {children}
