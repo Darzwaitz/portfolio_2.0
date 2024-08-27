@@ -9,8 +9,6 @@ function Checkbox({ isChecked, label, checkHandler }) {
                 id={label}
                 checked={isChecked}
                 onChange={checkHandler}
-                // onClick={checkHandler}
-                // onClick={checkHandler}
             />
             <label htmlFor={label}>{label}</label>
         </li>
@@ -20,7 +18,6 @@ function Checkbox({ isChecked, label, checkHandler }) {
 function PortfolioFilteritems() {
     // from Context
     const { items, onChangeHandle } = useFilter()
-    // const { items, onChangeHandle, checkItemsListBoolean } = useFilter()
 
     return (
         <>
@@ -30,10 +27,8 @@ function PortfolioFilteritems() {
                     label={menuitem.name}
                     checkHandler={() => {
                         onChangeHandle(index)
-                        // checkItemsListBoolean()
                     }}
                     key={index}
-                    // index={index}
                 />
             ))}
         </>
