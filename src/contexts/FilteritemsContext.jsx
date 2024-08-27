@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react'
+import { useSubmitButton } from '../hooks/useSubmitButton'
 
 const FilteritemsContext = createContext()
 
@@ -15,77 +16,44 @@ function FilteritemsProvider({ children }) {
         { name: 'Certifications', checked: false },
     ])
 
-    // show submit button in filter items list
-    const [showSubmit, setShowSubmit] = useState(false)
+    // hook needed for state issues
+    const onShowSubmit = useSubmitButton(items)
 
     function onChangeHandle(index) {
-        function innerFunct() {
-            // if 'All' is NOT true
-            if (index === 0 && items[index].checked === false) {
-                outerFunc()
-                return setItems(
-                    items.map((item) => {
-                        return { ...item, checked: true }
-                    })
-                )
-            }
-            // if 'All' is true
-            if (index === 0 && items[index].checked === true) {
-                return setItems(
-                    items.map((item) => {
-                        return { ...item, checked: false }
-                    })
-                )
-            }
-
-            // set individual item
-            setItems(
-                items.map((item, curIndex) => {
-                    return curIndex === index
-                        ? { ...item, checked: !item.checked }
-                        : item
+        // if 'All' is NOT true
+        if (index === 0 && items[index].checked === false) {
+            return setItems(
+                items.map((item) => {
+                    return { ...item, checked: true }
                 })
             )
         }
-        innerFunct()
-        // setShowSubmit(true)
-
-        function outerFunc() {
-            setShowSubmit(true)
-            console.log('outerFunc called')
+        // if 'All' is true
+        if (index === 0 && items[index].checked === true) {
+            return setItems(
+                items.map((item) => {
+                    return { ...item, checked: false }
+                })
+            )
         }
-        function hideSubmit() {
-            // if 'All' is NOT true
-            if (index === 0 && items[index].checked === false) {
-                setShowSubmit(false)
-            }
-        }
-        hideSubmit()
 
-        // console.log('testee')
-    }
-
-    function checkItemsListBoolean(secondItemsList) {
-        // function checkItem(item) {
-        //     return item.checked === false
-        // }
-        // if (items.every(checkItem)) console.log('checkd')
-
-        // console.log(items)
-
-        console.log(secondItemsList)
-
-        // function checkItem() {
-        //     console.log('testy')
-        // }
-        // checkItem()
-
-        // if (items.every(checkItem)) setShowSubmit(true)
+        // set individual item
+        setItems(
+            items.map((item, curIndex) => {
+                return curIndex === index
+                    ? { ...item, checked: !item.checked }
+                    : item
+            })
+        )
     }
 
     return (
         <FilteritemsContext.Provider
-            value={{ items, onChangeHandle, showSubmit, checkItemsListBoolean }}
+            value={{
+                items,
+                onChangeHandle,
+                onShowSubmit,
+            }}
         >
             {children}
         </FilteritemsContext.Provider>

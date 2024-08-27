@@ -6,7 +6,7 @@ import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 
 function SearchProjectsSubitem() {
     // from Context
-    const { showSubmit } = useFilter()
+    const { onShowSubmit } = useFilter()
 
     // reveal/hide dropdown menu
     let [reveal, setReveal] = useState(false)
@@ -36,7 +36,7 @@ function SearchProjectsSubitem() {
                     <PortfolioFilteritems />
                 </ul>
             )}
-            {showSubmit && (
+            {onShowSubmit && (
                 <div className="mt-1 flex items-center">
                     <span className="mr-1 w-5">
                         <ArrowIcon />

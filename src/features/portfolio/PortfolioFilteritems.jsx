@@ -8,8 +8,8 @@ function Checkbox({ isChecked, label, checkHandler }) {
                 type="checkbox"
                 id={label}
                 checked={isChecked}
-                // onChange={checkHandler}
-                onClick={checkHandler}
+                onChange={checkHandler}
+                // onClick={checkHandler}
                 // onClick={checkHandler}
             />
             <label htmlFor={label}>{label}</label>
