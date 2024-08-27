@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-
+import { useCurPageName } from '../hooks/useCurPageName'
 const CurPageContext = createContext()
 
 function CurPageProvider({ children }) {
@@ -9,6 +9,7 @@ function CurPageProvider({ children }) {
         ['Portfolio', '/portfolio', '📑'],
         ['Contact', '/contact', '📬'],
     ])
+    const onPageNameChange = useCurPageName(curPageList)
 
     // create custom hook
     // let [curPageName, setCurPageName] = useState('Home')
@@ -25,6 +26,7 @@ function CurPageProvider({ children }) {
             value={{
                 curPageList,
                 setCurPageList,
+                onPageNameChange,
                 // curPageName,
                 // setCurPageName,
                 // handleSetCurPageName,
