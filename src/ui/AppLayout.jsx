@@ -13,21 +13,20 @@ function AppLayout() {
             <FilteritemsProvider>
                 <CurPageProvider>
                     <Header />
-                </CurPageProvider>
 
-                <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full">
-                    {/* portfolio items filter state - needed for sub sidebar and portfolio page */}
-                    {/* {togglePanels.toggleLeft === true && <SidebarNav />} */}
-                    <CurPageProvider>
+                    <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full">
+                        {/* portfolio items filter state - needed for sub sidebar and portfolio page */}
+                        {/* {togglePanels.toggleLeft === true && <SidebarNav />} */}
+
                         <SidebarNav />
-                    </CurPageProvider>
 
-                    <section className="relative w-full bg-black-01 pl-14 pt-9 text-grey-01">
-                        <Outlet />
-                        <Terminal />
-                    </section>
-                </main>
-                <Footer />
+                        <section className="relative w-full bg-black-01 pl-14 pt-9 text-grey-01">
+                            <Outlet />
+                            <Terminal />
+                        </section>
+                    </main>
+                    <Footer />
+                </CurPageProvider>
             </FilteritemsProvider>
         </PanelsProvider>
     )
