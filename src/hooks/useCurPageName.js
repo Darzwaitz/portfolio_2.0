@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 export function useCurPageName() {
-    // let [curPageName] = useState('Home')
+    // let [curPageName] = useState('Homey')
     const [curPageName, setCurPageName] = useState('initial')
 
     // useEffect(() => {
