@@ -25,15 +25,15 @@ function CurPageProvider({ children }) {
     //     return curPageName
     // }
 
-    // const [curPageName, setCurPageName] = useState('initial')
-    const [curPageName] = useState('initial')
+    const [curPageName, setCurPageName] = useState('setter')
+    // const [curPageName] = useState('initial')
 
     function onCurPageName(curPageList) {
         // let [curPageName] = useState('Homey')
 
         // useEffect(() => {
         // setCurPageName(event?.target.innerText)
-        // setCurPageName('testyy')
+        setCurPageName()
         // }, [curPageName, setCurPageName])
 
         // console.log(curPageName)
@@ -49,7 +49,7 @@ function CurPageProvider({ children }) {
                 setCurPageList,
                 // onPageNameChange,
                 curPageName,
-                // setCurPageName,
+                setCurPageName,
                 onCurPageName,
                 // handleSetCurPageName,
             }}

@@ -9,6 +9,7 @@ import NavItems from './NavItems'
 // ]
 function NavTop() {
     const { curPageList } = useCurPage()
+    // console.log(curPageList)
 
     return (
         <nav className="flex gap-5 text-grey-01">

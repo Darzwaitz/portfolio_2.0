@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import { useCurPage } from '../../contexts/CurPageContext'
-const { curPageList } = useCurPage
 
 function NavItems({ title, url }) {
+    const { curPageList } = useCurPage
     // const { curPageName, onCurPageName } = useCurPage()
+    const { curPageName, setCurPageName } = useCurPage()
     // console.log(title, url)
     console.log(curPageList)
     // onCurPageName()
@@ -18,8 +19,10 @@ function NavItems({ title, url }) {
             }
             to={url}
             // onClick={() => onCurPageName?.()}
+            onClick={() => setCurPageName('setter2')}
         >
             <span> {title}</span>
+            <span> {curPageName}</span>
         </NavLink>
     )
 }
