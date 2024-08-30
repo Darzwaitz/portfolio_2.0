@@ -2,12 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { useCurPage } from '../../contexts/CurPageContext'
 
 function NavItems({ title, url }) {
-    const { curPageList } = useCurPage
-    // const { curPageName, onCurPageName } = useCurPage()
-    const { curPageName, setCurPageName } = useCurPage()
-    // console.log(title, url)
-    console.log(curPageList)
-    // onCurPageName()
+    const { onCurPageName } = useCurPage()
 
     return (
         <NavLink
@@ -18,11 +13,11 @@ function NavItems({ title, url }) {
                     : 'rounded-md bg-grey-04 pb-1 pl-1.5 pr-2 text-grey-02'
             }
             to={url}
-            // onClick={() => onCurPageName?.()}
-            onClick={() => setCurPageName('setter2')}
+            onClick={(e) => {
+                onCurPageName(e.target.innerText)
+            }}
         >
             <span> {title}</span>
-            <span> {curPageName}</span>
         </NavLink>
     )
 }

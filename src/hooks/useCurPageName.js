@@ -1,16 +1,9 @@
 // import { useEffect, useState } from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 export function useCurPageName() {
-    // let [curPageName] = useState('Homey')
-    const [curPageName, setCurPageName] = useState('initial')
+    // const [curPageName, setCurPageName] = useState('initial')
 
-    // useEffect(() => {
-    // setCurPageName(event?.target.innerText)
-    setCurPageName('testyy')
-    // }, [curPageName, setCurPageName])
-
-    // console.log(curPageName)
-
-    return { curPageName }
+    // return { curPageName }
+    return
 }

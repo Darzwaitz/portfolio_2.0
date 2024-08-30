@@ -1,45 +1,33 @@
 import { createContext, useContext, useState } from 'react'
-// import { useCurPageName } from '../hooks/useCurPageName'
 const CurPageContext = createContext()
 
 function CurPageProvider({ children }) {
     const [curPageList, setCurPageList] = useState([
-        ['Home', '/', '🏚️'],
-        ['About', '/about', '📃'],
-        ['Portfolio', '/portfolio', '📑'],
-        ['Contact', '/contact', '📬'],
+        ['Home', '🏚️', '/'],
+        ['About', '📃', '/about'],
+        ['Portfolio', '📑', '/portfolio'],
+        ['Contact', '📬', '/contact'],
     ])
-    // const onPageNameChange = useCurPageName()
-    // console.log(onPageNameChange)
-    // const { curPageName, setCurPageName } = useCurPageName()
-    // setCurPageName('from context')
-    // console.log(curPageName)
 
-    // create custom hook
-    // let [curPageName, setCurPageName] = useState('Home')
-    // function handleSetCurPageName(e) {
-    //     // setCurPageName = e?.target.innerText
-    //     setCurPageName = e?.target.innerText
-    //     console.log(setCurPageName)
+    const [curPageName, setCurPageName] = useState(
+        `${curPageList[0].slice(1, 2)} \u00A0${curPageList[0].slice(0, 1)}`
+    )
 
-    //     return curPageName
-    // }
+    function onCurPageName(curPName) {
+        let currentPage
 
-    const [curPageName, setCurPageName] = useState('setter')
-    // const [curPageName] = useState('initial')
+        function checkList() {
+            for (let i = 0; i < curPageList.length; i++) {
+                const item = curPageList[i]
+                if (item.includes(curPName))
+                    currentPage = `${item.slice(1, 2)} \u00A0${item.slice(0, 1)}`
+            }
+        }
+        checkList()
 
-    function onCurPageName(curPageList) {
-        // let [curPageName] = useState('Homey')
+        setCurPageName(currentPage)
 
-        // useEffect(() => {
-        // setCurPageName(event?.target.innerText)
-        setCurPageName()
-        // }, [curPageName, setCurPageName])
-
-        // console.log(curPageName)
-
-        // return curPageName
-        return { curPageList }
+        return setCurPageName
     }
 
     return (
@@ -47,11 +35,8 @@ function CurPageProvider({ children }) {
             value={{
                 curPageList,
                 setCurPageList,
-                // onPageNameChange,
                 curPageName,
-                setCurPageName,
                 onCurPageName,
-                // handleSetCurPageName,
             }}
         >
             {children}
