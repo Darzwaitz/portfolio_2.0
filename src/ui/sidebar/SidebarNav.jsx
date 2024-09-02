@@ -30,8 +30,8 @@ function SidebarNav() {
                 // show border left if sidebar is toggled to right side
                 className={
                     togglePanels.toggleRight
-                        ? 'z-10 flex border-l-[1px] border-l-grey-04'
-                        : 'z-10 flex border-r-[1px] border-r-grey-04'
+                        ? 'flex border-l-[1px] border-l-grey-04'
+                        : 'flex border-r-[1px] border-r-grey-04'
                 }
             >
                 <nav

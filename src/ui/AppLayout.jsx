@@ -17,7 +17,7 @@ function AppLayout() {
                     <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full">
                         <SidebarNav />
 
-                        <section className="relative w-full bg-black-01 pl-14 pt-9 text-grey-01">
+                        <section className="relative -z-10 w-full bg-black-01 pl-14 pt-9 text-grey-01">
                             <Outlet />
                             <Terminal />
                         </section>
