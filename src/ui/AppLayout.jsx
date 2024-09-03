@@ -12,17 +12,22 @@ function AppLayout() {
         <PanelsProvider>
             <FilteritemsProvider>
                 <CurPageProvider>
-                    <Header />
-                    {/* NB flex here on <main> needed for sidebar toggle in SidebarNav*/}
-                    <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full">
-                        <SidebarNav />
+                    <div className="grid h-screen grid-cols-1 grid-rows-[auto_1fr_auto]">
+                        <Header />
+                        {/* NB flex here on <main> needed for sidebar toggle in SidebarNav*/}
+                        {/* <main className="bg-yellow-400 flex h-[calc(100vh-72px)] w-full"> */}
+                        <main className="bg-yellow-400 flex w-full ">
+                            <SidebarNav />
 
-                        <section className="relative -z-10 w-full bg-black-01 pl-14 pt-9 text-grey-01">
-                            <Outlet />
-                            <Terminal />
-                        </section>
-                    </main>
-                    <Footer />
+                            <section className="relative -z-10 w-full  bg-black-01  text-grey-01">
+                                <section className="pl-14 pt-9">
+                                    <Outlet />
+                                </section>
+                                <Terminal />
+                            </section>
+                        </main>
+                        <Footer />
+                    </div>
                 </CurPageProvider>
             </FilteritemsProvider>
         </PanelsProvider>

@@ -3,12 +3,14 @@ import { usePanels } from '@/contexts/PanelsContext'
 function Terminal() {
     const { togglePanels } = usePanels()
     return togglePanels.toggleTerminal ? (
-        <div
+        <section
             role="terminal"
-            className="absolute bottom-0 h-6 w-full bg-grey-02"
+            // className=" w-full bg-grey-02"
+            className=" bg-grey-02"
+            // className="absolute bottom-0 h-6 w-full bg-grey-02"
         >
-            <h1>Terminal temp.</h1>
-        </div>
+            <h1 className="text-5xl">Terminal temp.</h1>
+        </section>
     ) : (
         ''
     )
