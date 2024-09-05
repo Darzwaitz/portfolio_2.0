@@ -10,7 +10,7 @@ function NavItems({ title, url }) {
             className={({ isActive }) =>
                 !isActive
                     ? ' pb-1 pl-1.5 pr-2 hover:text-grey-02'
-                    : 'rounded-md bg-grey-04 pb-1 pl-1.5 pr-2 text-grey-02'
+                    : 'rounded-md bg-grey-04 pl-1.5 pr-2 text-grey-02'
             }
             to={url}
             onClick={(e) => {

@@ -31,7 +31,7 @@ function SidebarNav() {
                 className={
                     togglePanels.toggleRight
                         ? 'flex border-l-[1px] border-l-grey-04'
-                        : 'flex border-r-[1px] border-r-grey-04'
+                        : 'flex  border-r-[1px] border-r-grey-04'
                 }
             >
                 <nav
