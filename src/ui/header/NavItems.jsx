@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { useCurPage } from '../../contexts/CurPageContext'
+import { useCurPage } from '@/contexts/CurPageContext'
 
 function NavItems({ title, url }) {
     const { onCurPageName } = useCurPage()

@@ -1,4 +1,5 @@
 import { SvgSettingsLarge } from '@/assets/imgs/svg/components/SvgSettings'
+import { useCurPage } from '@/contexts/CurPageContext'
 
 const { defaultColor, hover, iconSize } = SvgSettingsLarge()
 
@@ -7,11 +8,14 @@ import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import Tooltip from '@/features/tooltip/Tooltip'
 import { usePanels } from '@/contexts/PanelsContext'
 import { Link } from 'react-router-dom'
+
 function UserAccount() {
+    const { onCurPageName } = useCurPage()
     const { togglePanels } = usePanels()
+
     let arrDir = togglePanels.tooltipArrDir
     return (
-        <Link to="about">
+        <Link to="about" onClick={() => onCurPageName('About')}>
             <SvgIconwrapper iconSize={iconSize} hover={hover}>
                 <svg
                     className={hover}
