@@ -1,6 +1,4 @@
 import { createContext, useContext, useState } from 'react'
-// import { useCurPageUrl } from '../hooks/useCurPageUrl'
-// import { useLocation } from 'react-router-dom'
 
 const CurPageContext = createContext()
 
@@ -11,13 +9,6 @@ function CurPageProvider({ children }) {
         ['Portfolio', '📑', '/portfolio'],
         ['Contact', '📬', '/contact'],
     ])
-    // let location = useLocation()
-    // function useCheckCurUrl() {
-    //     useCurPageUrl()
-    // }
-    // useCheckCurUrl()
-
-    // const onShowTemp = useCurPageUrl()
 
     const [curPageName, setCurPageName] = useState(
         `${curPageList[0].slice(1, 2)} \u00A0${curPageList[0].slice(0, 1)}`
@@ -47,7 +38,6 @@ function CurPageProvider({ children }) {
                 setCurPageList,
                 curPageName,
                 onCurPageName,
-                // onShowTemp,
             }}
         >
             {children}
