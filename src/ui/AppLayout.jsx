@@ -15,14 +15,11 @@ function AppLayout() {
         <PanelsProvider>
             <FilteritemsProvider>
                 <CurPageProvider>
-                    {/* <div className="grid h-screen grid-rows-[8vh_86vh_6vh]">
-                        {console.log(`onCurPageName is: ${'testty'}`)} */}
                     <AppContainer>
                         <Header />
                         {/* NB flex here on <main> needed for sidebar toggle in SidebarNav*/}
                         <main className="bg-yellow-400 flex h-full w-full ">
                             <SidebarNav />
-
                             <section className="flex h-full w-full flex-col justify-between overflow-y-scroll bg-black-01  text-grey-01">
                                 <div className="pl-14 pt-9">
                                     <Outlet />
@@ -31,7 +28,6 @@ function AppLayout() {
                             </section>
                         </main>
                         <Footer />
-                        {/* </div> */}
                     </AppContainer>
                 </CurPageProvider>
             </FilteritemsProvider>
