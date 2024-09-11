@@ -2,15 +2,21 @@ function portfolioItemList() {
     return [
         {
             title: 'portfolio item 1',
-            description: 'This is the item 1 description',
-            tags: ['react', 'css', 'javascript'],
+            description: 'This is the REACT item 1 description',
+            tags: ['React'],
         },
 
-        // {
-        //     title: 'portfolio item 2',
-        //     description: 'This is the item 2 description',
-        //     tags: ['wordpress', 'css', 'javascript'],
-        // },
+        {
+            title: 'portfolio item 2',
+            description: 'This is the JAVASCRIPT item 2 description',
+            tags: ['Javascript'],
+        },
+        {
+            title: 'portfolio item 2',
+            description: 'This is the CSS item 2 description',
+            tags: ['Css'],
+        },
+
         // {
         //     title: 'portfolio item 3',
         //     description: 'This is the item 3 description',
