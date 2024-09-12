@@ -6,11 +6,11 @@ export function useSubmitButton(arrList) {
 
     useEffect(() => {
         function checkItem(item) {
-            return item.checked === this?.divisor
+            return item.checked === this?.itemPresent
         }
 
-        setShowSubmit(arrList.every(checkItem, { divisor: false }))
-        setShowSubmit(arrList.some(checkItem, { divisor: true }))
+        setShowSubmit(arrList.every(checkItem, { itemPresent: false }))
+        setShowSubmit(arrList.some(checkItem, { itemPresent: true }))
     }, [arrList, showSubmit])
 
     return showSubmit

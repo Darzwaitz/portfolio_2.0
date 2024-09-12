@@ -1,26 +1,10 @@
 import portfolioItemList from '../data/portfolioItemsList'
 import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
-import { useFilter } from '../contexts/FilteritemsContext'
-
-// importing data for each portfolio item
-// const { title, description, tags } = portfolioItemList;
-// console.log(title, description, tags);
-
-// const chosenTag = "wordpress";
+import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
 
 function PortfolioPage() {
-    const { items } = useFilter()
-
-    const checkStateTags = []
-
-    const checkStateList = function () {
-        items.map((item) =>
-            item.checked === true ? checkStateTags.push(item.name) : ''
-        )
-        console.log('checkStateList RUN')
-    }
-    checkStateList()
+    const portfolioitemTags = usePortfolioitemTags()
 
     return (
         <>
@@ -33,7 +17,7 @@ function PortfolioPage() {
             {/* items container */}
             <div className="flex w-auto justify-between">
                 {portfolioItemList.map((project, i) =>
-                    checkStateTags.includes(...project.tags) ? (
+                    portfolioitemTags.includes(...project.tags) ? (
                         <PortfolioItem project={project} key={i} />
                     ) : (
                         ''

@@ -1,6 +1,7 @@
 import placeholder from '@/assets/imgs/image-placeholder-square.png'
 
 function PortfolioItem({ project }) {
+    // importing data for each portfolio item
     const { title, description, tags } = project
 
     // console.log(item.tags);
