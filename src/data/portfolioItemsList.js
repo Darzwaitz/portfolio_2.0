@@ -9,12 +9,13 @@ function portfolioItemList() {
         {
             title: 'portfolio item 2',
             description: 'This is the JAVASCRIPT item 2 description',
-            tags: ['Javascript'],
+            // tags: ['Javascript'],
+            tags: ['Css'],
         },
         {
             title: 'portfolio item 2',
             description: 'This is the CSS item 2 description',
-            tags: ['Css'],
+            tags: ['React', 'Html'],
         },
 
         // {

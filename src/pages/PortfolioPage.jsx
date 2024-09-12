@@ -11,8 +11,17 @@ import { useFilter } from '../contexts/FilteritemsContext'
 
 function PortfolioPage() {
     const { items } = useFilter()
-    // console.log(items.map((item) => item.name))
-    // console.log([...items].forEach((item) => item.name))
+
+    const checkStateTags = []
+
+    const checkStateList = function () {
+        items.map((item) =>
+            item.checked === true ? checkStateTags.push(item.name) : ''
+        )
+        console.log('checkStateList RUN')
+    }
+    checkStateList()
+
     return (
         <>
             <h1 className="block pb-4">PORTFOLIO PAGE</h1>
@@ -24,22 +33,13 @@ function PortfolioPage() {
             {/* items container */}
             <div className="flex w-auto justify-between">
                 {portfolioItemList.map((project, i) =>
-                    project.tags.includes('React') ? (
+                    checkStateTags.includes(...project.tags) ? (
                         <PortfolioItem project={project} key={i} />
                     ) : (
                         ''
                     )
                 )}
             </div>
-            {/* items container
-            <div className="flex w-auto justify-between">
-                {portfolioItemList.map((project, i) => (
-                    <PortfolioItem project={project} key={i} />
-                ))}
-            </div> */}
-            {items.map((item) => (
-                <div key={item.name}>{item.name}</div>
-            ))}
         </>
     )
 }
