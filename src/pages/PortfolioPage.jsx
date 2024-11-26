@@ -26,9 +26,35 @@ function PortfolioPage() {
             </div> */}
             {/* items container */}
             <div className="flex w-auto justify-between">
-                {portfolioItemList.map((project, i) =>
+                {/* {portfolioItemList.map((project, i) =>
                     portfolioitemTags.includes(...project.tags) ? (
                         <PortfolioItem project={project} key={i} />
+                    ) : (
+                        ''
+                    )
+                )} */}
+                {portfolioItemList.map((project, i) =>
+                    // const {title, description, tags} = project
+                    portfolioitemTags.includes(...project.tags) ? (
+                        // <PortfolioItem project={project} key={i} />
+                        <PortfolioItem key={i}>
+                            <div className="flex flex-col rounded-s-sm  border border-grey-04 p-5 text-grey-02 hover:brightness-110">
+                                <div>
+                                    <PortfolioItem.TagList
+                                        tags={project.tags}
+                                    />
+                                </div>
+                                <div>
+                                    <PortfolioItem.Img />
+                                    <PortfolioItem.Title
+                                        title={project.title}
+                                    />
+                                    <PortfolioItem.Description
+                                        description={project.description}
+                                    />
+                                </div>
+                            </div>
+                        </PortfolioItem>
                     ) : (
                         ''
                     )
