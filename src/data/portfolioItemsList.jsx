@@ -12,14 +12,14 @@ function portfolioItemList() {
 
         {
             title: 'portfolio item 2',
-            description: 'This is the JAVASCRIPT item 2 description',
+            description: 'This is the HTML item 2 description',
             // tags: ['Javascript'],
             tags: ['Html'],
             icon: [<HtmlIcon key={'html'} />],
         },
         {
-            title: 'portfolio item 2',
-            description: 'This is the CSS item 2 description',
+            title: 'portfolio item 3',
+            description: 'This is the REACt & HTML item 3 description',
             tags: ['React', 'Html'],
             icon: [<ReactIcon key={'react'} />, <HtmlIcon key={'html'} />],
         },

@@ -42,7 +42,7 @@ function PortfolioPage() {
                                 <div>
                                     <PortfolioItem.TagList
                                         tags={project.tags}
-                                        icon={project.icon[1]}
+                                        icon={project.icon}
                                     />
                                 </div>
                                 <div>
