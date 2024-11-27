@@ -38,10 +38,11 @@ function PortfolioPage() {
                     portfolioitemTags.includes(...project.tags) ? (
                         // <PortfolioItem project={project} key={i} />
                         <PortfolioItem key={i}>
-                            <div className="flex flex-col rounded-s-sm  border border-grey-04 p-5 text-grey-02 hover:brightness-110">
+                            <div className="flex rounded-s-sm  border border-grey-04 p-5 text-grey-02 hover:brightness-110">
                                 <div>
                                     <PortfolioItem.TagList
                                         tags={project.tags}
+                                        icon={project.icon[1]}
                                     />
                                 </div>
                                 <div>

@@ -29,11 +29,14 @@ function Img() {
         />
     )
 }
-function TagList({ tags }) {
+function TagList({ tags, icon }) {
     return (
         <ul className="inline-block w-1/2">
             {tags.map((tag, i) => (
-                <li key={i}>{tag}</li>
+                <>
+                    <li key={i}>{tag}</li>
+                    <li key={tag}>{icon}</li>
+                </>
             ))}
         </ul>
     )
