@@ -1,4 +1,6 @@
 import ReactIcon from '../features/portfolio/assets/imgs/svg/components/ReactIcon'
+import VueIcon from '../features/portfolio/assets/imgs/svg/components/VueIcon'
+import AngularIcon from '../features/portfolio/assets/imgs/svg/components/AngularIcon'
 import HtmlIcon from '../features/portfolio/assets/imgs/svg/components/HtmlIcon'
 
 function portfolioItemList() {
@@ -19,9 +21,21 @@ function portfolioItemList() {
         },
         {
             title: 'portfolio item 3',
-            description: 'This is the REACt & HTML item 3 description',
+            description: 'This is the REACT & HTML item 3 description',
             tags: ['React', 'Html'],
             icon: [<ReactIcon key={'react'} />, <HtmlIcon key={'html'} />],
+        },
+        {
+            title: 'portfolio item 4',
+            description: 'This is the VUE item 3 description',
+            tags: ['Vue'],
+            icon: [<VueIcon key={'vue'} />],
+        },
+        {
+            title: 'portfolio item 5',
+            description: 'This is the Angular item 3 description',
+            tags: ['Angular'],
+            icon: [<AngularIcon key={'angular'} />],
         },
 
         // {

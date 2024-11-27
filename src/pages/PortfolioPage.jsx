@@ -41,7 +41,7 @@ function PortfolioPage() {
                             <div className="flex rounded-s-sm  border border-grey-04 p-5 text-grey-02 hover:brightness-110">
                                 <div>
                                     <PortfolioItem.TagList
-                                        tags={project.tags}
+                                        // tags={project.tags}
                                         icon={project.icon}
                                     />
                                 </div>
