@@ -1,7 +1,12 @@
 import ReactIcon from '../features/portfolio/assets/imgs/svg/components/ReactIcon'
 import VueIcon from '../features/portfolio/assets/imgs/svg/components/VueIcon'
 import AngularIcon from '../features/portfolio/assets/imgs/svg/components/AngularIcon'
+import ScssIcon from '../features/portfolio/assets/imgs/svg/components/ScssIcon'
 import HtmlIcon from '../features/portfolio/assets/imgs/svg/components/HtmlIcon'
+import WordpressIcon from '../features/portfolio/assets/imgs/svg/components/WordpressIcon'
+import JavaScriptIcon from '../features/portfolio/assets/imgs/svg/components/JavaScriptIcon'
+import TailwindIcon from '../features/portfolio/assets/imgs/svg/components/TailwindIcon'
+import AllFolderIcon from '../features/portfolio/assets/imgs/svg/components/AllFolderIcon'
 
 function portfolioItemList() {
     return [
@@ -14,10 +19,17 @@ function portfolioItemList() {
 
         {
             title: 'portfolio item 2',
-            description: 'This is the HTML item 2 description',
+            description: 'This is the SCSS item 2 description',
             // tags: ['Javascript'],
-            tags: ['Html'],
-            icon: [<HtmlIcon key={'html'} />],
+            tags: ['Scss'],
+            icon: [<ScssIcon key={'scss'} />],
+        },
+        {
+            title: 'portfolio item 2B also scss',
+            description: 'This is the SCSS item 2 description',
+            // tags: ['Javascript'],
+            tags: ['Scss'],
+            icon: [<ScssIcon key={'scss'} />],
         },
         {
             title: 'portfolio item 3',
@@ -27,15 +39,39 @@ function portfolioItemList() {
         },
         {
             title: 'portfolio item 4',
-            description: 'This is the VUE item 3 description',
+            description: 'This is the VUE item 4 description',
             tags: ['Vue'],
             icon: [<VueIcon key={'vue'} />],
         },
         {
             title: 'portfolio item 5',
-            description: 'This is the Angular item 3 description',
+            description: 'This is the Angular item 5 description',
             tags: ['Angular'],
             icon: [<AngularIcon key={'angular'} />],
+        },
+        {
+            title: 'portfolio item 6',
+            description: 'This is the Wordpress item 6 description',
+            tags: ['Wordpress'],
+            icon: [<WordpressIcon key={'wordpress'} />],
+        },
+        {
+            title: 'portfolio item 7',
+            description: 'This is the JS item 7 description',
+            tags: ['JavaScript'],
+            icon: [<JavaScriptIcon key={'javascript'} />],
+        },
+        {
+            title: 'portfolio item 8',
+            description: 'This is the Tailwind item 8 description',
+            tags: ['Tailwind'],
+            icon: [<TailwindIcon key={'tailwind'} />],
+        },
+        {
+            title: 'portfolio item 9',
+            description: 'This is the Tailwind item 9 description',
+            tags: ['All'],
+            icon: [<AllFolderIcon key={'allfolder'} />],
         },
 
         // {

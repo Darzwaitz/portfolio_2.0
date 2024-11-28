@@ -10,11 +10,11 @@ function FilteritemsProvider({ children }) {
         { name: 'Vue', checked: false },
         { name: 'Angular', checked: false },
         { name: 'JavaScript', checked: false },
-        // { name: 'Html, Css, Scss', checked: false },
-        { name: 'Html', checked: false },
+        { name: 'Scss', checked: false },
+        // { name: 'Html', checked: false },
         { name: 'Tailwind', checked: false },
         { name: 'Wordpress', checked: false },
-        { name: 'Certifications', checked: false },
+        // { name: 'Certifications', checked: false },
     ])
 
     // hook needed for state issues
