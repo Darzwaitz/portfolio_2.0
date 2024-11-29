@@ -1,8 +1,9 @@
 import { useFilter } from '../../contexts/FilteritemsContext'
 
-function Checkbox({ isChecked, label, checkHandler }) {
+function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li className="mr-5">
+            {/* <div className="flex"> */}
             <input
                 className="mb-1 mr-1.5 accent-grey-04"
                 type="checkbox"
@@ -11,6 +12,8 @@ function Checkbox({ isChecked, label, checkHandler }) {
                 onChange={checkHandler}
             />
             <label htmlFor={label}>{label}</label>
+            <span>{icon}</span>
+            {/* </div> */}
         </li>
     )
 }
@@ -22,14 +25,17 @@ function PortfolioFilteritems() {
     return (
         <>
             {items.map((menuitem, index) => (
-                <Checkbox
-                    isChecked={menuitem.checked}
-                    label={menuitem.name}
-                    checkHandler={() => {
-                        onChangeHandle(index)
-                    }}
-                    key={index}
-                />
+                <>
+                    <Checkbox
+                        isChecked={menuitem.checked}
+                        label={menuitem.name}
+                        checkHandler={() => {
+                            onChangeHandle(index)
+                        }}
+                        icon={menuitem.icon}
+                        key={index}
+                    />
+                </>
             ))}
         </>
     )

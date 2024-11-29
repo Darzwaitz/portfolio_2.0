@@ -1,4 +1,4 @@
-import portfolioItemList from '../data/portfolioItemsList'
+import PortfolioItemList from '../data/PortfolioItemsList'
 import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
 import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
@@ -16,7 +16,7 @@ function PortfolioPage() {
 
             {/* items container
             <div className="flex w-auto justify-between">
-                {portfolioItemList.map((project, i) =>
+                {PortfolioItemList.map((project, i) =>
                     portfolioitemTags.includes(...project.tags) ? (
                         <PortfolioItem project={project} key={i} />
                     ) : (
@@ -26,14 +26,14 @@ function PortfolioPage() {
             </div> */}
             {/* items container */}
             <div className="flex w-auto justify-between">
-                {/* {portfolioItemList.map((project, i) =>
+                {/* {PortfolioItemList.map((project, i) =>
                     portfolioitemTags.includes(...project.tags) ? (
                         <PortfolioItem project={project} key={i} />
                     ) : (
                         ''
                     )
                 )} */}
-                {portfolioItemList.map((project, i) =>
+                {PortfolioItemList.map((project, i) =>
                     // const {title, description, tags} = project
                     portfolioitemTags.includes(...project.tags) ? (
                         // <PortfolioItem project={project} key={i} />

@@ -1,12 +1,12 @@
+import AllFolderIcon from '../features/portfolio/assets/imgs/svg/components/AllFolderIcon'
 import ReactIcon from '../features/portfolio/assets/imgs/svg/components/ReactIcon'
 import VueIcon from '../features/portfolio/assets/imgs/svg/components/VueIcon'
 import AngularIcon from '../features/portfolio/assets/imgs/svg/components/AngularIcon'
-import ScssIcon from '../features/portfolio/assets/imgs/svg/components/ScssIcon'
-import HtmlIcon from '../features/portfolio/assets/imgs/svg/components/HtmlIcon'
-import WordpressIcon from '../features/portfolio/assets/imgs/svg/components/WordpressIcon'
 import JavaScriptIcon from '../features/portfolio/assets/imgs/svg/components/JavaScriptIcon'
+import ScssIcon from '../features/portfolio/assets/imgs/svg/components/ScssIcon'
 import TailwindIcon from '../features/portfolio/assets/imgs/svg/components/TailwindIcon'
-import AllFolderIcon from '../features/portfolio/assets/imgs/svg/components/AllFolderIcon'
+import WordpressIcon from '../features/portfolio/assets/imgs/svg/components/WordpressIcon'
+// import HtmlIcon from '../features/portfolio/assets/imgs/svg/components/HtmlIcon'
 
 function portfolioItemList() {
     return [
@@ -35,7 +35,7 @@ function portfolioItemList() {
             title: 'portfolio item 3',
             description: 'This is the REACT & HTML item 3 description',
             tags: ['React', 'Html'],
-            icon: [<ReactIcon key={'react'} />, <HtmlIcon key={'html'} />],
+            icon: [<ReactIcon key={'react'} />],
         },
         {
             title: 'portfolio item 4',
