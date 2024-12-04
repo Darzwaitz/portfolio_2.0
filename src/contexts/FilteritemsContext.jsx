@@ -61,6 +61,7 @@ function FilteritemsProvider({ children }) {
         <FilteritemsContext.Provider
             value={{
                 items,
+
                 onChangeHandle,
                 onShowSubmit,
             }}

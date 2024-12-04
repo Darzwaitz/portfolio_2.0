@@ -1,3 +1,4 @@
+import React from 'react'
 import { useFilter } from '../../contexts/FilteritemsContext'
 
 function Checkbox({ isChecked, label, checkHandler, icon }) {
@@ -25,7 +26,7 @@ function PortfolioFilteritems() {
     return (
         <>
             {items.map((menuitem, index) => (
-                <>
+                <React.Fragment key={index}>
                     <Checkbox
                         isChecked={menuitem.checked}
                         label={menuitem.name}
@@ -33,9 +34,10 @@ function PortfolioFilteritems() {
                             onChangeHandle(index)
                         }}
                         icon={menuitem.icon}
-                        key={index}
+                        key={Math.floor(Math.random())}
+                        // index={index}
                     />
-                </>
+                </React.Fragment>
             ))}
         </>
     )
