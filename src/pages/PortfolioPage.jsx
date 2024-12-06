@@ -10,7 +10,7 @@ function PortfolioPage() {
         <>
             <h1 className="block pb-4">PORTFOLIO PAGE</h1>
 
-            <ul className="mb-5 flex justify-center">
+            <ul className="mb-5 flex justify-center bg-grey-02">
                 <PortfolioFilteritems />
             </ul>
 
@@ -43,15 +43,6 @@ function PortfolioPage() {
                                     <PortfolioItem.TagList
                                         // tags={project.tags}
                                         icon={project.icon}
-                                    />
-                                </div>
-                                <div>
-                                    <PortfolioItem.Img />
-                                    <PortfolioItem.Title
-                                        title={project.title}
-                                    />
-                                    <PortfolioItem.Description
-                                        description={project.description}
                                     />
                                 </div>
                             </div>
