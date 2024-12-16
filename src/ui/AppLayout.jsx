@@ -20,7 +20,7 @@ function AppLayout() {
                         <main className="bg-yellow-400 flex h-full w-full ">
                             <SidebarNav />
                             <section className="flex h-full w-full flex-col justify-between overflow-y-scroll bg-black-01  text-grey-01">
-                                <div className="pl-14 pt-9">
+                                <div className="">
                                     <Outlet />
                                 </div>
                                 <Terminal />
