@@ -12,7 +12,9 @@ function Checkbox({ isChecked, label, checkHandler, icon }) {
                     checked={isChecked}
                     onChange={checkHandler}
                 />
-                <label htmlFor={label}>{label}</label>
+                <label className="mr-1" htmlFor={label}>
+                    {label}
+                </label>
                 <span className="h-8 w-8">{icon}</span>
             </div>
         </li>

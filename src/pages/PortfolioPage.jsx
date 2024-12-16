@@ -10,7 +10,7 @@ function PortfolioPage() {
         <>
             <h1 className="block pb-4">PORTFOLIO PAGE</h1>
 
-            <ul className="mb-5 flex justify-center bg-grey-02">
+            <ul className="mb-5 flex justify-center">
                 <PortfolioFilteritems />
             </ul>
 
