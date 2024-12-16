@@ -1,5 +1,5 @@
 import placeholder from '@/assets/imgs/image-placeholder-square.png'
-import { createContext } from 'react'
+import React, { createContext } from 'react'
 
 const PortfolioItemContext = createContext()
 
@@ -33,10 +33,10 @@ function TagList({ icon }) {
     return (
         <ul className="inline-block w-1/2">
             {icon.map((icon) => (
-                <>
+                <React.Fragment key={icon}>
                     {/* <li key={i}>{tag}</li> */}
                     <li key={icon}>{icon}</li>
-                </>
+                </React.Fragment>
             ))}
         </ul>
     )

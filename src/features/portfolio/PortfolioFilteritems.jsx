@@ -4,16 +4,16 @@ import { useFilter } from '../../contexts/FilteritemsContext'
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li className="mr-5">
-            <div className="flex">
+            <div className="flex items-center">
                 <input
-                    className="mb-1 mr-1.5 accent-grey-04"
+                    className=" mr-1.5 accent-grey-04"
                     type="checkbox"
                     id={label}
                     checked={isChecked}
                     onChange={checkHandler}
                 />
                 <label htmlFor={label}>{label}</label>
-                <span>{icon}</span>
+                <span className="h-8 w-8">{icon}</span>
             </div>
         </li>
     )
