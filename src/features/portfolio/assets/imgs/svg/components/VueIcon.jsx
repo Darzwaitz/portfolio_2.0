@@ -8,7 +8,7 @@
 
 function VueIcon() {
     return (
-        <svg>
+        <svg viewBox="0 0 32 32">
             <path
                 d="M24.4,3.925H30L16,28.075,2,3.925H12.71L16,9.525l3.22-5.6Z"
                 fill="#41b883"

@@ -19,8 +19,8 @@ function AppLayout() {
                         {/* NB flex here on <main> needed for sidebar toggle in SidebarNav*/}
                         <main className="bg-yellow-400 flex h-full w-full ">
                             <SidebarNav />
-                            <section className="flex h-full w-full flex-col justify-between overflow-y-scroll bg-black-01  text-grey-01">
-                                <div className="">
+                            <section className="flex h-full w-full flex-col justify-between overflow-y-scroll bg-black-01 pl-9 pt-9  text-grey-01">
+                                <div>
                                     <Outlet />
                                 </div>
                                 <Terminal />

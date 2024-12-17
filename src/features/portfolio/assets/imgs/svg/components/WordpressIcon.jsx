@@ -13,8 +13,8 @@ function VueIcon() {
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            height="100%"
+            width="80%"
+            height="80%"
             viewBox="0 0 97.75 97.75"
             stroke="#3958e9"
         >

@@ -8,7 +8,7 @@
 
 function AngularIcon() {
     return (
-        <svg>
+        <svg viewBox="0 0 32 32">
             <polygon
                 points="16 2 16 2 16 2 2.966 6.648 4.954 23.882 16 30 16 30 16 30 27.046 23.882 29.034 6.648 16 2"
                 fill="#dd0031"

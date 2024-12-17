@@ -15,7 +15,7 @@ function Checkbox({ isChecked, label, checkHandler, icon }) {
                 <label className="mr-1" htmlFor={label}>
                     {label}
                 </label>
-                <span className="h-8 w-8">{icon}</span>
+                <span className="h-6 w-6">{icon}</span>
             </div>
         </li>
     )
