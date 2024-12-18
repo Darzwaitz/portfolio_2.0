@@ -36,8 +36,6 @@ function PortfolioFilteritems() {
                             onChangeHandle(index)
                         }}
                         icon={menuitem.icon}
-                        key={Math.floor(Math.random())}
-                        // index={index}
                     />
                 </React.Fragment>
             ))}
