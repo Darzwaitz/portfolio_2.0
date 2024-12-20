@@ -36,7 +36,7 @@ function TagList({ icon }) {
             {icon.map((icon) => (
                 <React.Fragment key={icon}>
                     {/* <li key={i}>{tag}</li> */}
-                    <li className="w-6" key={icon}>
+                    <li className="m-3.5 w-6" key={icon}>
                         {icon}
                     </li>
                 </React.Fragment>

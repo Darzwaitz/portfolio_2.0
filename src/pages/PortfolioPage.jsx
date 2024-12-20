@@ -38,7 +38,7 @@ function PortfolioPage() {
                     portfolioitemTags.includes(...project.tags) ? (
                         // <PortfolioItem project={project} key={i} />
                         <PortfolioItem key={i}>
-                            <div className="flex rounded-s-sm  border border-grey-04 p-5 text-grey-02 hover:brightness-110">
+                            <div className="flex rounded-s-sm  border border-grey-04 text-grey-02 hover:brightness-110">
                                 <div>
                                     <PortfolioItem.TagList
                                         // tags={project.tags}
@@ -46,12 +46,15 @@ function PortfolioPage() {
                                     />
                                 </div>
                                 <div className="">
+                                    <PortfolioItem.Img />
+
                                     <PortfolioItem.Title
                                         title={project.title}
                                     />
-                                </div>
-                                <div className="">
-                                    <PortfolioItem.Img />
+
+                                    <PortfolioItem.Description
+                                        description={project.description}
+                                    />
                                 </div>
                             </div>
                         </PortfolioItem>
