@@ -7,14 +7,16 @@ import ScssIcon from '../features/portfolio/assets/imgs/svg/components/ScssIcon'
 import TailwindIcon from '../features/portfolio/assets/imgs/svg/components/TailwindIcon'
 import WordpressIcon from '../features/portfolio/assets/imgs/svg/components/WordpressIcon'
 // import HtmlIcon from '../features/portfolio/assets/imgs/svg/components/HtmlIcon'
+import placeholderimage from '../assets/imgs/image-placeholder-landscape.png'
 
-function portfolioItemList() {
+function portfolioItemsList() {
     return [
         {
             title: 'portfolio item 1',
             description: 'This is the REACT item 1 description',
             tags: ['React'],
             icon: [<ReactIcon key={'react'} />],
+            imageSrc: placeholderimage,
         },
 
         {
@@ -97,4 +99,4 @@ function portfolioItemList() {
     ]
 }
 
-export default portfolioItemList()
+export default portfolioItemsList()

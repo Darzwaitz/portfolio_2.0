@@ -1,4 +1,5 @@
-import placeholder from '@/assets/imgs/image-placeholder-square.png'
+// import placeholder from '@/assets/imgs/image-placeholder-square.png'
+import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext } from 'react'
 
 const PortfolioItemContext = createContext()

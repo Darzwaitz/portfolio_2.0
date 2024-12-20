@@ -1,4 +1,4 @@
-import PortfolioItemList from '../data/PortfolioItemsList'
+import PortfolioItemsList from '../data/PortfolioItemsList'
 import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
 import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
@@ -33,7 +33,7 @@ function PortfolioPage() {
                         ''
                     )
                 )} */}
-                {PortfolioItemList.map((project, i) =>
+                {PortfolioItemsList.map((project, i) =>
                     // const {title, description, tags} = project
                     portfolioitemTags.includes(...project.tags) ? (
                         // <PortfolioItem project={project} key={i} />
@@ -44,6 +44,14 @@ function PortfolioPage() {
                                         // tags={project.tags}
                                         icon={project.icon}
                                     />
+                                </div>
+                                <div className="">
+                                    <PortfolioItem.Title
+                                        title={project.title}
+                                    />
+                                </div>
+                                <div className="">
+                                    <PortfolioItem.Img />
                                 </div>
                             </div>
                         </PortfolioItem>
