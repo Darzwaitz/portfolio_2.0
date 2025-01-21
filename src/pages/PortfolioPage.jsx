@@ -14,16 +14,6 @@ function PortfolioPage() {
                 <PortfolioFilteritems />
             </ul>
 
-            {/* items container
-            <div className="flex w-auto justify-between">
-                {PortfolioItemList.map((project, i) =>
-                    portfolioitemTags.includes(...project.tags) ? (
-                        <PortfolioItem project={project} key={i} />
-                    ) : (
-                        ''
-                    )
-                )}
-            </div> */}
             {/* items container */}
             <div className="flex w-auto justify-between">
                 {/* {PortfolioItemList.map((project, i) =>

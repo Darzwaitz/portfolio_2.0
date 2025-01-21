@@ -4,12 +4,7 @@ import React, { createContext } from 'react'
 
 const PortfolioItemContext = createContext()
 
-// importing data for each portfolio item
-// const { title, description, tags } = project
-
-// function PortfolioItem({ project }) {
 function PortfolioItem({ children }) {
-    // console.log(item.tags);
     return (
         <PortfolioItemContext.Provider value={children}>
             {/* // <div className="bg-green-400 inline-block m-1 p-2 rounded-s-sm "> */}
@@ -35,7 +30,6 @@ function TagList({ icon }) {
         <ul className="inline-block w-1/2">
             {icon.map((icon) => (
                 <React.Fragment key={icon}>
-                    {/* <li key={i}>{tag}</li> */}
                     <li className="m-3.5 w-6" key={icon}>
                         {icon}
                     </li>
