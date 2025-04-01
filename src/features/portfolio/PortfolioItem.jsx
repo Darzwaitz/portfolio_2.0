@@ -7,10 +7,7 @@ const PortfolioItemContext = createContext()
 function PortfolioItem({ children }) {
     return (
         <PortfolioItemContext.Provider value={children}>
-            {/* // <div className="bg-green-400 inline-block m-1 p-2 rounded-s-sm "> */}
-            {/* <div className=" rounded-s-sm  border border-grey-04 p-5 text-grey-02 hover:brightness-110"> */}
             {children}
-            {/* </div> */}
         </PortfolioItemContext.Provider>
     )
 }
