@@ -12,7 +12,7 @@ function Tooltip({ msg, arrowDirection }) {
                 <div role="inner">{msg}</div>
             </pre>
             // bkup TO-REMOVE
-            // <pre className="before:solid after:solid invisible absolute left-0 top-[-74%] mt-2 rounded border  border-grey-01 bg-black-02 px-2.5 pb-2 pt-1 font-[inherit] text-grey-02 opacity-0 transition before:absolute before:right-[75%] before:top-[145%] before:mt-[-16px] before:border-[7px] before:border-b-transparent before:border-l-transparent before:border-r-transparent before:border-t-grey-01 before:text-current after:absolute after:right-[75%] after:top-[116%] after:mt-[-7px] after:border-[7px] after:border-b-transparent after:border-l-transparent after:border-r-transparent after:border-t-black-02 after:text-current group-hover:visible group-hover:opacity-100">
+            // <pre className="before:solid after:solid invisible absolute left-0 top-[-74%] mt-2 rounded-sm border  border-grey-01 bg-black-02 px-2.5 pb-2 pt-1 font-[inherit] text-grey-02 opacity-0 transition before:absolute before:right-[75%] before:top-[145%] before:mt-[-16px] before:border-[7px] before:border-b-transparent before:border-l-transparent before:border-r-transparent before:border-t-grey-01 before:text-current after:absolute after:right-[75%] after:top-[116%] after:mt-[-7px] after:border-[7px] after:border-b-transparent after:border-l-transparent after:border-r-transparent after:border-t-black-02 after:text-current group-hover:visible group-hover:opacity-100">
             //     <div role="inner">test {msg}</div>
             // </pre>
         )

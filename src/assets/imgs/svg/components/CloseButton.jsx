@@ -10,7 +10,7 @@ function CloseButton({ onToggleExplorer }) {
     return (
         <svg
             onClick={onToggleExplorer}
-            className={`${hover} cursor-pointer  rounded`}
+            className={`${hover} cursor-pointer  rounded-sm`}
             width="18"
             height="18"
             viewBox="0 0 16 16"
