@@ -4,6 +4,7 @@ import PortfolioPage from './pages/PortfolioPage'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import Home from './pages/Home'
+import LandingPage from './pages/LandingPage'
 
 const router = createBrowserRouter([
     {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
+                element: <LandingPage />,
+            },
+            {
+                path: 'home',
                 element: <Home />,
             },
             {

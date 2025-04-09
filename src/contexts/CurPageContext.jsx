@@ -4,7 +4,8 @@ const CurPageContext = createContext()
 
 function CurPageProvider({ children }) {
     const [curPageList, setCurPageList] = useState([
-        ['Home', '🏚️', '/'],
+        // ['Search', '🔎', '/'],
+        ['Home', '🏚️', '/home'],
         ['About', '📃', '/about'],
         ['Portfolio', '📑', '/portfolio'],
         ['Contact', '📬', '/contact'],
