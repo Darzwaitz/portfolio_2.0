@@ -4,13 +4,14 @@ const CurPageContext = createContext()
 
 function CurPageProvider({ children }) {
     const [curPageList, setCurPageList] = useState([
-        // ['Search', '🔎', '/'],
+        ['Search', '🔎', '/'],
         ['Home', '🏚️', '/home'],
         ['About', '📃', '/about'],
         ['Portfolio', '📑', '/portfolio'],
         ['Contact', '📬', '/contact'],
     ])
 
+    // \u00A0 === unicode for space
     const [curPageName, setCurPageName] = useState(
         `${curPageList[0].slice(1, 2)} \u00A0${curPageList[0].slice(0, 1)}`
     )
@@ -27,6 +28,7 @@ function CurPageProvider({ children }) {
         }
         checkList()
 
+        // sets current active nav item in NavTop
         setCurPageName(currentPage)
 
         return setCurPageName
