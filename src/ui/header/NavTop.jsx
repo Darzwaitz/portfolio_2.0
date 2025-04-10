@@ -2,7 +2,7 @@ import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
 
 function NavTop() {
-    // take nav array, reove the first 'search' item from painted nav display
+    // take nav array, remove the first 'search' item from painted nav display
     const { curPageList } = useCurPage()
     const displayNavArr = curPageList.slice()
     displayNavArr.shift()
