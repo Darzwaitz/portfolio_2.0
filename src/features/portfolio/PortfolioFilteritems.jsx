@@ -1,12 +1,12 @@
 import React from 'react'
-import { useFilter } from '../../contexts/FilteritemsContext'
+import { useFilter } from '@/contexts/FilteritemsContext'
 
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li className="mr-5">
             <div className="flex items-center">
                 <input
-                    className=" mr-1.5 accent-grey-04"
+                    className="accent-grey-04 mr-1.5"
                     type="checkbox"
                     id={label}
                     checked={isChecked}

@@ -18,16 +18,17 @@ function Img() {
         <img
             src={placeholder}
             alt="placeholder image"
-            className="inline-block w-1/2"
+            className="inline-block"
         />
     )
 }
 function TagList({ icon }) {
     return (
-        <ul className="inline-block w-1/2">
+        // <ul className="inline-block w-1/2">
+        <ul className="inline-block">
             {icon.map((icon) => (
                 <React.Fragment key={icon}>
-                    <li className="m-3.5 w-6" key={icon}>
+                    <li className="m-2.5 w-6" key={icon}>
                         {icon}
                     </li>
                 </React.Fragment>
