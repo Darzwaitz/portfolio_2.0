@@ -1,17 +1,21 @@
 import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
+import { useMemo } from 'react'
 
 function NavTop() {
-    // take nav array, remove the first 'search' item from painted nav display
     const { curPageList } = useCurPage()
-    const displayNavArr = curPageList.slice()
-    displayNavArr.shift()
 
-    console.log('run')
+    // take nav array, remove the first 'search' item from painted main nav links display
+    const navLinks = useMemo(() => {
+        const updatedNavLinks = curPageList.slice()
+        updatedNavLinks.shift()
+
+        return updatedNavLinks
+    }, [curPageList])
 
     return (
         <nav className="text-grey-01 flex gap-5">
-            {displayNavArr.map(([title, icon, url]) => (
+            {navLinks.map(([title, icon, url]) => (
                 <NavItems key={title} title={title} url={url} icon={icon} />
             ))}
         </nav>
