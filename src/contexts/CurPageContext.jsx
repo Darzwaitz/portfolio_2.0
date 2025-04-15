@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from 'react'
 const CurPageContext = createContext()
 
 function CurPageProvider({ children }) {
+    // 1st item 'Search' is not displayed on landing
     const [curPageList, setCurPageList] = useState([
         ['Search', '🔎', '/'],
         ['Home', '🏚️', '/home'],
@@ -28,7 +29,7 @@ function CurPageProvider({ children }) {
         }
         checkList()
 
-        // sets current active nav item in NavTop
+        // sets current active nav item in NavTop component
         setCurPageName(currentPage)
 
         return setCurPageName
