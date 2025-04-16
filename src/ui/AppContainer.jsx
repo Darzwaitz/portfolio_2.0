@@ -4,7 +4,9 @@ function AppContainer({ children }) {
     useCurPageUrl()
 
     return (
-        <div className="grid h-screen grid-rows-[8vh_86vh_6vh]">{children}</div>
+        <div className="max-w-8xl mx-auto grid h-screen grid-rows-[8vh_86vh_6vh]">
+            {children}
+        </div>
     )
 }
 

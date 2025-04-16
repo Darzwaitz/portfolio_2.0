@@ -16,31 +16,27 @@ function PortfolioPage() {
             </ul>
 
             {/* items container */}
-            <div className="flex w-auto justify-between">
+            <div className="grid grid-cols-(--my-grid-cols) gap-2">
                 {PortfolioItemsList.map((project, i) =>
                     // const {title, description, tags} = project
                     portfolioitemTags.includes(...project.tags) ? (
                         // <PortfolioItem project={project} key={i} />
                         <PortfolioItem key={i}>
-                            {/* item container */}
-                            <div className="border-grey-04 text-grey-02 flex w-auto rounded-s-sm border hover:brightness-110">
-                                <div>
-                                    <PortfolioItem.TagList
-                                        // tags={project.tags}
-                                        icon={project.icon}
-                                    />
-                                </div>
-                                <div className="">
-                                    <PortfolioItem.Img />
+                            {/* item container within comp */}
+                            <div>
+                                <PortfolioItem.TagList
+                                    // tags={project.tags}
+                                    icon={project.icon}
+                                />
+                            </div>
+                            <div className="">
+                                <PortfolioItem.Img />
 
-                                    <PortfolioItem.Title
-                                        title={project.title}
-                                    />
+                                <PortfolioItem.Title title={project.title} />
 
-                                    {/* <PortfolioItem.Description
+                                {/* <PortfolioItem.Description
                                         description={project.description}
                                     /> */}
-                                </div>
                             </div>
                         </PortfolioItem>
                     ) : (

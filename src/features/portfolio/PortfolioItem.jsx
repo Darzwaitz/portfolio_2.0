@@ -6,9 +6,11 @@ const PortfolioItemContext = createContext()
 
 function PortfolioItem({ children }) {
     return (
-        <PortfolioItemContext.Provider value={children}>
-            {children}
-        </PortfolioItemContext.Provider>
+        <div className="border-grey-04 text-grey-02 flex w-auto border p-1.5 hover:brightness-110">
+            <PortfolioItemContext.Provider value={children}>
+                {children}
+            </PortfolioItemContext.Provider>
+        </div>
     )
 }
 
