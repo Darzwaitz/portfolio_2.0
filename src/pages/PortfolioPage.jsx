@@ -5,6 +5,10 @@ import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
 
 function PortfolioPage() {
     const portfolioitemTags = usePortfolioitemTags()
+    function clickEl(e) {
+        // e.target.className.add('hidden')
+        console.log(e.target.hidden)
+    }
 
     return (
         <>
@@ -30,13 +34,13 @@ function PortfolioPage() {
                                 />
                             </div>
                             <div className="">
-                                <PortfolioItem.Img />
-
                                 <PortfolioItem.Title title={project.title} />
-
-                                {/* <PortfolioItem.Description
-                                        description={project.description}
-                                    /> */}
+                                <PortfolioItem.Img />
+                                {/* show on condition in portfolioitem */}
+                                <PortfolioItem.Description
+                                    description={project.description}
+                                    onclick={clickEl}
+                                />
                             </div>
                         </PortfolioItem>
                     ) : (

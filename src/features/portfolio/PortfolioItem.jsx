@@ -6,7 +6,8 @@ const PortfolioItemContext = createContext()
 
 function PortfolioItem({ children }) {
     return (
-        <div className="border-grey-04 text-grey-02 flex w-auto border p-1.5 hover:brightness-110">
+        // item container
+        <div className="border-grey-04 text-grey-02 flex border p-1.5 hover:brightness-110">
             <PortfolioItemContext.Provider value={children}>
                 {children}
             </PortfolioItemContext.Provider>
@@ -41,8 +42,12 @@ function TagList({ icon }) {
 function Title({ title }) {
     return <h1 className="bg-blue-200">{title}</h1>
 }
-function Description({ description }) {
-    return <h2 className="bg-red-200">{description}</h2>
+function Description({ description, onclick }) {
+    return (
+        <p className="hidden" onClick={onclick}>
+            {description}
+        </p>
+    )
 }
 
 PortfolioItem.Img = Img
