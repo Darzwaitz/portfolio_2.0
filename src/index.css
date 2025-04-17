@@ -28,7 +28,7 @@
     --font-sans: 'CascadiaMono';
 
     /* custom sizes */
-    --my-grid-cols: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    --item-grid-cols: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
 }
 
 /*

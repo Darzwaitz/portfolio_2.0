@@ -16,7 +16,7 @@ function PortfolioPage() {
             </ul>
 
             {/* items container */}
-            <div className="grid grid-cols-(--my-grid-cols) gap-2">
+            <div className="grid grid-cols-(--item-grid-cols) gap-2">
                 {PortfolioItemsList.map((project, i) =>
                     // const {title, description, tags} = project
                     portfolioitemTags.includes(...project.tags) ? (
