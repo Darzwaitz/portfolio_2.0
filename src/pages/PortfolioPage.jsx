@@ -7,7 +7,7 @@ function PortfolioPage() {
     const portfolioitemTags = usePortfolioitemTags()
     function clickEl(e) {
         // e.target.className.add('hidden')
-        console.log(e.target.hidden)
+        e.target.hidden = true
     }
 
     return (

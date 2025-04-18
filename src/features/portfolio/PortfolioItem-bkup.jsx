@@ -44,7 +44,7 @@ function Title({ title }) {
 }
 function Description({ description, onclick }) {
     return (
-        <p className="" onClick={onclick}>
+        <p className="hidden" onClick={onclick}>
             {description}
         </p>
     )
