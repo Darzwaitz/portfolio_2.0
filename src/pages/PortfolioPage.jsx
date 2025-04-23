@@ -27,7 +27,7 @@ function PortfolioPage() {
                         // <PortfolioItem project={project} key={i} />
                         <PortfolioItem key={i}>
                             {/* item container within comp */}
-                            <div>
+                            <div className="">
                                 <PortfolioItem.TagList
                                     // tags={project.tags}
                                     icon={project.icon}

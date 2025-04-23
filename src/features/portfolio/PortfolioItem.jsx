@@ -7,7 +7,7 @@ const PortfolioItemContext = createContext()
 function PortfolioItem({ children }) {
     return (
         // item container
-        <div className="border-grey-04 text-grey-02 flex border p-1.5 hover:brightness-110">
+        <div className="border-grey-04 text-grey-02 flex border hover:brightness-110">
             <PortfolioItemContext.Provider value={children}>
                 {children}
             </PortfolioItemContext.Provider>
@@ -21,7 +21,7 @@ function Img() {
         <img
             src={placeholder}
             alt="placeholder image"
-            className="inline-block"
+            className="inline-block pl-3"
         />
     )
 }

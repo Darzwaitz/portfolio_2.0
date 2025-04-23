@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react'
 const CurPageContext = createContext()
 
 function CurPageProvider({ children }) {
-    // 1st item 'Search' is not displayed on landing
+    // 1st item 'Search' is not displayed on landing - or ever
     const [curPageList, setCurPageList] = useState([
         ['Search', '🔎', '/'],
         ['Home', '🏚️', '/home'],
