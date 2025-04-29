@@ -1,14 +1,21 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, { createContext } from 'react'
+import React, { createContext, useRef } from 'react'
 
 const PortfolioItemContext = createContext()
 
+function showFullItem(e) {
+    // e.target.className.add('hidden')
+    // e.target.hidden = true
+    console.log('clickd: ' + e.target.className)
+}
+
 function PortfolioItem({ children }) {
+    const show = useRef(false)
     return (
         // item container
         <div className="border-grey-04 text-grey-02 flex border hover:brightness-110">
-            <PortfolioItemContext.Provider value={children}>
+            <PortfolioItemContext.Provider value={show}>
                 {children}
             </PortfolioItemContext.Provider>
         </div>
@@ -21,7 +28,7 @@ function Img() {
         <img
             src={placeholder}
             alt="placeholder image"
-            className="inline-block pl-3"
+            className="col-span-2 inline-block"
         />
     )
 }
@@ -31,7 +38,7 @@ function TagList({ icon }) {
         <ul className="inline-block">
             {icon.map((icon) => (
                 <React.Fragment key={icon}>
-                    <li className="m-2.5 w-6" key={icon}>
+                    <li className="m-1 w-6" key={icon}>
                         {icon}
                     </li>
                 </React.Fragment>
@@ -40,11 +47,29 @@ function TagList({ icon }) {
     )
 }
 function Title({ title }) {
-    return <h1 className="bg-blue-200">{title}</h1>
+    return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
 }
-function Description({ description, onclick }) {
+
+function Maximize() {
     return (
-        <p className="" onClick={onclick}>
+        <span
+            className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
+            onClick={showFullItem}
+        >
+            ◻
+        </span>
+    )
+}
+
+function Description({ description, onclick, show }) {
+    console.log(show)
+
+    return (
+        <p
+            className="col-span-2 hidden"
+            style={{ display: show ? 'block' : 'none' }}
+            onClick={onclick}
+        >
             {description}
         </p>
     )
@@ -53,6 +78,7 @@ function Description({ description, onclick }) {
 PortfolioItem.Img = Img
 PortfolioItem.TagList = TagList
 PortfolioItem.Title = Title
+PortfolioItem.Maximize = Maximize
 PortfolioItem.Description = Description
 
 export default PortfolioItem
