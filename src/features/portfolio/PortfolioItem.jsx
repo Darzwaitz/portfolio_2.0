@@ -1,25 +1,51 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, { createContext, useRef } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
 const PortfolioItemContext = createContext()
 
-function showFullItem(e) {
-    // e.target.className.add('hidden')
-    // e.target.hidden = true
-    console.log('clickd: ' + e.target.className)
+function PortfolioItem({ children, projectKey }) {
+    const [show, setShow] = useState(false)
+
+    // when maximize button clicked
+    function showFullItem() {
+        setShow(!show)
+        return show
+    }
+
+    return (
+        <PortfolioItemContext.Provider
+            value={{
+                show,
+                showFullItem,
+                projectKey,
+            }}
+        >
+            {children}
+        </PortfolioItemContext.Provider>
+    )
 }
 
-function PortfolioItem({ children }) {
-    const show = useRef(false)
+// item container
+function ItemWrapper({ children }) {
+    const showFullItem = useContext(PortfolioItemContext)
+
     return (
-        // item container
-        <div className="border-grey-04 text-grey-02 flex border hover:brightness-110">
-            <PortfolioItemContext.Provider value={show}>
-                {children}
-            </PortfolioItemContext.Provider>
+        <div
+            // add absolute position to current item on click of maximize
+            style={{ position: showFullItem.show ? 'absolute' : '' }}
+            className="border-grey-04 text-grey-02 flex border hover:brightness-110"
+        >
+            {children}
         </div>
     )
+}
+// item inner layout wrapperz
+function GridWrapper({ children }) {
+    return <div className="grid grid-cols-2 items-baseline">{children}</div>
+}
+function DivWrapper({ children }) {
+    return <div className="">{children}</div>
 }
 
 // context child componentz
@@ -51,6 +77,8 @@ function Title({ title }) {
 }
 
 function Maximize() {
+    const { showFullItem } = useContext(PortfolioItemContext)
+
     return (
         <span
             className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
@@ -61,20 +89,22 @@ function Maximize() {
     )
 }
 
-function Description({ description, onclick, show }) {
-    console.log(show)
+function Description({ description }) {
+    const showFullItem = useContext(PortfolioItemContext)
 
     return (
         <p
             className="col-span-2 hidden"
-            style={{ display: show ? 'block' : 'none' }}
-            onClick={onclick}
+            style={{ display: showFullItem.show ? 'block' : 'none' }}
         >
             {description}
         </p>
     )
 }
 
+PortfolioItem.ItemWrapper = ItemWrapper
+PortfolioItem.GridWrapper = GridWrapper
+PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img
 PortfolioItem.TagList = TagList
 PortfolioItem.Title = Title

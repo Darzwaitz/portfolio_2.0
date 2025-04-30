@@ -6,12 +6,6 @@ import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
 function PortfolioPage() {
     const portfolioitemTags = usePortfolioitemTags()
 
-    // function clickEl() {
-    //     // e.target.className.add('hidden')
-    //     // e.target.hidden = true
-    //     console.log('clickd')
-    // }
-
     return (
         <>
             <h1 className="block pb-4">PORTFOLIO PAGE</h1>
@@ -22,29 +16,32 @@ function PortfolioPage() {
             </ul>
 
             {/* items container */}
-            <div className="grid grid-cols-(--item-grid-cols) gap-2">
+            <div className="relative grid grid-cols-(--item-grid-cols) gap-2">
                 {PortfolioItemsList.map((project, i) =>
-                    // const {title, description, tags} = project
                     portfolioitemTags.includes(...project.tags) ? (
-                        // <PortfolioItem project={project} key={i} />
-                        <PortfolioItem key={i}>
+                        <PortfolioItem key={i} projectKey={i}>
                             {/* item container within comp */}
-                            <div className="">
-                                <PortfolioItem.TagList
-                                    // tags={project.tags}
-                                    icon={project.icon}
-                                />
-                            </div>
-                            <div className="grid grid-cols-2 items-baseline">
-                                <PortfolioItem.Title title={project.title} />
-                                <PortfolioItem.Maximize />
-                                <PortfolioItem.Img />
-                                {/* show on condition in portfolioitem */}
-                                <PortfolioItem.Description
-                                    description={project.description}
-                                    // onclick={clickEl}
-                                />
-                            </div>
+                            <PortfolioItem.ItemWrapper>
+                                <PortfolioItem.DivWrapper>
+                                    <PortfolioItem.TagList
+                                        // tags={project.tags}
+                                        icon={project.icon}
+                                    />
+                                </PortfolioItem.DivWrapper>
+
+                                <PortfolioItem.GridWrapper>
+                                    <PortfolioItem.Title
+                                        title={project.title}
+                                    />
+                                    {/* maximize item button */}
+                                    <PortfolioItem.Maximize />
+                                    <PortfolioItem.Img />
+                                    {/* show on condition in portfolioitem */}
+                                    <PortfolioItem.Description
+                                        description={project.description}
+                                    />
+                                </PortfolioItem.GridWrapper>
+                            </PortfolioItem.ItemWrapper>
                         </PortfolioItem>
                     ) : (
                         ''
