@@ -28,13 +28,11 @@ function PortfolioItem({ children, projectKey }) {
 
 // item container
 function ItemWrapper({ children }) {
-    const showFullItem = useContext(PortfolioItemContext)
+    const { show } = useContext(PortfolioItemContext)
 
     return (
         <div
-            // add absolute position to current item on click of maximize
-            style={{ position: showFullItem.show ? 'absolute' : '' }}
-            className="border-grey-04 text-grey-02 flex border hover:brightness-110"
+            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show ? 'absolute' : ''}`}
         >
             {children}
         </div>
@@ -90,13 +88,10 @@ function Maximize() {
 }
 
 function Description({ description }) {
-    const showFullItem = useContext(PortfolioItemContext)
+    const { show } = useContext(PortfolioItemContext)
 
     return (
-        <p
-            className="col-span-2 hidden"
-            style={{ display: showFullItem.show ? 'block' : 'none' }}
-        >
+        <p className={`col-span-2 ${show ? 'block' : 'hidden'}`}>
             {description}
         </p>
     )
