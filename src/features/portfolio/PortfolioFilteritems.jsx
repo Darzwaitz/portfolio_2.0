@@ -21,12 +21,14 @@ function Checkbox({ isChecked, label, checkHandler, icon }) {
     )
 }
 
-function PortfolioFilteritems() {
+function PortfolioFilteritems({ flexcolumn }) {
     // from Context
     const { items, onChangeHandle } = useFilter()
 
     return (
-        <>
+        <ul
+            className={`mb-5 flex justify-center ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+        >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
                     <Checkbox
@@ -39,7 +41,7 @@ function PortfolioFilteritems() {
                     />
                 </React.Fragment>
             ))}
-        </>
+        </ul>
     )
 }
 

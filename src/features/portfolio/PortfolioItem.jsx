@@ -10,7 +10,7 @@ function PortfolioItem({ children, projectKey }) {
     // when maximize button clicked
     function showFullItem() {
         setShow(!show)
-        return show
+        // return show
     }
 
     return (

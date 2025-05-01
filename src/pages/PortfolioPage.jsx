@@ -11,9 +11,7 @@ function PortfolioPage() {
             <h1 className="block pb-4">PORTFOLIO PAGE</h1>
 
             {/* choose filter items section */}
-            <ul className="mb-5 flex justify-center">
-                <PortfolioFilteritems />
-            </ul>
+            <PortfolioFilteritems />
 
             {/* items container */}
             <div className="relative grid grid-cols-(--item-grid-cols) gap-2">

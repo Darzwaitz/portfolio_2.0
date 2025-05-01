@@ -17,8 +17,8 @@ function SearchProjectsSubitem() {
 
     return (
         <div className="listitem">
-            <div className="flex cursor-pointer text-sm text-grey-02">
-                <span className="mr-1 w-5 self-center ">
+            <div className="text-grey-02 flex cursor-pointer text-sm">
+                <span className="mr-1 w-5 self-center">
                     <ArrowIcon />
                 </span>
                 <h1
@@ -31,11 +31,9 @@ function SearchProjectsSubitem() {
                 </h1>
             </div>
 
-            {reveal && (
-                <ul className="ml-6">
-                    <PortfolioFilteritems />
-                </ul>
-            )}
+            {/* choose filter items section - set flex to col */}
+            {reveal && <PortfolioFilteritems flexcolumn />}
+
             {onShowSubmit && (
                 <div className="mt-1 flex items-center">
                     <span className="mr-1 w-5">
