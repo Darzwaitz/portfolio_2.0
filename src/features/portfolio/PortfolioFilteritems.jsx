@@ -27,7 +27,8 @@ function PortfolioFilteritems({ flexcolumn }) {
 
     return (
         <ul
-            className={`mb-5 flex justify-center ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            // className={`mb-5 flex justify-center ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            className={`mb-5 flex flex-wrap justify-center ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
