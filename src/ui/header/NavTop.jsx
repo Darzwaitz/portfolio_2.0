@@ -9,7 +9,7 @@ function NavTop() {
     updatedNavLinks.shift()
 
     return (
-        <nav className="text-grey-01 flex gap-5">
+        <nav className="text-grey-01 hidden gap-5 lg:flex">
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems key={title} title={title} url={url} icon={icon} />
             ))}

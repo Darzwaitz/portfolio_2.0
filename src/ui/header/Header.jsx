@@ -3,11 +3,13 @@ import Logo from './assets/imgs/Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
 import HeaderWindowbuttons from './HeaderWindowbuttons'
 import TogglePanels from '../header/TogglePanels'
+import NavArrows from './NavArrows'
 
 function Header() {
     return (
-        <header className="bg-neutral-300 sticky top-0 z-10 flex flex-wrap items-center gap-2 border-b border-grey-03 bg-black-01 pl-3 text-grey-01 ">
+        <header className="border-grey-03 bg-black-01 text-grey-01 sticky top-0 z-10 flex flex-wrap items-center gap-2 border-b bg-neutral-300 pl-3">
             <Logo />
+            <NavArrows />
             <NavTop />
             <HeaderSearchnavbar />
             <TogglePanels />

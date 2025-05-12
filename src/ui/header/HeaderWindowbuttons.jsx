@@ -1,9 +1,9 @@
 function HeaderWindowbuttons() {
     return (
-        <div className="flex gap-2">
-            <div className="p-1 text-grey-01">-</div>
-            <div className="p-1 text-grey-01">◻</div>
-            <div className="p-1 text-grey-01">X</div>
+        <div className="hidden gap-2 lg:flex">
+            <div className="text-grey-01 p-1">-</div>
+            <div className="text-grey-01 p-1">◻</div>
+            <div className="text-grey-01 p-1">X</div>
         </div>
     )
 }
