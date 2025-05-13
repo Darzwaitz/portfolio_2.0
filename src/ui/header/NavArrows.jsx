@@ -1,10 +1,11 @@
 function NavArrows() {
+    // using header to show these conditionally
     return (
-        <div>
+        <>
             <span>←</span>
             <span>&nbsp;</span>
             <span>→</span>
-        </div>
+        </>
     )
 }
 
