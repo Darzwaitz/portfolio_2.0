@@ -31,7 +31,7 @@
     --item-grid-cols: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
 
     /* custom breakpointz */
-    --breakpoint-lg: 65.1rem;
+    --breakpoint-lg: 67rem;
 }
 
 /*

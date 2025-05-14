@@ -2,14 +2,15 @@ import React from 'react'
 import { useFilter } from '@/contexts/FilteritemsContext'
 
 // list
-function PortfolioFilteritems({ flexcolumn }) {
+function PortfolioFilteritems({ flexcolumn, width }) {
     // from Context
     const { items, onChangeHandle } = useFilter()
 
     return (
         <ul
             // className={`mb-5 flex justify-center ${flexcolumn ? 'flex-col' : 'flex-row'}`}
-            className={`w m-auto mb-5 flex flex-wrap justify-center sm:max-lg:w-[40rem] ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            // className={`m-auto mb-5 flex flex-wrap justify-center sm:max-lg:w-[40rem] ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            className={`m-auto mb-5 flex flex-wrap justify-center ${width ? 'sm:max-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
