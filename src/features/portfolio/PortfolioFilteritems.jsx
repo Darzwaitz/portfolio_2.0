@@ -8,9 +8,8 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 
     return (
         <ul
-            // className={`mb-5 flex justify-center ${flexcolumn ? 'flex-col' : 'flex-row'}`}
-            // className={`m-auto mb-5 flex flex-wrap justify-center sm:max-lg:w-[40rem] ${flexcolumn ? 'flex-col' : 'flex-row'}`}
-            className={`m-auto mb-5 flex flex-wrap justify-center ${width ? 'sm:max-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            // className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>

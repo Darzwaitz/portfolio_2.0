@@ -21,7 +21,7 @@ function AppLayout() {
                         <section className="flex h-full w-full bg-yellow-400">
                             <SidebarNav />
                             <main className="bg-black-01 text-grey-01 flex h-full w-full flex-col justify-between overflow-y-scroll">
-                                <div className="p-9">
+                                <div className="@container p-9">
                                     <Outlet />
                                 </div>
                                 <Terminal />
