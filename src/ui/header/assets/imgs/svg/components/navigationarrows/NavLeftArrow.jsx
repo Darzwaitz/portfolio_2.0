@@ -1,6 +1,7 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
+const { defaultColor, hover, iconSize, arrowDirectionWithFix } =
+    SvgSettingsMedium()
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
@@ -12,7 +13,6 @@ function NavLeftArrow() {
             {/* arrow-left.svg */}
             <svg
                 className="pointer-events-none"
-                data-panel="toggleCustomizeLayout"
                 width="22"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ function NavLeftArrow() {
 
             <Tooltip
                 msg={'Go Back (Alt+LeftArrow)'}
-                arrowDirection={arrowDirection}
+                arrowDirectionWithFix={arrowDirectionWithFix}
             />
         </SvgIconwrapper>
     )

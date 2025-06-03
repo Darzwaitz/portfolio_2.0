@@ -13,6 +13,7 @@ export function SvgSettingsMedium() {
         hover: 'hover:bg-grey-08',
         iconSize: 'medium',
         arrowDirection: 'up',
+        arrowDirectionWithFix: 'upOverFlowXFix',
     }
 }
 
