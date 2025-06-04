@@ -1,11 +1,12 @@
 // svg comp. imports
 import SvgWrapper from '@/assets/imgs/svg/components/SvgWrapper'
+import NavMenuIcon from './assets/imgs/svg/components/NavMenuIcon'
+import ExplorerView from './assets/imgs/svg/components/ExplorerView'
+import SourceControl from './assets/imgs/svg/components/SourceControl'
+import Search from './assets/imgs/svg/components/Search'
+import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import UserAccount from './assets/imgs/svg/components/UserAccount'
 import SettingsGear from './assets/imgs/svg/components/SettingsGear'
-import ExplorerView from './assets/imgs/svg/components/ExplorerView'
-import Search from './assets/imgs/svg/components/Search'
-import SourceControl from './assets/imgs/svg/components/SourceControl'
-import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import SidebarExplorer from './SidebarExplorer'
 
 import { usePanels } from '@/contexts/PanelsContext'
@@ -45,6 +46,9 @@ function SidebarNav() {
                     {/* top nav links */}
                     <div>
                         <SvgWrapper size="large">
+                            <div className="lg:hidden">
+                                <NavMenuIcon />
+                            </div>
                             {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
                             <ExplorerView
                                 onToggleExplorer={handleToggleExplorer}
