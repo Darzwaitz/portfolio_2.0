@@ -1,11 +1,4 @@
 function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
-    // up arrow direction with fix for tooltip overflowing screen on the left
-    if (arrowDirectionWithFix === 'upOverFlowXFix')
-        return (
-            <pre className="tooltip before:solid after:solid after:top-top-0.5 before:border-b-grey-01 after:border-b-black-02 after: -left-3 z-50 px-2.5 pt-2.5 pb-3.5 before:absolute before:top-0.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:left-2.5 after:mt-[-22px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
-                {msg}
-            </pre>
-        )
     if (arrowDirection === 'up')
         return (
             <pre className="tooltip before:solid after:solid after:top-top-0.5 before:border-b-grey-01 after:border-b-black-02 right-0 px-2.5 pt-2.5 pb-3.5 before:absolute before:top-0.5 before:right-1.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:right-1.5 after:mt-[-22px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
@@ -20,13 +13,6 @@ function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
                 {msg}
             </pre>
         )
-
-    // if (arrowDirection === 'up')
-    //     return (
-    //         <pre className="tooltip before:solid after:solid after:top-top-0.5 before:border-b-grey-01 after:border-b-black-02 right-0 px-2.5 pt-2.5 pb-3.5 before:absolute before:top-0.5 before:right-1.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:right-1.5 after:mt-[-22px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
-    //             {msg}
-    //         </pre>
-    //     )
 
     if (arrowDirection === 'down')
         return (

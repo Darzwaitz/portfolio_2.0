@@ -8,7 +8,9 @@ function SvgIconwrapper({ iconSize, hover, children }) {
         // NB: class of pointer events none on tooltip comp to stop this firing on the svg itself
         const elToSend = e.target.querySelector('svg').dataset.panel
 
-        onTogglePanels(elToSend)
+        // only call onTogglePanels if elToSend is truthy
+        if (elToSend) onTogglePanels(elToSend)
+        return
     }
 
     if (iconSize === 'large')
@@ -24,7 +26,9 @@ function SvgIconwrapper({ iconSize, hover, children }) {
                 onClick={getChildSvgData}
                 className={'group relative inline-block'}
             >
-                <div className={`${hover} z-50 rounded-sm p-[3px] text-grey-06`}>
+                <div
+                    className={`${hover} text-grey-06 z-50 rounded-sm p-[3px]`}
+                >
                     {children}
                 </div>
             </div>

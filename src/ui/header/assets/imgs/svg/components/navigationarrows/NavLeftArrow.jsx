@@ -1,5 +1,6 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+// arrowDirectionWithFix used because of tooltip x axis overflow
 const { defaultColor, hover, iconSize, arrowDirectionWithFix } =
     SvgSettingsMedium()
 
