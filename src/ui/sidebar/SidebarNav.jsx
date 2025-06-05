@@ -8,6 +8,7 @@ import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import UserAccount from './assets/imgs/svg/components/UserAccount'
 import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
+import NavTop from '../header/NavTop'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
@@ -46,7 +47,15 @@ function SidebarNav() {
                     {/* top nav links */}
                     <div>
                         <SvgWrapper size="large">
-                            <div className="lg:hidden">
+                            <div
+                                className="lg:hidden"
+                                onClick={() => {
+                                    console.log(
+                                        document.getElementById('navtop')
+                                            .className
+                                    )
+                                }}
+                            >
                                 <NavMenuIcon />
                             </div>
                             {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
@@ -73,6 +82,10 @@ function SidebarNav() {
                 {toggleExplorer && (
                     <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}
+                {/* conditionally show main nav list for smaller screens */}
+                <div id="navtop" className="">
+                    <NavTop />
+                </div>
             </aside>
         )
     )

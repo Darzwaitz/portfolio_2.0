@@ -31,8 +31,8 @@ function SidebarExplorer({ onToggleExplorer }) {
     //     setReveal(!reveal)
     // }
     return (
-        <section className="w-max border-l-[1px] border-r-[1px] border-l-grey-04  border-r-grey-04 bg-black-01 text-grey-01">
-            <ul className=" mt-3 flex flex-col">
+        <section className="border-l-grey-04 border-r-grey-04 bg-black-01 text-grey-01 w-max border-r-[1px] border-l-[1px]">
+            <ul className="mt-[77px] flex flex-col lg:mt-3">
                 {[
                     <ExplorerSubitem
                         key={'01'}
