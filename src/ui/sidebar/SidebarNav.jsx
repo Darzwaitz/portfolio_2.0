@@ -8,7 +8,8 @@ import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import UserAccount from './assets/imgs/svg/components/UserAccount'
 import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
-import NavTop from '../header/NavTop'
+// import NavTop from '../header/NavTop'
+import NavTop2 from '../header/NavTop2'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
@@ -17,10 +18,21 @@ function SidebarNav() {
     const { togglePanels } = usePanels()
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
+    const [toggleNav, setToggleNav] = useState(false)
+    // console.log(toggleNav)
 
     function handleToggleExplorer() {
         if (togglePanels.toggleLeft || togglePanels.toggleRight)
             setToggleExplorer((show) => (show = !show))
+    }
+
+    function handleToggleNav() {
+        // if (togglePanels.toggleLeft || togglePanels.toggleRight)
+        // console.log('toggleNav')
+
+        setToggleNav((show) => (show = !show))
+        // console.log(toggleNav)
+        console.log(SvgWrapper.width)
     }
 
     return (
@@ -49,12 +61,7 @@ function SidebarNav() {
                         <SvgWrapper size="large">
                             <div
                                 className="lg:hidden"
-                                onClick={() => {
-                                    console.log(
-                                        document.getElementById('navtop')
-                                            .className
-                                    )
-                                }}
+                                onClick={handleToggleNav}
                             >
                                 <NavMenuIcon />
                             </div>
@@ -83,9 +90,11 @@ function SidebarNav() {
                     <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}
                 {/* conditionally show main nav list for smaller screens */}
-                <div id="navtop" className="">
+                {/* <div className={toggleNav && 'hidden'}>
                     <NavTop />
-                </div>
+                </div> */}
+                {toggleNav && <NavTop2 />}
+                {/* <NavTop /> */}
             </aside>
         )
     )
