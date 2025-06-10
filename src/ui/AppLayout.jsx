@@ -18,7 +18,8 @@ function AppLayout() {
                         <Header />
                         {/* NB flex here on <section> needed for sidebar toggle in SidebarNav*/}
                         {/* grid in AppContainer to be used in 2.0 */}
-                        <section className="flex h-full w-full bg-yellow-400">
+                        {/* CHANGING TO GRID tbu <section className="flex h-full w-full bg-yellow-400"> */}
+                        <section className="grid h-full w-full bg-yellow-400">
                             <SidebarNav />
                             <main className="bg-black-01 text-grey-01 flex h-full w-full flex-col justify-between overflow-y-scroll">
                                 <div className="@container p-9">
