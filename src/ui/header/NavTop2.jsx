@@ -1,7 +1,7 @@
 import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
 
-function NavTop() {
+function NavTop({ toggleExplorer }) {
     const { curPageList } = useCurPage()
 
     // take nav array, remove the first 'search' item from painted main nav links display
@@ -11,7 +11,11 @@ function NavTop() {
     return (
         // <nav className="text-grey-01 hidden gap-5 lg:flex">
         // <nav className="text-grey-01 gap-5 lg:flex">
-        <nav className="text-grey-01 absolute gap-5">
+        <nav
+            // style={togglePanels.toggleRight ? { order: '1' } : { order: '0' }}
+            style={toggleExplorer ? { left: '10px' } : { right: '10px' }}
+            className="text-grey-01 absolute left-10 gap-5"
+        >
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems key={title} title={title} url={url} icon={icon} />
             ))}

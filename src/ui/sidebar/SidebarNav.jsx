@@ -32,7 +32,7 @@ function SidebarNav() {
 
         setToggleNav((show) => (show = !show))
         // console.log(toggleNav)
-        // console.log(SvgWrapper.width)
+        console.log(SvgWrapper.width)
     }
 
     return (
@@ -42,18 +42,10 @@ function SidebarNav() {
                     togglePanels.toggleRight ? { order: '1' } : { order: '0' }
                 }
                 // show border left if sidebar is toggled to right side
-                // PREVIOUS FLEX SETUP
-                // className={
-                //     togglePanels.toggleRight
-                //         ? 'border-l-grey-04 flex border-l-[1px]'
-                //         : 'border-r-grey-04 flex border-r-[1px]'
-                // }
                 className={
                     togglePanels.toggleRight
-                        ? // ? 'border-l-grey-04 col-span-1 border-l-[1px]'
-                          // : 'border-r-grey-04 col-span-1 border-r-[1px]'
-                          'border-l-grey-04 col-span-1 border-l-[1px]'
-                        : 'border-r-grey-04 w-fit border-r-[1px]'
+                        ? 'border-l-grey-04 flex border-l-[1px]'
+                        : 'border-r-grey-04 flex border-r-[1px]'
                 }
             >
                 <nav
@@ -62,7 +54,7 @@ function SidebarNav() {
                             ? { order: '1' }
                             : { order: '0' }
                     }
-                    className="bg-black-01 text-grey-01 flex h-full flex-col items-center justify-between"
+                    className="bg-black-01 text-grey-01 flex flex-col items-center justify-between"
                 >
                     {/* top nav links */}
                     <div>
@@ -101,7 +93,7 @@ function SidebarNav() {
                 {/* <div className={toggleNav && 'hidden'}>
                     <NavTop />
                 </div> */}
-                {toggleNav && <NavTop2 />}
+                {toggleNav && <NavTop2 toggleExplorer={toggleExplorer} />}
                 {/* <NavTop /> */}
             </aside>
         )
