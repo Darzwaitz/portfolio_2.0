@@ -31,8 +31,8 @@ function SidebarNav() {
         // console.log('toggleNav')
 
         setToggleNav((show) => (show = !show))
-        // console.log(toggleNav)
-        console.log(SvgWrapper.width)
+
+        // console.log(togglePanels.toggleLeft)
     }
 
     return (
@@ -93,7 +93,7 @@ function SidebarNav() {
                 {/* <div className={toggleNav && 'hidden'}>
                     <NavTop />
                 </div> */}
-                {toggleNav && <NavTop2 toggleExplorer={toggleExplorer} />}
+                {toggleNav && <NavTop2 togglePanels={togglePanels} />}
                 {/* <NavTop /> */}
             </aside>
         )
