@@ -16,7 +16,7 @@ function NavTop({ togglePanels }) {
                 togglePanels.toggleLeft ? { left: '57px' } : { right: '57px' }
             }
             // lg:hidden hides nav if window is resized larger & nav is shown - don't want nav to show when burger menu doesn't show
-            className="text-grey-01 absolute w-min gap-5 lg:hidden"
+            className="text-grey-01 border-grey-01 bg-grey-03 absolute z-50 w-min gap-5 rounded-xs border lg:hidden"
         >
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems key={title} title={title} url={url} icon={icon} />

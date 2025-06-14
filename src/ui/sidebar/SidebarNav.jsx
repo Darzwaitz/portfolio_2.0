@@ -8,8 +8,7 @@ import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import UserAccount from './assets/imgs/svg/components/UserAccount'
 import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
-// import NavTop from '../header/NavTop'
-import NavTop2 from '../header/NavTop2'
+import NavSide from '../header/NavSide'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
@@ -38,23 +37,18 @@ function SidebarNav() {
     return (
         (togglePanels.toggleLeft || togglePanels.toggleRight) && (
             <aside
-                style={
-                    togglePanels.toggleRight ? { order: '1' } : { order: '0' }
-                }
-                // show border left if sidebar is toggled to right side
-                className={
+                // show proper border on sidebar toggle
+                className={`flex ${
                     togglePanels.toggleRight
-                        ? 'border-l-grey-04 flex border-l-[1px]'
-                        : 'border-r-grey-04 flex border-r-[1px]'
-                }
+                        ? 'border-l-grey-04 order-1 border-l-[1px]'
+                        : 'border-r-grey-04 order-0 border-r-[1px]'
+                }`}
             >
                 <nav
-                    style={
-                        togglePanels.toggleRight
-                            ? { order: '1' }
-                            : { order: '0' }
-                    }
-                    className="bg-black-01 text-grey-01 flex flex-col items-center justify-between"
+                    // flex order also needed here for correct order of comps when sidebar toggled right
+                    className={`bg-black-01 text-grey-01 flex flex-col items-center justify-between ${
+                        togglePanels.toggleRight ? 'order-1' : 'order-0'
+                    }`}
                 >
                     {/* top nav links */}
                     <div>
@@ -90,11 +84,7 @@ function SidebarNav() {
                     <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}
                 {/* conditionally show main nav list for smaller screens */}
-                {/* <div className={toggleNav && 'hidden'}>
-                    <NavTop />
-                </div> */}
-                {toggleNav && <NavTop2 togglePanels={togglePanels} />}
-                {/* <NavTop /> */}
+                {toggleNav && <NavSide togglePanels={togglePanels} />}
             </aside>
         )
     )
