@@ -12,7 +12,9 @@ function Header() {
             <nav className="block lg:hidden">
                 <NavArrows />
             </nav>
-            <NavTop />
+            <div className="hidden lg:flex">
+                <NavTop />
+            </div>
             <HeaderSearchnavbar />
             <TogglePanels />
             <HeaderWindowbuttons />

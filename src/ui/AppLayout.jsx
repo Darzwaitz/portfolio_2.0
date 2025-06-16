@@ -17,6 +17,7 @@ function AppLayout() {
                     <AppContainer>
                         <Header />
                         {/* NB flex here on <section> needed for sidebar toggle in SidebarNav - Grid tested/not good for this*/}
+                        {/* KEEP <main> within <section> because of <sidebar> within <section>*/}
                         <section className="flex h-full w-full bg-yellow-400">
                             <SidebarNav />
                             <main className="bg-black-01 text-grey-01 flex h-full w-full flex-col justify-between overflow-y-scroll">

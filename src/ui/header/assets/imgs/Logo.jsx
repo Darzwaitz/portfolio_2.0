@@ -6,7 +6,7 @@ function Logo() {
     const { onCurPageName } = useCurPage()
 
     return (
-        <Link to="/" onClick={() => onCurPageName('Home')}>
+        <Link to="/" onClick={() => onCurPageName('Search')}>
             <img
                 // src="/imgs/logo-loading.gif"
                 src="/imgs/Portfolio-website-logo-Retina-344x320September-2017.png"

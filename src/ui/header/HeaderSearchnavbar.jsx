@@ -4,9 +4,10 @@ import { useCurPage } from '../../contexts/CurPageContext'
 function HeaderSearchnavbar() {
     // from context
     const { curPageName } = useCurPage()
+    console.log(curPageName)
 
     return (
-        <div className="m-auto rounded-lg border border-grey-07 bg-grey-03 px-40 py-1 pb-2 text-sm text-grey-06">
+        <div className="border-grey-07 bg-grey-03 text-grey-06 m-auto rounded-lg border px-40 py-1 pb-2 text-sm">
             {curPageName}
         </div>
     )

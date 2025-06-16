@@ -8,7 +8,8 @@ import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import UserAccount from './assets/imgs/svg/components/UserAccount'
 import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
-import NavSide from '../header/NavSide'
+// import NavSide from '../header/NavSide'
+import NavPages from '../header/NavPages'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
@@ -84,7 +85,12 @@ function SidebarNav() {
                     <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}
                 {/* conditionally show main nav list for smaller screens */}
-                {toggleNav && <NavSide togglePanels={togglePanels} />}
+                <div className="lg:hidden">
+                    {/* {toggleNav && <NavSide togglePanels={togglePanels} />} */}
+                    {toggleNav && (
+                        <NavPages togglePanels={togglePanels} NavSide />
+                    )}
+                </div>
             </aside>
         )
     )
