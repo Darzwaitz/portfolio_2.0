@@ -1,4 +1,5 @@
-import NavTop from './NavTop'
+// import NavTop from './NavTop'
+import NavPages from './NavPages'
 import Logo from './assets/imgs/Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
 import HeaderWindowbuttons from './HeaderWindowbuttons'
@@ -13,7 +14,7 @@ function Header() {
                 <NavArrows />
             </nav>
             <div className="hidden lg:flex">
-                <NavTop />
+                <NavPages stylesNavtop />
             </div>
             <HeaderSearchnavbar />
             <TogglePanels />

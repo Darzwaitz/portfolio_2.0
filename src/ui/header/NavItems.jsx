@@ -15,6 +15,7 @@ function NavItems({ title, url }) {
             to={url}
             onClick={(e) => {
                 onCurPageName(e.target.innerText)
+                console.log(e.target)
             }}
         >
             <span> {title}</span>

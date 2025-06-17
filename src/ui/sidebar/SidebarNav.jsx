@@ -86,9 +86,11 @@ function SidebarNav() {
                 )}
                 {/* conditionally show main nav list for smaller screens */}
                 <div className="lg:hidden">
-                    {/* {toggleNav && <NavSide togglePanels={togglePanels} />} */}
                     {toggleNav && (
-                        <NavPages togglePanels={togglePanels} NavSide />
+                        <NavPages
+                            togglePanels={togglePanels}
+                            stylesNavSidebar
+                        />
                     )}
                 </div>
             </aside>

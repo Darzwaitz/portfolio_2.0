@@ -8,7 +8,6 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 
     return (
         <ul
-            // className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
             className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
