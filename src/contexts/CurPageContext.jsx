@@ -12,16 +12,9 @@ function CurPageProvider({ children }) {
         ['Contact', '📬', '/contact'],
     ])
 
-    // Orij
-    // // \u00A0 === unicode for space
-    // const [curPageName, setCurPageName] = useState(
-    //     `${curPageList[0].slice(1, 2)} \u00A0${curPageList[0].slice(0, 1)}`
-    // )
-
     // \u00A0 === unicode for space
     const [curPageName, setCurPageName] = useState(
-        // `${curPageList[0].slice(1, 2)} \u00A0 ${curPageList[0].slice(0, 1)}`
-        `${curPageList[0].slice(1, 2)} ${curPageList[0].slice(0, 1)}`
+        `${curPageList[0].slice(1, 2)} \u00A0${curPageList[0].slice(0, 1)}`
     )
 
     function onCurPageName(curPName) {
@@ -31,13 +24,12 @@ function CurPageProvider({ children }) {
             for (let i = 0; i < curPageList.length; i++) {
                 const item = curPageList[i]
                 if (item.includes(curPName))
-                    // currentPage = `${item.slice(1, 2)} \u00A0 ${item.slice(0, 1)}`
-                    currentPage = `${item.slice(1, 2)} ${item.slice(0, 1)}`
+                    currentPage = `${item.slice(1, 2)} \u00A0${item.slice(0, 1)}`
             }
         }
         checkList()
 
-        // sets current active nav item in NavTop component
+        // sets current active nav item in NavPages component
         setCurPageName(currentPage)
 
         return setCurPageName
