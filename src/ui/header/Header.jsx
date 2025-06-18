@@ -1,4 +1,3 @@
-// import NavTop from './NavTop'
 import NavPages from './NavPages'
 import Logo from './assets/imgs/Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
