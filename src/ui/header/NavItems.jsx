@@ -9,8 +9,8 @@ function NavItems({ title, url }) {
             key={title}
             className={({ isActive }) =>
                 !isActive
-                    ? 'hover:text-grey-02 pr-2 pb-1 pl-1.5'
-                    : 'bg-grey-04 text-grey-02 rounded-md pr-2 pb-1 pl-1.5'
+                    ? 'hover:text-grey-02 w-fit pr-2 pb-1 pl-1.5'
+                    : 'bg-grey-04 text-grey-02 w-fit rounded-md pr-2 pb-1 pl-1.5'
             }
             to={url}
             onClick={() => {
