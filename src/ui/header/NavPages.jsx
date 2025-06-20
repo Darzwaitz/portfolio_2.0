@@ -5,9 +5,9 @@ function NavPages({ togglePanels, stylesNavtop, stylesNavSidebar }) {
     const { curPageList } = useCurPage()
 
     // conditionsl styles setup
-    const navStylesSidebar = `text-grey-01 flex flex-col border-grey-01 bg-grey-03 px-4 absolute z-50 w-min rounded-xs border lg:hidden 
+    const navStylesSidebar = `text-grey-01 gap-2 flex flex-col border-grey-01 bg-grey-03 px-[2px]  absolute z-50 w-min rounded-xs border lg:hidden 
     ${togglePanels?.toggleLeft ? 'left-[55px]' : 'right-[55px]'}`
-    const navStylesNavtop = 'text-grey-01 gap-5'
+    const navStylesNavtop = 'text-grey-01'
 
     // take nav array, remove the first 'search' item from painted main nav links display
     const updatedNavLinks = curPageList.slice()
@@ -18,7 +18,13 @@ function NavPages({ togglePanels, stylesNavtop, stylesNavSidebar }) {
             className={`${stylesNavtop && navStylesNavtop} ${stylesNavSidebar && navStylesSidebar}`}
         >
             {updatedNavLinks.map(([title, icon, url]) => (
-                <NavItems key={title} title={title} url={url} icon={icon} />
+                <NavItems
+                    key={title}
+                    title={title}
+                    url={url}
+                    icon={icon}
+                    stylesHoverSidebarNav={stylesNavSidebar}
+                />
             ))}
         </nav>
     )
