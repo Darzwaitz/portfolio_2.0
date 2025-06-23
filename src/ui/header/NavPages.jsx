@@ -1,11 +1,12 @@
 import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
+import ArrowIcon from '../sidebar/assets/imgs/svg/components/ArrowIcon'
 
 function NavPages({ togglePanels, stylesNavtop, stylesNavSidebar }) {
     const { curPageList } = useCurPage()
 
     // conditionsl styles setup
-    const navStylesSidebar = `text-grey-01 gap-2 flex flex-col border-grey-01 bg-grey-03 px-[2px]  absolute z-50 w-min rounded-xs border lg:hidden 
+    const navStylesSidebar = `w-[178px] text-grey-01 gap-2 flex flex-col border-grey-01 bg-grey-03 px-[2px] absolute z-50 w-min rounded-xs border lg:hidden
     ${togglePanels?.toggleLeft ? 'left-[55px]' : 'right-[55px]'}`
     const navStylesNavtop = 'text-grey-01'
 
@@ -18,13 +19,17 @@ function NavPages({ togglePanels, stylesNavtop, stylesNavSidebar }) {
             className={`${stylesNavtop && navStylesNavtop} ${stylesNavSidebar && navStylesSidebar}`}
         >
             {updatedNavLinks.map(([title, icon, url]) => (
-                <NavItems
-                    key={title}
-                    title={title}
-                    url={url}
-                    icon={icon}
-                    stylesHoverSidebarNav={stylesNavSidebar}
-                />
+                <span key={title} className="flex pl-4">
+                    <NavItems
+                        key={title}
+                        title={title}
+                        url={url}
+                        icon={icon}
+                        // conditional sent to NavItems - styles not directly used on NavItems
+                        stylesHoverSidebarNav={stylesNavSidebar}
+                    />
+                    {stylesNavSidebar && <ArrowIcon />}
+                </span>
             ))}
         </nav>
     )
