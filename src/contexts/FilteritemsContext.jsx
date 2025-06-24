@@ -30,8 +30,19 @@ function FilteritemsProvider({ children }) {
     const onShowSubmit = useSubmitButton(items)
 
     function onChangeHandle(index) {
+        //NEW
+        // if ALL is true, but 1 is unmarked after, turn of single All checkbox too
+        if (index !== 0 && items[0].checked === true) {
+            console.log('cliiikd')
+            setItems(items[0].checked === false)
+
+            console.log(items[0].checked)
+        }
+        // /NEW
+
         // if 'All' is NOT true
         if (index === 0 && items[index].checked === false) {
+            // console.log('all NOT true')
             return setItems(
                 items.map((item) => {
                     return { ...item, checked: true }
@@ -40,6 +51,8 @@ function FilteritemsProvider({ children }) {
         }
         // if 'All' is true
         if (index === 0 && items[index].checked === true) {
+            // console.log('all true')
+
             return setItems(
                 items.map((item) => {
                     return { ...item, checked: false }

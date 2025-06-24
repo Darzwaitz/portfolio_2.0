@@ -34,12 +34,13 @@ function SearchProjectsSubitem() {
             {/* choose filter items section - set flex to col */}
             {reveal && <PortfolioFilteritems flexcolumn />}
 
-            {onShowSubmit && (
+            {/* Only show SUBMIT button when search projects portfolioitemslist is open */}
+            {reveal && onShowSubmit && (
                 <div className="mt-1 flex items-center">
                     <span className="mr-1 w-5">
                         <ArrowIcon />
                     </span>
-                    <h1 className="mb-px cursor-pointer text-sm">Submit</h1>
+                    <h1 className="mb-px cursor-pointer text-sm">SUBMIT</h1>
                 </div>
             )}
         </div>

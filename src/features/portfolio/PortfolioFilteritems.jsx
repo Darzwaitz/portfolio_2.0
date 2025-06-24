@@ -30,7 +30,6 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li className="mr-5 flex items-center">
-            {/* <div className="flex items-center"> */}
             <input
                 className="accent-grey-04 mr-1.5"
                 type="checkbox"
@@ -42,7 +41,6 @@ function Checkbox({ isChecked, label, checkHandler, icon }) {
                 {label}
             </label>
             <span className="h-6 w-6">{icon}</span>
-            {/* </div> */}
         </li>
     )
 }
