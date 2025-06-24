@@ -8,18 +8,17 @@ import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
 import UserAccount from './assets/imgs/svg/components/UserAccount'
 import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
-// import NavSide from '../header/NavSide'
 import NavPages from '../header/NavPages'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
 
 function SidebarNav() {
+    // toggle panel controls triggered in header comp.
     const { togglePanels } = usePanels()
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
     const [toggleNav, setToggleNav] = useState(false)
-    // console.log(toggleNav)
 
     function handleToggleExplorer() {
         if (togglePanels.toggleLeft || togglePanels.toggleRight)
@@ -27,12 +26,7 @@ function SidebarNav() {
     }
 
     function handleToggleNav() {
-        // if (togglePanels.toggleLeft || togglePanels.toggleRight)
-        // console.log('toggleNav')
-
         setToggleNav((show) => (show = !show))
-
-        // console.log(togglePanels.toggleLeft)
     }
 
     return (
@@ -51,7 +45,7 @@ function SidebarNav() {
                         togglePanels.toggleRight ? 'order-1' : 'order-0'
                     }`}
                 >
-                    {/* top nav links */}
+                    {/* sidebar top nav links */}
                     <div>
                         <SvgWrapper size="large">
                             <div
@@ -71,7 +65,7 @@ function SidebarNav() {
                             <RemoteExplorer />
                         </SvgWrapper>
                     </div>
-                    {/* bottom nav links */}
+                    {/* sidebar bottom nav links */}
                     <div>
                         <SvgWrapper size="large">
                             <UserAccount />
