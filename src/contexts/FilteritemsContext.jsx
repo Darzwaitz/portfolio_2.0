@@ -30,16 +30,6 @@ function FilteritemsProvider({ children }) {
     const onShowSubmit = useSubmitButton(items)
 
     function onChangeHandle(index) {
-        //NEW
-        // if ALL is true, but 1 is unmarked after, turn of single All checkbox too
-        if (index !== 0 && items[0].checked === true) {
-            console.log('cliiikd')
-            setItems(items[0].checked === false)
-
-            console.log(items[0].checked)
-        }
-        // /NEW
-
         // if 'All' is NOT true
         if (index === 0 && items[index].checked === false) {
             // console.log('all NOT true')
@@ -60,14 +50,52 @@ function FilteritemsProvider({ children }) {
             )
         }
 
-        // set individual item
-        setItems(
-            items.map((item, curIndex) => {
-                return curIndex === index
-                    ? { ...item, checked: !item.checked }
-                    : item
-            })
-        )
+        // set individual item when ALL true
+        if (items[0].checked === false) {
+            setItems(
+                items.map((item, curIndex) => {
+                    return curIndex === index
+                        ? { ...item, checked: !item.checked }
+                        : item
+                })
+            )
+        }
+
+        // if 'All' is checked true, set it to false when individual item changed
+        if (items[0].checked === true) {
+            // console.log('when ALL true')
+
+            setItems(
+                items.map((item, curIndex) => {
+                    return curIndex === index
+                        ? { ...item, checked: !item.checked }
+                        : item
+                })
+            )
+            items[0].checked = false
+        }
+
+        // TEMP CODE HERE TO WORK ON
+        // checked 'All' to true if ALL individual items are checked true
+        // if (items[0].checked === false) {
+        //     if (
+        //         items.every(
+        //             (item) => item.name !== 'All' && item.checked === true
+        //         )
+        //     ) {
+        //         items[0].checked = true
+        //     }
+        // }
+
+        // ORIJ WORKIN
+        // // set individual item
+        // setItems(
+        //     items.map((item, curIndex) => {
+        //         return curIndex === index
+        //             ? { ...item, checked: !item.checked }
+        //             : item
+        //     })
+        // )
     }
 
     return (
