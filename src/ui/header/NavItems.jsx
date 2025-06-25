@@ -1,10 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import { useCurPage } from '@/contexts/CurPageContext'
 import ArrowIcon from '../sidebar/assets/imgs/svg/components/ArrowIcon'
 
-function NavItems({ title, url, stylesHoverSidebarNav }) {
-    const { onCurPageName } = useCurPage()
-
+function NavItems({ title, url, stylesHoverSidebarNav, onclickHandler }) {
     return (
         <NavLink
             key={title}
@@ -14,10 +11,7 @@ function NavItems({ title, url, stylesHoverSidebarNav }) {
                     : `${stylesHoverSidebarNav ? 'bg-blue-02 flex items-center justify-between' : 'bg-grey-04'} text-grey-02 rounded-md pr-2 pb-1 pl-1.5`
             }
             to={url}
-            onClick={() => {
-                // onCurPageName(e.target.innerText)
-                onCurPageName(title)
-            }}
+            onClick={onclickHandler}
         >
             <span className={stylesHoverSidebarNav && 'pl-5'}>{title}</span>
             {/* only add arrow icon on sidebar */}

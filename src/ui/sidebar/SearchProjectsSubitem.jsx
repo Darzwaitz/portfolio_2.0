@@ -40,7 +40,12 @@ function SearchProjectsSubitem() {
                     <span className="mr-1 w-5">
                         <ArrowIcon />
                     </span>
-                    <h1 className="mb-px cursor-pointer text-sm">SUBMIT</h1>
+                    <h1
+                        className="mb-px cursor-pointer text-sm"
+                        onClick={() => console.log('clickd it')}
+                    >
+                        SUBMIT
+                    </h1>
                 </div>
             )}
         </div>

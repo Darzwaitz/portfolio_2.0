@@ -14,6 +14,7 @@ const FilteritemsContext = createContext()
 
 function FilteritemsProvider({ children }) {
     const [items, setItems] = useState([
+        // { name: 'All', checked: false, icon: <AllFolderIcon /> },
         { name: 'All', checked: false, icon: <AllFolderIcon /> },
         { name: 'React', checked: false, icon: <ReactIcon /> },
         { name: 'Vue', checked: false, icon: <VueIcon /> },

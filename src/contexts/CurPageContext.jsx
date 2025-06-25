@@ -17,7 +17,7 @@ function CurPageProvider({ children }) {
         `${curPageList[0].slice(1, 2)} \u00A0${curPageList[0].slice(0, 1)}`
     )
 
-    function onCurPageName(curPName) {
+    function handleCurPageName(curPName) {
         let currentPage
 
         function checkList() {
@@ -41,7 +41,7 @@ function CurPageProvider({ children }) {
                 curPageList,
                 setCurPageList,
                 curPageName,
-                onCurPageName,
+                handleCurPageName,
             }}
         >
             {children}

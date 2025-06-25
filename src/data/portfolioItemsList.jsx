@@ -1,4 +1,4 @@
-import AllFolderIcon from '../features/portfolio/assets/imgs/svg/components/AllFolderIcon'
+// import AllFolderIcon from '../features/portfolio/assets/imgs/svg/components/AllFolderIcon'
 import ReactIcon from '../features/portfolio/assets/imgs/svg/components/ReactIcon'
 import VueIcon from '../features/portfolio/assets/imgs/svg/components/VueIcon'
 import AngularIcon from '../features/portfolio/assets/imgs/svg/components/AngularIcon'
@@ -10,6 +10,8 @@ import WordpressIcon from '../features/portfolio/assets/imgs/svg/components/Word
 import placeholderimage from '../assets/imgs/image-placeholder-landscape.png'
 
 function portfolioItemsList() {
+    // console.log('portfolioItemsList RUN')
+
     return [
         {
             title: 'portfolio item 1',
@@ -69,12 +71,13 @@ function portfolioItemsList() {
             tags: ['Tailwind'],
             icon: [<TailwindIcon key={'tailwind'} />],
         },
-        {
-            title: 'portfolio item 9',
-            description: 'This is the Tailwind item 9 description',
-            tags: ['All'],
-            icon: [<AllFolderIcon key={'allfolder'} />],
-        },
+        // ,
+        // {
+        //     title: 'portfolio item 9',
+        //     description: 'This is the Tailwind item 9 description',
+        //     tags: ['All'],
+        //     icon: [<AllFolderIcon key={'allfolder'} />],
+        // },
 
         // {
         //     title: 'portfolio item 3',

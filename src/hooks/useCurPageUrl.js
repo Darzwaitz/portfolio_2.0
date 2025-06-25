@@ -3,7 +3,7 @@ import { useCurPage } from '../contexts/CurPageContext'
 import { useLocation } from 'react-router-dom'
 
 export function useCurPageUrl() {
-    const { onCurPageName } = useCurPage()
+    const { handleCurPageName } = useCurPage()
     let curLocation = useLocation().pathname
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export function useCurPageUrl() {
             return upperCasePathName
         }
 
-        if (curLocation !== '/') return onCurPageName(upperCasePathName())
+        if (curLocation !== '/') return handleCurPageName(upperCasePathName())
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 }

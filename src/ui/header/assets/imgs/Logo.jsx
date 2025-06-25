@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { useCurPage } from '@/contexts/CurPageContext'
 
 function Logo() {
-    const { onCurPageName } = useCurPage()
+    const { handleCurPageName } = useCurPage()
 
     return (
-        <Link to="/" onClick={() => onCurPageName('Search')}>
+        <Link to="/" onClick={() => handleCurPageName('Search')}>
             <img
                 src="/imgs/Portfolio-website-logo-Retina-344x320September-2017.png"
                 alt="main-logo"
