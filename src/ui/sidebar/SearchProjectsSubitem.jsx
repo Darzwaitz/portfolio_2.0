@@ -17,22 +17,24 @@ function SearchProjectsSubitem() {
 
     return (
         <div className="listitem">
-            <div className="text-grey-02 flex cursor-pointer text-sm">
+            <div
+                className="text-grey-02 flex cursor-pointer text-sm"
+                onClick={function () {
+                    handleReveal()
+                }}
+            >
                 <span className="mr-1 w-5 self-center">
                     <ArrowIcon />
                 </span>
-                <h1
-                    onClick={function () {
-                        handleReveal()
-                    }}
-                    className="pb-0.5"
-                >
-                    SEARCH PROJECTS
-                </h1>
+                <h1 className="pb-0.5">SEARCH PROJECTS</h1>
             </div>
 
             {/* choose filter items section - set flex to col */}
-            {reveal && <PortfolioFilteritems flexcolumn />}
+            {reveal && (
+                <div className="pt-1 pl-6">
+                    <PortfolioFilteritems flexcolumn />
+                </div>
+            )}
 
             {/* Only show SUBMIT button when search projects portfolioitemslist is open */}
             {reveal && onShowSubmit && (

@@ -14,7 +14,6 @@ const FilteritemsContext = createContext()
 
 function FilteritemsProvider({ children }) {
     const [items, setItems] = useState([
-        // { name: 'All', checked: false, icon: <AllFolderIcon /> },
         { name: 'All', checked: false, icon: <AllFolderIcon /> },
         { name: 'React', checked: false, icon: <ReactIcon /> },
         { name: 'Vue', checked: false, icon: <VueIcon /> },
@@ -75,6 +74,25 @@ function FilteritemsProvider({ children }) {
             )
             items[0].checked = false
         }
+
+        // items.map((item, curIndex) => {
+        //     return curIndex === index
+        //         ? { ...item, checked: !item.checked }
+        //         : item
+        // })
+
+        // check 'All' if all individual item checked
+        // if (items[0].checked === false) {
+        // if (items.shift())
+        //     setItems(
+        //         items.map((item, curIndex) => {
+        //             return curIndex === index
+        //                 ? { ...item, checked: !item.checked }
+        //                 : item
+        //         })
+        //     )
+        // items[0].checked = false
+        // }
 
         // TEMP CODE HERE TO WORK ON
         // checked 'All' to true if ALL individual items are checked true

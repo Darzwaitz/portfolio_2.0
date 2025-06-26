@@ -29,18 +29,18 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 // list item
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
-        <li className="mr-5 flex items-center">
+        <li className="mr-5 flex cursor-pointer items-center">
             <input
-                className="accent-grey-04 mr-1.5"
+                className="accent-grey-04 mr-1.5 cursor-pointer"
                 type="checkbox"
                 id={label}
                 checked={isChecked}
                 onChange={checkHandler}
             />
-            <label className="mr-1" htmlFor={label}>
+            <label className="mr-1 cursor-pointer" htmlFor={label}>
                 {label}
             </label>
-            <span className="h-6 w-6">{icon}</span>
+            <span className="h-6 w-6 cursor-pointer">{icon}</span>
         </li>
     )
 }

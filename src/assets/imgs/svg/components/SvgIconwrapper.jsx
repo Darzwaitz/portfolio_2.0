@@ -24,7 +24,7 @@ function SvgIconwrapper({ iconSize, hover, children }) {
         return (
             <div
                 onClick={getChildSvgData}
-                className={'group relative inline-block'}
+                className={'group relative inline-block cursor-pointer'}
             >
                 <div
                     className={`${hover} text-grey-06 z-50 rounded-sm p-[3px]`}
