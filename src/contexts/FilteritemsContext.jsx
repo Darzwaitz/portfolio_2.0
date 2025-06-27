@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react'
 import { useSubmitButton } from '../hooks/useSubmitButton'
+import { useAllItemsChecked } from '../hooks/useAllItemsChecked'
 
 import AllFolderIcon from '../features/portfolio/assets/imgs/svg/components/AllFolderIcon'
 import ReactIcon from '../features/portfolio/assets/imgs/svg/components/ReactIcon'
@@ -14,7 +15,9 @@ const FilteritemsContext = createContext()
 
 function FilteritemsProvider({ children }) {
     const [items, setItems] = useState([
+        // 'All' object must ALWAYS be first object in items Array
         { name: 'All', checked: false, icon: <AllFolderIcon /> },
+
         { name: 'React', checked: false, icon: <ReactIcon /> },
         { name: 'Vue', checked: false, icon: <VueIcon /> },
         { name: 'Angular', checked: false, icon: <AngularIcon /> },
@@ -29,18 +32,20 @@ function FilteritemsProvider({ children }) {
     // hook needed for state issues
     const onShowSubmit = useSubmitButton(items)
 
+    // hook needed for state issues
+    const onAllItemsChecked = useAllItemsChecked(items, setItems)
+
     function onChangeHandle(index) {
-        // if 'All' is NOT true
-        if (index === 0 && items[index].checked === false) {
-            // console.log('all NOT true')
+        // if 'All' is NOT true/unchecked - check all items including 'All'
+        if (index === 0 && items[0].checked === false) {
             return setItems(
                 items.map((item) => {
                     return { ...item, checked: true }
                 })
             )
         }
-        // if 'All' is true
-        if (index === 0 && items[index].checked === true) {
+        // if 'All' is true/checked - uncheck all items including 'All'
+        if (index === 0 && items[0].checked === true) {
             // console.log('all true')
 
             return setItems(
@@ -50,7 +55,7 @@ function FilteritemsProvider({ children }) {
             )
         }
 
-        // set individual item when ALL true
+        // check individual item when ALL is unchecked
         if (items[0].checked === false) {
             setItems(
                 items.map((item, curIndex) => {
@@ -59,12 +64,14 @@ function FilteritemsProvider({ children }) {
                         : item
                 })
             )
+            // hook to check 'All' if all items checked
+            onAllItemsChecked
         }
 
-        // if 'All' is checked true, set it to false when individual item changed
+        //
+        // if 'All' is checked true, set it to false when individual item is unchecked
+        // if at least 1 item is unchecked, then 'All' won't be true
         if (items[0].checked === true) {
-            // console.log('when ALL true')
-
             setItems(
                 items.map((item, curIndex) => {
                     return curIndex === index
@@ -74,37 +81,6 @@ function FilteritemsProvider({ children }) {
             )
             items[0].checked = false
         }
-
-        // items.map((item, curIndex) => {
-        //     return curIndex === index
-        //         ? { ...item, checked: !item.checked }
-        //         : item
-        // })
-
-        // check 'All' if all individual item checked
-        // if (items[0].checked === false) {
-        // if (items.shift())
-        //     setItems(
-        //         items.map((item, curIndex) => {
-        //             return curIndex === index
-        //                 ? { ...item, checked: !item.checked }
-        //                 : item
-        //         })
-        //     )
-        // items[0].checked = false
-        // }
-
-        // TEMP CODE HERE TO WORK ON
-        // checked 'All' to true if ALL individual items are checked true
-        // if (items[0].checked === false) {
-        //     if (
-        //         items.every(
-        //             (item) => item.name !== 'All' && item.checked === true
-        //         )
-        //     ) {
-        //         items[0].checked = true
-        //     }
-        // }
 
         // ORIJ WORKIN
         // // set individual item
