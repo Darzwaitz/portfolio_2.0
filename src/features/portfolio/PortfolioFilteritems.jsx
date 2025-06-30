@@ -8,7 +8,7 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 
     return (
         <ul
-            className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col gap-1' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
@@ -29,7 +29,10 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 // list item
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
-        <li className="mr-5 flex cursor-pointer items-center">
+        // <li className="hover:bg-grey-08 mr-5 flex cursor-pointer items-center rounded-sm px-1">
+        <li
+            className={`hover:bg-grey-08 mr-5 flex cursor-pointer items-center rounded-sm px-1.5 ${isChecked && 'bg-grey-08'}`}
+        >
             <input
                 className="accent-grey-04 mr-1.5 cursor-pointer"
                 type="checkbox"

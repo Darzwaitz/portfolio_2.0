@@ -10,12 +10,12 @@ import { usePanels } from '@/contexts/PanelsContext'
 import { Link } from 'react-router-dom'
 
 function UserAccount() {
-    const { onCurPageName } = useCurPage()
+    const { handleCurPageName } = useCurPage()
     const { togglePanels } = usePanels()
 
     let arrDir = togglePanels.tooltipArrDir
     return (
-        <Link to="about" onClick={() => onCurPageName('About')}>
+        <Link to="about" onClick={() => handleCurPageName('About')}>
             <SvgIconwrapper iconSize={iconSize} hover={hover}>
                 <svg
                     className={hover}
