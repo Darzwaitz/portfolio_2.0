@@ -35,7 +35,7 @@ function FilteritemsProvider({ children }) {
     // hook needed for state issues
     const onAllItemsChecked = useAllItemsChecked(items, setItems)
 
-    function onChangeHandle(index) {
+    function onClickHandle(index) {
         // if 'All' is NOT true/unchecked - check all items including 'All'
         if (index === 0 && items[0].checked === false) {
             return setItems(
@@ -98,7 +98,7 @@ function FilteritemsProvider({ children }) {
             value={{
                 items,
 
-                onChangeHandle,
+                onClickHandle,
                 onShowSubmit,
             }}
         >
