@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useFilter } from '../../contexts/FilteritemsContext'
+import { useCurPage } from '@/contexts/CurPageContext'
+import { Link } from 'react-router-dom'
 
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
@@ -7,6 +9,7 @@ import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
 function SearchProjectsSubitem() {
     // from Context
     const { onShowSubmit } = useFilter()
+    const { handleCurPageName } = useCurPage()
 
     // reveal/hide dropdown menu
     let [reveal, setReveal] = useState(false)
@@ -19,9 +22,7 @@ function SearchProjectsSubitem() {
         <div className="listitem">
             <div
                 className="text-grey-02 flex cursor-pointer text-sm"
-                onClick={function () {
-                    handleReveal()
-                }}
+                onClick={handleReveal}
             >
                 <span className="mr-1 w-5 self-center">
                     <ArrowIcon />
@@ -42,12 +43,12 @@ function SearchProjectsSubitem() {
                     <span className="mr-1 w-5">
                         <ArrowIcon />
                     </span>
-                    <h1
-                        className="mb-px cursor-pointer text-sm"
-                        onClick={() => console.log('clickd it')}
+                    <Link
+                        to="portfolio"
+                        onClick={() => handleCurPageName('Portfolio')}
                     >
-                        SUBMIT
-                    </h1>
+                        <h1 className="mb-px cursor-pointer text-sm">SUBMIT</h1>
+                    </Link>
                 </div>
             )}
         </div>
