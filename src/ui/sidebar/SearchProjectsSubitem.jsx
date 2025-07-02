@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useFilter } from '../../contexts/FilteritemsContext'
 import { useCurPage } from '@/contexts/CurPageContext'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'
@@ -11,18 +11,17 @@ function SearchProjectsSubitem() {
     const { onShowSubmit } = useFilter()
     const { handleCurPageName } = useCurPage()
 
-    // reveal/hide dropdown menu
-    let [reveal, setReveal] = useState(false)
+    // truthy if portfolio is url location
+    const portfolioUrl = useLocation().pathname.slice(1) === 'portfolio'
 
-    function handleReveal() {
-        setReveal(!reveal)
-    }
+    // revealItemsList/hide dropdown menu
+    const [revealItemsList, setRevealItemsList] = useState(false)
 
     return (
         <div className="listitem">
             <div
                 className="text-grey-02 flex cursor-pointer text-sm"
-                onClick={handleReveal}
+                onClick={() => setRevealItemsList(!revealItemsList)}
             >
                 <span className="mr-1 w-5 self-center">
                     <ArrowIcon />
@@ -30,15 +29,15 @@ function SearchProjectsSubitem() {
                 <h1 className="pb-0.5">SEARCH PROJECTS</h1>
             </div>
 
-            {/* choose filter items section - set flex to col */}
-            {reveal && (
+            {/* choose/filter items section - set flex to col */}
+            {revealItemsList && (
                 <div className="pt-1 pl-5">
                     <PortfolioFilteritems flexcolumn />
                 </div>
             )}
 
-            {/* Only show SUBMIT button when search projects portfolioitemslist is open */}
-            {reveal && onShowSubmit && (
+            {/* Only show SUBMIT button when search projects portfolioitemslist is open, and current page isn't portfolio page */}
+            {revealItemsList && onShowSubmit && !portfolioUrl && (
                 <div className="mt-1 flex items-center">
                     <span className="mr-1 w-5">
                         <ArrowIcon />
