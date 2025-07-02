@@ -3,12 +3,14 @@ import { useFilter } from '@/contexts/FilteritemsContext'
 
 // list
 function PortfolioFilteritems({ flexcolumn, width }) {
+    // function PortfolioFilteritems({ flexcolumn }) {
     // from Context
     const { items, onClickHandle } = useFilter()
 
     return (
         <ul
-            className={`m-auto mb-5 flex flex-wrap justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col gap-1' : 'flex-row'}`}
+            className={`m-auto mb-5 flex flex-wrap gap-1 lg:justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            // className={`m-auto mb-5 flex flex-wrap justify-center gap-1 ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
