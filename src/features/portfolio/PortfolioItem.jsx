@@ -32,7 +32,7 @@ function ItemWrapper({ children }) {
 
     return (
         <div
-            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show ? 'absolute' : ''}`}
+            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show && 'absolute max-w-[86vh]'}`}
         >
             {children}
         </div>
@@ -43,7 +43,7 @@ function GridWrapper({ children }) {
     return <div className="grid grid-cols-2 items-baseline">{children}</div>
 }
 function DivWrapper({ children }) {
-    return <div className="">{children}</div>
+    return <div id="itemwrapper">{children}</div>
 }
 
 // context child componentz
