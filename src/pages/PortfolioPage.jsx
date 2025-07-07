@@ -15,6 +15,7 @@ function PortfolioPage() {
 
             {/* items container */}
             <div className="relative grid grid-cols-(--item-grid-cols) gap-2">
+                {/* <div className="relative flex gap-2"> */}
                 {PortfolioItemsList.map((project, i) =>
                     portfolioitemTags.includes(...project.tags) ? (
                         <PortfolioItem key={i} projectKey={i}>

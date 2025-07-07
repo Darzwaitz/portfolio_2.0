@@ -7,17 +7,11 @@ const PortfolioItemContext = createContext()
 function PortfolioItem({ children, projectKey }) {
     const [show, setShow] = useState(false)
 
-    // when maximize button clicked
-    function showFullItem() {
-        setShow(!show)
-        // return show
-    }
-
     return (
         <PortfolioItemContext.Provider
             value={{
                 show,
-                showFullItem,
+                setShow,
                 projectKey,
             }}
         >
@@ -75,12 +69,12 @@ function Title({ title }) {
 }
 
 function Maximize() {
-    const { showFullItem } = useContext(PortfolioItemContext)
+    const { show, setShow } = useContext(PortfolioItemContext)
 
     return (
         <span
             className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
-            onClick={showFullItem}
+            onClick={() => setShow(!show)}
         >
             ◻
         </span>
