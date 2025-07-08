@@ -21,7 +21,8 @@ function AppLayout() {
                         <section className="flex h-full w-full">
                             <SidebarNav />
                             <main className="bg-black-01 text-grey-01 flex h-full w-full flex-col justify-between overflow-y-auto">
-                                <div className="@container p-9">
+                                {/* <div className="@container w-full p-9"> */}
+                                <div className="w-full p-9">
                                     <Outlet />
                                 </div>
                                 <Terminal />
