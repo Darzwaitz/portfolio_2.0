@@ -26,7 +26,7 @@ function ItemWrapper({ children }) {
 
     return (
         <div
-            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-1/8 max-w-[100vh]'}`}
+            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
         >
             {children}
         </div>
