@@ -15,6 +15,8 @@ function PortfolioItem({ children, projectKey }) {
                 projectKey,
             }}
         >
+            {/* wrapper for all currently displayed items */}
+            {/* <BgItemsWrapper show={show} /> */}
             {children}
         </PortfolioItemContext.Provider>
     )
@@ -26,18 +28,37 @@ function ItemWrapper({ children }) {
 
     return (
         <div
-            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
+            id="itemwrapper"
+            className={`border-grey-04 bg-green-01 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
         >
             {children}
         </div>
     )
 }
+
+// items backdrop wrapper
+function BgItemsWrapper({ show }) {
+    return (
+        show && (
+            <div
+                id="BgItemsWrapper"
+                // className="bg-black-01 absolute h-full w-full opacity-75 backdrop-blur-2xl"
+                className="bg-black-01 absolute h-full w-full opacity-0"
+            ></div>
+        )
+    )
+}
+
 // item inner layout wrapperz
 function GridWrapper({ children }) {
-    return <div className="grid grid-cols-2 items-baseline">{children}</div>
+    return (
+        <div id="gridwrapper" className="grid grid-cols-2 items-baseline">
+            {children}
+        </div>
+    )
 }
 function DivWrapper({ children }) {
-    return <div id="itemwrapper">{children}</div>
+    return <div id="divwrapper">{children}</div>
 }
 
 // context child componentz
@@ -92,6 +113,9 @@ function Description({ description }) {
 }
 
 PortfolioItem.ItemWrapper = ItemWrapper
+// test code - to delete or maybe keep
+PortfolioItem.BgItemsWrapper = BgItemsWrapper
+
 PortfolioItem.GridWrapper = GridWrapper
 PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img
