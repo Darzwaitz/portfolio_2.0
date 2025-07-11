@@ -9,7 +9,7 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 
     return (
         <ul
-            className={`mx-auto mb-5 flex flex-wrap gap-1 lg:justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            className={`mb-5 flex flex-wrap gap-1 lg:justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
             // className={`m-auto mb-5 flex flex-wrap justify-center gap-1 ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (

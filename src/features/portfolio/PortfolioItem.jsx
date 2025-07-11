@@ -15,8 +15,6 @@ function PortfolioItem({ children, projectKey }) {
                 projectKey,
             }}
         >
-            {/* wrapper for all currently displayed items */}
-            {/* <BgItemsWrapper show={show} /> */}
             {children}
         </PortfolioItemContext.Provider>
     )
@@ -29,36 +27,18 @@ function ItemWrapper({ children }) {
     return (
         <div
             id="itemwrapper"
-            className={`border-grey-04 bg-green-01 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
+            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
         >
             {children}
         </div>
     )
 }
-
-// items backdrop wrapper
-function BgItemsWrapper({ show }) {
-    return (
-        show && (
-            <div
-                id="BgItemsWrapper"
-                // className="bg-black-01 absolute h-full w-full opacity-75 backdrop-blur-2xl"
-                className="bg-black-01 absolute h-full w-full opacity-0"
-            ></div>
-        )
-    )
-}
-
 // item inner layout wrapperz
 function GridWrapper({ children }) {
-    return (
-        <div id="gridwrapper" className="grid grid-cols-2 items-baseline">
-            {children}
-        </div>
-    )
+    return <div className="grid grid-cols-2 items-baseline">{children}</div>
 }
 function DivWrapper({ children }) {
-    return <div id="divwrapper">{children}</div>
+    return <div>{children}</div>
 }
 
 // context child componentz
@@ -107,15 +87,23 @@ function Description({ description }) {
 
     return (
         <p className={`col-span-2 ${show ? 'block' : 'hidden'}`}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            fugit rerum nihil cum aperiam laboriosam libero ducimus, itaque,
+            vitae quibusdam sint praesentium voluptates id, inventore in culpa
+            tempora quod dolores. Tempore reiciendis sint rerum impedit nemo,
+            nihil possimus, voluptate fugiat dolores numquam officia nobis omnis
+            non doloribus aliquid error quisquam quaerat? Harum dignissimos
+            eaque nesciunt id ullam quasi, explicabo alias officia, totam
+            tempora necessitatibus debitis, asperiores quod reprehenderit a
+            ducimus ad dolorem molestiae maiores provident expedita consectetur
+            architecto qui laborum! Saepe maiores reprehenderit illum veniam
+            vero possimus dolores.
             {description}
         </p>
     )
 }
 
 PortfolioItem.ItemWrapper = ItemWrapper
-// test code - to delete or maybe keep
-PortfolioItem.BgItemsWrapper = BgItemsWrapper
-
 PortfolioItem.GridWrapper = GridWrapper
 PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img
