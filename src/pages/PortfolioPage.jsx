@@ -19,7 +19,7 @@ function PortfolioPage() {
             {/* items container */}
             <div
                 id="itemsdisplay"
-                className="relative grid h-full grid-cols-(--item-grid-cols) gap-2"
+                className="relative grid h-full grid-cols-(--item-grid-cols) gap-2 overflow-auto"
             >
                 {/* <div className="relative flex gap-2"> */}
                 {PortfolioItemsList.map((project, i) =>

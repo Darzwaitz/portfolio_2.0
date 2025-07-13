@@ -20,6 +20,20 @@ function PortfolioItem({ children, projectKey }) {
     )
 }
 
+// items backdrop wrapper
+
+function BgItemsWrapper({ show }) {
+    return (
+        show && (
+            <div
+                id="BgItemsWrapper"
+                // className="bg-black-01 absolute h-full w-full opacity-75 backdrop-blur-2xl"
+
+                className="bg-black-01 absolute h-full w-full opacity-0"
+            ></div>
+        )
+    )
+}
 // item container
 function ItemWrapper({ children }) {
     const { show } = useContext(PortfolioItemContext)
@@ -35,7 +49,7 @@ function ItemWrapper({ children }) {
 }
 // item inner layout wrapperz
 function GridWrapper({ children }) {
-    return <div className="grid grid-cols-2 items-baseline">{children}</div>
+    return <div className="grid grid-cols-2">{children}</div>
 }
 function DivWrapper({ children }) {
     return <div>{children}</div>
@@ -104,6 +118,7 @@ function Description({ description }) {
 }
 
 PortfolioItem.ItemWrapper = ItemWrapper
+PortfolioItem.BgItemsWrapper = BgItemsWrapper
 PortfolioItem.GridWrapper = GridWrapper
 PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img

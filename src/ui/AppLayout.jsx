@@ -21,13 +21,13 @@ function AppLayout() {
                         <section className="flex h-full w-full">
                             <SidebarNav />
                             {/* <main className="bg-black-01 text-grey-01 relative flex h-full w-full flex-col justify-between overflow-y-auto"> */}
-                            <main className="bg-black-01 text-grey-01 relative flex w-full flex-col overflow-y-auto">
+                            <main className="bg-black-01 text-grey-01 relative flex w-full flex-col overflow-y-auto p-9">
                                 {/* <div className="@container w-full p-9"> */}
                                 {/* <div className="w-full p-9">  */}
-                                {/* <div className=""> */}
                                 <Outlet />
-                                <Terminal />
-                                {/* </div> */}
+                                <div className="">
+                                    <Terminal />
+                                </div>
                             </main>
                         </section>
                         <Footer />
