@@ -47,10 +47,17 @@ function ItemWrapper({ children }) {
         </div>
     )
 }
+
+// padding for outside of maximised item
+function PaddingBottom() {
+    return <div className="h-2.5 w-full"></div>
+}
+
 // item inner layout wrapperz
 function GridWrapper({ children }) {
     return <div className="grid grid-cols-2">{children}</div>
 }
+
 function DivWrapper({ children }) {
     return <div>{children}</div>
 }
@@ -118,6 +125,7 @@ function Description({ description }) {
 }
 
 PortfolioItem.ItemWrapper = ItemWrapper
+PortfolioItem.PaddingBottom = PaddingBottom
 PortfolioItem.BgItemsWrapper = BgItemsWrapper
 PortfolioItem.GridWrapper = GridWrapper
 PortfolioItem.DivWrapper = DivWrapper
