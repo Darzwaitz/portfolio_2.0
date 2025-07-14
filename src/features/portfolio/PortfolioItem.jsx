@@ -15,6 +15,9 @@ function PortfolioItem({ children, projectKey }) {
                 projectKey,
             }}
         >
+            {/* wrapper for all currently displayed items */}
+
+            <BgItemsWrapper show={show} />
             {children}
         </PortfolioItemContext.Provider>
     )
@@ -27,9 +30,7 @@ function BgItemsWrapper({ show }) {
         show && (
             <div
                 id="BgItemsWrapper"
-                // className="bg-black-01 absolute h-full w-full opacity-75 backdrop-blur-2xl"
-
-                className="bg-black-01 absolute h-full w-full opacity-0"
+                className="bg-black-01 absolute h-full w-full opacity-90"
             ></div>
         )
     )
@@ -41,7 +42,7 @@ function ItemWrapper({ children }) {
     return (
         <div
             id="itemwrapper"
-            className={`border-grey-04 text-grey-02 flex border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
+            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
         >
             {children}
         </div>
@@ -107,20 +108,23 @@ function Description({ description }) {
     const { show } = useContext(PortfolioItemContext)
 
     return (
-        <p className={`col-span-2 ${show ? 'block' : 'hidden'}`}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
-            fugit rerum nihil cum aperiam laboriosam libero ducimus, itaque,
-            vitae quibusdam sint praesentium voluptates id, inventore in culpa
-            tempora quod dolores. Tempore reiciendis sint rerum impedit nemo,
-            nihil possimus, voluptate fugiat dolores numquam officia nobis omnis
-            non doloribus aliquid error quisquam quaerat? Harum dignissimos
-            eaque nesciunt id ullam quasi, explicabo alias officia, totam
-            tempora necessitatibus debitis, asperiores quod reprehenderit a
-            ducimus ad dolorem molestiae maiores provident expedita consectetur
-            architecto qui laborum! Saepe maiores reprehenderit illum veniam
-            vero possimus dolores.
-            {description}
-        </p>
+        show && (
+            <p className={`col-span-2 flex flex-col`}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorum fugit rerum nihil cum aperiam laboriosam libero ducimus,
+                itaque, vitae quibusdam sint praesentium voluptates id,
+                inventore in culpa nihil possimus, voluptate fugiat dolores
+                numquam officia nobis omnis non doloribus aliquid error quisquam
+                quaerat? Harum dignissimos tempora quod dolores. Tempore
+                reiciendis sint rerum impedit nemo, eaque nesciunt id ullam
+                quasi, explicabo alias officia, totam tempora necessitatibus
+                debitis, asperiores quod reprehenderit a ducimus ad dolorem
+                molestiae maiores provident expedita consectetur architecto qui
+                laborum! Saepe maiores reprehenderit illum veniam vero possimus
+                dolores.
+                {description}
+            </p>
+        )
     )
 }
 
