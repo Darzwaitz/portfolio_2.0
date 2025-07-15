@@ -7,7 +7,7 @@ function PortfolioPage() {
     const portfolioitemTags = usePortfolioitemTags()
 
     return (
-        <>
+        <div className="h-full" onClick={() => console.log('clicked')}>
             <h1>Portfolio Page</h1>
 
             {/* choose filter items section */}
@@ -53,7 +53,7 @@ function PortfolioPage() {
                         )
                 )}
             </div>
-        </>
+        </div>
     )
 }
 

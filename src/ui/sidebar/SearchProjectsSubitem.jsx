@@ -31,7 +31,7 @@ function SearchProjectsSubitem() {
 
             {/* choose/filter items section - set flex to col */}
             {revealItemsList && (
-                <div className="pt-1 pl-5">
+                <div className="pt-1 pl-4">
                     <PortfolioFilteritems flexcolumn />
                 </div>
             )}

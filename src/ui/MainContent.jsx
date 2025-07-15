@@ -9,7 +9,11 @@ function MainContent() {
         <main
             className={`bg-black-01 text-grey-01 grid w-full ${togglePanels.toggleTerminal ? 'grid-rows-[1fr]' : 'grid-rows-[1fr]_auto'}`}
         >
-            <div id="outlet" className="overflow-auto p-8">
+            <div
+                id="outlet"
+                className="overflow-auto p-8"
+                // onClick={() => console.log('clikdd')}
+            >
                 <Outlet />
             </div>
             <Terminal />
