@@ -31,6 +31,7 @@ function BgItemsWrapper({ show }) {
             <div
                 id="BgItemsWrapper"
                 className="bg-black-01 absolute h-full w-full opacity-90"
+                // onClick={() => console.log('clikdd BgWrapper')}
             ></div>
         )
     )

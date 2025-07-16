@@ -1,24 +1,26 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useOutletContext } from 'react-router-dom'
 import Terminal from '../features/terminal/Terminal'
 import { usePanels } from '../contexts/PanelsContext'
 
-function MainContent() {
+export default function MainContent() {
     const { togglePanels } = usePanels()
+
+    const testFunc = function () {
+        console.log('testFunc CALLED')
+    }
 
     return (
         <main
             className={`bg-black-01 text-grey-01 grid w-full ${togglePanels.toggleTerminal ? 'grid-rows-[1fr]' : 'grid-rows-[1fr]_auto'}`}
         >
-            <div
-                id="outlet"
-                className="overflow-auto p-8"
-                // onClick={() => console.log('clikdd')}
-            >
-                <Outlet />
+            <div id="outlet" className="overflow-auto p-8">
+                <Outlet context={{ testFunc }} />
             </div>
             <Terminal />
         </main>
     )
 }
 
-export default MainContent
+export function useTestFunc() {
+    return useOutletContext()
+}
