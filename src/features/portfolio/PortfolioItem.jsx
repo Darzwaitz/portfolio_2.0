@@ -1,6 +1,12 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, { createContext, useContext, useState } from 'react'
+import React, {
+    createContext,
+    useContext,
+    useEffect,
+    useRef,
+    useState,
+} from 'react'
 
 const PortfolioItemContext = createContext()
 
@@ -94,11 +100,22 @@ function Title({ title }) {
 
 function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
+    const ref = useRef()
+
+    useEffect(function () {
+        function handleOutsideClick(e) {
+            if (ref.current && !ref.current.contains(e.target)) setShow(false)
+        }
+
+        document.addEventListener('click', handleOutsideClick)
+    })
 
     return (
         <span
             className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
-            onClick={() => setShow(!show)}
+            onClick={() => {
+                setShow(!show)
+            }}
         >
             ◻
         </span>
