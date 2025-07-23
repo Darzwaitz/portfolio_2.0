@@ -7,8 +7,9 @@ import { useTestFunc } from '../ui/MainContent'
 
 function PortfolioPage() {
     const portfolioitemTags = usePortfolioitemTags()
-
     const { testFunc } = useTestFunc()
+
+    // const ref = useRef()
 
     // can call it when page loads too
     // testFunc()
@@ -41,7 +42,6 @@ function PortfolioPage() {
                                 <PortfolioItem key={i} projectKey={i}>
                                     {/* item container within comp */}
                                     <PortfolioItem.ItemWrapper>
-                                        {/*  */}
                                         <PortfolioItem.DivWrapper>
                                             <PortfolioItem.TagList
                                                 // tags={project.tags}

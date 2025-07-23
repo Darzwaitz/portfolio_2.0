@@ -4,7 +4,7 @@ import React, {
     createContext,
     useContext,
     useEffect,
-    useRef,
+    // useRef,
     useState,
 } from 'react'
 
@@ -35,7 +35,7 @@ function BgItemsWrapper({ show }) {
     return (
         show && (
             <div
-                id="BgItemsWrapper"
+                id="bg-items-wrapper"
                 className="bg-black-01 absolute h-full w-full opacity-90"
                 // onClick={() => console.log('clikdd BgWrapper')}
             ></div>
@@ -45,6 +45,7 @@ function BgItemsWrapper({ show }) {
 // item container
 function ItemWrapper({ children }) {
     const { show } = useContext(PortfolioItemContext)
+    // console.log(ref)
 
     return (
         <div
@@ -100,22 +101,47 @@ function Title({ title }) {
 
 function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
-    const ref = useRef()
 
-    useEffect(function () {
-        function handleOutsideClick(e) {
-            if (ref.current && !ref.current.contains(e.target)) setShow(false)
-        }
+    function handleMinimize(e) {
+        if (show === false) setShow(true)
+        if (show === true) setShow(false)
 
-        document.addEventListener('click', handleOutsideClick)
+        test
+        console.log(e)
+    }
+
+    const outsideC = function (e) {
+        console.log('outsideC called')
+
+        console.log(e.target.id)
+    }
+    // useEffect(
+
+    //     function (e) {
+    //         const outsideClick = e.target.id
+    //         if (
+    //             outsideClick === 'itemscontainerwrapper' ||
+    //             outsideClick === 'itemscontainerwrapper' ||
+    //             outsideClick === 'bg-items-wrapper'
+    //         )
+    //             setShow(false)
+
+    //         console.log(e.target.id)
+    //     },
+    //     // document.addEventListener('click', handleEv)
+
+    //     [show, setShow]
+    // )
+
+    const test = useEffect(() => {
+        document.addEventListener('click', outsideC)
+        return () => document.removeEventListener('click', outsideC)
     })
 
     return (
         <span
             className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
-            onClick={() => {
-                setShow(!show)
-            }}
+            onClick={() => handleMinimize()}
         >
             ◻
         </span>
