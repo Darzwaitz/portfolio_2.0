@@ -1,12 +1,7 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, {
-    createContext,
-    useContext,
-    useEffect,
-    // useRef,
-    useState,
-} from 'react'
+// import useOutsideClick from '../../hooks/useOutsideClick'
+import React, { createContext, useContext, useState } from 'react'
 
 const PortfolioItemContext = createContext()
 
@@ -22,7 +17,6 @@ function PortfolioItem({ children, projectKey }) {
             }}
         >
             {/* wrapper for all currently displayed items */}
-
             <BgItemsWrapper show={show} />
             {children}
         </PortfolioItemContext.Provider>
@@ -101,47 +95,27 @@ function Title({ title }) {
 
 function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
+    // const { setShow } = useContext(PortfolioItemContext)
+    // const call = useOutsideClick
 
-    function handleMinimize(e) {
-        if (show === false) setShow(true)
-        if (show === true) setShow(false)
+    function handleMinimize() {
+        // call()
 
-        test
-        console.log(e)
+        setShow(!show)
     }
 
-    const outsideC = function (e) {
-        console.log('outsideC called')
-
-        console.log(e.target.id)
-    }
-    // useEffect(
-
-    //     function (e) {
-    //         const outsideClick = e.target.id
-    //         if (
-    //             outsideClick === 'itemscontainerwrapper' ||
-    //             outsideClick === 'itemscontainerwrapper' ||
-    //             outsideClick === 'bg-items-wrapper'
-    //         )
-    //             setShow(false)
-
-    //         console.log(e.target.id)
-    //     },
-    //     // document.addEventListener('click', handleEv)
-
-    //     [show, setShow]
+    // const curElemId = e.target.id
+    // if (
+    //     curElemId === 'itemscontainerwrapper' ||
+    //     curElemId === 'itemscontainerwrapper' ||
+    //     curElemId === 'bg-items-wrapper'
     // )
-
-    const test = useEffect(() => {
-        document.addEventListener('click', outsideC)
-        return () => document.removeEventListener('click', outsideC)
-    })
+    //     console.log(curElemId)
 
     return (
         <span
             className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
-            onClick={() => handleMinimize()}
+            onClick={handleMinimize}
         >
             ◻
         </span>
