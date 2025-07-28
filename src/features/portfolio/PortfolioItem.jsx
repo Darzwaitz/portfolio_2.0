@@ -97,12 +97,29 @@ function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
     // const { setShow } = useContext(PortfolioItemContext)
     // const call = useOutsideClick
+    // document.addEventListener('click', () => console.log('onCALLED'))
 
+    // handleMinTwo()
+
+    // function handleMinTwo() {
+    //     console.log(`2nd: ${show}`)
+    // }
+    // useEffect(() => {
     function handleMinimize() {
         // call()
+        // function onCall() {
+        //     console.log('onCall')
+        // }
+        console.log(`1st: ${show}`)
+        setShow(() => !show)
+        window.addEventListener('scroll', () => console.log('onCALLED'))
 
-        setShow(!show)
+        // if (show === true) {
+        // document.addEventListener('click', () => onCall)
+        // document.removeEventListener('click', onCall)
+        // }
     }
+    // }, [show, setShow])
 
     // const curElemId = e.target.id
     // if (
