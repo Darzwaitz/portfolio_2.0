@@ -93,6 +93,14 @@ function Title({ title }) {
     return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
 }
 
+// function onCall(firstCall) {
+//     console.log('onCall')
+//     window.removeEventListener('click', firstCall)
+// }
+function onCall() {
+    console.log('onCall')
+}
+
 function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
     // const { setShow } = useContext(PortfolioItemContext)
@@ -107,16 +115,19 @@ function Maximize() {
     // useEffect(() => {
     function handleMinimize() {
         // call()
-        // function onCall() {
-        //     console.log('onCall')
-        // }
+        setTimeout(() => document.addEventListener('click', firstCall))
+
+        function firstCall() {
+            // console.log('firstCall')
+
+            onCall()
+            document.removeEventListener('click', firstCall)
+        }
         console.log(`1st: ${show}`)
         setShow(() => !show)
-        window.addEventListener('scroll', () => console.log('onCALLED'))
+        // window.addEventListener('click', () => console.log('onCALLED'))
 
         // if (show === true) {
-        // document.addEventListener('click', () => onCall)
-        // document.removeEventListener('click', onCall)
         // }
     }
     // }, [show, setShow])
