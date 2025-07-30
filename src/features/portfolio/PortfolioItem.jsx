@@ -1,6 +1,5 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-// import useOutsideClick from '../../hooks/useOutsideClick'
 import React, { createContext, useContext, useState } from 'react'
 
 const PortfolioItemContext = createContext()
@@ -24,7 +23,6 @@ function PortfolioItem({ children, projectKey }) {
 }
 
 // items backdrop wrapper
-
 function BgItemsWrapper({ show }) {
     return (
         show && (
@@ -89,56 +87,33 @@ function TagList({ icon }) {
         </ul>
     )
 }
+
 function Title({ title }) {
     return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
 }
 
-// function onCall(firstCall) {
-//     console.log('onCall')
-//     window.removeEventListener('click', firstCall)
-// }
-function onCall() {
-    console.log('onCall')
-}
-
 function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
-    // const { setShow } = useContext(PortfolioItemContext)
-    // const call = useOutsideClick
-    // document.addEventListener('click', () => console.log('onCALLED'))
 
-    // handleMinTwo()
-
-    // function handleMinTwo() {
-    //     console.log(`2nd: ${show}`)
-    // }
-    // useEffect(() => {
     function handleMinimize() {
-        // call()
-        setTimeout(() => document.addEventListener('click', firstCall))
+        if (show === false) {
+            setTimeout(() => document.addEventListener('click', firstCall))
+        }
 
-        function firstCall() {
-            // console.log('firstCall')
-
-            onCall()
+        function firstCall(e) {
+            const curElemId = e.target.id
+            if (
+                curElemId === 'itemscontainerwrapper' ||
+                curElemId === 'itemscontainerwrapper' ||
+                curElemId === 'bg-items-wrapper' ||
+                curElemId === 'outlet'
+            ) {
+                setShow(false)
+            }
             document.removeEventListener('click', firstCall)
         }
-        console.log(`1st: ${show}`)
-        setShow(() => !show)
-        // window.addEventListener('click', () => console.log('onCALLED'))
-
-        // if (show === true) {
-        // }
+        setShow(!show)
     }
-    // }, [show, setShow])
-
-    // const curElemId = e.target.id
-    // if (
-    //     curElemId === 'itemscontainerwrapper' ||
-    //     curElemId === 'itemscontainerwrapper' ||
-    //     curElemId === 'bg-items-wrapper'
-    // )
-    //     console.log(curElemId)
 
     return (
         <span
