@@ -29,7 +29,6 @@ function BgItemsWrapper({ show }) {
             <div
                 id="bg-items-wrapper"
                 className="bg-black-01 absolute h-full w-full opacity-90"
-                // onClick={() => console.log('clikdd BgWrapper')}
             ></div>
         )
     )
@@ -37,7 +36,6 @@ function BgItemsWrapper({ show }) {
 // item container
 function ItemWrapper({ children }) {
     const { show } = useContext(PortfolioItemContext)
-    // console.log(ref)
 
     return (
         <div
@@ -96,11 +94,20 @@ function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
 
     function handleMinimize() {
-        if (show === false) {
+        //  if (show) {
+        // removal needed here for 2nd click on maximize button
+        document.removeEventListener('click', firstCall)
+        //  }
+
+        if (!show) {
+            // using zero second setTimeout to mitigate event listener being called prematurely
             setTimeout(() => document.addEventListener('click', firstCall))
         }
 
+        // close the current maximized item onClick of these element ids
         function firstCall(e) {
+            console.log('firstCallD')
+
             const curElemId = e.target.id
             if (
                 curElemId === 'itemscontainerwrapper' ||
@@ -110,8 +117,9 @@ function Maximize() {
             ) {
                 setShow(false)
             }
-            document.removeEventListener('click', firstCall)
+            return document.removeEventListener('click', firstCall)
         }
+
         setShow(!show)
     }
 
