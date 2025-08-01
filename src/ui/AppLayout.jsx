@@ -16,7 +16,7 @@ function AppLayout() {
                     <AppContainer>
                         <Header />
                         {/* NB flex here on <section> needed for sidebar toggle in SidebarNav - Grid tested/not good for this*/}
-                        {/* KEEP <main> semantically within <section> because <sidebar> shouldn't go within <main>*/}
+                        {/* KEEP MainContent containing <main> semantically within <section> because SidebarNav containing <sidebar> shouldn't go within <main>*/}
                         <section className="flex h-full w-full">
                             <SidebarNav />
                             <MainContent />

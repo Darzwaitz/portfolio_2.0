@@ -49,7 +49,7 @@ function ItemWrapper({ children }) {
 
 // padding for outside of maximised item
 function PaddingBottom() {
-    return <div className="h-2.5 w-full"></div>
+    return <div className="bg-yellow-01 h-2.5 w-full"></div>
 }
 
 // item inner layout wrapperz
@@ -94,19 +94,19 @@ function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
 
     function handleMinimize() {
-        //  if (show) {
         // removal needed here for 2nd click on maximize button
-        document.removeEventListener('click', firstCall)
-        //  }
+        document.removeEventListener('click', outsideItemClick)
 
         if (!show) {
             // using zero second setTimeout to mitigate event listener being called prematurely
-            setTimeout(() => document.addEventListener('click', firstCall))
+            setTimeout(() =>
+                document.addEventListener('click', outsideItemClick)
+            )
         }
 
         // close the current maximized item onClick of these element ids
-        function firstCall(e) {
-            console.log('firstCallD')
+        function outsideItemClick(e) {
+            console.log('outsideItemClickD')
 
             const curElemId = e.target.id
             if (
@@ -117,7 +117,7 @@ function Maximize() {
             ) {
                 setShow(false)
             }
-            return document.removeEventListener('click', firstCall)
+            return document.removeEventListener('click', outsideItemClick)
         }
 
         setShow(!show)
@@ -138,7 +138,9 @@ function Description({ description }) {
 
     return (
         show && (
-            <p className={`col-span-2 flex flex-col`}>
+            <p className={`col-span-2 flex flex-col pr-2.5 pb-5`}>
+                {description}
+                <br />
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorum fugit rerum nihil cum aperiam laboriosam libero ducimus,
                 itaque, vitae quibusdam sint praesentium voluptates id,
@@ -151,7 +153,6 @@ function Description({ description }) {
                 molestiae maiores provident expedita consectetur architecto qui
                 laborum! Saepe maiores reprehenderit illum veniam vero possimus
                 dolores.
-                {description}
             </p>
         )
     )

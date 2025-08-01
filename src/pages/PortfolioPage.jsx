@@ -65,7 +65,6 @@ function PortfolioPage() {
                                             />
                                             {/* <PortfolioItem.PaddingBottom /> */}
                                         </PortfolioItem.GridWrapper>
-                                        {/*  */}
                                     </PortfolioItem.ItemWrapper>
                                 </PortfolioItem>
                             )
