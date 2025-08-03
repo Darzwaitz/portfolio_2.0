@@ -1,6 +1,6 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useRef, useState } from 'react'
 
 const PortfolioItemContext = createContext()
 
@@ -92,12 +92,13 @@ function Title({ title }) {
 
 function Maximize() {
     const { show, setShow } = useContext(PortfolioItemContext)
+    const minimized = useRef(true)
 
     function handleMinimize() {
         // removal needed here for 2nd click on maximize button
-        document.removeEventListener('click', outsideItemClick)
+        // document.removeEventListener('click', outsideItemClick)
 
-        if (!show) {
+        if (minimized) {
             // using zero second setTimeout to mitigate event listener being called prematurely
             setTimeout(() =>
                 document.addEventListener('click', outsideItemClick)
@@ -116,8 +117,12 @@ function Maximize() {
                 curElemId === 'outlet'
             ) {
                 setShow(false)
+                minimized.current = false
+                return document.removeEventListener('click', outsideItemClick)
             }
-            return document.removeEventListener('click', outsideItemClick)
+            if (minimized === false) {
+                return document.removeEventListener('click', outsideItemClick)
+            }
         }
 
         setShow(!show)
