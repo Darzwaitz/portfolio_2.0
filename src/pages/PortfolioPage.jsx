@@ -54,7 +54,7 @@ function PortfolioPage() {
                                                 title={project.title}
                                             />
                                             {/* maximize item button */}
-                                            <PortfolioItem.Maximize />
+                                            <PortfolioItem.MaximizeButton />
                                             <PortfolioItem.Img />
 
                                             {/* show on condition in portfolioitem */}

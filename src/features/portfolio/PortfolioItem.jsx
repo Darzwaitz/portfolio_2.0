@@ -1,6 +1,6 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, { createContext, useContext, useRef, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
 const PortfolioItemContext = createContext()
 
@@ -90,26 +90,29 @@ function Title({ title }) {
     return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
 }
 
-function Maximize() {
+function MaximizeButton() {
     const { show, setShow } = useContext(PortfolioItemContext)
-    const minimized = useRef(true)
 
-    function handleMinimize() {
-        // removal needed here for 2nd click on maximize button
-        // document.removeEventListener('click', outsideItemClick)
+    function handleMaximize(e) {
+        // console.log(e.target)
 
-        if (minimized) {
+        if (!show) {
+            e.target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+                inline: 'nearest',
+            })
             // using zero second setTimeout to mitigate event listener being called prematurely
             setTimeout(() =>
                 document.addEventListener('click', outsideItemClick)
             )
         }
 
-        // close the current maximized item onClick of these element ids
         function outsideItemClick(e) {
-            console.log('outsideItemClickD')
-
             const curElemId = e.target.id
+            console.log(curElemId)
+
+            // close the current maximized item onClick of these element ids
             if (
                 curElemId === 'itemscontainerwrapper' ||
                 curElemId === 'itemscontainerwrapper' ||
@@ -117,10 +120,10 @@ function Maximize() {
                 curElemId === 'outlet'
             ) {
                 setShow(false)
-                minimized.current = false
                 return document.removeEventListener('click', outsideItemClick)
             }
-            if (minimized === false) {
+            // removal needed here for 2nd click on maximize button when item is already maximized
+            if (curElemId === 'maximize-button') {
                 return document.removeEventListener('click', outsideItemClick)
             }
         }
@@ -131,9 +134,11 @@ function Maximize() {
     return (
         <span
             className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
-            onClick={handleMinimize}
+            id="maximize-button"
+            onClick={handleMaximize}
         >
-            ◻
+            {/* iconz to be updated */}
+            {show ? 'X' : '◻'}
         </span>
     )
 }
@@ -171,7 +176,7 @@ PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img
 PortfolioItem.TagList = TagList
 PortfolioItem.Title = Title
-PortfolioItem.Maximize = Maximize
+PortfolioItem.MaximizeButton = MaximizeButton
 PortfolioItem.Description = Description
 
 export default PortfolioItem
