@@ -7,8 +7,11 @@ function HeaderSearchnavbar() {
     // console.log(curPageName)
 
     return (
-        <div className="border-grey-07 bg-grey-03 text-grey-06 m-auto rounded-lg border px-40 py-1 pb-2 text-sm">
-            {curPageName}
+        <div
+            id="header-search-navbar"
+            className="border-grey-07 bg-grey-03 text-grey-06 m-auto max-w-[30rem] rounded-lg border py-1 pb-2 text-center text-sm"
+        >
+            <span className="">{curPageName}</span>
         </div>
     )
 }
