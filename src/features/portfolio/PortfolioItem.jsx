@@ -110,7 +110,6 @@ function MaximizeButton() {
 
         function outsideItemClick(e) {
             const curElemId = e.target.id
-            console.log(curElemId)
 
             // close the current maximized item onClick of these element ids
             if (
