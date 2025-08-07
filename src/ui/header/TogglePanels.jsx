@@ -8,10 +8,10 @@ function TogglePanels() {
         <div className="flex gap-2">
             {/* svgs comps. */}
 
+            <CustomizeLayout />
             <ToggleSidebarLeft />
             <ToggleTerminal />
             <ToggleSidebarRight />
-            <CustomizeLayout />
         </div>
     )
 }

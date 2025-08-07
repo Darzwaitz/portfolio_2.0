@@ -4,16 +4,22 @@ const PanelsContext = createContext()
 
 function PanelsProvider({ children }) {
     const [togglePanels, setTogglePanels] = useState({
+        toggleCustomizeLayout: false,
         toggleLeft: true,
         toggleTerminal: false,
         toggleRight: false,
-        toggleCustomizeLayout: false,
         tooltipArrDir: 'left',
     })
 
     function onTogglePanels(dataset) {
         setTogglePanels((prev) => {
             switch (dataset) {
+                case 'toggleCustomizeLayout':
+                    console.log('toggleCustomizeLayout pressed')
+                    return {
+                        ...prev,
+                        toggleCustomizeLayout: !prev.toggleCustomizeLayout,
+                    }
                 case 'toggleLeft':
                     return {
                         ...prev,
@@ -34,12 +40,7 @@ function PanelsProvider({ children }) {
                         ...prev,
                         toggleTerminal: !prev.toggleTerminal,
                     }
-                case 'toggleCustomizeLayout':
-                    console.log('toggleCustomizeLayout pressed')
-                    return {
-                        ...prev,
-                        toggleCustomizeLayout: !prev.toggleCustomizeLayout,
-                    }
+
                 default:
                     return
             }
