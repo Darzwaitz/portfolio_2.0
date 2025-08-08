@@ -15,7 +15,7 @@ function PanelsProvider({ children }) {
         setTogglePanels((prev) => {
             switch (dataset) {
                 case 'toggleCustomizeLayout':
-                    console.log('toggleCustomizeLayout pressed')
+                    // console.log('toggleCustomizeLayout pressed')
                     return {
                         ...prev,
                         toggleCustomizeLayout: !prev.toggleCustomizeLayout,

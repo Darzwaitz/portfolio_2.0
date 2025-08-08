@@ -7,8 +7,9 @@ function NavItems({ title, url, stylesHoverSidebarNav, onclickHandler }) {
             key={title}
             className={({ isActive }) =>
                 !isActive
-                    ? `${stylesHoverSidebarNav ? 'hover:bg-blue-01 flex items-center justify-between hover:rounded-md' : ''} hover:text-grey-02 pr-2 pb-1 pl-1.5`
-                    : `${stylesHoverSidebarNav ? 'bg-blue-02 flex items-center justify-between' : 'bg-grey-04'} text-grey-02 rounded-md pr-2 pb-1 pl-1.5`
+                    ? `${stylesHoverSidebarNav ? 'hover:bg-blue-01 flex items-center justify-between' : 'hover:bg-grey-04'} text-grey-09 pr-2 pb-1 pl-1.5 hover:rounded-md`
+                    : //
+                      `${stylesHoverSidebarNav ? 'flex items-center justify-between' : ''} text-grey-02 rounded-md pr-2 pb-1 pl-1.5 font-semibold text-shadow-current`
             }
             to={url}
             onClick={onclickHandler}

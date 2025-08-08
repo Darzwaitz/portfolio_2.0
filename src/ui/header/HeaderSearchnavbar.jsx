@@ -1,21 +1,21 @@
 // search bar / current page notification
 import { useCurPage } from '../../contexts/CurPageContext'
+import { usePanels } from '@/contexts/PanelsContext'
+
+import CustomizeLayoutMenu from './CustomizeLayoutMenu'
 
 function HeaderSearchnavbar() {
     // from context
     const { curPageName } = useCurPage()
     // console.log(curPageName)
+    const { togglePanels } = usePanels()
 
     return (
         <div
             id="header-search-navbar"
-            className="border-grey-07 bg-grey-03 text-grey-06 relative m-auto grow rounded-lg border py-1 pb-2 text-center text-sm sm:w-[22rem] sm:grow-0 md:w-[36rem]"
+            className="border-grey-07 bg-grey-03 text-grey-06 relative m-auto my-1 grow rounded-lg border py-1 pb-2 text-center text-sm sm:w-[20rem] sm:grow-0 md:w-[30rem]"
         >
-            {/* customize layout bar */}
-            {/* NB temp height REMOVE LATER*/}
-            <div className="bg-green-01 text-grey-02 absolute top-0 h-[14rem] w-full rounded-lg">
-                <h1> customize layout</h1>
-            </div>
+            {togglePanels.toggleCustomizeLayout && <CustomizeLayoutMenu />}
             <span className="">{curPageName}</span>
         </div>
     )

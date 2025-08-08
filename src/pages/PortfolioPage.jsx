@@ -3,39 +3,22 @@ import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
 import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
 
-import { useTestFunc } from '../ui/MainContent'
-
 function PortfolioPage() {
     const portfolioitemTags = usePortfolioitemTags()
-    const { testFunc } = useTestFunc()
-
-    // const ref = useRef()
-
-    // can call it when page loads too
-    // testFunc()
 
     return (
         <>
-            {/* // <div className="h-full"> */}
-
-            {/* {testFunc()} */}
-            <h1 onClick={() => testFunc()}>Portfolio Page</h1>
-            {/* <h1>Portfolio Page</h1> */}
+            <h1>Portfolio Page</h1>
 
             {/* choose filter items section */}
             <PortfolioFilteritems width />
 
-            <div
-                id="itemscontainerwrapper"
-                className="h-full"
-                // onClick={() => console.log('clicked Page')}
-            >
+            <div id="itemscontainerwrapper" className="h-full">
                 {/* items container */}
                 <div
                     id="itemsdisplay"
                     className="relative grid grid-cols-(--item-grid-cols) gap-2"
                 >
-                    {/* <div className="relative flex gap-2"> */}
                     {PortfolioItemsList.map(
                         (project, i) =>
                             portfolioitemTags.includes(...project.tags) && (

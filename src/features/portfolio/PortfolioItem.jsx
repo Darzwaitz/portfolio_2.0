@@ -28,7 +28,7 @@ function BgItemsWrapper({ show }) {
         show && (
             <div
                 id="bg-items-wrapper"
-                className="bg-black-01 absolute h-full w-full opacity-90"
+                className="bg-black-02 absolute h-full w-full opacity-90"
             ></div>
         )
     )
