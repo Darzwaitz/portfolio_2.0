@@ -1,7 +1,7 @@
 import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
 
-function NavPages({ togglePanels, stylesNavSidebar }) {
+function NavPages({ togglePanels, stylesNavMobile }) {
     const { curPageList, handleCurPageName } = useCurPage()
 
     // conditional styles setup for main navigation/links if displayed on sidebar
@@ -14,7 +14,7 @@ function NavPages({ togglePanels, stylesNavSidebar }) {
 
     return (
         <nav
-            className={`${stylesNavSidebar && navStylesSidebar} 'text-grey-01'`}
+            className={`${stylesNavMobile && navStylesSidebar} 'text-grey-01'`}
         >
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems
@@ -23,7 +23,8 @@ function NavPages({ togglePanels, stylesNavSidebar }) {
                     url={url}
                     icon={icon}
                     // conditional sent to NavItems - styles not directly used on NavItems in this comp.
-                    stylesHoverSidebarNav={stylesNavSidebar}
+                    stylesHoverSidebarNav={stylesNavMobile}
+                    // stylesHoverSidebarNav
                     onclickHandler={() => handleCurPageName(title)}
                 />
             ))}
