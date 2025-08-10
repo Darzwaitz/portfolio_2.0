@@ -6,7 +6,8 @@ import CustomizeLayout from './assets/imgs/svg/components/CustomizeLayout'
 function TogglePanels() {
     // N.B. onClick is added to parent SvgIconwrapper for all of these comps.
     return (
-        <div className="flex gap-2">
+        // <div className="flex gap-2">
+        <div className="flex flex-col gap-2">
             <CustomizeLayout />
             <ToggleSidebarLeft />
             <ToggleTerminal />
