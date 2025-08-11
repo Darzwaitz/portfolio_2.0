@@ -7,7 +7,7 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 
     return (
         <ul
-            className={`mb-5 flex flex-wrap gap-1 lg:justify-center ${width ? '@sm:@min-lg:w-[40rem]' : ''} ${flexcolumn ? 'flex-col' : 'flex-row'}`}
+            className={`mx-auto mb-5 flex w-full flex-wrap gap-1 lg:w-full ${width} ${flexcolumn ? 'flex-col justify-center' : 'flex-row sm:justify-center md:w-[86%]'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
@@ -29,7 +29,8 @@ function PortfolioFilteritems({ flexcolumn, width }) {
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li
-            className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 mr-5 flex flex-1 cursor-pointer items-center rounded-sm border px-2 py-0.5 ${'sm:flex-0'} ${isChecked && 'bg-grey-08'}`}
+            // className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 mr-5 flex flex-[1_0_auto] cursor-pointer items-center rounded-sm border px-2 py-0.5 ${isChecked && 'bg-grey-08'}`}
+            className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 flex flex-[0_0_auto] cursor-pointer rounded-sm border px-2 py-0.5 md:mr-2 ${isChecked && 'bg-grey-08'}`}
             // onChange={checkHandler}
             onClick={checkHandler}
         >
@@ -44,7 +45,7 @@ function Checkbox({ isChecked, label, checkHandler, icon }) {
                 checked={isChecked}
             />
             {/* <label className="mr-1 cursor-pointer" htmlFor={label}> */}
-            <label className="mr-1 cursor-pointer">{label}</label>
+            <label className="mr-auto cursor-pointer pr-1">{label}</label>
             <span className="h-6 w-6 cursor-pointer">{icon}</span>
         </li>
     )
