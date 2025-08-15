@@ -6,7 +6,7 @@ import Tooltip from '@/features/tooltip/Tooltip'
 
 // no off for this svg - just hover=already set
 
-function CustomizeLayout() {
+function CustomizeLayout({ showTooltip }) {
     return (
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             {/* layout.svg */}
@@ -23,10 +23,12 @@ function CustomizeLayout() {
                 <path d="M10 10L11 9H14L15 10V13L14 14H11L10 13V10ZM11 10V13H14V10H11Z" />
             </svg>
 
-            <Tooltip
-                msg={'Customize Layout...'}
-                arrowDirection={arrowDirection}
-            />
+            {showTooltip && (
+                <Tooltip
+                    msg={'Customize Layout...'}
+                    arrowDirection={arrowDirection}
+                />
+            )}
         </SvgIconwrapper>
     )
 }

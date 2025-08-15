@@ -3,14 +3,18 @@ import ToggleSidebarLeft from './assets/imgs/svg/components/ToggleSidebarLeft'
 import ToggleSidebarRight from './assets/imgs/svg/components/ToggleSidebarRight'
 import CustomizeLayout from './assets/imgs/svg/components/CustomizeLayout'
 
-function TogglePanels({ flexcolumn }) {
+function TogglePanels({ flexcolumn, tooltip }) {
+    // condition to show tooltip sent in from parent
+    let showTooltip = true
+    if (!tooltip) showTooltip = false
+
     // N.B. onClick is added to parent SvgIconwrapper for all of these comps.
     return (
         <div className={`flex gap-2 ${flexcolumn && 'flex-col'}`}>
-            <CustomizeLayout />
-            <ToggleSidebarLeft />
-            <ToggleTerminal />
-            <ToggleSidebarRight />
+            <CustomizeLayout showTooltip={showTooltip} />
+            <ToggleSidebarLeft showTooltip={showTooltip} />
+            <ToggleTerminal showTooltip={showTooltip} />
+            <ToggleSidebarRight showTooltip={showTooltip} />
         </div>
     )
 }
