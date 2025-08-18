@@ -16,7 +16,7 @@ function Header() {
                 <NavPages stylesNavtop />
             </div>
             <HeaderSearchnavbar />
-            <TogglePanels tooltip={true} />
+            <TogglePanels tooltips={true} />
             <HeaderWindowbuttons />
         </header>
     )

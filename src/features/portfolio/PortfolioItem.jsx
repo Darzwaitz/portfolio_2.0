@@ -1,31 +1,32 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useState } from 'react'
+import useOutsideClick from '../../hooks/useOutsideClick'
 
 const PortfolioItemContext = createContext()
 
 function PortfolioItem({ children, projectKey }) {
-    const [show, setShow] = useState(false)
+    const [maximize, setMaximize] = useState(false)
 
     return (
         <PortfolioItemContext.Provider
             value={{
-                show,
-                setShow,
+                maximize,
+                setMaximize,
                 projectKey,
             }}
         >
             {/* wrapper for all currently displayed items */}
-            <BgItemsWrapper show={show} />
+            <BgItemsWrapper maximize={maximize} />
             {children}
         </PortfolioItemContext.Provider>
     )
 }
 
 // items backdrop wrapper
-function BgItemsWrapper({ show }) {
+function BgItemsWrapper({ maximize }) {
     return (
-        show && (
+        maximize && (
             <div
                 id="bg-items-wrapper"
                 className="bg-black-02 absolute h-full w-full opacity-90"
@@ -35,12 +36,12 @@ function BgItemsWrapper({ show }) {
 }
 // item container
 function ItemWrapper({ children }) {
-    const { show } = useContext(PortfolioItemContext)
+    const { maximize } = useContext(PortfolioItemContext)
 
     return (
         <div
             id="itemwrapper"
-            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${show && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
+            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${maximize && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
         >
             {children}
         </div>
@@ -91,44 +92,9 @@ function Title({ title }) {
 }
 
 function MaximizeButton() {
-    const { show, setShow } = useContext(PortfolioItemContext)
+    const { maximize, setMaximize } = useContext(PortfolioItemContext)
 
-    function handleMaximize(e) {
-        // console.log(e.target)
-
-        if (!show) {
-            e.target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'end',
-                inline: 'nearest',
-            })
-            // using zero second setTimeout to mitigate event listener being called prematurely
-            setTimeout(() =>
-                document.addEventListener('click', outsideItemClick)
-            )
-        }
-
-        function outsideItemClick(e) {
-            const curElemId = e.target.id
-
-            // close the current maximized item onClick of these element ids
-            if (
-                curElemId === 'itemscontainerwrapper' ||
-                curElemId === 'itemscontainerwrapper' ||
-                curElemId === 'bg-items-wrapper' ||
-                curElemId === 'outlet'
-            ) {
-                setShow(false)
-                return document.removeEventListener('click', outsideItemClick)
-            }
-            // removal needed here for 2nd click on maximize button when item is already maximized
-            if (curElemId === 'maximize-button') {
-                return document.removeEventListener('click', outsideItemClick)
-            }
-        }
-
-        setShow(!show)
-    }
+    const handleMaximize = useOutsideClick(maximize, setMaximize)
 
     return (
         <span
@@ -137,16 +103,16 @@ function MaximizeButton() {
             onClick={handleMaximize}
         >
             {/* iconz to be updated */}
-            {show ? 'X' : '◻'}
+            {maximize ? 'X' : '◻'}
         </span>
     )
 }
 
 function Description({ description }) {
-    const { show } = useContext(PortfolioItemContext)
+    const { maximize } = useContext(PortfolioItemContext)
 
     return (
-        show && (
+        maximize && (
             <p className={`col-span-2 flex flex-col pr-2.5 pb-5`}>
                 {description}
                 <br />
