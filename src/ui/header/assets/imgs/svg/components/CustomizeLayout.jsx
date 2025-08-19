@@ -1,6 +1,7 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
+const { defaultColor, hover, iconSize, arrowDirection, svgStylesMedium } =
+    SvgSettingsMedium()
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
@@ -11,9 +12,9 @@ function CustomizeLayout({ showTooltip }) {
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             {/* layout.svg */}
             <svg
-                className="pointer-events-none"
+                className={`pointer-events-none ${iconSize === 'medium' && svgStylesMedium}`}
                 data-panel="toggleCustomizeLayout"
-                width="22"
+                // width="12"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
                 fill={defaultColor}

@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+@media (width <= 40rem) {
+    html {
+        font-size: 12px;
+    }
+}
+
 @theme {
     /* colourz */
     --color-*: initial;

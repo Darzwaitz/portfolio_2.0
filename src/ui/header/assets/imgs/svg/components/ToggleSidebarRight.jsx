@@ -1,6 +1,7 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, hover, iconSize, arrowDirection } = SvgSettingsMedium()
+const { defaultColor, hover, iconSize, arrowDirection, svgStylesMedium } =
+    SvgSettingsMedium()
 import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
@@ -16,9 +17,9 @@ function ToggleSidebarRight({ showTooltip }) {
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             {/* layout-sidebar-right-off.svg */}
             <svg
-                className="pointer-events-none"
+                className={`pointer-events-none ${iconSize === 'medium' && svgStylesMedium}`}
                 data-panel="toggleRight"
-                width="22"
+                // width="12"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
                 fill={defaultColor}
@@ -31,7 +32,7 @@ function ToggleSidebarRight({ showTooltip }) {
                     />
                 ) : (
                     <path
-                        className="pointer-events-none"
+                        className={`pointer-events-none ${iconSize === 'medium' && svgStylesMedium}`}
                         data-panel="toggleRight"
                         d="M2 1L1 2V14L2 15H14L15 14V2L14 1H2ZM2 14V2H9V14H2Z"
                     />
