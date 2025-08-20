@@ -68,7 +68,7 @@ function Img() {
         <img
             src={placeholder}
             alt="placeholder image"
-            className="col-span-2 inline-block"
+            className="col-span-2 inline-block p-[0_0.5rem_0.5rem_0]"
         />
     )
 }
@@ -98,7 +98,8 @@ function MaximizeButton() {
 
     return (
         <span
-            className="text-grey-01 m- col-span-1 mr-[4px] cursor-pointer justify-self-end"
+            // some temp styles to be removed when correct icon added
+            className="text-grey-01 bg-grey-03 col-span-1 m-1 flex h-6 w-6 cursor-pointer place-content-center justify-self-end"
             id="maximize-button"
             onClick={handleMaximize}
         >
