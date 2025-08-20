@@ -2,6 +2,7 @@
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useState } from 'react'
 import useOutsideClick from '../../hooks/useOutsideClick'
+import MaximizeButtonIcon from './assets/imgs/svg/components/MaximizeButtonIcon'
 
 const PortfolioItemContext = createContext()
 
@@ -104,7 +105,7 @@ function MaximizeButton() {
             onClick={handleMaximize}
         >
             {/* iconz to be updated */}
-            {maximize ? 'X' : '◻'}
+            {maximize ? 'X' : <MaximizeButtonIcon />}
         </span>
     )
 }
