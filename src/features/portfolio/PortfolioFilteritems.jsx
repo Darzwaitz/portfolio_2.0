@@ -1,13 +1,13 @@
 import React from 'react'
 import { useFilter } from '@/contexts/FilteritemsContext'
 
-function PortfolioFilteritems({ flexcolumn, width }) {
+function PortfolioFilteritems({ flexcolumn }) {
     // from Context
     const { items, onClickHandle } = useFilter()
 
     return (
         <ul
-            className={`mx-auto mb-5 flex w-full flex-wrap gap-1 lg:w-full ${width} ${flexcolumn ? 'flex-col justify-center' : 'flex-row sm:justify-center md:w-[86%]'}`}
+            className={`mr-auto mb-5 ml-auto flex w-fit flex-wrap gap-1 ${flexcolumn ? 'flex-col' : 'flex-row'}`}
         >
             {items.map((menuitem, index) => (
                 <React.Fragment key={index}>
@@ -30,7 +30,7 @@ function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li
             // className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 mr-5 flex flex-[1_0_auto] cursor-pointer items-center rounded-sm border px-2 py-0.5 ${isChecked && 'bg-grey-08'}`}
-            className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 flex flex-[0_0_auto] cursor-pointer rounded-sm border px-2 py-0.5 md:mr-2 ${isChecked && 'bg-grey-08'}`}
+            className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 mr-0.5 flex flex-[0_0_auto] cursor-pointer rounded-sm border px-2 py-0.5 lg:mr-1 ${isChecked && 'bg-grey-08'}`}
             // onChange={checkHandler}
             onClick={checkHandler}
         >

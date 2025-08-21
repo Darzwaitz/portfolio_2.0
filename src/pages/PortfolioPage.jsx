@@ -11,7 +11,7 @@ function PortfolioPage() {
             <h1>Portfolio Page</h1>
 
             {/* choose filter items section */}
-            <PortfolioFilteritems width />
+            <PortfolioFilteritems />
 
             <div id="itemscontainerwrapper" className="h-full">
                 {/* items container */}
