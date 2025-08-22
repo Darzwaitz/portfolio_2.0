@@ -29,7 +29,6 @@ function PortfolioFilteritems({ flexcolumn }) {
 function Checkbox({ isChecked, label, checkHandler, icon }) {
     return (
         <li
-            // className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 mr-5 flex flex-[1_0_auto] cursor-pointer items-center rounded-sm border px-2 py-0.5 ${isChecked && 'bg-grey-08'}`}
             className={`hover:border-grey-07 border-grey-04 hover:bg-grey-08 mr-0.5 flex flex-[0_0_auto] cursor-pointer rounded-sm border px-2 py-0.5 lg:mr-1 ${isChecked && 'bg-grey-08'}`}
             // onChange={checkHandler}
             onClick={checkHandler}

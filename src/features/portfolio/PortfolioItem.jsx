@@ -1,8 +1,8 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useState } from 'react'
-import useOutsideClick from '../../hooks/useOutsideClick'
-import MaximizeButtonIcon from './assets/imgs/svg/components/MaximizeButtonIcon'
+import useOutsideClick from '@/hooks/useOutsideClick'
+import MaximizeButtonIcon from '@/ui/buttons/MaximizeButtonIcon'
 
 const PortfolioItemContext = createContext()
 
@@ -100,7 +100,7 @@ function MaximizeButton() {
     return (
         <span
             // some temp styles to be removed when correct icon added
-            className="text-grey-01 bg-grey-03 col-span-1 m-1 flex h-6 w-6 cursor-pointer place-content-center justify-self-end"
+            className="col-span-1 m-1 flex h-6 w-6 cursor-pointer place-content-center justify-self-end"
             id="maximize-button"
             onClick={handleMaximize}
         >
