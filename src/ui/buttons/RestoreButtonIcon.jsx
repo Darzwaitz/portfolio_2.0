@@ -5,8 +5,8 @@
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
-function MaximizeButtonIcon() {
-    /* chrome-maximize.svg */
+function RestoreButtonIcon() {
+    /* chrome-restore.svg */
 
     return (
         <span>
@@ -18,11 +18,16 @@ function MaximizeButtonIcon() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
             >
-                <path d="M3 3v10h10V3H3zm9 9H4V4h8v8z" />
+                <path d="M3 5v9h9V5H3zm8 8H4V6h7v7z" />
+                <path
+                    // fill-rule="evenodd"
+                    // clip-rule="evenodd"
+                    d="M5 5h1V4h7v7h-1v1h2V3H5v2z"
+                />
             </svg>
-            <Tooltip msg={'Maximize'} arrowDirection={'up'} />
+            <Tooltip msg={'Restore'} arrowDirection={'up'} />
         </span>
     )
 }
 
-export default MaximizeButtonIcon
+export default RestoreButtonIcon
