@@ -11,9 +11,9 @@ function MaximizeButtonIcon() {
     return (
         <span>
             <svg
-                className="hover:bg-grey-08 p-1"
-                width="28"
-                height="28"
+                className="hover:bg-grey-08 h-6 p-1"
+                // width="28"
+                // height="28"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

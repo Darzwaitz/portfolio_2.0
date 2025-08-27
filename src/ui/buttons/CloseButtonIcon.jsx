@@ -5,29 +5,23 @@
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
-function RestoreButtonIcon() {
-    /* chrome-restore.svg */
+function CloseButtonIcon() {
+    /* chrome-close.svg */
 
     return (
         <span>
             <svg
                 className="hover:bg-grey-08 h-6 p-1"
-                // width="28"
-                // height="28"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
             >
-                <path d="M3 5v9h9V5H3zm8 8H4V6h7v7z" />
-                <path
-                    // fill-rule="evenodd"
-                    // clip-rule="evenodd"
-                    d="M5 5h1V4h7v7h-1v1h2V3H5v2z"
-                />
+                <path d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z" />
+                <script xmlns="" />
             </svg>
-            <Tooltip msg={'Restore'} arrowDirection={'up'} />
+            <Tooltip msg={'Minimize'} arrowDirection={'up'} />
         </span>
     )
 }
 
-export default RestoreButtonIcon
+export default CloseButtonIcon
