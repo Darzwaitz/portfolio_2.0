@@ -2,8 +2,24 @@
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useState } from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
-import MaximizeButtonIcon from '@/ui/buttons/MaximizeButtonIcon'
-import RestoreButtonIcon from '@/ui/buttons/RestoreButtonIcon'
+
+import BrowserWindowButtons from '../../ui/header/BrowserWindowbuttons'
+
+// import MinimizeButtonIcon from '../buttons/MinimizeButtonIcon'
+// import MaximizeButtonIcon from '@/ui/buttons/MaximizeButtonIcon'
+// import RestoreButtonIcon from '@/ui/buttons/RestoreButtonIcon'
+// import CloseButtonIcon from '../buttons/CloseButtonIcon'
+
+//
+//
+//
+//
+// TODO LOOKUP RENDER PROPS AND OTHER PATTERNS
+//
+//
+//
+//
+//
 
 const PortfolioItemContext = createContext()
 
@@ -93,6 +109,10 @@ function Title({ title }) {
     return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
 }
 
+function PortfolioWindowButtons() {
+    return <BrowserWindowButtons OtherStyles />
+}
+
 function MaximizeButton() {
     const { maximize, setMaximize } = useContext(PortfolioItemContext)
 
@@ -106,7 +126,7 @@ function MaximizeButton() {
             onClick={handleMaximize}
         >
             {/* iconz to be updated */}
-            {maximize ? <RestoreButtonIcon /> : <MaximizeButtonIcon />}
+            {/* {maximize ? <RestoreButtonIcon /> : <MaximizeButtonIcon />} */}
         </span>
     )
 }
@@ -144,6 +164,7 @@ PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img
 PortfolioItem.TagList = TagList
 PortfolioItem.Title = Title
+PortfolioItem.PortfolioWindowButtons = PortfolioWindowButtons
 PortfolioItem.MaximizeButton = MaximizeButton
 PortfolioItem.Description = Description
 

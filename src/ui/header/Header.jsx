@@ -1,7 +1,7 @@
 import NavPages from './NavPages'
 import Logo from './assets/imgs/Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
-import HeaderWindowbuttons from './HeaderWindowbuttons'
+import BrowserWindowButtons from './BrowserWindowbuttons'
 import TogglePanels from '../header/TogglePanels'
 import NavArrows from './NavArrows'
 
@@ -17,7 +17,7 @@ function Header() {
             </div>
             <HeaderSearchnavbar />
             <TogglePanels tooltips={true} />
-            <HeaderWindowbuttons />
+            <BrowserWindowButtons HeaderStyles />
         </header>
     )
 }
