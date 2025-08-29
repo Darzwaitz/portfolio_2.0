@@ -1,7 +1,7 @@
 import NavPages from './NavPages'
 import Logo from './assets/imgs/Logo'
 import HeaderSearchnavbar from './HeaderSearchnavbar'
-import BrowserWindowButtons from './BrowserWindowbuttons'
+import BrowserWindowButtons from '@/ui/buttons/BrowserWindowButtons'
 import TogglePanels from '../header/TogglePanels'
 import NavArrows from './NavArrows'
 

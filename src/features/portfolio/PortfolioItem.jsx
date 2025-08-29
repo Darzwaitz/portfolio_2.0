@@ -3,7 +3,7 @@ import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useState } from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
 
-import BrowserWindowButtons from '../../ui/header/BrowserWindowbuttons'
+import BrowserWindowButtons from '../../ui/buttons/BrowserWindowButtons'
 
 // import MinimizeButtonIcon from '../buttons/MinimizeButtonIcon'
 // import MaximizeButtonIcon from '@/ui/buttons/MaximizeButtonIcon'
