@@ -1,6 +1,7 @@
 import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
 
+// main nav linkz
 function NavPages({ togglePanels, stylesNavMobile }) {
     const { curPageList, handleCurPageName } = useCurPage()
 
@@ -14,7 +15,8 @@ function NavPages({ togglePanels, stylesNavMobile }) {
 
     return (
         <nav
-            className={`${stylesNavMobile && navStylesSidebar} 'text-grey-01'`}
+            id="main-nav"
+            className={`${stylesNavMobile ? navStylesSidebar : ''} 'text-grey-01'`}
         >
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems

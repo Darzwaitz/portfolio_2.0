@@ -1,5 +1,7 @@
+import CloseButtonIcon from './assets/imgs/svgs/components/CloseButtonIcon'
+
 function CloseButton() {
-    return <div></div>
+    return <CloseButtonIcon />
 }
 
 export default CloseButton

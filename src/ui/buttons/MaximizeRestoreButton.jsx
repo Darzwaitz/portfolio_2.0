@@ -1,12 +1,13 @@
 import MaximizeButtonIcon from './assets/imgs/svgs/components/MaximizeButtonIcon'
 import RestoreButtonIcon from './assets/imgs/svgs/components/RestoreButtonIcon'
 
-function MaximizeRestoreButton() {
+function MaximizeRestoreButton({ maximize, onClick }) {
     return (
-        <div>
-            <MaximizeButtonIcon />
-            <RestoreButtonIcon />
-        </div>
+        <span onClick={onClick}>
+            {/* <MaximizeButtonIcon />
+            <RestoreButtonIcon /> */}
+            {maximize ? <RestoreButtonIcon /> : <MaximizeButtonIcon />}
+        </span>
     )
 }
 

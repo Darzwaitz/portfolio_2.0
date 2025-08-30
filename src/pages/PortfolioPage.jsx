@@ -36,9 +36,8 @@ function PortfolioPage() {
                                             <PortfolioItem.Title
                                                 title={project.title}
                                             />
-                                            <PortfolioItem.PortfolioWindowButtons />
-                                            {/* maximize item button */}
-                                            {/* <PortfolioItem.MaximizeButton /> */}
+                                            {/* maximize restore etc. buttonz */}
+                                            <PortfolioItem.PortfolioCardButtons />
                                             <PortfolioItem.Img />
 
                                             {/* show on condition in portfolioitem */}

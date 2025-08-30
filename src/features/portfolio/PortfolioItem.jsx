@@ -3,23 +3,7 @@ import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useState } from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
 
-import BrowserWindowButtons from '../../ui/buttons/BrowserWindowButtons'
-
-// import MinimizeButtonIcon from '../buttons/MinimizeButtonIcon'
-// import MaximizeButtonIcon from '@/ui/buttons/MaximizeButtonIcon'
-// import RestoreButtonIcon from '@/ui/buttons/RestoreButtonIcon'
-// import CloseButtonIcon from '../buttons/CloseButtonIcon'
-
-//
-//
-//
-//
-// TODO LOOKUP RENDER PROPS AND OTHER PATTERNS
-//
-//
-//
-//
-//
+import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
 
 const PortfolioItemContext = createContext()
 
@@ -52,6 +36,7 @@ function BgItemsWrapper({ maximize }) {
         )
     )
 }
+
 // item container
 function ItemWrapper({ children }) {
     const { maximize } = useContext(PortfolioItemContext)
@@ -109,25 +94,20 @@ function Title({ title }) {
     return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
 }
 
-function PortfolioWindowButtons() {
-    return <BrowserWindowButtons OtherStyles />
-}
-
-function MaximizeButton() {
+// minimize, restore/maximize and Close buttons within here
+function PortfolioCardButtons() {
     const { maximize, setMaximize } = useContext(PortfolioItemContext)
 
+    // handle click outside of portfolio item in specific areas i.e. not the filter items section
     const handleMaximize = useOutsideClick(maximize, setMaximize)
 
     return (
-        <span
-            // some temp styles to be removed when correct icon added
-            className="col-span-1 m-1 flex h-6 w-6 cursor-pointer place-content-center justify-self-end"
-            id="maximize-button"
+        <WindowDisplayButtons
+            PortfolioItemStyles
+            maximize={maximize}
             onClick={handleMaximize}
-        >
-            {/* iconz to be updated */}
-            {/* {maximize ? <RestoreButtonIcon /> : <MaximizeButtonIcon />} */}
-        </span>
+            id={'portfolio-card-buttons'}
+        />
     )
 }
 
@@ -164,8 +144,7 @@ PortfolioItem.DivWrapper = DivWrapper
 PortfolioItem.Img = Img
 PortfolioItem.TagList = TagList
 PortfolioItem.Title = Title
-PortfolioItem.PortfolioWindowButtons = PortfolioWindowButtons
-PortfolioItem.MaximizeButton = MaximizeButton
+PortfolioItem.PortfolioCardButtons = PortfolioCardButtons
 PortfolioItem.Description = Description
 
 export default PortfolioItem
