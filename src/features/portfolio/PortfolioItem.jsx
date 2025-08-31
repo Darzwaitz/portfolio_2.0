@@ -44,7 +44,7 @@ function ItemWrapper({ children }) {
     return (
         <div
             id="itemwrapper"
-            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${maximize && 'absolute left-0 md:left-[15%] md:w-[70%] lg:left-[25%] lg:w-[50%]'}`}
+            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${maximize && 'absolute inset-0 mx-auto h-max w-[80%] md:w-[70%] lg:w-[50%]'}`}
         >
             {children}
         </div>
@@ -116,7 +116,10 @@ function Description({ description }) {
 
     return (
         maximize && (
-            <p className={`col-span-2 flex flex-col pr-2.5 pb-5`}>
+            <p
+                id="description"
+                className={`col-span-2 flex flex-col pr-2.5 pb-5`}
+            >
                 {description}
                 <br />
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

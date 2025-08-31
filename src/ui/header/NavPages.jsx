@@ -6,7 +6,7 @@ function NavPages({ togglePanels, stylesNavMobile }) {
     const { curPageList, handleCurPageName } = useCurPage()
 
     // conditional styles setup for main navigation/links if displayed on sidebar
-    const navStylesSidebar = `text-grey-01 border-grey-04 bg-black-02 absolute z-50 flex w-[11.1rem] flex-col gap-2 rounded-md border p-1 lg:hidden
+    const navStylesSidebar = ` border-grey-04 bg-black-02 absolute z-50 flex w-[11.1rem] flex-col gap-2 rounded-md border p-1 lg:hidden
     ${togglePanels?.toggleLeft ? 'left-[3.4rem]' : 'right-[3.4rem]'}`
 
     // take nav array, remove the first 'search' item from painted main nav links display
@@ -16,7 +16,7 @@ function NavPages({ togglePanels, stylesNavMobile }) {
     return (
         <nav
             id="main-nav"
-            className={`${stylesNavMobile ? navStylesSidebar : ''} 'text-grey-01'`}
+            className={`text-grey-01${stylesNavMobile ? navStylesSidebar : ''}`}
         >
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems
