@@ -12,7 +12,7 @@ function WindowDisplayButtons({
     return (
         <div
             id={id}
-            className={`${HeaderStyles ? 'hidden gap-2 pl-1 lg:flex' : ''} ${PortfolioItemStyles ? 'ml-auto flex gap-0.5' : ''}`}
+            className={`${HeaderStyles ? 'hidden h-full gap-2 pl-1 lg:flex' : ''} ${PortfolioItemStyles ? 'ml-auto flex gap-0.5' : ''}`}
         >
             <MinimizeButton />
             <MaximizeRestoreButton maximize={maximize} onClick={onClick} />
