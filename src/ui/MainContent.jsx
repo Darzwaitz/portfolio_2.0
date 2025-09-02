@@ -11,7 +11,7 @@ export default function MainContent() {
 
     return (
         <main
-            className={`bg-black-01 text-grey-01 grid w-full ${togglePanels.toggleTerminal ? 'grid-rows-[1fr]' : 'grid-rows-[1fr]_auto'}`}
+            className={`bg-black-01 text-grey-01 grid w-full ${!togglePanels.toggleTerminal ? 'grid-rows-[1fr]_auto' : 'grid-rows-[1fr]'}`}
         >
             <div
                 id="outlet"
