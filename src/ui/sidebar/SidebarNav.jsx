@@ -10,6 +10,8 @@ import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
 import NavPages from '../header/NavPages'
 
+import useOutsideClick from '../../hooks/useOutsideClick'
+
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
 
@@ -27,6 +29,7 @@ function SidebarNav() {
 
     function handleToggleNav() {
         setToggleNav((show) => (show = !show))
+        // useOutsideClick
     }
 
     return (
