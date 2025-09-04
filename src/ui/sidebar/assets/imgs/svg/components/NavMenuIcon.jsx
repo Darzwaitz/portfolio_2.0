@@ -12,7 +12,7 @@ function NavMenuIcon({ onToggleExplorer }) {
     return (
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             <svg
-                className={`${hover} relative`}
+                className={`${hover} pointer-events-none relative`}
                 onClick={onToggleExplorer}
                 width="100%"
                 // height="80%"

@@ -1,6 +1,6 @@
 // svg comp. imports
 import SvgWrapper from '@/assets/imgs/svg/components/SvgWrapper'
-import NavMenuIcon from './assets/imgs/svg/components/NavMenuIcon'
+import SidebarNavMenuButton from './SidebarNavMenuButton'
 import ExplorerView from './assets/imgs/svg/components/ExplorerView'
 import SourceControl from './assets/imgs/svg/components/SourceControl'
 import Search from './assets/imgs/svg/components/Search'
@@ -10,7 +10,7 @@ import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
 import NavPages from '../header/NavPages'
 
-import useOutsideClick from '../../hooks/useOutsideClick'
+// import useOutsideClick from '../../hooks/useOutsideClick'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
@@ -28,8 +28,11 @@ function SidebarNav() {
     }
 
     function handleToggleNav() {
+        // console.log(e.currentTarget.id)
+        // console.log('klikk')
+
         setToggleNav((show) => (show = !show))
-        // useOutsideClick
+        // closeSideNavMenu
     }
 
     return (
@@ -51,12 +54,10 @@ function SidebarNav() {
                     {/* sidebar top nav links */}
                     <div>
                         <SvgWrapper size="large">
-                            <div
-                                className="lg:hidden"
-                                onClick={handleToggleNav}
-                            >
-                                <NavMenuIcon />
-                            </div>
+                            <SidebarNavMenuButton
+                                toggleNav={toggleNav}
+                                handleToggleNav={handleToggleNav}
+                            />
                             {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
                             <ExplorerView
                                 onToggleExplorer={handleToggleExplorer}

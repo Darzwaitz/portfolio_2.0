@@ -1,21 +1,9 @@
 // close the current maximized item
 export default function useOutsideClick(maximize, setMaximize) {
-    // console.log('sidebar icon clik')
+    console.log('sidebar icon clik')
 
     return function (e) {
-        // console.log(e)
-        // console.log(e)
-        // if (closeSidebarNav) {
-        //     console.log('kalld')
-        // }
-
-        if (e.currentTarget.id === 'sidebar-nav-menu') {
-            setTimeout(() =>
-                document.addEventListener('click', outsideItemClick)
-            )
-            //  console.log(e.currentTarget.id)
-            //  return
-        } else if (!maximize) {
+        if (!maximize) {
             e.target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'end',
@@ -39,8 +27,7 @@ export default function useOutsideClick(maximize, setMaximize) {
             ) {
                 // outside click for SidebarNav to be closed if open
 
-                if (setMaximize) setMaximize(false)
-                // if (toggleNav) setMaximize(false)
+                setMaximize(false)
                 return document.removeEventListener('click', outsideItemClick)
             }
             // removal needed here for 2nd click on maximize button when item is already maximized
@@ -49,6 +36,6 @@ export default function useOutsideClick(maximize, setMaximize) {
             }
         }
 
-        if (setMaximize) setMaximize(!maximize)
+        setMaximize(!maximize)
     }
 }
