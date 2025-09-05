@@ -1,10 +1,20 @@
 // close the current maximized item
-export default function useOutsideClick(maximize, setMaximize) {
+export default function useOutsideClick(maximize, setMaximize, setToggleNav) {
     console.log('sidebar icon clik')
+    // console.log(e)
 
     return function (e) {
-        if (!maximize) {
-            e.target.scrollIntoView({
+        console.log(e.target.id)
+
+        if (e?.currentTarget?.id === 'sidebar-nav-menu') {
+            console.log('listener added')
+            setTimeout(() =>
+                document.addEventListener('click', outsideItemClick)
+            )
+            //  console.log(e.currentTarget.id)
+            //  return
+        } else if (!maximize) {
+            e?.currentTarget?.scrollIntoView({
                 behavior: 'smooth',
                 block: 'end',
                 inline: 'nearest',
@@ -16,6 +26,8 @@ export default function useOutsideClick(maximize, setMaximize) {
         }
 
         function outsideItemClick(e) {
+            console.log('other is ' + e.target.id)
+
             const curElemId = e.target.id
 
             // close the current maximized item onClick of these element ids
@@ -25,9 +37,17 @@ export default function useOutsideClick(maximize, setMaximize) {
                 curElemId === 'bg-items-wrapper' ||
                 curElemId === 'outlet'
             ) {
+                console.log('listener executed')
+
                 // outside click for SidebarNav to be closed if open
 
-                setMaximize(false)
+                // if (setMaximize) setMaximize(false)
+                // console.log(setToggleNav)
+                // console.log(setToggleNav)
+
+                setToggleNav?.()
+                setMaximize?.(false)
+                // if (toggleNav) setMaximize(false)
                 return document.removeEventListener('click', outsideItemClick)
             }
             // removal needed here for 2nd click on maximize button when item is already maximized
@@ -36,6 +56,7 @@ export default function useOutsideClick(maximize, setMaximize) {
             }
         }
 
-        setMaximize(!maximize)
+        // if (setMaximize) setMaximize(!maximize)
+        setMaximize?.(!maximize)
     }
 }

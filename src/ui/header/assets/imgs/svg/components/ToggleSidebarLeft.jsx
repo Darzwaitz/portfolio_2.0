@@ -17,6 +17,7 @@ function ToggleSidebarLeft({ showTooltip }) {
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
             {/* layout-sidebar-left.svg */}
             <svg
+                id="toggle-left"
                 className={`pointer-events-none ${iconSize === 'medium' && svgStylesMedium}`}
                 data-panel="toggleLeft"
                 // width="12"

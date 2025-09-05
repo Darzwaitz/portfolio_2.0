@@ -18,7 +18,7 @@ function SearchProjectsSubitem() {
     const [revealItemsList, setRevealItemsList] = useState(false)
 
     return (
-        <div className="listitem">
+        <div id="search-projects-sidenav" className="listitem">
             <div
                 className="text-grey-02 flex cursor-pointer text-sm"
                 onClick={() => setRevealItemsList(!revealItemsList)}

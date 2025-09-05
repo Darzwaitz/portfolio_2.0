@@ -1,18 +1,12 @@
 import NavMenuIcon from './assets/imgs/svg/components/NavMenuIcon'
-import useOutsideClick from '@/hooks/useOutsideClick'
 
 function SidebarNavMenuButton({ handleToggleNav }) {
-    const closeSideNavMenu = useOutsideClick()
-
     return (
         <div
             id="sidebar-nav-menu"
-            className="lg:hidden"
+            className="z-[9999] lg:hidden"
             // onClick={[handleToggleNav, closeSideNavMenu]}
-            onClick={(e) => {
-                handleToggleNav()
-                closeSideNavMenu(e, handleToggleNav)
-            }}
+            onClick={handleToggleNav}
         >
             <NavMenuIcon />
         </div>

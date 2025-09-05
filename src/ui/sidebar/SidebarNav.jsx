@@ -10,17 +10,18 @@ import SettingsGear from './assets/imgs/svg/components/SettingsGear'
 import SidebarExplorer from './SidebarExplorer'
 import NavPages from '../header/NavPages'
 
-// import useOutsideClick from '../../hooks/useOutsideClick'
+import useToggleNav from './hooks/useToggleNav'
 
 import { usePanels } from '@/contexts/PanelsContext'
 import { useState } from 'react'
 
 function SidebarNav() {
+    const { toggleNav, onHandleToggleNav } = useToggleNav()
+
     // toggle panel controls triggered in header comp.
     const { togglePanels } = usePanels()
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
-    const [toggleNav, setToggleNav] = useState(false)
 
     function handleToggleExplorer() {
         if (togglePanels.toggleLeft || togglePanels.toggleRight)
@@ -28,11 +29,31 @@ function SidebarNav() {
     }
 
     function handleToggleNav() {
-        // console.log(e.currentTarget.id)
-        // console.log('klikk')
+        onHandleToggleNav()
+        setTimeout(() => document.addEventListener('click', clickOutside))
 
-        setToggleNav((show) => (show = !show))
-        // closeSideNavMenu
+        function clickOutside(e) {
+            console.log(e)
+
+            const curElemId = e.currentTarget.id
+
+            // close the current maximized item onClick of these element ids
+            if (
+                // curElemId === 'itemscontainerwrapper' ||
+                // curElemId === 'itemscontainerwrapper' ||
+                // curElemId === 'bg-items-wrapper' ||
+                // curElemId === 'outlet'
+                // curElemId !== 'main-nav' ||
+                curElemId !== 'sidebar-nav-menu' ||
+                curElemId !== 'search-projects-sidenav'
+            ) {
+                // outside click for SidebarNav to be closed if open
+                onHandleToggleNav()
+
+                // setToggleNav((show) => (show = !show))
+                return document.removeEventListener('click', clickOutside)
+            }
+        }
     }
 
     return (
@@ -55,7 +76,6 @@ function SidebarNav() {
                     <div>
                         <SvgWrapper size="large">
                             <SidebarNavMenuButton
-                                toggleNav={toggleNav}
                                 handleToggleNav={handleToggleNav}
                             />
                             {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
