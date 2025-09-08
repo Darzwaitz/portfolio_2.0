@@ -6,8 +6,6 @@ export default function useToggleNav() {
     const onHandleToggleNav = () => {
         if (toggleNav === true) {
             setToggleNav(false)
-            // console.log(toggleNav)
-            //   return document.removeEventListener('click', clickOutside)
         }
         setToggleNav((show) => !show)
     }

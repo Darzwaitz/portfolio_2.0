@@ -5,7 +5,6 @@ function SidebarNavMenuButton({ handleToggleNav }) {
         <div
             id="sidebar-nav-menu"
             className="z-[9999] lg:hidden"
-            // onClick={[handleToggleNav, closeSideNavMenu]}
             onClick={handleToggleNav}
         >
             <NavMenuIcon />

@@ -39,11 +39,6 @@ function SidebarNav() {
 
             // close the current maximized item onClick of these element ids
             if (
-                // curElemId === 'itemscontainerwrapper' ||
-                // curElemId === 'itemscontainerwrapper' ||
-                // curElemId === 'bg-items-wrapper' ||
-                // curElemId === 'outlet'
-                // curElemId !== 'main-nav' ||
                 curElemId !== 'sidebar-nav-menu' ||
                 curElemId !== 'search-projects-sidenav'
             ) {
