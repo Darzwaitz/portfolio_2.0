@@ -2,7 +2,7 @@ import AppContainer from './AppContainer'
 import Header from './header/Header'
 import SidebarNav from './sidebar/SidebarNav'
 import MainContent from './MainContent'
-import Footer from './Footer'
+import Footer from './footer/Footer'
 import { PanelsProvider } from '../contexts/PanelsContext'
 import { FilteritemsProvider } from '../contexts/FilteritemsContext'
 
