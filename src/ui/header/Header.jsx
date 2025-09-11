@@ -20,7 +20,8 @@ function Header() {
                 <NavPages stylesNavtop />
             </div>
             <HeaderSearchnavbar />
-            <TogglePanels tooltips={true} />
+
+            <TogglePanels flexcolumn={false} tooltips={true} />
             <WindowDisplayButtons
                 HeaderStyles
                 maximize={maximize}

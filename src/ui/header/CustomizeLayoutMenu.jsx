@@ -7,7 +7,7 @@ function CustomizeLayoutMenu() {
                 <h2 className="text-grey-09 pb-1.5">Customize Layout</h2>
             </div>
             <div className="px-2 py-1">
-                <TogglePanels flexcolumn tooltips={false} />
+                <TogglePanels tooltips={false} headerStyles={true} />
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 // svg comp. imports
-import SvgWrapper from '@/assets/imgs/svg/components/SvgWrapper'
+import SvgSectionWrapper from '@/assets/imgs/svg/components/SvgSectionWrapper'
 import SidebarNavMenuButton from './SidebarNavMenuButton'
 import ExplorerView from './assets/imgs/svg/components/ExplorerView'
 import SourceControl from './assets/imgs/svg/components/SourceControl'
@@ -67,9 +67,9 @@ function SidebarNav() {
                         togglePanels.toggleRight ? 'order-1' : 'order-0'
                     }`}
                 >
-                    {/* sidebar top nav links */}
+                    {/* sidebar nav links - a */}
                     <div>
-                        <SvgWrapper size="large">
+                        <SvgSectionWrapper size="large">
                             <SidebarNavMenuButton
                                 handleToggleNav={handleToggleNav}
                             />
@@ -82,14 +82,14 @@ function SidebarNav() {
                             {/* SearchProjects */}
                             <Search />
                             <RemoteExplorer />
-                        </SvgWrapper>
+                        </SvgSectionWrapper>
                     </div>
-                    {/* sidebar bottom nav links */}
+                    {/* sidebar nav links - b */}
                     <div>
-                        <SvgWrapper size="large">
+                        <SvgSectionWrapper size="large">
                             <UserAccount />
                             <SettingsGear />
-                        </SvgWrapper>
+                        </SvgSectionWrapper>
                     </div>
                 </nav>
 
@@ -97,7 +97,7 @@ function SidebarNav() {
                 {toggleExplorer && (
                     <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}
-                {/* conditionally show main nav list for smaller screens */}
+                {/* conditionally show main nav list for smaller screens onclick of burger icon  */}
                 <div className="lg:hidden">
                     {toggleNav && (
                         <NavPages togglePanels={togglePanels} stylesNavMobile />
