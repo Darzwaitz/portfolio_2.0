@@ -17,6 +17,8 @@ import { useState } from 'react'
 
 function SidebarNav() {
     const { toggleNav, onHandleToggleNav } = useToggleNav()
+    // SvgSectionWrapper custom styles created/passed for/within this comp
+    let svgSectionStyles = 'flex-col gap-[1.7rem]'
 
     // toggle panel controls triggered in header comp.
     const { togglePanels } = usePanels()
@@ -33,8 +35,6 @@ function SidebarNav() {
         setTimeout(() => document.addEventListener('click', clickOutside))
 
         function clickOutside(e) {
-            console.log(e)
-
             const curElemId = e.currentTarget.id
 
             // close the current maximized item onClick of these element ids
@@ -68,29 +68,29 @@ function SidebarNav() {
                     }`}
                 >
                     {/* sidebar nav links - a */}
-                    <div>
-                        <SvgSectionWrapper size="large">
-                            <SidebarNavMenuButton
-                                handleToggleNav={handleToggleNav}
-                            />
-                            {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
-                            <ExplorerView
-                                onToggleExplorer={handleToggleExplorer}
-                            />
-                            <SourceControl />
+                    <SvgSectionWrapper
+                        customStyles={svgSectionStyles}
+                        size="large"
+                    >
+                        <SidebarNavMenuButton
+                            handleToggleNav={handleToggleNav}
+                        />
+                        {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
+                        <ExplorerView onToggleExplorer={handleToggleExplorer} />
+                        <SourceControl />
 
-                            {/* SearchProjects */}
-                            <Search />
-                            <RemoteExplorer />
-                        </SvgSectionWrapper>
-                    </div>
+                        {/* SearchProjects */}
+                        <Search />
+                        <RemoteExplorer />
+                    </SvgSectionWrapper>
                     {/* sidebar nav links - b */}
-                    <div>
-                        <SvgSectionWrapper size="large">
-                            <UserAccount />
-                            <SettingsGear />
-                        </SvgSectionWrapper>
-                    </div>
+                    <SvgSectionWrapper
+                        customStyles={svgSectionStyles}
+                        size="large"
+                    >
+                        <UserAccount />
+                        <SettingsGear />
+                    </SvgSectionWrapper>
                 </nav>
 
                 {/* explorer sub sidebar section */}

@@ -21,7 +21,7 @@ function Header() {
             </div>
             <HeaderSearchnavbar />
 
-            <TogglePanels flexcolumn={false} tooltips={true} />
+            <TogglePanels headerStyles={true} tooltips={true} />
             <WindowDisplayButtons
                 HeaderStyles
                 maximize={maximize}

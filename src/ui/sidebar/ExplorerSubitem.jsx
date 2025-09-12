@@ -8,10 +8,10 @@ function ExplorerSubitem({ onToggleExplorer }) {
                 <ArrowIcon />
             </span>
             <h1 className="mr-auto self-center pb-0.5">EXPLORER</h1>
-            <span className="self-center">
-                {/* <CloseButton /> */}
-                <CloseButton onToggleExplorer={onToggleExplorer} />
-            </span>
+            {/* <span className="self-center"> */}
+            {/* <CloseButton /> */}
+            <CloseButton onToggleExplorer={onToggleExplorer} />
+            {/* </span> */}
         </div>
     )
 }
