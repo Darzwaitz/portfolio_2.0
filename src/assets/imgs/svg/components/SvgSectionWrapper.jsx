@@ -1,4 +1,4 @@
-function SvgSectionWrapper({ size, children, customStyles }) {
+function SvgSectionWrapper({ id, size, children, customStyles }) {
     let width = ''
     let margin = ''
 
@@ -17,11 +17,7 @@ function SvgSectionWrapper({ size, children, customStyles }) {
     }
 
     return (
-        <div
-            // REMOVE ID LATER
-            id="svgsectionwrapper-temp"
-            className={`flex ${customStyles} ${width} ${margin}`}
-        >
+        <div id={id} className={`flex ${customStyles} ${width} ${margin}`}>
             {children}
         </div>
     )

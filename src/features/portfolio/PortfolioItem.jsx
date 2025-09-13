@@ -104,7 +104,7 @@ function PortfolioCardButtons() {
 
     return (
         <WindowDisplayButtons
-            PortfolioItemStyles
+            portfolioItemStyles={true}
             maximize={maximize}
             onClick={handleMaximize}
             id={'portfolio-card-buttons'}

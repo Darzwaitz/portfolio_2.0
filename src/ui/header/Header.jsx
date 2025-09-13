@@ -23,7 +23,7 @@ function Header() {
 
             <TogglePanels headerStyles={true} tooltips={true} />
             <WindowDisplayButtons
-                HeaderStyles
+                headerWindowStyles={true}
                 maximize={maximize}
                 onClick={() => setMaximize(!maximize)}
                 id={'main-page-display-buttons'}

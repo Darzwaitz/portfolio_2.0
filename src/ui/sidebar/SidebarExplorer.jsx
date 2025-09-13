@@ -1,4 +1,3 @@
-// import CloseButton from '@/assets/imgs/svg/components/CloseButton'
 import ExplorerSubitem from './ExplorerSubitem'
 import SearchProjectsSubitem from './SearchProjectsSubitem'
 import AllProjectsSubitem from './AllProjectsSubitem'
