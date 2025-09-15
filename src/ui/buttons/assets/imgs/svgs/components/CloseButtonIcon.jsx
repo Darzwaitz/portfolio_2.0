@@ -1,8 +1,3 @@
-// import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
-// import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
-// const { defaultColor, svgStylesMedium } =
-//     SvgSettingsMedium()
-
 // import Tooltip from '@/features/tooltip/Tooltip'
 
 function CloseButtonIcon({ customStyles }) {

@@ -8,7 +8,8 @@ function CloseButton({
 }) {
     let customStyles = ''
     if (asideMenuStyles) customStyles = 'hover:bg-grey-08 h-6 p-1'
-    if (headerStyles) customStyles = 'hover:bg-blue-01 h-6 p-1'
+    if (headerStyles)
+        customStyles = 'hover:bg-red-01 hover:text-grey-02b h-6 p-1'
     if (portfolioStyles) customStyles = 'hover:bg-yellow-01 h-6 p-1'
 
     return (

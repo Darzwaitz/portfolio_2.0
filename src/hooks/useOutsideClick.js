@@ -1,6 +1,6 @@
 // close the current maximized item
 export default function useOutsideClick(maximize, setMaximize) {
-    console.log('sidebar icon clik')
+    // console.log('sidebar icon clik')
 
     return function (e) {
         if (!maximize) {
