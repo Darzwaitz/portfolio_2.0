@@ -17,8 +17,16 @@ function WindowDisplayButtons({
 
     return (
         <SvgSectionWrapper id={id} customStyles={customStyles}>
-            <MinimizeButton />
-            <MaximizeRestoreButton maximize={maximize} onClick={onClick} />
+            <MinimizeButton
+                headerStyles={headerWindowStyles}
+                portfolioStyles={portfolioItemStyles}
+            />
+            <MaximizeRestoreButton
+                headerStyles={headerWindowStyles}
+                portfolioStyles={portfolioItemStyles}
+                maximize={maximize}
+                onClick={onClick}
+            />
             {/* 2 different sets of styles conditional for CloseButton based 
             on 2 different styles conditional from this comp */}
             <CloseButton
