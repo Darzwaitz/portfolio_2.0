@@ -75,6 +75,7 @@
 @utility tooltip {
     @apply border-grey-04b bg-black-02 text-grey-09 pointer-events-none invisible absolute z-100 mt-2 ml-2 rounded-sm border px-2 pt-1 pb-2 font-[inherit] text-sm leading-[10px] opacity-0 transition group-hover:visible group-hover:opacity-100;
 }
+
 @utility listitem {
     @apply border-b-grey-04 border-t-grey-04 text-grey-02 mb-[1.57rem] border-t-[1px] border-b-[1px] p-1 pr-3 text-sm hover:brightness-110;
 }

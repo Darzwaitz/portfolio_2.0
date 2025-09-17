@@ -13,7 +13,7 @@ function CloseButton({
     if (asideMenuStyles) iconStyles = 'hover:bg-grey-08 h-6 p-1'
     if (headerStyles) {
         iconStyles = 'm-auto h-6 p-1'
-        commonStyles = 'flex w-[2.4rem] h-full self-center'
+        commonStyles = 'flex w-[3rem] h-full self-center'
         buttonStyles =
             'hover:bg-red-01 hover:text-grey-02b hover:text-red-01-01 '
     }

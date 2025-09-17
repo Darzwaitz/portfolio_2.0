@@ -12,7 +12,7 @@ function WindowDisplayButtons({
     id,
 }) {
     let customStyles = ''
-    if (headerWindowStyles) customStyles = 'hidden h-full gap-2 pl-1 lg:flex'
+    if (headerWindowStyles) customStyles = 'hidden h-full pl-1 lg:flex'
     if (portfolioItemStyles) customStyles = 'ml-auto flex gap-0.5'
 
     return (

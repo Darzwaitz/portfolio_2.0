@@ -13,7 +13,7 @@ function MaximizeRestoreButton({
 
     if (headerStyles) {
         iconStyles = 'm-auto h-6 p-1'
-        commonStyles = 'flex w-[2.4rem] h-full self-center'
+        commonStyles = 'flex w-[2.9rem] h-full self-center'
         buttonStyles = 'hover:text-grey-02b hover:bg-grey-08'
     }
     if (portfolioStyles) {
