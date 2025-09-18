@@ -21,8 +21,10 @@ function MinimizeButton({ headerStyles, portfolioStyles }) {
             // onClick={() => null}
         >
             <MinimizeButtonIcon iconStyles={iconStyles} />
-            <span className="bg-grey-02 text-black-01 invisible absolute top-[112%] border p-1 shadow-lg delay-500 group-hover:visible">
-                tooltip
+            <span
+                className={`${headerStyles ? 'top-[3rem]' : 'top-[1.5rem]'} bg-grey-02 text-black-01 invisible absolute border p-1 shadow-lg group-hover:visible group-hover:delay-500`}
+            >
+                Minimize
             </span>
         </span>
     )
