@@ -1,10 +1,7 @@
-// import Tooltip from '@/features/tooltip/Tooltip'
-
 function MaximizeButtonIcon({ iconStyles }) {
     /* chrome-maximize.svg */
 
     return (
-        // <span>
         <svg
             className={iconStyles}
             viewBox="0 0 16 16"

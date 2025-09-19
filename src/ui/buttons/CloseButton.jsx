@@ -22,10 +22,15 @@ function CloseButton({
 
     return (
         <span
-            className={`${commonStyles} ${buttonStyles}`}
+            className={`${commonStyles} ${buttonStyles} group`}
             onClick={onToggleExplorer}
         >
             <CloseButtonIcon iconStyles={iconStyles} />
+            <span
+                className={`${headerStyles ? 'top-[3rem]' : 'top-[1.5rem]'} bg-grey-02 text-black-01 invisible absolute border p-1 shadow-lg group-hover:visible group-hover:delay-500`}
+            >
+                Close
+            </span>
         </span>
     )
 }

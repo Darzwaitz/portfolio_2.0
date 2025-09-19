@@ -1,5 +1,3 @@
-// import Tooltip from '@/features/tooltip/Tooltip'
-
 function CloseButtonIcon({ iconStyles }) {
     return (
         /* chrome-close.svg */

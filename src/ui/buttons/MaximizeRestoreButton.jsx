@@ -21,14 +21,20 @@ function MaximizeRestoreButton({
         buttonStyles = 'hover:bg-grey-08 w-[2rem]'
     }
     return (
-        <span className={`${commonStyles} ${buttonStyles}`} onClick={onClick}>
-            {/* <MaximizeButtonIcon />
-            <RestoreButtonIcon /> */}
+        <span
+            className={`${commonStyles} ${buttonStyles} group`}
+            onClick={onClick}
+        >
             {maximize ? (
                 <RestoreButtonIcon iconStyles={iconStyles} />
             ) : (
                 <MaximizeButtonIcon iconStyles={iconStyles} />
             )}
+            <span
+                className={`${headerStyles ? 'top-[3rem]' : 'top-[1.5rem]'} bg-grey-02 text-black-01 invisible absolute border p-1 shadow-lg group-hover:visible group-hover:delay-500`}
+            >
+                {maximize ? 'Restore' : 'Maximize'}
+            </span>
         </span>
     )
 }
