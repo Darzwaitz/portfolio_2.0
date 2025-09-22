@@ -1,9 +1,9 @@
 import SvgSectionWrapper from '../../assets/imgs/svg/components/SvgSectionWrapper'
 
+import CustomizeLayoutButton from './assets/imgs/svg/components/CustomizeLayoutButton'
 import ToggleTerminal from './assets/imgs/svg/components/ToggleTerminal'
 import ToggleSidebarLeft from './assets/imgs/svg/components/ToggleSidebarLeft'
 import ToggleSidebarRight from './assets/imgs/svg/components/ToggleSidebarRight'
-import CustomizeLayout from './assets/imgs/svg/components/CustomizeLayout'
 
 function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
     // condition to show tooltip - set on parent
@@ -17,7 +17,7 @@ function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
     // N.B. onClick is added to parent SvgIconwrapper for all of these comps.
     return (
         <SvgSectionWrapper customStyles={customStyles}>
-            <CustomizeLayout showTooltip={showTooltip} />
+            <CustomizeLayoutButton showTooltip={showTooltip} />
             <ToggleSidebarLeft showTooltip={showTooltip} />
             <ToggleTerminal showTooltip={showTooltip} />
             <ToggleSidebarRight showTooltip={showTooltip} />
