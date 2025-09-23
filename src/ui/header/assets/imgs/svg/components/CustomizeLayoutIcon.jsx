@@ -3,7 +3,6 @@ function CustomizeLayoutIcon({ iconSize, svgStylesMedium, defaultColor }) {
         <svg
             className={`pointer-events-none ${iconSize === 'medium' && svgStylesMedium}`}
             data-panel="toggleCustomizeLayout"
-            // width="12"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
             fill={defaultColor}

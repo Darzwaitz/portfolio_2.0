@@ -1,9 +1,9 @@
 import SvgSectionWrapper from '../../assets/imgs/svg/components/SvgSectionWrapper'
 
-import CustomizeLayoutButton from './assets/imgs/svg/components/CustomizeLayoutButton'
-import ToggleTerminal from './assets/imgs/svg/components/ToggleTerminal'
-import ToggleSidebarLeft from './assets/imgs/svg/components/ToggleSidebarLeft'
-import ToggleSidebarRight from './assets/imgs/svg/components/ToggleSidebarRight'
+import CustomizeLayoutButton from './buttons/CustomizeLayoutButton'
+import ToggleSidebarLeftButton from './buttons/ToggleSidebarLeftButton'
+import ToggleTerminalButton from './buttons/ToggleTerminalButton'
+import ToggleSidebarRightButton from './buttons/ToggleSidebarRightButton'
 
 function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
     // condition to show tooltip - set on parent
@@ -18,9 +18,9 @@ function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
     return (
         <SvgSectionWrapper customStyles={customStyles}>
             <CustomizeLayoutButton showTooltip={showTooltip} />
-            <ToggleSidebarLeft showTooltip={showTooltip} />
-            <ToggleTerminal showTooltip={showTooltip} />
-            <ToggleSidebarRight showTooltip={showTooltip} />
+            <ToggleSidebarLeftButton showTooltip={showTooltip} />
+            <ToggleTerminalButton showTooltip={showTooltip} />
+            <ToggleSidebarRightButton showTooltip={showTooltip} />
         </SvgSectionWrapper>
     )
 }
