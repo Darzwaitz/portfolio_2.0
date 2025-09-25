@@ -13,7 +13,7 @@ function ExplorerSubitem({ onToggleExplorer }) {
             <CloseButton
                 asideMenuStyles={true}
                 onToggleExplorer={onToggleExplorer}
-                tooltip
+                showTooltip={false}
             />
         </div>
     )

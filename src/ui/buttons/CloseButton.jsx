@@ -5,7 +5,7 @@ function CloseButton({
     headerStyles,
     portfolioStyles,
     onToggleExplorer,
-    tooltip,
+    showTooltip,
 }) {
     let buttonStyles = ''
     let iconStyles = ''
@@ -28,7 +28,7 @@ function CloseButton({
         >
             <CloseButtonIcon iconStyles={iconStyles} />
 
-            {!tooltip && (
+            {showTooltip && (
                 <span
                     className={`${headerStyles ? 'top-[3rem]' : 'top-[1.5rem]'} bg-grey-02 text-black-01 invisible absolute border p-1 shadow-lg group-hover:visible group-hover:delay-500`}
                 >

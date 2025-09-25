@@ -32,6 +32,7 @@ function WindowDisplayButtons({
             <CloseButton
                 headerStyles={headerWindowStyles}
                 portfolioStyles={portfolioItemStyles}
+                showTooltip={true}
             />
         </SvgSectionWrapper>
     )
