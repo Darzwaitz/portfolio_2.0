@@ -1,13 +1,13 @@
 // svg comp. imports
 import SvgSectionWrapper from '@/assets/imgs/svg/components/SvgSectionWrapper'
 import SidebarNavMenuButton from './SidebarNavMenuButton'
-import ExplorerView from './assets/imgs/svg/components/ExplorerView'
-import SourceControl from './assets/imgs/svg/components/SourceControl'
-import Search from './assets/imgs/svg/components/Search'
-import RemoteExplorer from './assets/imgs/svg/components/RemoteExplorer'
-import UserAccount from './assets/imgs/svg/components/UserAccount'
-import SettingsGear from './assets/imgs/svg/components/SettingsGear'
-import SidebarExplorer from './SidebarExplorer'
+import ExplorerViewButton from './assets/imgs/svg/components/ExplorerViewButton'
+import SourceControlButton from './assets/imgs/svg/components/SourceControlButton'
+import SearchButton from './assets/imgs/svg/components/SearchButton'
+import RemoteExplorerButton from './assets/imgs/svg/components/RemoteExplorerButton'
+import UserAccountButton from './assets/imgs/svg/components/UserAccount'
+import SettingsGearButton from './assets/imgs/svg/components/SettingsGearButton'
+import SidebarExplorerButton from './SidebarExplorerButton'
 import NavPages from '../header/NavPages'
 
 import useToggleNav from './hooks/useToggleNav'
@@ -76,26 +76,30 @@ function SidebarNav() {
                             handleToggleNav={handleToggleNav}
                         />
                         {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
-                        <ExplorerView onToggleExplorer={handleToggleExplorer} />
-                        <SourceControl />
+                        <ExplorerViewButton
+                            onToggleExplorer={handleToggleExplorer}
+                        />
+                        <SourceControlButton />
 
                         {/* SearchProjects */}
-                        <Search />
-                        <RemoteExplorer />
+                        <SearchButton />
+                        <RemoteExplorerButton />
                     </SvgSectionWrapper>
                     {/* sidebar nav links - b */}
                     <SvgSectionWrapper
                         customStyles={svgSectionStyles}
                         size="large"
                     >
-                        <UserAccount />
-                        <SettingsGear />
+                        <UserAccountButton />
+                        <SettingsGearButton />
                     </SvgSectionWrapper>
                 </nav>
 
                 {/* explorer sub sidebar section */}
                 {toggleExplorer && (
-                    <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
+                    <SidebarExplorerButton
+                        onToggleExplorer={handleToggleExplorer}
+                    />
                 )}
                 {/* conditionally show main nav list for smaller screens onclick of burger icon  */}
                 <div className="lg:hidden">

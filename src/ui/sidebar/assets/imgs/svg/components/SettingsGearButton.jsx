@@ -7,7 +7,7 @@ import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
 
-function SettingsGear() {
+function SettingsGearButton() {
     const { togglePanels } = usePanels()
     let arrDir = togglePanels.tooltipArrDir
     return (
@@ -18,7 +18,6 @@ function SettingsGear() {
                 height=""
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                // fill={props.color}
                 fill={defaultColor}
             >
                 <path
@@ -32,4 +31,4 @@ function SettingsGear() {
     )
 }
 
-export default SettingsGear
+export default SettingsGearButton

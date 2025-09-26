@@ -9,7 +9,7 @@ import Tooltip from '@/features/tooltip/Tooltip'
 import { usePanels } from '@/contexts/PanelsContext'
 import { Link } from 'react-router-dom'
 
-function UserAccount() {
+function UserAccountButton() {
     const { handleCurPageName } = useCurPage()
     const { togglePanels } = usePanels()
 
@@ -33,4 +33,4 @@ function UserAccount() {
     )
 }
 
-export default UserAccount
+export default UserAccountButton
