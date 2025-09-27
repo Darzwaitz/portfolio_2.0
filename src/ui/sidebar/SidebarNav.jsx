@@ -1,13 +1,13 @@
 // svg comp. imports
 import SvgSectionWrapper from '@/assets/imgs/svg/components/SvgSectionWrapper'
-import SidebarNavMenuButton from './SidebarNavMenuButton'
-import ExplorerViewButton from './assets/imgs/svg/components/ExplorerViewButton'
-import SourceControlButton from './assets/imgs/svg/components/SourceControlButton'
-import SearchButton from './assets/imgs/svg/components/SearchButton'
-import RemoteExplorerButton from './assets/imgs/svg/components/RemoteExplorerButton'
-import UserAccountButton from './assets/imgs/svg/components/UserAccount'
-import SettingsGearButton from './assets/imgs/svg/components/SettingsGearButton'
-import SidebarExplorerButton from './SidebarExplorerButton'
+import SidebarNavMenuButton from './buttons/SidebarNavMenuButton'
+import ExplorerViewButton from './buttons/ExplorerViewButton'
+import SourceControlButton from './buttons/SourceControlButton'
+import SearchButton from './buttons/SearchButton'
+import RemoteExplorerButton from './buttons/RemoteExplorerButton'
+import UserAccountButton from './buttons/UserAccountButton'
+import SettingsGearButton from './buttons/SettingsGearButton'
+import SidebarExplorer from './SidebarExplorer'
 import NavPages from '../header/NavPages'
 
 import useToggleNav from './hooks/useToggleNav'
@@ -97,9 +97,7 @@ function SidebarNav() {
 
                 {/* explorer sub sidebar section */}
                 {toggleExplorer && (
-                    <SidebarExplorerButton
-                        onToggleExplorer={handleToggleExplorer}
-                    />
+                    <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
                 )}
                 {/* conditionally show main nav list for smaller screens onclick of burger icon  */}
                 <div className="lg:hidden">

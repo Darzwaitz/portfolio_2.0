@@ -1,4 +1,4 @@
-import NavMenuIcon from './assets/imgs/svg/components/NavMenuIcon'
+import NavMenuIconButton from './NavMenuIconButton'
 
 function SidebarNavMenuButton({ handleToggleNav }) {
     return (
@@ -7,7 +7,7 @@ function SidebarNavMenuButton({ handleToggleNav }) {
             className="z-[9999] lg:hidden"
             onClick={handleToggleNav}
         >
-            <NavMenuIcon />
+            <NavMenuIconButton />
         </div>
     )
 }
