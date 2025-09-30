@@ -4,6 +4,7 @@ function SvgIconwrapper({ iconSize, hover, children }) {
     const { onTogglePanels } = usePanels()
 
     function getChildSvgData(e) {
+        console.log('iconwrapper')
         // const elToSend = e.target.children[0].children[0].dataset.test
         // NB: class of pointer events none on tooltip comp to stop this firing on the svg itself
         const elToSend = e.target.querySelector('svg').dataset.panel
