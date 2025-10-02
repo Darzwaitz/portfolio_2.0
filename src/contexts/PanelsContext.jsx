@@ -9,6 +9,7 @@ function PanelsProvider({ children }) {
         toggleTerminal: false,
         toggleRight: false,
         tooltipArrDir: 'left',
+        toggleSearchBar: false,
     })
 
     function onTogglePanels(dataset) {

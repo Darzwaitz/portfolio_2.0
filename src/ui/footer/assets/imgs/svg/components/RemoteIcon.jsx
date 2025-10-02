@@ -2,6 +2,7 @@ function RemoteIcon() {
     return (
         <svg
             className="h-full w-full"
+            data-panel="toggleSearchBar"
             // width="16"
             // height="16"
             viewBox="0 0 16 16"
