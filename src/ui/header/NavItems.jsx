@@ -16,7 +16,7 @@ function NavItems({ title, url, stylesHoverSidebarNav, onclickHandler }) {
             to={url}
             onClick={onclickHandler}
         >
-            <span className={stylesHoverSidebarNav && 'pl-5'}>{title}</span>
+            <span className={stylesHoverSidebarNav ? 'pl-5' : ''}>{title}</span>
             {/* only add arrow icon on sidebar */}
             {stylesHoverSidebarNav && (
                 <span className="w-[19px] pt-1">

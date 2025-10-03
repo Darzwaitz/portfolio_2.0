@@ -1,10 +1,8 @@
 function RemoteIcon() {
     return (
         <svg
-            className="h-full w-full"
+            className={`pointer-events-none z-50 mx-auto h-[1.7rem] py-1`}
             data-panel="toggleSearchBar"
-            // width="16"
-            // height="16"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

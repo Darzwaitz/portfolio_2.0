@@ -19,6 +19,7 @@ function PanelsProvider({ children }) {
                     // console.log('toggleCustomizeLayout pressed')
                     return {
                         ...prev,
+                        toggleSearchBar: false,
                         toggleCustomizeLayout: !prev.toggleCustomizeLayout,
                     }
                 case 'toggleLeft':
@@ -40,6 +41,12 @@ function PanelsProvider({ children }) {
                     return {
                         ...prev,
                         toggleTerminal: !prev.toggleTerminal,
+                    }
+                case 'toggleSearchBar':
+                    return {
+                        ...prev,
+                        toggleCustomizeLayout: false,
+                        toggleSearchBar: !prev.toggleSearchBar,
                     }
 
                 default:

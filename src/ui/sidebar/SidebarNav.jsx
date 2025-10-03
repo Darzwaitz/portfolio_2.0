@@ -102,7 +102,10 @@ function SidebarNav() {
                 {/* conditionally show main nav list for smaller screens onclick of burger icon  */}
                 <div className="lg:hidden">
                     {toggleNav && (
-                        <NavPages togglePanels={togglePanels} stylesNavMobile />
+                        <NavPages
+                            togglePanels={togglePanels}
+                            stylesNavMobile={true}
+                        />
                     )}
                 </div>
             </aside>

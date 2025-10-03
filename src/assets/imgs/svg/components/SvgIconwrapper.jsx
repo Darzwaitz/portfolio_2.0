@@ -1,6 +1,6 @@
 import { usePanels } from '@/contexts/PanelsContext'
 
-function SvgIconwrapper({ iconSize, hover, children }) {
+function SvgIconwrapper({ iconSize, hover, customStyles, children }) {
     const { onTogglePanels } = usePanels()
 
     function getChildSvgData(e) {
@@ -23,12 +23,19 @@ function SvgIconwrapper({ iconSize, hover, children }) {
 
     if (iconSize === 'medium')
         return (
+            // <div
+            //     onClick={getChildSvgData}
+            //     // className={'group relative inline-block cursor-pointer'}
+            //     className={'group relative cursor-pointer'}
+            // >
             <div
                 onClick={getChildSvgData}
-                className={'group relative inline-block cursor-pointer'}
+                // className={'group relative inline-block cursor-pointer'}
+                className={'group relative cursor-pointer'}
             >
                 <div
-                    className={`${hover} text-grey-06 z-50 rounded-sm p-[3px]`}
+                    // if customStyles, use customStyles hover, else passed in hover styles
+                    className={`${customStyles ? '' : hover}${customStyles ? customStyles : 'text-grey-06 z-50 rounded-sm p-[3px]'}`}
                 >
                     {children}
                 </div>
