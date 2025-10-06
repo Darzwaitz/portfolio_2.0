@@ -1,8 +1,10 @@
 function GithubIcon() {
     return (
         <svg
-            width="24"
-            height="24"
+            className={`pointer-events-none m-auto block h-5`}
+            // width="24"
+            // height="24"
+            // data-panel="github-icon"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
