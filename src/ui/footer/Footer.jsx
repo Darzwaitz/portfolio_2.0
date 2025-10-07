@@ -1,4 +1,5 @@
 import RemoteButton from './buttons/RemoteButton'
+// GithubButton located in main ui folder
 import GithubButton from '../buttons/GitHubButton'
 import LinkedInButton from './buttons/LinkedInButton'
 
@@ -6,8 +7,9 @@ function Footer() {
     return (
         <footer className="border-t-grey-04 bg-black-01 text-grey-01 flex w-full border-t">
             <RemoteButton />
-            <LinkedInButton />
+            {/* GithubButton kept in main ui folder */}
             <GithubButton />
+            <LinkedInButton />
         </footer>
     )
 }

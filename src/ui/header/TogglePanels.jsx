@@ -5,8 +5,11 @@ import ToggleSidebarLeftButton from './buttons/ToggleSidebarLeftButton'
 import ToggleTerminalButton from './buttons/ToggleTerminalButton'
 import ToggleSidebarRightButton from './buttons/ToggleSidebarRightButton'
 
+import useGetDataAttr from '@/hooks/useGetDataAttr'
+
 function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
-    // condition to show tooltip - set on parent
+    const onGetDataAttr = useGetDataAttr()
+
     let showTooltip = true
     if (!tooltips) showTooltip = false
 
@@ -16,7 +19,7 @@ function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
 
     // N.B. onClick is added to parent SvgIconwrapper for all of these comps.
     return (
-        <SvgSectionWrapper customStyles={customStyles}>
+        <SvgSectionWrapper onClick={onGetDataAttr} customStyles={customStyles}>
             <CustomizeLayoutButton showTooltip={showTooltip} />
             <ToggleSidebarLeftButton showTooltip={showTooltip} />
             <ToggleTerminalButton showTooltip={showTooltip} />
