@@ -16,7 +16,7 @@ function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
 
     if (arrowDirection === 'down')
         return (
-            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02 top-[-74%] left-0 before:absolute before:top-[145%] before:right-[75%] before:mt-[-16px] before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent before:text-current after:absolute after:top-[116%] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent after:text-current">
+            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02 top-[-3.2rem] left-0 px-2.5 pt-2.5 pb-3.5 before:absolute before:top-[2.4rem] before:right-[75%] before:mt-[-16px] before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent before:text-current after:absolute after:top-[1.77rem] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent after:text-current">
                 <div role="inner">{msg}</div>
             </pre>
         )

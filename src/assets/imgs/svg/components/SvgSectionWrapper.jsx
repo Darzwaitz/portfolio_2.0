@@ -1,4 +1,4 @@
-function SvgSectionWrapper({ onClick, size, children, customStyles }) {
+function SvgSectionWrapper({ onClick, id, size, children, customStyles }) {
     let width = ''
     let margin = ''
 
@@ -18,7 +18,7 @@ function SvgSectionWrapper({ onClick, size, children, customStyles }) {
 
     return (
         <div
-            id="svg-section-wrapper"
+            id={id}
             onClick={onClick}
             className={`flex ${customStyles} ${width} ${margin}`}
         >

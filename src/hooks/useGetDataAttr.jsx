@@ -4,7 +4,7 @@ function useGetDataAttr() {
     const { onTogglePanels } = usePanels()
     return function getChildSvgData(e) {
         // don't fire on section container
-        if (e.target.id === 'svg-section-wrapper') return
+        if (e.target.id === 'panels-svg-wrapper') return
 
         // NB: class of pointer events none on tooltip comp to stop this firing on the svg itself
 

@@ -69,6 +69,7 @@ function SidebarNav() {
                 >
                     {/* sidebar nav links - a */}
                     <SvgSectionWrapper
+                        id={'sidebar-svg-wrapper-top'}
                         customStyles={svgSectionStyles}
                         size="large"
                     >
@@ -87,6 +88,7 @@ function SidebarNav() {
                     </SvgSectionWrapper>
                     {/* sidebar nav links - b */}
                     <SvgSectionWrapper
+                        id={'sidebar-svg-wrapper-bottom'}
                         customStyles={svgSectionStyles}
                         size="large"
                     >

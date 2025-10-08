@@ -19,7 +19,11 @@ function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
 
     // N.B. onClick is added to parent SvgIconwrapper for all of these comps.
     return (
-        <SvgSectionWrapper onClick={onGetDataAttr} customStyles={customStyles}>
+        <SvgSectionWrapper
+            onClick={onGetDataAttr}
+            id={'panels-svg-wrapper'}
+            customStyles={customStyles}
+        >
             <CustomizeLayoutButton showTooltip={showTooltip} />
             <ToggleSidebarLeftButton showTooltip={showTooltip} />
             <ToggleTerminalButton showTooltip={showTooltip} />
