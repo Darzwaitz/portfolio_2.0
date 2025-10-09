@@ -4,7 +4,7 @@ import RemoteIcon from '../assets/imgs/svg/components/RemoteIcon'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
 const { defaultColor, iconSize, hover } = SvgSettingsMedium()
 
-import Tooltip from '../../../features/tooltip/Tooltip'
+import Tooltip from '@/features/tooltip/Tooltip'
 import useGetDataAttr from '@/hooks/useGetDataAttr'
 
 function RemoteButton() {
@@ -19,7 +19,7 @@ function RemoteButton() {
             hover={hover}
             customStyles={remoteButtonStyles}
         >
-            <Tooltip msg={'Open searchbar'} arrowDirection={'down'} />
+            <Tooltip msg={'Open a page'} arrowDirection={'down'} />
             <RemoteIcon defaultColor={defaultColor} />
         </SvgIconwrapper>
     )

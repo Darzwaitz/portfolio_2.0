@@ -16,7 +16,7 @@ function NavPages({ togglePanels, stylesNavMobile }) {
     return (
         <nav
             id="main-nav"
-            className={`text-grey-01${stylesNavMobile ? navStylesSidebar : ''}`}
+            className={`pb-[3px] text-grey-01${stylesNavMobile ? navStylesSidebar : ''}`}
         >
             {updatedNavLinks.map(([title, icon, url]) => (
                 <NavItems

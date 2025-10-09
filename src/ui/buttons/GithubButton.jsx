@@ -3,16 +3,18 @@ import GithubIcon from './assets/imgs/svgs/components/GithubIcon'
 
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
 const { defaultColor, iconSize, hover } = SvgSettingsMedium()
+import Tooltip from '@/features/tooltip/Tooltip'
 
 function GithubButton() {
     const githubButtonStyles =
-        'px-2 pt-[0.2rem] h-full w-full text-grey-02 hover:text-grey-06b'
+        'pl-3 pt-[0.2rem] h-full w-full text-grey-02 hover:text-grey-06b'
     return (
         <SvgIconwrapper
             iconSize={iconSize}
             hover={hover}
             customStyles={githubButtonStyles}
         >
+            <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
             <GithubIcon defaultColor={defaultColor} />
         </SvgIconwrapper>
     )

@@ -14,7 +14,7 @@ function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
     if (!tooltips) showTooltip = false
 
     let customStyles = ''
-    if (headerStyles) customStyles = 'flex gap-2'
+    if (headerStyles) customStyles = 'flex gap-2 ml-auto'
     if (customizeLayoutStyles) customStyles = 'flex gap-2 flex-col'
 
     // N.B. onClick is added to parent SvgIconwrapper for all of these comps.

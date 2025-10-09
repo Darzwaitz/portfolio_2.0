@@ -4,9 +4,11 @@ import LinkedInIcon from '../assets/imgs/svg/components/LinkedInIcon'
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
 const { defaultColor, iconSize, hover } = SvgSettingsMedium()
 
+import Tooltip from '@/features/tooltip/Tooltip'
+
 function LinkedInButton() {
     const linkedinButtonStyles =
-        'h-full w-full text-grey-02 hover:text-grey-06b pt-[0.2rem]'
+        'h-full w-full text-grey-02 pl-3 hover:text-grey-06b pt-[0.2rem]'
     return (
         // <span className="mx-2 my-0.5 w-4">
         <SvgIconwrapper
@@ -14,6 +16,7 @@ function LinkedInButton() {
             hover={hover}
             customStyles={linkedinButtonStyles}
         >
+            <Tooltip msg={'LinkedIn Profile'} arrowDirection={'down'} />
             <LinkedInIcon defaultColor={defaultColor} />
         </SvgIconwrapper>
     )

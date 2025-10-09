@@ -11,14 +11,15 @@ function Header() {
     const [maximize, setMaximize] = useState(true)
 
     return (
-        <header className="border-grey-03 bg-black-01 text-grey-01 sticky top-0 z-100 flex flex-wrap items-center gap-2 border-b bg-neutral-300 px-3 lg:pr-0">
+        <header className="border-grey-03 bg-black-01 text-grey-01 sticky top-0 z-100 flex items-center gap-2 border-b bg-neutral-300 px-3 lg:pr-0">
             <Logo />
-            <nav className="block lg:hidden">
-                <NavArrows />
-            </nav>
             <div className="hidden lg:flex">
                 <NavPages stylesNavtop />
             </div>
+            {/* <nav className="flex lg:hidden"> */}
+            <nav className="ml-auto flex md:hidden lg:flex">
+                <NavArrows />
+            </nav>
             <HeaderSearchnavbar />
 
             <TogglePanels headerStyles={true} tooltips={true} />
