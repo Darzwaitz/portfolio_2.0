@@ -3,7 +3,7 @@ import { SvgSettingsLarge } from '@/assets/imgs/svg/components/SvgSettings'
 const { defaultColor, hover, iconSize } = SvgSettingsLarge()
 
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
-import NavMenuIconIcon from '../assets/imgs/svg/components/NavMenuIconIcon'
+import NavMenuIcon from '../assets/imgs/svg/components/NavMenuIcon'
 
 // import { usePanels } from '@/contexts/PanelsContext'
 
@@ -12,7 +12,7 @@ function NavMenuIconButton({ onToggleExplorer }) {
 
     return (
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
-            <NavMenuIconIcon
+            <NavMenuIcon
                 hover={hover}
                 onToggleExplorer={onToggleExplorer}
                 defaultColor={defaultColor}

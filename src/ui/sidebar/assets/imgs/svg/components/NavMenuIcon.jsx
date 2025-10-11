@@ -1,4 +1,4 @@
-function NavMenuIconIcon({ hover, defaultColor, onToggleExplorer }) {
+function NavMenuIcon({ hover, defaultColor, onToggleExplorer }) {
     return (
         <svg
             className={`${hover} pointer-events-none relative`}
@@ -13,4 +13,4 @@ function NavMenuIconIcon({ hover, defaultColor, onToggleExplorer }) {
     )
 }
 
-export default NavMenuIconIcon
+export default NavMenuIcon

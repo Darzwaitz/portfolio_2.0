@@ -36,6 +36,7 @@ function SidebarNav() {
 
         function clickOutside(e) {
             const curElemId = e.currentTarget.id
+            console.log('outsideClik')
 
             // close the current maximized item onClick of these element ids
             if (

@@ -6,19 +6,23 @@ const { defaultColor, iconSize, hover } = SvgSettingsMedium()
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
+import { Link } from 'react-router'
+
 function LinkedInButton() {
     const linkedinButtonStyles =
         'h-full w-full text-grey-02 pl-3 hover:text-grey-06b pt-[0.2rem]'
     return (
         // <span className="mx-2 my-0.5 w-4">
-        <SvgIconwrapper
-            iconSize={iconSize}
-            hover={hover}
-            customStyles={linkedinButtonStyles}
-        >
-            <Tooltip msg={'LinkedIn Profile'} arrowDirection={'down'} />
-            <LinkedInIcon defaultColor={defaultColor} />
-        </SvgIconwrapper>
+        <Link to="#">
+            <SvgIconwrapper
+                iconSize={iconSize}
+                hover={hover}
+                customStyles={linkedinButtonStyles}
+            >
+                <Tooltip msg={'LinkedIn Profile'} arrowDirection={'down'} />
+                <LinkedInIcon defaultColor={defaultColor} />
+            </SvgIconwrapper>
+        </Link>
     )
 }
 
