@@ -32,11 +32,14 @@ function SidebarNav() {
 
     function handleToggleNav() {
         onHandleToggleNav()
+
+        if (toggleNav)
+            return document.removeEventListener('click', clickOutside)
+
         setTimeout(() => document.addEventListener('click', clickOutside))
 
         function clickOutside(e) {
             const curElemId = e.currentTarget.id
-            console.log('outsideClik')
 
             // close the current maximized item onClick of these element ids
             if (
