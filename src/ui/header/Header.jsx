@@ -17,7 +17,7 @@ function Header() {
                 <NavPages stylesNavtop />
             </div>
             {/* <nav className="flex lg:hidden"> */}
-            <nav className="ml-auto flex md:hidden lg:flex">
+            <nav className="ml-auto flex lg:flex">
                 <NavArrows />
             </nav>
             <HeaderSearchnavbar />

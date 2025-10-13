@@ -9,10 +9,10 @@ export function SvgSettingsLarge() {
 export function SvgSettingsMedium() {
     return {
         defaultColor: 'currentColor',
-        // hover: 'hover:fill-grey-02 hover:bg-grey-01',
         hover: 'hover:bg-grey-08 ',
         svgStylesMedium: 'w-5',
         iconSize: 'medium',
+        // for ToolTtip comp
         arrowDirection: 'up',
         arrowDirectionWithFix: 'upOverFlowXFix',
     }

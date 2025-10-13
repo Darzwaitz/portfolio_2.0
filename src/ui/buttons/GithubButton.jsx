@@ -10,7 +10,7 @@ import { Link } from 'react-router'
 
 function GithubButton() {
     const githubButtonStyles =
-        'pl-3 pt-[0.2rem] h-full w-full text-grey-02 hover:text-grey-06b'
+        'pl-3 pt-[0.2rem] h-full w-full text-grey-01 hover:text-grey-02'
 
     return (
         <Link to="#">

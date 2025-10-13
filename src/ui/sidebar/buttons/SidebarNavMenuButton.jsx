@@ -1,4 +1,4 @@
-import NavMenuIconButton from './NavMenuIconButton'
+import NavMenuButton from './NavMenuButton'
 
 function SidebarNavMenuButton({ handleToggleNav }) {
     return (
@@ -7,7 +7,7 @@ function SidebarNavMenuButton({ handleToggleNav }) {
             className="z-[9999] lg:hidden"
             onClick={handleToggleNav}
         >
-            <NavMenuIconButton />
+            <NavMenuButton />
         </div>
     )
 }
