@@ -1,7 +1,7 @@
 function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
     if (arrowDirection === 'up')
         return (
-            <pre className="tooltip before:solid after:solid before:border-b-grey-04b after:border-b-black-02 right-0 px-2.5 pt-2 pb-[11px] before:absolute before:top-0.5 before:right-1.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:top-0.5 after:right-1.5 after:mt-[-15px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
+            <pre className="tooltip before:solid after:solid before:border-b-grey-04b after:border-b-black-02 top-6 right-0 px-2.5 pt-2 pb-[11px] before:absolute before:top-0.5 before:right-1.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:top-0.5 after:right-1.5 after:mt-[-15px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
                 {msg}
             </pre>
         )
@@ -9,7 +9,7 @@ function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
     // up arrow direction with fix for tooltip overflowing screen on the left
     if (arrowDirectionWithFix === 'upOverFlowXFix')
         return (
-            <pre className="tooltip before:solid after:solid before:border-b-grey-04b after:border-b-black-02 after: -left-3 px-2.5 pt-2 pb-[11px] before:absolute before:top-0.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:top-0.5 after:left-2.5 after:mt-[-15px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
+            <pre className="tooltip before:solid after:solid before:border-b-grey-04b after:border-b-black-02 after: top-6 -left-3 px-2.5 pt-2 pb-[11px] before:absolute before:top-0.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent before:text-current after:absolute after:top-0.5 after:left-2.5 after:mt-[-15px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent after:text-current">
                 {msg}
             </pre>
         )

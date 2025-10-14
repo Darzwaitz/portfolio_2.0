@@ -9,20 +9,22 @@ import Tooltip from '@/features/tooltip/Tooltip'
 import { Link } from 'react-router'
 
 function GithubButton() {
+    // const githubButtonStyles =
+    //     'pl-3 pt-[0.2rem] hover:bg-grey-04b h-full w-full text-grey-01 hover:text-grey-02'
     const githubButtonStyles =
-        'pl-3 pt-[0.2rem] h-full w-full text-grey-01 hover:text-grey-02'
+        'hover:bg-grey-04b px-1.5 h-full w-full text-grey-01 hover:text-grey-02'
 
     return (
-        <Link to="#">
-            <SvgIconwrapper
-                iconSize={iconSize}
-                hover={hover}
-                customStyles={githubButtonStyles}
-            >
+        <SvgIconwrapper
+            iconSize={iconSize}
+            hover={hover}
+            customStyles={githubButtonStyles}
+        >
+            <Link to="#">
                 <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
                 <GithubIcon defaultColor={defaultColor} />
-            </SvgIconwrapper>
-        </Link>
+            </Link>
+        </SvgIconwrapper>
     )
 }
 
