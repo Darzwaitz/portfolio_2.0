@@ -6,44 +6,108 @@
     }
 }
 
+/* darkmode colourz */
+:root {
+    --blue-01: #0078d4;
+    --blue-02: #0076b9;
+    --blue-03: #119fc6;
+    --black-01: #181818;
+    --black-02: #1f1f1f;
+    --black-02b: #212121;
+    --black-03: #161616;
+    --black-04: #252525;
+    --grey-01: #868686;
+    --grey-02: #d2d2d2;
+    --grey-02b: #efeaea;
+    --grey-03: #313131;
+    --grey-04: #3b3b3b;
+    --grey-04b: #4a4a4a;
+    --grey-04c: #383838;
+    --grey-05: #2c2d2d;
+    /* --grey-06: rgb(146, 143, 143); */
+    --grey-06b: #9d9595;
+    --grey-07: #74787c;
+    --grey-08: #2c2c2c;
+    --grey-09: #c3c3c3ed;
+    --green-01: #0dac6e;
+    --pink-01: #b24db2;
+    --red-01: #f04e1f;
+    --yellow-01: #d8d610;
+}
+
+/* light mode because default is dark */
+.dark {
+    /* remote button */
+    --blue-01: #ac9d57;
+    --blue-02: #957e48;
+    /* --blue-03: ; */
+    /* header sidebar etc. */
+    --black-01: #ddd6c1;
+    /* main section content */
+    --black-02: #fdf6e3;
+    --black-02b: #b7b1a2;
+    /* --black-03: ; */
+    /* --black-04: ; */
+    --grey-01: #6a6865;
+    --grey-02: #bf8803;
+    /* --grey-02b: green; */
+    --grey-03: green;
+    --grey-04: green;
+    /* tootip outline */
+    --grey-04b: #c0c0c0;
+    --grey-04c: green;
+    --grey-05: green;
+    /* --grey-06b: #956b05; */
+    --grey-06b: #605b50;
+    --grey-07: green;
+    --grey-08: green;
+    /* tooltip text */
+    --grey-09: red;
+    --green-01: green;
+    --pink-01: green;
+    --red-01: green;
+    --yellow-01: green;
+}
+
 @theme {
     /* colourz */
     --color-*: initial;
     --color-transparent: transparent;
     --color-current: currentColor;
-    --color-blue-01: #0078d4;
-    --color-blue-02: #0076b9;
-    --color-blue-03: #119fc6;
-    --color-black-01: #181818;
-    --color-black-02: #1f1f1f;
-    --color-black-02b: #1d1c1c;
-    --color-black-03: #161616;
-    --color-black-04: #252525;
-    --color-grey-01: #868686;
-    --color-grey-02: #d2d2d2;
-    --color-grey-02b: #efeaea;
-    --color-grey-03: #313131;
-    --color-grey-04: #3b3b3b;
-    --color-grey-04b: #4a4a4a;
-    --color-grey-04c: #383838;
-    --color-grey-05: #2c2d2d;
-    --color-grey-06: rgb(146, 143, 143);
-    --color-grey-06b: #9d9595;
-    --color-grey-07: #74787c;
-    --color-grey-08: #2c2c2c;
-    --color-grey-09: #c3c3c3ed;
-    --color-green-01: #0dac6e;
-    --color-pink-01: #b24db2;
-    --color-red-01: #f04e1f;
-    --color-yellow-01: #d8d610;
-
+    --color-blue-01: var(--blue-01);
+    --color-blue-02: var(--blue-02);
+    --color-blue-03: var(--blue-03);
+    --color-black-01: var(--black-01);
+    --color-black-02: var(--black-02);
+    --color-black-02b: var(--black-02b);
+    --color-black-03: var(--black-03);
+    --color-black-04: var(--black-04);
+    --color-grey-01: var(--grey-01);
+    --color-grey-02: var(--grey-02);
+    --color-grey-02b: var(--grey-02b);
+    --color-grey-03: var(--grey-03);
+    --color-grey-04: var(--grey-04);
+    --color-grey-04b: var(--grey-04b);
+    --color-grey-04c: var(--grey-04c);
+    --color-grey-05: var(--grey-05);
+    /* --color-grey-06: rgb(146, 143, 143); */
+    --color-grey-06b: var(--grey-06b);
+    --color-grey-07: var(--grey-07);
+    --color-grey-08: var(--grey-08);
+    --color-grey-09: var(--grey-09);
+    --color-green-01: var(--green-01);
+    --color-pink-01: var(--pink-01);
+    --color-red-01: var(--red-01);
+    --color-yellow-01: var(--yellow-01);
+}
+@theme {
     /* // Text colors
-		"textBlockQuote.background": "#7f7f7f1a",
-		"textBlockQuote.border": "#007acc80",
-		"textLink.activeForeground": "#3794ff",
-		"textLink.foreground": "#3794ff",
-		"textPreformat.foreground": "#caaf77",
-		"textSeparator.foreground": "#ffffff2e", */
+    "textBlockQuote.background": "#7f7f7f1a",
+    "textBlockQuote.border": "#007acc80",
+    "textLink.activeForeground": "#3794ff",
+    "textLink.foreground": "#3794ff",
+    "textPreformat.foreground": "#caaf77",
+    "textSeparator.foreground": "#ffffff2e", */
 
     /* fontz */
     --font-sans: 'CascadiaMono';
@@ -56,13 +120,13 @@
 }
 
 /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+    The default border color has changed to `currentColor` in Tailwind CSS v4,
+    so we've added these compatibility styles to make sure everything still
+    looks the same as it did with Tailwind CSS v3.
+    
+    If we ever want to remove these styles, we need to add an explicit border
+    color utility to any element that depends on these defaults.
+    */
 @layer base {
     *,
     ::after,
@@ -74,7 +138,7 @@
 }
 
 @utility tooltip {
-    @apply border-grey-04b bg-black-02 text-grey-09 pointer-events-none invisible absolute z-100 mt-2 ml-2 rounded-sm border px-2 pt-1 pb-2 font-[inherit] text-sm leading-[10px] opacity-0 transition group-hover:visible group-hover:opacity-100;
+    @apply border-grey-04b bg-black-02b text-grey-09 pointer-events-none invisible absolute z-100 mt-2 ml-2 rounded-sm border px-2 pt-1 pb-2 font-[inherit] text-sm leading-[10px] opacity-0 transition group-hover:visible group-hover:opacity-100;
 }
 
 @utility listitem {

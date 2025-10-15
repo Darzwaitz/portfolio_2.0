@@ -1,7 +1,7 @@
 function SettingsGearIcon({ hover, defaultColor }) {
     return (
         <svg
-            className={hover}
+            className={`pointer-events-none ${hover}`}
             width=""
             height=""
             viewBox="0 0 24 24"

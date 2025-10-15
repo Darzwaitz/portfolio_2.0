@@ -16,6 +16,8 @@ export default function MainContent() {
         >
             <div
                 id="outlet"
+                // hide scrollbar
+                style={{ scrollbarWidth: 'none' }}
                 className="bg-black-02 overflow-auto p-4 sm:p-5 md:p-6 lg:p-8"
             >
                 {/* <Outlet context={{ testFunc }} /> */}

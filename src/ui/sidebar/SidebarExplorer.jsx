@@ -6,7 +6,11 @@ import ShowcaseProjectsSubitem from './ShowcaseProjectsSubitem'
 // onToggleExplorer={handleToggleExplorer} from SidebarNav, not PanelsContext
 function SidebarExplorer({ onToggleExplorer }) {
     return (
-        <section className="border-l-grey-04 border-r-grey-04 bg-black-01 text-grey-01 w-max overflow-auto border-r-[1px] border-l-[1px]">
+        <section
+            // hide scrollbar
+            style={{ scrollbarWidth: 'none' }}
+            className="border-l-grey-04 border-r-grey-04 bg-black-01 text-grey-01 w-max overflow-auto border-r-[1px] border-l-[1px]"
+        >
             <ul className="mt-[4.8rem] flex flex-col lg:mt-3">
                 {[
                     <ExplorerSubitem

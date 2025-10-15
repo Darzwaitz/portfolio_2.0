@@ -1,6 +1,6 @@
 export function SvgSettingsLarge() {
     return {
-        defaultColor: 'currentColor',
+        defaultColor: 'fill-grey-01',
         hover: 'hover:fill-grey-02',
         iconSize: 'large',
     }
