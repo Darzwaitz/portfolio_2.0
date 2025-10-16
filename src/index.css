@@ -48,8 +48,10 @@
     --black-02b: #b7b1a2;
     /* --black-03: ; */
     /* --black-04: ; */
-    --grey-01: #6a6865;
-    --grey-02: #bf8803;
+    /* --grey-01: #6a6865; */
+    --grey-01: #b0a78d;
+    /* --grey-02: #b58900; */
+    --grey-02: rgba(58, 48, 18, 0.665);
     /* --grey-02b: green; */
     --grey-03: green;
     --grey-04: green;
@@ -65,7 +67,7 @@
     --grey-09: red;
     --green-01: green;
     --pink-01: green;
-    --red-01: green;
+    --red-01: yellow;
     --yellow-01: green;
 }
 
