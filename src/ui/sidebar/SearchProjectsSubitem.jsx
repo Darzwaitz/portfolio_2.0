@@ -38,7 +38,7 @@ function SearchProjectsSubitem() {
 
             {/* Only show SUBMIT button when search projects portfolioitemslist is open, and current page isn't portfolio page */}
             {revealItemsList && onShowSubmit && !portfolioUrl && (
-                <div className="mt-1 flex items-center">
+                <div className="flex items-center">
                     <span className="mr-1 w-5">
                         <ArrowIcon />
                     </span>
@@ -46,7 +46,9 @@ function SearchProjectsSubitem() {
                         to="portfolio"
                         onClick={() => handleCurPageName('Portfolio')}
                     >
-                        <h1 className="mb-px cursor-pointer text-sm">SUBMIT</h1>
+                        <button className="hover:border-grey-07 border-black-01 hover:bg-grey-08 hover:text-grey-02 cursor-pointer rounded-md border pt-1 pr-2 pb-1.5 pl-2 text-sm hover:border">
+                            SUBMIT
+                        </button>
                     </Link>
                 </div>
             )}

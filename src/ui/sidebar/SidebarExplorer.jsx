@@ -9,7 +9,7 @@ function SidebarExplorer({ onToggleExplorer }) {
         <section
             // hide scrollbar
             style={{ scrollbarWidth: 'none' }}
-            className="border-l-grey-04 border-r-grey-04 bg-black-01 text-grey-01 w-max overflow-auto border-r-[1px] border-l-[1px]"
+            className="border-l-grey-04 border-r-grey-04 bg-black-01b text-grey-01 w-max overflow-auto border-r-[1px] border-l-[1px]"
         >
             <ul className="mt-[4.8rem] flex flex-col lg:mt-3">
                 {[
