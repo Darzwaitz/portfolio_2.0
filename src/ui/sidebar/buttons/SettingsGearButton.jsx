@@ -8,7 +8,7 @@ import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
 
-const toggleDarkMode = () => document.documentElement.classList.toggle('dark')
+const toggleLightMode = () => document.documentElement.classList.toggle('light')
 
 function SettingsGearButton() {
     const { togglePanels } = usePanels()
@@ -16,7 +16,7 @@ function SettingsGearButton() {
 
     return (
         <SvgIconwrapper iconSize={iconSize} hover={hover}>
-            <div onClick={toggleDarkMode}>
+            <div onClick={toggleLightMode}>
                 <SettingsGearIcon hover={hover} defaultColor={defaultColor} />
                 <Tooltip msg={'Colour Scheme'} arrowDirection={arrDir} />
             </div>
