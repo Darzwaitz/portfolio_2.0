@@ -7,31 +7,44 @@ import SettingsGearIcon from '../assets/imgs/svg/components/SettingsGearIcon'
 import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
-import { useState } from 'react'
+import useDarkMode from '../../../hooks/useDarkMode'
 
 // let theme = localStorage.getItem('theme')
-console.log(localStorage.getItem('theme'))
+// console.log(localStorage.getItem('theme'))
 
 function SettingsGearButton() {
+    const { darkMode, onSetDarkMode } = useDarkMode()
+    // onSetDarkMode()
+    // console.log(darkMode)
+
     const { togglePanels } = usePanels()
     let arrDir = togglePanels.tooltipArrDir
 
     // let [darkMode, setDarkMode] = useState(true)
-    let [darkMode, setDarkMode] = useState(true)
+    // console.log(darkMode)
+
+    if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light')
+        // onSetDarkMode()
+    }
+    // }
+    // localStorage.clear()
 
     const toggleLightMode = () => {
-        document.documentElement.classList.toggle('light')
+        onSetDarkMode()
 
-        localStorage.setItem('theme', false)
-        // if (localStorage.getItem('light')) {
-        //     localStorage.setItem('colorMode', 'dark')
-        // } else {
-        //     localStorage.setItem('colorMode', 'light')
+        console.log(darkMode)
+
+        // if (darkMode === true) {
+        //     document.documentElement.classList.add('light')
+        //     localStorage.setItem('theme', 'light')
+        //     onSetDarkMode()
         // }
-
-        console.log(localStorage.getItem('theme'))
-
-        setDarkMode(!darkMode)
+        // if (darkMode === false) {
+        //     document.documentElement.classList.remove('light')
+        //     localStorage.clear()
+        //     onSetDarkMode()
+        // }
     }
 
     return (
