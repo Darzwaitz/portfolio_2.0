@@ -13,7 +13,7 @@ import useDarkMode from '../../../hooks/useDarkMode'
 // console.log(localStorage.getItem('theme'))
 
 function SettingsGearButton() {
-    const { darkMode, onSetDarkMode } = useDarkMode()
+    const { darkMode, setDarkMode } = useDarkMode()
     // onSetDarkMode()
     // console.log(darkMode)
 
@@ -23,17 +23,19 @@ function SettingsGearButton() {
     // let [darkMode, setDarkMode] = useState(true)
     // console.log(darkMode)
 
-    if (localStorage.getItem('theme') === 'light') {
-        document.documentElement.classList.add('light')
-        // onSetDarkMode()
-    }
+    // if (localStorage.getItem('theme') === 'light') {
+    //     document.documentElement.classList.add('light')
+    //     // onSetDarkMode()
+    // }
     // }
     // localStorage.clear()
+    console.log('render: ' + darkMode)
 
     const toggleLightMode = () => {
-        onSetDarkMode()
+        setDarkMode(!darkMode)
+        console.log('onclick: ' + darkMode)
 
-        console.log(darkMode)
+        // console.log(darkMode)
 
         // if (darkMode === true) {
         //     document.documentElement.classList.add('light')
@@ -48,8 +50,12 @@ function SettingsGearButton() {
     }
 
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
-            <div onClick={toggleLightMode}>
+        <SvgIconwrapper
+            onClick={toggleLightMode}
+            iconSize={iconSize}
+            hover={hover}
+        >
+            <div>
                 <SettingsGearIcon hover={hover} defaultColor={defaultColor} />
                 <Tooltip
                     msg={darkMode ? 'Light Mode' : 'Dark Mode'}

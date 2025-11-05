@@ -2,7 +2,10 @@ function SvgIconwrapper({ onClick, iconSize, hover, customStyles, children }) {
     if (iconSize === 'large')
         // color set here for currentColor of children
         return (
-            <div className="group text-grey-01 relative inline-block cursor-pointer">
+            <div
+                className="group text-grey-01 relative inline-block cursor-pointer"
+                onClick={onClick}
+            >
                 {children}
             </div>
         )
