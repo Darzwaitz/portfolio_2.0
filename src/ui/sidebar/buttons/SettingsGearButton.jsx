@@ -9,9 +9,6 @@ import Tooltip from '@/features/tooltip/Tooltip'
 import { usePanels } from '@/contexts/PanelsContext'
 import useDarkMode from '../../../hooks/useDarkMode'
 
-// let theme = localStorage.getItem('theme')
-// console.log(localStorage.getItem('theme'))
-
 function SettingsGearButton() {
     const { darkMode, setDarkMode } = useDarkMode()
     // onSetDarkMode()
@@ -20,15 +17,6 @@ function SettingsGearButton() {
     const { togglePanels } = usePanels()
     let arrDir = togglePanels.tooltipArrDir
 
-    // let [darkMode, setDarkMode] = useState(true)
-    // console.log(darkMode)
-
-    // if (localStorage.getItem('theme') === 'light') {
-    //     document.documentElement.classList.add('light')
-    //     // onSetDarkMode()
-    // }
-    // }
-    // localStorage.clear()
     console.log('render: ' + darkMode)
 
     const toggleLightMode = () => {
@@ -36,17 +24,6 @@ function SettingsGearButton() {
         console.log('onclick: ' + darkMode)
 
         // console.log(darkMode)
-
-        // if (darkMode === true) {
-        //     document.documentElement.classList.add('light')
-        //     localStorage.setItem('theme', 'light')
-        //     onSetDarkMode()
-        // }
-        // if (darkMode === false) {
-        //     document.documentElement.classList.remove('light')
-        //     localStorage.clear()
-        //     onSetDarkMode()
-        // }
     }
 
     return (

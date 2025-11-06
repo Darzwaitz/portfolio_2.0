@@ -47,3 +47,27 @@ export default function useDarkMode() {
 
 //     return { darkMode, onSetDarkMode }
 // }
+
+// let theme = localStorage.getItem('theme')
+// console.log(localStorage.getItem('theme'))
+
+// let [darkMode, setDarkMode] = useState(true)
+// console.log(darkMode)
+
+// if (localStorage.getItem('theme') === 'light') {
+//     document.documentElement.classList.add('light')
+//     // onSetDarkMode()
+// }
+// }
+// localStorage.clear()
+
+// if (darkMode === true) {
+//     document.documentElement.classList.add('light')
+//     localStorage.setItem('theme', 'light')
+//     onSetDarkMode()
+// }
+// if (darkMode === false) {
+//     document.documentElement.classList.remove('light')
+//     localStorage.clear()
+//     onSetDarkMode()
+// }
