@@ -2,18 +2,33 @@ import { useState } from 'react'
 
 export default function useDarkMode() {
     let [darkMode, setDarkMode] = useState(true)
-    console.log('called')
+    // console.log('called')
 
-    // if (localStorage.getItem('theme') === 'light') {
-    //     console.log('localstorage is theme light')
+    if (localStorage.getItem('theme') === 'light') {
+        console.log('localstorage is theme light')
 
-    //     document.documentElement.classList.toggle('light')
-    //     setDarkMode(false)
-    // }
-    // if (!localStorage.getItem('theme')) {
-    //     console.log('localstorage is theme light')
-    //     console.log('localstorage is not theme light')
-    // }
+        if (!document.documentElement.classList.contains('light')) {
+            document.documentElement.classList.add('light')
+        }
+        // setDarkMode(false)
+        console.log('called')
+    }
+
+    function onSetDarkMode() {
+        // setDarkMode(!darkMode)
+        if (localStorage.getItem('theme', 'light')) {
+            localStorage.removeItem('theme')
+            console.log('light set')
+            setDarkMode(true)
+        }
+        if (!localStorage.getItem('theme')) {
+            // console.log('localstorage is theme light')
+            // console.log('localstorage is not theme light')
+            // setDarkMode(false)
+            localStorage.setItem('theme', 'light')
+            setDarkMode(false)
+        }
+    }
 
     // const onSetDarkMode = () => {
     //     if (localStorage.getItem('theme')) {
@@ -34,7 +49,7 @@ export default function useDarkMode() {
     //     return darkMode
     // }
 
-    return { darkMode, setDarkMode }
+    return { darkMode, setDarkMode, onSetDarkMode }
 }
 // import { useState } from 'react'
 
