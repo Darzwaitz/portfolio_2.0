@@ -10,23 +10,13 @@ import { usePanels } from '@/contexts/PanelsContext'
 import useDarkMode from '@/hooks/useDarkMode'
 
 function SettingsGearButton() {
-    // const { darkMode, setDarkMode, onSetDarkMode } = useDarkMode()
     const { darkMode, onSetDarkMode } = useDarkMode()
-    // const { darkMode } = useDarkMode()
-    // onSetDarkMode()
-    // console.log(darkMode)
 
     const { togglePanels } = usePanels()
     let arrDir = togglePanels.tooltipArrDir
 
-    // console.log('render: ' + darkMode)
-    // localStorage.setItem('theme', 'light')
-
     const toggleLightMode = () => {
-        // setDarkMode(!darkMode)
-        console.log('onclick: ' + darkMode)
         onSetDarkMode()
-        // console.log(darkMode)
     }
 
     return (
