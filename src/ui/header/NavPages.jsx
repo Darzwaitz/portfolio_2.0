@@ -1,6 +1,10 @@
 import { useCurPage } from '@/contexts/CurPageContext'
 import NavItems from './NavItems'
 
+//TODO
+// add dynamic stylez for search menu
+// sort lg:hidden to be dynamic
+
 // main nav linkz
 function NavPages({ togglePanels, stylesNavMobile }) {
     const { curPageList, handleCurPageName } = useCurPage()
