@@ -10,7 +10,7 @@ function SearchMenu() {
                 {/* <span>TO BE UPDATED</span> */}
                 {/* <NavPages togglePanels={togglePanels} stylesNavMobile={true} /> */}
                 {/* <NavPages stylesNavMobile={true} /> */}
-                <NavPages stylesNavMobile={true} />
+                <NavPages />
             </div>
         </div>
     )
