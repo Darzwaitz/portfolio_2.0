@@ -14,7 +14,7 @@ function Header() {
         <header className="border-grey-03 bg-black-01 text-grey-01 sticky top-0 z-100 flex items-center gap-2 border-b bg-neutral-300 px-3 lg:pr-0">
             <Logo />
             <div className="hidden lg:flex">
-                <NavPages stylesNavtop />
+                <NavPages stylesHeader={true} />
             </div>
             {/* <nav className="flex lg:hidden"> */}
             <nav className="ml-auto flex lg:flex">

@@ -5,16 +5,18 @@ function NavItems({
     title,
     url,
     stylesHoverSidebarNav,
+    stylesHeader,
     stylesSearchMenu,
     onclickHandler,
 }) {
     const commonItemStyles = 'pr-2 pb-1 pl-1.5'
-    const sidebarNavStylesActive = 'flex items-center justify-between'
+    const stylesHeaderStyles = 'hover:text-link-inactive-hover'
+    const sidebarNavStylesActive = 'flex items-center justify-between '
     const sidebarNavStylesNotActive =
-        'hover:bg-blue-01 flex items-center justify-between'
+        'hover:bg-blue-01 flex items-center justify-between hover:text-link-inactive-hover'
     const stylesSearchMenuActive = 'flex items-center justify-between'
     const stylesSearchMenuNotActive =
-        'hover:bg-blue-01 flex items-center justify-between'
+        'hover:bg-grey-08 flex items-center justify-between'
 
     return (
         <NavLink
@@ -23,7 +25,7 @@ function NavItems({
             className={({ isActive }) =>
                 isActive
                     ? `${stylesHoverSidebarNav ? sidebarNavStylesActive : ''} ${stylesSearchMenu ? stylesSearchMenuActive : ''} ${commonItemStyles} hover:text-link-active text-link-active rounded-md`
-                    : `${stylesHoverSidebarNav ? sidebarNavStylesNotActive : 'hover:bg-link-inactive-bg-hover'} ${commonItemStyles} ${stylesSearchMenu ? stylesSearchMenuNotActive : ''} hover:text-link-inactive-hover text-grey-09 hover:rounded-md`
+                    : `${stylesHeader ? stylesHeaderStyles : ''} ${stylesHoverSidebarNav ? sidebarNavStylesNotActive : ''} ${stylesHeader ? 'hover:bg-link-inactive-bg-hover' : ''} ${commonItemStyles} ${stylesSearchMenu ? stylesSearchMenuNotActive : ''} text-grey-09 hover:rounded-md`
             }
             to={url}
             onClick={onclickHandler}
