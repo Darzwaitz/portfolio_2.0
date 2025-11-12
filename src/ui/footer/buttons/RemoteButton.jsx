@@ -14,6 +14,7 @@ function RemoteButton() {
         'bg-blue-01 mr-1 h-full text-grey-02b hover:text-grey-06b hover:bg-blue-02 w-10'
     return (
         <SvgIconwrapper
+            id="remote-button"
             onClick={onGetDataAttr}
             iconSize={iconSize}
             hover={hover}

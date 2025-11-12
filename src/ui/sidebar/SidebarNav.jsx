@@ -33,7 +33,7 @@ function SidebarNav() {
     function handleToggleNav() {
         onHandleToggleNav()
 
-        if (toggleNav)
+        if (toggleNav === true)
             return document.removeEventListener('click', clickOutside)
 
         setTimeout(() => document.addEventListener('click', clickOutside))

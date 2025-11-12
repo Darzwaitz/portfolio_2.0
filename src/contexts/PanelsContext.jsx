@@ -10,6 +10,7 @@ function PanelsProvider({ children }) {
         toggleRight: false,
         tooltipArrDir: 'left',
         toggleSearchBar: false,
+        toggleMobileMenu: false,
     })
 
     function onTogglePanels(dataset) {
@@ -47,6 +48,11 @@ function PanelsProvider({ children }) {
                         ...prev,
                         toggleCustomizeLayout: false,
                         toggleSearchBar: !prev.toggleSearchBar,
+                    }
+                case 'toggleMobileMenu':
+                    return {
+                        ...prev,
+                        toggleMobileMenu: !prev.toggleMobileMenu,
                     }
 
                 default:
