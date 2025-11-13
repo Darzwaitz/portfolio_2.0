@@ -17,11 +17,12 @@ import { useState } from 'react'
 
 function SidebarNav() {
     const { toggleNav, onHandleToggleNav } = useToggleNav()
+
     // SvgSectionWrapper custom styles created/passed for/within this comp
     let svgSectionStyles = 'flex-col gap-[1.7rem]'
 
     // toggle panel controls triggered in header comp.
-    const { togglePanels } = usePanels()
+    const { togglePanels, onTogglePanels } = usePanels()
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
 
@@ -32,6 +33,8 @@ function SidebarNav() {
 
     function handleToggleNav() {
         onHandleToggleNav()
+        // close searchbar and customizelayout menus if open
+        onTogglePanels('toggleHeaderMenus')
 
         if (toggleNav === true)
             return document.removeEventListener('click', clickOutside)

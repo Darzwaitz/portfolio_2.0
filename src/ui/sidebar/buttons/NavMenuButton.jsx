@@ -8,7 +8,7 @@ import NavMenuIcon from '../assets/imgs/svg/components/NavMenuIcon'
 // function NavMenuButton({ onToggleExplorer }) {
 function NavMenuButton() {
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
+        <SvgIconwrapper id="sidebar-nav-menu" iconSize={iconSize} hover={hover}>
             <NavMenuIcon
                 hover={hover}
                 // onToggleExplorer={onToggleExplorer}
