@@ -20,7 +20,7 @@ function GithubButton() {
             hover={hover}
             customStyles={githubButtonStyles}
         >
-            <Link to="#">
+            <Link to="https://github.com/Darzwaitz">
                 <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
                 <GithubIcon defaultColor={defaultColor} />
             </Link>
