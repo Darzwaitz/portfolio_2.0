@@ -172,6 +172,10 @@
     @apply shadow-[0px_0px_11px_0px_#0f0f0f89];
 }
 
+@utility input-box-style-one {
+    @apply hover:border-grey-01 hover:text-grey-02 -mt-1 w-full cursor-pointer border-0 py-2.5 font-[700] transition-[0.3s];
+}
+
 @layer base {
     html,
     pre {
