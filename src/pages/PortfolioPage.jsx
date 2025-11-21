@@ -46,6 +46,7 @@ function PortfolioPage() {
                                                     project.description
                                                 }
                                             />
+                                            <PortfolioItem.ItemFooter />
                                             {/* <PortfolioItem.PaddingBottom /> */}
                                         </PortfolioItem.GridWrapper>
                                     </PortfolioItem.ItemWrapper>

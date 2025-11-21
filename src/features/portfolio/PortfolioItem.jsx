@@ -72,14 +72,15 @@ function Img() {
         <img
             src={placeholder}
             alt="placeholder image"
-            className="col-span-2 inline-block p-[0_0.5rem_0.5rem_0]"
+            // className="col-span-2 inline-block p-[0_0.5rem_0.5rem_0]"
+            className="col-span-2 inline-block p-[0.5rem]"
         />
     )
 }
 function TagList({ icon }) {
     return (
         // <ul className="inline-block w-1/2">
-        <ul className="inline-block">
+        <ul className="border-r-grey-04 col-span-2 h-full border-r">
             {icon.map((icon) => (
                 <React.Fragment key={icon}>
                     <li className="m-1 w-6" key={icon}>
@@ -140,6 +141,14 @@ function Description({ description }) {
     )
 }
 
+function ItemFooter() {
+    return (
+        <div className="border-t-grey-04 w-full border-0 border-t">
+            <p> Item footer</p>
+        </div>
+    )
+}
+
 PortfolioItem.ItemWrapper = ItemWrapper
 PortfolioItem.PaddingBottom = PaddingBottom
 PortfolioItem.BgItemsWrapper = BgItemsWrapper
@@ -150,5 +159,6 @@ PortfolioItem.TagList = TagList
 PortfolioItem.Title = Title
 PortfolioItem.PortfolioCardButtons = PortfolioCardButtons
 PortfolioItem.Description = Description
+PortfolioItem.ItemFooter = ItemFooter
 
 export default PortfolioItem
