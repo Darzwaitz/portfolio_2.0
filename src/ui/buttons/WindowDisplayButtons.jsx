@@ -13,7 +13,7 @@ function WindowDisplayButtons({
 }) {
     let customStyles = ''
     if (headerWindowStyles) customStyles = 'hidden h-full pl-1 lg:flex'
-    if (portfolioItemStyles) customStyles = 'ml-auto flex gap-0.5'
+    if (portfolioItemStyles) customStyles = 'col-span-2 ml-auto flex gap-0.5'
 
     return (
         <SvgSectionWrapper id={id} customStyles={customStyles}>

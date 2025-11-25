@@ -8,7 +8,7 @@ import Tooltip from '@/features/tooltip/Tooltip'
 
 import { Link } from 'react-router'
 
-function GithubButton() {
+function GithubButton({ link }) {
     // const githubButtonStyles =
     //     'pl-3 pt-[0.2rem] hover:bg-grey-04b h-full w-full text-grey-01 hover:text-grey-02'
     const githubButtonStyles =
@@ -20,7 +20,7 @@ function GithubButton() {
             hover={hover}
             customStyles={githubButtonStyles}
         >
-            <Link to="https://github.com/Darzwaitz">
+            <Link to={link}>
                 <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
                 <GithubIcon defaultColor={defaultColor} />
             </Link>

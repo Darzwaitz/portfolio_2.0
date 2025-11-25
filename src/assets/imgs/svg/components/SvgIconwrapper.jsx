@@ -33,6 +33,17 @@ function SvgIconwrapper({
                 </div>
             </div>
         )
+
+    if (iconSize === 'small')
+        // color set here for currentColor of children
+        return (
+            <div
+                className="group text-grey-01 inline-block cursor-pointer"
+                //  onClick={onClick}
+            >
+                {children}
+            </div>
+        )
 }
 
 export default SvgIconwrapper

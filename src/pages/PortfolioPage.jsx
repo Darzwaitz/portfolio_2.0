@@ -33,12 +33,12 @@ function PortfolioPage() {
                                         </PortfolioItem.DivWrapper>
 
                                         <PortfolioItem.GridWrapper>
-                                            <PortfolioItem.Title
-                                                title={project.title}
-                                            />
                                             {/* maximize restore etc. buttonz */}
                                             <PortfolioItem.PortfolioCardButtons />
                                             <PortfolioItem.Img />
+                                            <PortfolioItem.Title
+                                                title={project.title}
+                                            />
 
                                             {/* show on condition in portfolioitem */}
                                             <PortfolioItem.Description

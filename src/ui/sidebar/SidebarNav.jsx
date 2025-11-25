@@ -64,8 +64,8 @@ function SidebarNav() {
                 // show proper border on sidebar toggle
                 className={`flex ${
                     togglePanels.toggleRight
-                        ? 'border-l-grey-04 order-1 border'
-                        : 'border-r-grey-04 order-0 border'
+                        ? 'border-l-grey-04 order-1 border-l-[1px]'
+                        : 'border-r-grey-04 order-0 border-r-[1px]'
                 }`}
             >
                 <nav

@@ -5,7 +5,15 @@ import useOutsideClick from '@/hooks/useOutsideClick'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
 
+// import GithubButton from '../../ui/buttons/GitHubButton'
+import Tooltip from '@/features/tooltip/Tooltip'
+
+import { Link } from 'react-router-dom'
+import GithubIcon from '../../ui/buttons/assets/imgs/svgs/components/GithubIcon'
+
 const PortfolioItemContext = createContext()
+
+const itemPadding = 'px-[0.5rem]'
 
 function PortfolioItem({ children, projectKey }) {
     const [maximize, setMaximize] = useState(false)
@@ -44,7 +52,7 @@ function ItemWrapper({ children }) {
     return (
         <div
             id="itemwrapper"
-            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${maximize && 'absolute inset-0 mx-auto h-max w-[80%] md:w-[70%] lg:w-[50%]'}`}
+            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-[0.09rem] border hover:brightness-110 ${maximize && 'absolute inset-0 mx-auto h-max w-[80%] md:w-[70%] lg:w-[50%]'}`}
             // className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${maximize && 'absolute inset-0 mx-auto h-max w-[min(200px_500px)]'}`}
         >
             {children}
@@ -72,18 +80,17 @@ function Img() {
         <img
             src={placeholder}
             alt="placeholder image"
-            // className="col-span-2 inline-block p-[0_0.5rem_0.5rem_0]"
-            className="col-span-2 inline-block p-[0.5rem]"
+            className={`${itemPadding} col-span-2 inline-block`}
         />
     )
 }
 function TagList({ icon }) {
     return (
         // <ul className="inline-block w-1/2">
-        <ul className="border-r-grey-04 col-span-2 h-full border-r">
+        <ul className="border-r-grey-04 h-full border-r">
             {icon.map((icon) => (
                 <React.Fragment key={icon}>
-                    <li className="m-1 w-6" key={icon}>
+                    <li className="w-8 p-1" key={icon}>
                         {icon}
                     </li>
                 </React.Fragment>
@@ -93,7 +100,13 @@ function TagList({ icon }) {
 }
 
 function Title({ title }) {
-    return <h1 className="col-span-1 bg-blue-200 text-nowrap">{title}</h1>
+    return (
+        <h1
+            className={`${itemPadding} col-span-2 py-1.5 leading-none text-wrap`}
+        >
+            {title}
+        </h1>
+    )
 }
 
 // minimize, restore/maximize and Close buttons within here
@@ -142,9 +155,21 @@ function Description({ description }) {
 }
 
 function ItemFooter() {
+    // const { maximize } = useContext(PortfolioItemContext)
     return (
-        <div className="border-t-grey-04 w-full border-0 border-t">
-            <p> Item footer</p>
+        <div
+            // className={`${itemPadding} border-t-grey-04 col-span-full grid w-full border-0 border-t`}
+            className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
+        >
+            <div className="ml-auto w-fit">
+                {/* <Link to={link}> */}
+                <Link>
+                    <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
+                    {/* <GithubIcon defaultColor={defaultColor} /> */}
+                    <GithubIcon />
+                </Link>
+                {/* <GithubButton /> */}
+            </div>
         </div>
     )
 }
