@@ -11,10 +11,10 @@ function SvgSectionWrapper({ onClick, id, size, children, customStyles }) {
         width = 'w-4'
         margin = 'm-3'
     }
-    if (size === 'small') {
-        width = 'w-3.5'
-        margin = 'm-3'
-    }
+    // if (size === 'small') {
+    //     width = 'w-3.5'
+    //     margin = 'm-3'
+    // }
 
     return (
         <div
