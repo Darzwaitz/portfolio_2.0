@@ -20,6 +20,13 @@ function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
                 <div>{msg}</div>
             </pre>
         )
+    // negative left attribute only changed here
+    if (arrowDirection === 'down-social-icon')
+        return (
+            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b top-[-3.2rem] -left-4 ml-0 px-2.5 pt-2 pb-[11px] group-hover:delay-500 before:absolute before:top-[2.8rem] before:right-[75%] before:mt-[-16px] before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[2.2rem] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
+                <div>{msg}</div>
+            </pre>
+        )
 
     if (arrowDirection === 'left')
         return (

@@ -161,10 +161,13 @@ function ItemFooter() {
             // className={`${itemPadding} border-t-grey-04 col-span-full grid w-full border-0 border-t`}
             className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
         >
-            <div className="ml-auto w-fit">
+            <div className="group relative ml-auto w-fit">
                 {/* <Link to={link}> */}
                 <Link>
-                    <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
+                    <Tooltip
+                        msg={'Project on Github'}
+                        arrowDirection={'down-social-icon'}
+                    />
                     {/* <GithubIcon defaultColor={defaultColor} /> */}
                     <GithubIcon />
                 </Link>
