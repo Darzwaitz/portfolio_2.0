@@ -3,6 +3,9 @@ import RemoteButton from './buttons/RemoteButton'
 import GithubButton from '../buttons/GitHubButton'
 import LinkedInButton from './buttons/LinkedInButton'
 
+import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+const { defaultColor, iconSize, hover } = SvgSettingsMedium()
+
 import SiteDetails from './SiteDetails'
 const link = 'https://github.com/Darzwaitz'
 function Footer() {
@@ -11,7 +14,13 @@ function Footer() {
             <div className="flex items-center gap-1.5">
                 <RemoteButton />
                 {/* GithubButton kept in main ui folder */}
-                <GithubButton link={link} />
+                <GithubButton
+                    link={link}
+                    iconSize={iconSize}
+                    hover={hover}
+                    defaultColor={defaultColor}
+                    tooltipMsg="Github Profile"
+                />
                 <LinkedInButton />
             </div>
             <SiteDetails />

@@ -38,7 +38,7 @@ function SvgIconwrapper({
         // color set here for currentColor of children
         return (
             <div
-                className="group text-grey-01 inline-block cursor-pointer"
+                className={`group text-grey-01 relative inline-block w-fit cursor-pointer ${customStyles ? customStyles : ''}`}
                 //  onClick={onClick}
             >
                 {children}

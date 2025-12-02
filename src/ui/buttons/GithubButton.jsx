@@ -1,18 +1,19 @@
 import SvgIconwrapper from '@/assets/imgs/svg/components/SvgIconwrapper'
 import GithubIcon from './assets/imgs/svgs/components/GithubIcon'
 
-import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
-const { defaultColor, iconSize, hover } = SvgSettingsMedium()
+// import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
+// const { defaultColor, iconSize, hover } = SvgSettingsMedium()
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
 import { Link } from 'react-router'
 
-function GithubButton({ link }) {
+function GithubButton({ link, iconSize, hover, defaultColor, tooltipMsg }) {
     // const githubButtonStyles =
     //     'pl-3 pt-[0.2rem] hover:bg-grey-04b h-full w-full text-grey-01 hover:text-grey-02'
     const githubButtonStyles =
-        'hover:bg-grey-04b px-1.5 h-full w-full text-grey-01 hover:text-grey-02'
+        // 'hover:bg-grey-04b px-1.5 h-full w-full text-grey-01 hover:text-grey-02'
+        'hover:bg-red-01 px-1.5 h-full w-full text-grey-01 hover:text-grey-02'
 
     return (
         <SvgIconwrapper
@@ -21,7 +22,7 @@ function GithubButton({ link }) {
             customStyles={githubButtonStyles}
         >
             <Link to={link}>
-                <Tooltip msg={'Github Profile'} arrowDirection={'down'} />
+                <Tooltip msg={tooltipMsg} arrowDirection={'down'} />
                 <GithubIcon defaultColor={defaultColor} />
             </Link>
         </SvgIconwrapper>

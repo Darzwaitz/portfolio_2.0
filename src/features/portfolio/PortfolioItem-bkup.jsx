@@ -5,14 +5,14 @@ import useOutsideClick from '@/hooks/useOutsideClick'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
 
-import GithubButton from '../../ui/buttons/GitHubButton'
-// import SvgIconwrapper from '../../assets/imgs/svg/components/SvgIconwrapper'
-// import { Link } from 'react-router-dom'
-// import Tooltip from '@/features/tooltip/Tooltip'
-// import GithubIcon from '../../ui/buttons/assets/imgs/svgs/components/GithubIcon'
+// import GithubButton from '../../ui/buttons/GitHubButton'
+import SvgIconwrapper from '../../assets/imgs/svg/components/SvgIconwrapper'
+import { Link } from 'react-router-dom'
+import Tooltip from '@/features/tooltip/Tooltip'
+import GithubIcon from '../../ui/buttons/assets/imgs/svgs/components/GithubIcon'
 
 import { SvgSettingsSmall } from '../../assets/imgs/svg/components/SvgSettings'
-const { link, defaultColor, iconSize, hover } = SvgSettingsSmall()
+const { iconSize, hover } = SvgSettingsSmall()
 
 const PortfolioItemContext = createContext()
 
@@ -161,15 +161,23 @@ function ItemFooter() {
     // const { maximize } = useContext(PortfolioItemContext)
     return (
         <div
+            // className={`${itemPadding} border-t-grey-04 col-span-full grid w-full border-0 border-t`}
             className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
         >
-            <GithubButton
-                link={link}
-                iconSize={iconSize}
-                hover={hover}
-                defaultColor={defaultColor}
-                tooltipMsg="Project on Github"
-            />
+            {/* <div className="group relative ml-auto w-fit"> */}
+            {/* <Link to={link}> */}
+            <SvgIconwrapper iconSize={iconSize} hover={hover}>
+                <Link>
+                    <Tooltip
+                        msg={'Project on Github'}
+                        arrowDirection={'down-social-icon'}
+                    />
+                    {/* <GithubIcon defaultColor={defaultColor} /> */}
+                    <GithubIcon />
+                </Link>
+            </SvgIconwrapper>
+            {/* <GithubButton /> */}
+            {/* </div> */}
         </div>
     )
 }
