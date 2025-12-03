@@ -56,19 +56,24 @@
     --blue-02: #957e48;
 
     /* header sidebar etc. */
+    /* --black-01: #ddd6c1; */
     --black-01: #ddd6c1;
+    /* --black-01: red; */
     /* Explorer sub menu/filter */
     --black-01b: #eee8d5;
     /* main section content */
     --black-02: #fdf6e3;
     --black-02b: #b7b1a2;
 
-    --grey-01: #b0a78d;
+    /* --grey-01: #b0a78d; */
+    --grey-01: #5e5d5cc2;
 
     --grey-02: #3a3012aa;
     --grey-02b: #d7d3ca;
     --grey-03: #e2dcca;
-    --grey-04: #d9d4c5;
+    /* --grey-04: #d9d4c5; */
+    --grey-04: #52514f38;
+    /* --grey-04: red; */
 
     /* tooltip outline */
     --grey-04b: #c0c0c0;

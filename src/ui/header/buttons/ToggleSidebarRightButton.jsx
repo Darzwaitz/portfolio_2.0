@@ -11,11 +11,15 @@ import { usePanels } from '@/contexts/PanelsContext'
 // layout-sidebar-right.svg
 // <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1L1 2V14L2 15H14L15 14V2L14 1H2ZM2 14V2H9V14H2Z"/></svg>
 
-function ToggleSidebarRight({ showTooltip }) {
+function ToggleSidebarRight({ showTooltip, customStyles }) {
     const { togglePanels } = usePanels()
 
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
+        <SvgIconwrapper
+            iconSize={iconSize}
+            hover={hover}
+            customStyles={customStyles}
+        >
             {/* layout-sidebar-right-off.svg */}
             <ToggleSidebarRightIcon
                 defaultColor={defaultColor}

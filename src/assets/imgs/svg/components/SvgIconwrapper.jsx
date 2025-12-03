@@ -2,7 +2,7 @@ function SvgIconwrapper({
     id,
     onClick,
     iconSize,
-    hover,
+    // hover,
     customStyles,
     children,
 }) {
@@ -24,10 +24,9 @@ function SvgIconwrapper({
             >
                 <div
                     id={id}
-                    // onClick move to child here - originally on parent div above
+                    // onClick moved to child here - originally on parent div above
                     onClick={onClick}
-                    // if customStyles, use customStyles hover, else passed in hover styles
-                    className={`flex h-full items-center ${customStyles ? '' : hover}${customStyles ? customStyles : 'text-grey-06 z-50 rounded-sm p-[3px]'}`}
+                    className={`flex h-full items-center ${customStyles}`}
                 >
                     {children}
                 </div>
@@ -35,10 +34,9 @@ function SvgIconwrapper({
         )
 
     if (iconSize === 'small')
-        // color set here for currentColor of children
         return (
             <div
-                className={`group text-grey-01 relative inline-block w-fit cursor-pointer ${customStyles ? customStyles : ''}`}
+                className={`group text-grey-01 inline-block cursor-pointer ${customStyles}`}
                 //  onClick={onClick}
             >
                 {children}

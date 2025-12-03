@@ -19,6 +19,7 @@ function Footer() {
                     iconSize={iconSize}
                     hover={hover}
                     defaultColor={defaultColor}
+                    footerStyles={true}
                     tooltipMsg="Github Profile"
                 />
                 <LinkedInButton />

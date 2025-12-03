@@ -9,10 +9,14 @@ import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
 
-function ToggleSidebarLeftButton({ showTooltip }) {
+function ToggleSidebarLeftButton({ showTooltip, customStyles }) {
     const { togglePanels } = usePanels()
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
+        <SvgIconwrapper
+            iconSize={iconSize}
+            hover={hover}
+            customStyles={customStyles}
+        >
             <ToggleSidebarLeftIcon
                 defaultColor={defaultColor}
                 svgStylesMedium={svgStylesMedium}

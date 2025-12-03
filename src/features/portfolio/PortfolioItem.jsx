@@ -161,6 +161,7 @@ function ItemFooter() {
     // const { maximize } = useContext(PortfolioItemContext)
     return (
         <div
+            // className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
             className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
         >
             <GithubButton
@@ -169,6 +170,7 @@ function ItemFooter() {
                 hover={hover}
                 defaultColor={defaultColor}
                 tooltipMsg="Project on Github"
+                portfolioItemStyles={true}
             />
         </div>
     )

@@ -7,8 +7,13 @@ import ToggleSidebarRightButton from './buttons/ToggleSidebarRightButton'
 
 import useGetDataAttr from '@/hooks/useGetDataAttr'
 
+import { SvgSettingsMedium } from '../../assets/imgs/svg/components/SvgSettings'
+const { hover } = SvgSettingsMedium()
+
 function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
     const onGetDataAttr = useGetDataAttr()
+
+    const togglePanelsStyles = `text-grey-06 z-50 rounded-sm p-[3px] ${hover}`
 
     let showTooltip = true
     if (!tooltips) showTooltip = false
@@ -24,10 +29,23 @@ function TogglePanels({ tooltips, customizeLayoutStyles, headerStyles }) {
             id={'panels-svg-wrapper'}
             customStyles={customStyles}
         >
-            <CustomizeLayoutButton showTooltip={showTooltip} />
-            <ToggleSidebarLeftButton showTooltip={showTooltip} />
-            <ToggleTerminalButton showTooltip={showTooltip} />
-            <ToggleSidebarRightButton showTooltip={showTooltip} />
+            <CustomizeLayoutButton
+                showTooltip={showTooltip}
+                customStyles={togglePanelsStyles}
+            />
+
+            <ToggleSidebarLeftButton
+                showTooltip={showTooltip}
+                customStyles={togglePanelsStyles}
+            />
+            <ToggleTerminalButton
+                showTooltip={showTooltip}
+                customStyles={togglePanelsStyles}
+            />
+            <ToggleSidebarRightButton
+                showTooltip={showTooltip}
+                customStyles={togglePanelsStyles}
+            />
         </SvgSectionWrapper>
     )
 }

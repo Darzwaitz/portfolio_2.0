@@ -11,9 +11,13 @@ const {
 
 import Tooltip from '@/features/tooltip/Tooltip'
 
-function NavArrowButton({ arrowDirection, tooltipMsg }) {
+function NavArrowButton({ arrowDirection, tooltipMsg, customStyles }) {
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
+        <SvgIconwrapper
+            iconSize={iconSize}
+            hover={hover}
+            customStyles={customStyles}
+        >
             <svg
                 className={`pointer-events-none ${iconSize === 'medium' && svgStylesMedium}`}
                 viewBox="0 0 16 16"

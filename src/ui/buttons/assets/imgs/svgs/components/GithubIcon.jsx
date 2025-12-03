@@ -1,7 +1,8 @@
-function GithubIcon() {
+function GithubIcon({ iconHeight }) {
     return (
         <svg
-            className={`pointer-events-none m-auto block h-5`}
+            // className={`pointer-events-none m-auto block h-5`}
+            className={`pointer-events-none m-auto block ${iconHeight}`}
             // width="24"
             // height="24"
             // data-panel="github-icon"

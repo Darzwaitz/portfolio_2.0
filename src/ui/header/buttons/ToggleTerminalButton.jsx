@@ -8,12 +8,16 @@ import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
 
-function ToggleTerminal({ showTooltip }) {
+function ToggleTerminal({ showTooltip, customStyles }) {
     const { togglePanels } = usePanels()
     // let arrDir = togglePanels.tooltipArrDir
 
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
+        <SvgIconwrapper
+            iconSize={iconSize}
+            hover={hover}
+            customStyles={customStyles}
+        >
             <ToggleTerminalIcon
                 defaultColor={defaultColor}
                 svgStylesMedium={svgStylesMedium}
