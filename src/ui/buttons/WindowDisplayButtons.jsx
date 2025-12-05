@@ -1,4 +1,4 @@
-import SvgSectionWrapper from '../../assets/imgs/svg/components/SvgSectionWrapper'
+import SvgSectionWrapper from '@/assets/imgs/svg/components/SvgSectionWrapper'
 
 import MinimizeButton from './MinimizeButton'
 import MaximizeRestoreButton from './MaximizeRestoreButton'

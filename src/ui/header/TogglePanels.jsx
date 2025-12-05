@@ -1,4 +1,4 @@
-import SvgSectionWrapper from '../../assets/imgs/svg/components/SvgSectionWrapper'
+import SvgSectionWrapper from '@/assets/imgs/svg/components/SvgSectionWrapper'
 
 import CustomizeLayoutButton from './buttons/CustomizeLayoutButton'
 import ToggleSidebarLeftButton from './buttons/ToggleSidebarLeftButton'

@@ -5,7 +5,7 @@ import useOutsideClick from '@/hooks/useOutsideClick'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
 
-import GithubButton from '../../ui/buttons/GitHubButton'
+import GithubButton from '@/ui/buttons/GitHubButton'
 // import SvgIconwrapper from '../../assets/imgs/svg/components/SvgIconwrapper'
 // import { Link } from 'react-router-dom'
 // import Tooltip from '@/features/tooltip/Tooltip'
@@ -162,7 +162,7 @@ function ItemFooter() {
     return (
         <div
             // className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
-            className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
+            className={`border-t-grey-04 col-span-full flex w-full border-0 border-t`}
         >
             <GithubButton
                 link={link}

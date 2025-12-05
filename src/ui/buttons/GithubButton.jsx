@@ -28,8 +28,8 @@ function GithubButton({
         iconHeight = 'h-5'
     }
     if (portfolioItemStyles) {
-        customStyles = 'hover:bg-grey-04b w-fit'
-        iconHeight = 'h-3.5'
+        customStyles = 'hover:bg-grey-04b hover:text-grey-02 w-fit p-1 mx-1'
+        iconHeight = 'h-4'
     }
     // const githubButtonStyles =
     // 'hover:bg-grey-04b px-1.5 h-full w-full text-grey-01 hover:text-grey-02'
