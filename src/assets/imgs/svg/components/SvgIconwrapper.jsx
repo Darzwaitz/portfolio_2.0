@@ -36,6 +36,7 @@ function SvgIconwrapper({
     if (iconSize === 'small')
         return (
             <div
+                // className={`group text-grey-01 relative cursor-pointer ${customStyles}`}
                 className={`group text-grey-01 cursor-pointer ${customStyles}`}
                 //  onClick={onClick}
             >

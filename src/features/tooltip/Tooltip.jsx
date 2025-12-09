@@ -16,14 +16,17 @@ function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
 
     if (arrowDirection === 'down')
         return (
-            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b top-[-3.2rem] left-0 ml-0 px-2.5 pt-2 pb-[11px] group-hover:delay-500 before:absolute before:top-[2.8rem] before:right-[75%] before:mt-[-16px] before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[2.2rem] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
+            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b top-[-3.2rem] left-[0.4rem] ml-0 px-2.5 pt-2 pb-[0.688rem] group-hover:delay-500 before:absolute before:top-[156%] before:right-[75%] before:-mt-4 before:border-[0.438rem] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[121%] after:right-[75%] after:mt-[-0.438rem] after:border-[0.438rem] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
                 <div>{msg}</div>
             </pre>
         )
     // negative left attribute only changed here
     if (arrowDirection === 'down-social-icon')
         return (
-            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b bottom-[2rem] -left-4 ml-0 px-2.5 pt-2 pb-[11px] group-hover:delay-500 before:absolute before:top-[2.8rem] before:right-[75%] before:mt-[-16px] before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[2.2rem] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
+            <pre
+                // style={''}
+                className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b bottom-[2rem] -left-[0.9rem] ml-0 px-2.5 pt-2 pb-[11px] group-hover:delay-500 before:absolute before:top-[2.8rem] before:right-[75%] before:-mt-4 before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[2.2rem] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent"
+            >
                 <div>{msg}</div>
             </pre>
         )

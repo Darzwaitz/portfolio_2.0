@@ -21,15 +21,18 @@ function GithubButton({
     // const githubButtonStyles =
     //     'pl-3 pt-[0.2rem] hover:bg-grey-04b h-full w-full text-grey-01 hover:text-grey-02'
     let customStyles = ''
+    let arrowDirection = ''
 
     if (footerStyles) {
         customStyles =
             'hover:bg-grey-04b px-1.5 h-full text-grey-01 hover:text-grey-02'
         iconHeight = 'h-5'
+        arrowDirection = 'down'
     }
     if (portfolioItemStyles) {
         customStyles = 'hover:bg-grey-04b hover:text-grey-02 w-fit p-1 mx-1'
         iconHeight = 'h-4'
+        arrowDirection = 'down-social-icon'
     }
     // const githubButtonStyles =
     // 'hover:bg-grey-04b px-1.5 h-full w-full text-grey-01 hover:text-grey-02'
@@ -42,7 +45,7 @@ function GithubButton({
             customStyles={customStyles}
         >
             <Link to={link}>
-                <Tooltip msg={tooltipMsg} arrowDirection={'down'} />
+                <Tooltip msg={tooltipMsg} arrowDirection={arrowDirection} />
                 <GithubIcon
                     defaultColor={defaultColor}
                     iconHeight={iconHeight}
