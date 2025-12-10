@@ -1,4 +1,9 @@
-function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
+function Tooltip({
+    msg,
+    arrowDirection,
+    arrowDirectionWithFix,
+    tooltipStyles,
+}) {
     if (arrowDirection === 'up')
         return (
             <pre className="tooltip before:solid after:solid before:border-b-grey-04b after:border-b-black-02b before:text-black-02b after:text-black-02b top-6 right-0 px-2.5 pt-2 pb-[11px] before:absolute before:top-0.5 before:right-1.5 before:mt-[-16px] before:border-[7px] before:border-t-transparent before:border-r-transparent before:border-l-transparent after:absolute after:top-0.5 after:right-1.5 after:mt-[-15px] after:border-[7px] after:border-t-transparent after:border-r-transparent after:border-l-transparent">
@@ -15,18 +20,18 @@ function Tooltip({ msg, arrowDirection, arrowDirectionWithFix }) {
         )
 
     if (arrowDirection === 'down')
+        // custom tooltipStyles added only on social link buttons
         return (
-            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b top-[-3.2rem] left-[0.4rem] ml-0 px-2.5 pt-2 pb-[0.688rem] group-hover:delay-500 before:absolute before:top-[156%] before:right-[75%] before:-mt-4 before:border-[0.438rem] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[121%] after:right-[75%] after:mt-[-0.438rem] after:border-[0.438rem] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
+            <pre
+                className={`tooltip ${tooltipStyles} before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b top-[-3.2rem] ml-0 px-2.5 pt-2 pb-[0.688rem] group-hover:delay-500 before:absolute before:top-[155%] before:right-[75%] before:-mt-4 before:border-[0.438rem] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[121%] after:right-[75%] after:mt-[-0.438rem] after:border-[0.438rem] after:border-r-transparent after:border-b-transparent after:border-l-transparent`}
+            >
                 <div>{msg}</div>
             </pre>
         )
     // negative left attribute only changed here
     if (arrowDirection === 'down-social-icon')
         return (
-            <pre
-                // style={''}
-                className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b bottom-[2rem] -left-[0.9rem] ml-0 px-2.5 pt-2 pb-[11px] group-hover:delay-500 before:absolute before:top-[2.8rem] before:right-[75%] before:-mt-4 before:border-[7px] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[2.2rem] after:right-[75%] after:mt-[-7px] after:border-[7px] after:border-r-transparent after:border-b-transparent after:border-l-transparent"
-            >
+            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b bottom-[2rem] left-[1.5rem] ml-0 px-2.5 pt-2 pb-[0.688rem] group-hover:delay-500 before:absolute before:top-[153%] before:right-[75%] before:-mt-4 before:border-[0.438rem] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[119%] after:right-[75%] after:mt-[-0.438rem] after:border-[0.438rem] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
                 <div>{msg}</div>
             </pre>
         )

@@ -11,6 +11,8 @@ import { Link } from 'react-router'
 function LinkedInButton() {
     const linkedinButtonStyles =
         'h-full hover:bg-grey-04b px-1.5 w-full text-grey-01 hover:text-grey-02'
+    const tooltipStyles = 'left-[-0.3rem]'
+
     return (
         <SvgIconwrapper
             iconSize={iconSize}
@@ -18,7 +20,11 @@ function LinkedInButton() {
             customStyles={linkedinButtonStyles}
         >
             <Link to="#">
-                <Tooltip msg={'LinkedIn Profile'} arrowDirection={'down'} />
+                <Tooltip
+                    msg={'LinkedIn Profile'}
+                    tooltipStyles={tooltipStyles}
+                    arrowDirection={'down'}
+                />
                 <LinkedInIcon defaultColor={defaultColor} />
             </Link>
         </SvgIconwrapper>

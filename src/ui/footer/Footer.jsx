@@ -1,6 +1,6 @@
 import RemoteButton from './buttons/RemoteButton'
 // GithubButton located in main ui folder
-import GithubButton from '../buttons/GitHubButton'
+import GithubButton from '../buttons/GithubButton'
 import LinkedInButton from './buttons/LinkedInButton'
 
 import { SvgSettingsMedium } from '@/assets/imgs/svg/components/SvgSettings'
