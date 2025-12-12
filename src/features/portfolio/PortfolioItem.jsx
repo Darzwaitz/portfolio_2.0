@@ -6,6 +6,7 @@ import useOutsideClick from '@/hooks/useOutsideClick'
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
 
 import GithubButton from '@/ui/buttons/GitHubButton'
+import GoLiveButton from './buttons/GoLiveButton'
 // import SvgIconwrapper from '../../assets/imgs/svg/components/SvgIconwrapper'
 // import { Link } from 'react-router-dom'
 // import Tooltip from '@/features/tooltip/Tooltip'
@@ -172,6 +173,7 @@ function ItemFooter() {
                 tooltipMsg="Project on Github"
                 portfolioItemStyles={true}
             />
+            <GoLiveButton />
         </div>
     )
 }
