@@ -14,16 +14,16 @@ function CloseButton({
     if (asideMenuStyles) iconStyles = 'hover:bg-grey-08 h-6 p-1'
     if (headerStyles) {
         iconStyles = 'm-auto h-6 p-1'
-        commonStyles = 'flex w-[3rem] h-full self-center'
-        buttonStyles =
-            'hover:bg-red-01 hover:text-grey-02b hover:text-red-01-01 '
+        commonStyles = 'flex w-[3rem] h-full self-center hover:text-grey-02c'
+        buttonStyles = 'hover:bg-red-01'
     }
-    // change hover to red after testing
-    if (portfolioStyles) iconStyles = 'hover:bg-yellow-01 h-6 p-1'
+
+    if (portfolioStyles)
+        iconStyles = 'hover:bg-red-01 h-6 p-1 hover:text-grey-02c'
 
     return (
         <span
-            className={`${commonStyles} ${buttonStyles} group`}
+            className={`${commonStyles} ${buttonStyles} text-gre group`}
             onClick={onToggleExplorer}
         >
             <CloseButtonIcon iconStyles={iconStyles} />
