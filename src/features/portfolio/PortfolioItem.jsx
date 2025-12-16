@@ -13,7 +13,7 @@ import GoLiveButton from './buttons/GoLiveButton'
 // import GithubIcon from '../../ui/buttons/assets/imgs/svgs/components/GithubIcon'
 
 import { SvgSettingsSmall } from '../../assets/imgs/svg/components/SvgSettings'
-const { link, defaultColor, iconSize, hover } = SvgSettingsSmall()
+const { defaultColor, iconSize, hover } = SvgSettingsSmall()
 
 const PortfolioItemContext = createContext()
 
@@ -158,7 +158,7 @@ function Description({ description }) {
     )
 }
 
-function ItemFooter() {
+function ItemFooter({ link }) {
     // const { maximize } = useContext(PortfolioItemContext)
     return (
         <div
@@ -173,7 +173,13 @@ function ItemFooter() {
                 tooltipMsg="Project on Github"
                 portfolioItemStyles={true}
             />
-            <GoLiveButton />
+            <GoLiveButton
+                link={link}
+                iconSize={iconSize}
+                hover={hover}
+                defaultColor={defaultColor}
+                tooltipMsg="Go to live Project"
+            />
         </div>
     )
 }

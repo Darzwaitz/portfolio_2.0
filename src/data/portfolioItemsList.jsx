@@ -19,6 +19,7 @@ function portfolioItemsList() {
             tags: ['React'],
             icon: [<ReactIcon key={'react'} />],
             imageSrc: placeholderimage,
+            link: 'react url',
         },
 
         {
@@ -27,6 +28,7 @@ function portfolioItemsList() {
             // tags: ['Javascript'],
             tags: ['Scss'],
             icon: [<ScssIcon key={'scss'} />],
+            link: 'scss url',
         },
         {
             title: 'portfolio item 2B also scss',
@@ -34,42 +36,49 @@ function portfolioItemsList() {
             // tags: ['Javascript'],
             tags: ['Scss'],
             icon: [<ScssIcon key={'scss'} />],
+            link: 'scss url',
         },
         {
             title: 'portfolio item 3',
             description: 'This is the REACT & HTML item 3 description',
             tags: ['React', 'Html'],
             icon: [<ReactIcon key={'react'} />],
+            link: 'react & html url',
         },
         {
             title: 'portfolio item 4',
             description: 'This is the VUE item 4 description',
             tags: ['Vue'],
             icon: [<VueIcon key={'vue'} />],
+            link: 'vue url',
         },
         {
             title: 'portfolio item 5',
             description: 'This is the Angular item 5 description',
             tags: ['Angular'],
             icon: [<AngularIcon key={'angular'} />],
+            link: 'angular url',
         },
         {
             title: 'portfolio item 6',
             description: 'This is the Wordpress item 6 description',
             tags: ['Wordpress'],
             icon: [<WordpressIcon key={'wordpress'} />],
+            link: 'wordpress url',
         },
         {
             title: 'portfolio item 7',
             description: 'This is the JS item 7 description',
             tags: ['JavaScript'],
             icon: [<JavaScriptIcon key={'javascript'} />],
+            link: 'js url',
         },
         {
             title: 'portfolio item 8',
             description: 'This is the Tailwind item 8 description',
             tags: ['Tailwind'],
             icon: [<TailwindIcon key={'tailwind'} />],
+            link: 'tailwind url',
         },
         // ,
         // {

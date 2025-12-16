@@ -14,20 +14,20 @@ function LinkedInButton() {
     const tooltipStyles = 'left-[-0.3rem]'
 
     return (
-        <SvgIconwrapper
-            iconSize={iconSize}
-            hover={hover}
-            customStyles={linkedinButtonStyles}
-        >
-            <Link to="#">
+        <Link className="h-full" to="#">
+            <SvgIconwrapper
+                iconSize={iconSize}
+                hover={hover}
+                customStyles={linkedinButtonStyles}
+            >
                 <Tooltip
                     msg={'LinkedIn Profile'}
                     tooltipStyles={tooltipStyles}
                     arrowDirection={'down'}
                 />
                 <LinkedInIcon defaultColor={defaultColor} />
-            </Link>
-        </SvgIconwrapper>
+            </SvgIconwrapper>
+        </Link>
     )
 }
 

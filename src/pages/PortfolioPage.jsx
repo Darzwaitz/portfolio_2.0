@@ -46,7 +46,9 @@ function PortfolioPage() {
                                                     project.description
                                                 }
                                             />
-                                            <PortfolioItem.ItemFooter />
+                                            <PortfolioItem.ItemFooter
+                                                link={project.link}
+                                            />
                                             {/* <PortfolioItem.PaddingBottom /> */}
                                         </PortfolioItem.GridWrapper>
                                     </PortfolioItem.ItemWrapper>

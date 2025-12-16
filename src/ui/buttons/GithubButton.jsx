@@ -25,7 +25,7 @@ function GithubButton({
     if (footerStyles) {
         customStyles =
             'hover:bg-grey-04b px-1.5 h-full text-grey-01 hover:text-grey-02'
-        tooltipStyles = 'left-[-0.3rem]'
+        tooltipStyles = '-left-[0.3em]'
         iconHeight = 'h-5'
         arrowDirection = 'down'
     }
@@ -36,12 +36,12 @@ function GithubButton({
     }
 
     return (
-        <SvgIconwrapper
-            iconSize={iconSize}
-            hover={hover}
-            customStyles={customStyles}
-        >
-            <Link to={link}>
+        <Link className="h-full" to={link}>
+            <SvgIconwrapper
+                iconSize={iconSize}
+                hover={hover}
+                customStyles={customStyles}
+            >
                 <Tooltip
                     msg={tooltipMsg}
                     tooltipStyles={tooltipStyles}
@@ -51,8 +51,8 @@ function GithubButton({
                     defaultColor={defaultColor}
                     iconHeight={iconHeight}
                 />
-            </Link>
-        </SvgIconwrapper>
+            </SvgIconwrapper>
+        </Link>
     )
 }
 
