@@ -1,4 +1,4 @@
-import PortfolioItemsList from '../data/PortfolioItemsList'
+import portfolioItemsList from '../data/portfolioItemsList'
 import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
 import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
@@ -19,7 +19,7 @@ function PortfolioPage() {
                     id="itemsdisplay"
                     className="relative grid grid-cols-(--item-grid-cols) gap-2"
                 >
-                    {PortfolioItemsList.map(
+                    {portfolioItemsList.map(
                         (project, i) =>
                             portfolioitemTags.includes(...project.tags) && (
                                 <PortfolioItem key={i} projectKey={i}>
@@ -47,7 +47,12 @@ function PortfolioPage() {
                                                 }
                                             />
                                             <PortfolioItem.ItemFooter
-                                                link={project.link}
+                                                githubProjectLink={
+                                                    project.githubProjectLink
+                                                }
+                                                liveProjectLink={
+                                                    project.liveProjectLink
+                                                }
                                             />
                                             {/* <PortfolioItem.PaddingBottom /> */}
                                         </PortfolioItem.GridWrapper>

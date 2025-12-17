@@ -8,18 +8,17 @@ import { Link } from 'react-router'
 function GoLiveButton({
     iconSize,
     hover,
-    link,
+    liveProjectLink,
     tooltipMsg,
     defaultColor,
     iconHeight,
 }) {
-    let customStyles =
-        'hover:bg-grey-04b hover:text-grey-02 w-fit p-1 mx-1 relative'
+    let customStyles = 'hover:bg-grey-04b hover:text-grey-02 w-fit p-1 mx-1'
     let arrowDirection = 'down'
     let tooltipStyles = '-left-[0.8rem]'
 
     return (
-        <Link to={link}>
+        <Link to={liveProjectLink}>
             <SvgIconwrapper
                 iconSize={iconSize}
                 hover={hover}

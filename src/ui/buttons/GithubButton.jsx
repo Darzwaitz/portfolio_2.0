@@ -9,7 +9,7 @@ import Tooltip from '@/features/tooltip/Tooltip'
 import { Link } from 'react-router'
 
 function GithubButton({
-    link,
+    githubProjectLink,
     iconSize,
     iconHeight,
     hover,
@@ -36,7 +36,7 @@ function GithubButton({
     }
 
     return (
-        <Link className="h-full" to={link}>
+        <Link className="h-full" to={githubProjectLink}>
             <SvgIconwrapper
                 iconSize={iconSize}
                 hover={hover}
