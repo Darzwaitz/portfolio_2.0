@@ -29,7 +29,8 @@ function portfolioItemsList() {
             // tags: ['Javascript'],
             tags: ['Scss'],
             icon: [<ScssIcon key={'scss'} />],
-            link: 'scss url',
+            githubProjectLink: 'github scss url',
+            liveProjectLink: '',
         },
         {
             title: 'portfolio item 2B also scss',

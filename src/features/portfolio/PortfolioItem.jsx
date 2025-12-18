@@ -162,17 +162,18 @@ function ItemFooter({ githubProjectLink, liveProjectLink }) {
     // const { maximize } = useContext(PortfolioItemContext)
     return (
         <div
-            // className={`border-t-grey-04 col-span-full grid w-full border-0 border-t`}
             className={`border-t-grey-04 col-span-full flex w-full border-0 border-t`}
         >
-            <GithubButton
-                githubProjectLink={githubProjectLink}
-                iconSize={iconSize}
-                hover={hover}
-                defaultColor={defaultColor}
-                tooltipMsg="Project on Github"
-                portfolioItemStyles={true}
-            />
+            {githubProjectLink && (
+                <GithubButton
+                    githubProjectLink={githubProjectLink}
+                    iconSize={iconSize}
+                    hover={hover}
+                    defaultColor={defaultColor}
+                    tooltipMsg="Project on Github"
+                    portfolioItemStyles={true}
+                />
+            )}
             {liveProjectLink && (
                 <GoLiveButton
                     liveProjectLink={liveProjectLink}
