@@ -6,6 +6,7 @@ function CloseButton({
     portfolioStyles,
     onToggleExplorer,
     showTooltip,
+    // onClick,
 }) {
     let buttonStyles = ''
     let iconStyles = ''

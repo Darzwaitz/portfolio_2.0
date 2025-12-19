@@ -8,7 +8,9 @@ function WindowDisplayButtons({
     headerWindowStyles,
     portfolioItemStyles,
     maximize,
-    onClick,
+    handleMaximize,
+    testLog,
+    // onClick,
     id,
 }) {
     let customStyles = ''
@@ -25,7 +27,7 @@ function WindowDisplayButtons({
                 headerStyles={headerWindowStyles}
                 portfolioStyles={portfolioItemStyles}
                 maximize={maximize}
-                onClick={onClick}
+                onClick={handleMaximize}
             />
             {/* 2 different sets of styles conditional for CloseButton based 
             on 2 different styles conditional from this comp */}
@@ -33,6 +35,7 @@ function WindowDisplayButtons({
                 headerStyles={headerWindowStyles}
                 portfolioStyles={portfolioItemStyles}
                 showTooltip={true}
+                onClick={testLog}
             />
         </SvgSectionWrapper>
     )

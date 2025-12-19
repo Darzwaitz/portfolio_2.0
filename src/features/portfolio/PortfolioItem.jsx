@@ -120,11 +120,16 @@ function PortfolioCardButtons() {
     // handle click outside of portfolio item in specific areas i.e. not the filter items section
     const handleMaximize = useOutsideClick(maximize, setMaximize)
 
+    // test
+    const testLog = (e) => console.log(e)
+
     return (
         <WindowDisplayButtons
             portfolioItemStyles={true}
             maximize={maximize}
-            onClick={handleMaximize}
+            handleMaximize={handleMaximize}
+            testLog={testLog}
+            // onClick={[handleMaximize, testLog]}
             id={'portfolio-card-buttons'}
         />
     )
