@@ -4,9 +4,8 @@ function CloseButton({
     asideMenuStyles,
     headerStyles,
     portfolioStyles,
-    onToggleExplorer,
     showTooltip,
-    // onClick,
+    onClick,
 }) {
     let buttonStyles = ''
     let iconStyles = ''
@@ -24,8 +23,8 @@ function CloseButton({
 
     return (
         <span
-            className={`${commonStyles} ${buttonStyles} text-gre group`}
-            onClick={onToggleExplorer}
+            className={`${commonStyles} ${buttonStyles} group`}
+            onClick={onClick}
         >
             <CloseButtonIcon iconStyles={iconStyles} />
 

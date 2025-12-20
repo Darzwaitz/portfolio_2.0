@@ -13,12 +13,12 @@ function ExplorerViewButton({ onToggleExplorer }) {
     let arrDir = togglePanels.tooltipArrDir
 
     return (
-        <SvgIconwrapper iconSize={iconSize} hover={hover}>
-            <ExplorerViewIcon
-                hover={hover}
-                onToggleExplorer={onToggleExplorer}
-                defaultColor={defaultColor}
-            />
+        <SvgIconwrapper
+            iconSize={iconSize}
+            onClick={onToggleExplorer}
+            hover={hover}
+        >
+            <ExplorerViewIcon hover={hover} defaultColor={defaultColor} />
             <Tooltip msg={'Explorer (Ctrl+Shift+E)'} arrowDirection={arrDir} />
         </SvgIconwrapper>
     )

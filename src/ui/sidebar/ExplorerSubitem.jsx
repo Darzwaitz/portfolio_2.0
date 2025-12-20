@@ -12,7 +12,7 @@ function ExplorerSubitem({ onToggleExplorer }) {
             {/* <span className="self-center"> */}
             <CloseButton
                 asideMenuStyles={true}
-                onToggleExplorer={onToggleExplorer}
+                onClick={onToggleExplorer}
                 showTooltip={false}
             />
         </div>

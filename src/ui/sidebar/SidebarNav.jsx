@@ -26,7 +26,7 @@ function SidebarNav() {
 
     const [toggleExplorer, setToggleExplorer] = useState(false)
 
-    function handleToggleExplorer() {
+    function handleToggleExplorerView() {
         if (togglePanels.toggleLeft || togglePanels.toggleRight)
             setToggleExplorer((show) => (show = !show))
     }
@@ -80,12 +80,10 @@ function SidebarNav() {
                         customStyles={svgSectionStyles}
                         size="large"
                     >
-                        <SidebarNavMenuButton
-                            handleToggleNav={handleToggleNav}
-                        />
-                        {/* onToggleExplorer={handleToggleExplorer} from this comp. SidebarNav, not PanelsContext */}
+                        <SidebarNavMenuButton onToggleNav={handleToggleNav} />
+                        {/* onToggleExplorer={handleToggleExplorerView} from this comp. SidebarNav, not PanelsContext */}
                         <ExplorerViewButton
-                            onToggleExplorer={handleToggleExplorer}
+                            onToggleExplorer={handleToggleExplorerView}
                         />
                         <SourceControlButton />
 
@@ -106,7 +104,9 @@ function SidebarNav() {
 
                 {/* explorer sub sidebar section */}
                 {toggleExplorer && (
-                    <SidebarExplorer onToggleExplorer={handleToggleExplorer} />
+                    <SidebarExplorer
+                        onToggleExplorer={handleToggleExplorerView}
+                    />
                 )}
                 {/* conditionally show main nav list for smaller screens onclick of burger icon  */}
                 <div className="lg:hidden">

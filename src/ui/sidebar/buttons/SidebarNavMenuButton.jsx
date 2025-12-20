@@ -1,11 +1,11 @@
 import NavMenuButton from './NavMenuButton'
 
-function SidebarNavMenuButton({ handleToggleNav }) {
+function SidebarNavMenuButton({ onToggleNav }) {
     return (
         <div
             // id="sidebar-nav-menu"
             className="z-[9999] lg:hidden"
-            onClick={handleToggleNav}
+            onClick={onToggleNav}
         >
             <NavMenuButton />
         </div>
