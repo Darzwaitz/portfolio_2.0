@@ -29,6 +29,8 @@ function FilteritemsProvider({ children }) {
         // // unused { name: 'Certifications', checked: false },
     ])
 
+    // const onDeleteItem = useDeleteItem()
+
     // hook needed for state issues
     const onShowSubmit = useSubmitButton(items)
 

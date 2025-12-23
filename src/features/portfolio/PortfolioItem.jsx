@@ -121,7 +121,9 @@ function PortfolioCardButtons() {
     const handleMaximize = useOutsideClick(maximize, setMaximize)
 
     // test
-    const testLog = (e) => console.log(e)
+    const testLog = function (e) {
+        console.log(e)
+    }
 
     return (
         <WindowDisplayButtons

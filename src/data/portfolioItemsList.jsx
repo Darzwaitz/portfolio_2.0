@@ -44,7 +44,8 @@ function portfolioItemsList() {
         {
             title: 'portfolio item 3',
             description: 'This is the REACT & HTML item 3 description',
-            tags: ['React', 'Html'],
+            // tags: ['React', 'Html'],
+            tags: ['React'],
             icon: [<ReactIcon key={'react'} />],
             githubProjectLink: 'github react & html url',
             liveProjectLink: 'live react & html url',
