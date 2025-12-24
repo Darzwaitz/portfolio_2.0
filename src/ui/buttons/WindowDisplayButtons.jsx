@@ -9,7 +9,7 @@ function WindowDisplayButtons({
     portfolioItemStyles,
     maximize,
     handleMaximize,
-    testLog,
+    deleteItem,
     // onClick,
     id,
 }) {
@@ -35,7 +35,7 @@ function WindowDisplayButtons({
                 headerStyles={headerWindowStyles}
                 portfolioStyles={portfolioItemStyles}
                 showTooltip={true}
-                onClick={testLog}
+                onClick={deleteItem}
             />
         </SvgSectionWrapper>
     )

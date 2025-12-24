@@ -14,6 +14,7 @@ function portfolioItemsList() {
 
     return [
         {
+            id: 'item1',
             title: 'portfolio item 1',
             description: 'This is the REACT item 1 description',
             tags: ['React'],
@@ -24,6 +25,7 @@ function portfolioItemsList() {
         },
 
         {
+            id: 'item2',
             title: 'portfolio item 2',
             description: 'This is the SCSS item 2 description',
             // tags: ['Javascript'],
@@ -33,7 +35,8 @@ function portfolioItemsList() {
             liveProjectLink: '',
         },
         {
-            title: 'portfolio item 2B also scss',
+            id: 'item3',
+            title: 'portfolio item 3 also scss',
             description: 'This is the SCSS item 2 description',
             // tags: ['Javascript'],
             tags: ['Scss'],
@@ -42,7 +45,8 @@ function portfolioItemsList() {
             liveProjectLink: 'live scss url',
         },
         {
-            title: 'portfolio item 3',
+            id: 'item4',
+            title: 'portfolio item 4',
             description: 'This is the REACT & HTML item 3 description',
             // tags: ['React', 'Html'],
             tags: ['React'],
@@ -51,7 +55,8 @@ function portfolioItemsList() {
             liveProjectLink: 'live react & html url',
         },
         {
-            title: 'portfolio item 4',
+            id: 'item5',
+            title: 'portfolio item 5',
             description: 'This is the VUE item 4 description',
             tags: ['Vue'],
             icon: [<VueIcon key={'vue'} />],
@@ -59,7 +64,8 @@ function portfolioItemsList() {
             liveProjectLink: 'live vue url',
         },
         {
-            title: 'portfolio item 5',
+            id: 'item6',
+            title: 'portfolio item 6',
             description: 'This is the Angular item 5 description',
             tags: ['Angular'],
             icon: [<AngularIcon key={'angular'} />],
@@ -67,7 +73,8 @@ function portfolioItemsList() {
             liveProjectLink: 'live angular url',
         },
         {
-            title: 'portfolio item 6',
+            id: 'item7',
+            title: 'portfolio item 7',
             description: 'This is the Wordpress item 6 description',
             tags: ['Wordpress'],
             icon: [<WordpressIcon key={'wordpress'} />],
@@ -75,7 +82,8 @@ function portfolioItemsList() {
             liveProjectLink: 'live wordpress url',
         },
         {
-            title: 'portfolio item 7',
+            id: 'item8',
+            title: 'portfolio item 8',
             description: 'This is the JS item 7 description',
             tags: ['JavaScript'],
             icon: [<JavaScriptIcon key={'javascript'} />],
@@ -83,7 +91,8 @@ function portfolioItemsList() {
             liveProjectLink: 'live js url',
         },
         {
-            title: 'portfolio item 8',
+            id: 'item9',
+            title: 'portfolio item 9',
             description: 'This is the Tailwind item 8 description',
             tags: ['Tailwind'],
             icon: [<TailwindIcon key={'tailwind'} />],
