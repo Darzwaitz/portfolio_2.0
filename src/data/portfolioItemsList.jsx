@@ -22,6 +22,7 @@ function portfolioItemsList() {
             imageSrc: placeholderimage,
             githubProjectLink: 'github react url',
             liveProjectLink: 'live react url',
+            show: true,
         },
 
         {
@@ -33,6 +34,7 @@ function portfolioItemsList() {
             icon: [<ScssIcon key={'scss'} />],
             githubProjectLink: 'github scss url',
             liveProjectLink: '',
+            show: true,
         },
         {
             id: 'item3',
@@ -43,6 +45,7 @@ function portfolioItemsList() {
             icon: [<ScssIcon key={'scss'} />],
             githubProjectLink: 'github scss url',
             liveProjectLink: 'live scss url',
+            show: true,
         },
         {
             id: 'item4',
@@ -53,6 +56,7 @@ function portfolioItemsList() {
             icon: [<ReactIcon key={'react'} />],
             githubProjectLink: 'github react & html url',
             liveProjectLink: 'live react & html url',
+            show: true,
         },
         {
             id: 'item5',
@@ -62,6 +66,7 @@ function portfolioItemsList() {
             icon: [<VueIcon key={'vue'} />],
             githubProjectLink: 'github vue url',
             liveProjectLink: 'live vue url',
+            show: true,
         },
         {
             id: 'item6',
@@ -71,6 +76,7 @@ function portfolioItemsList() {
             icon: [<AngularIcon key={'angular'} />],
             githubProjectLink: 'github angular url',
             liveProjectLink: 'live angular url',
+            show: 'true',
         },
         {
             id: 'item7',
@@ -80,6 +86,7 @@ function portfolioItemsList() {
             icon: [<WordpressIcon key={'wordpress'} />],
             githubProjectLink: 'github wordpress url',
             liveProjectLink: 'live wordpress url',
+            show: true,
         },
         {
             id: 'item8',
@@ -89,6 +96,7 @@ function portfolioItemsList() {
             icon: [<JavaScriptIcon key={'javascript'} />],
             githubProjectLink: 'github js url',
             liveProjectLink: 'live js url',
+            show: true,
         },
         {
             id: 'item9',
@@ -98,6 +106,7 @@ function portfolioItemsList() {
             icon: [<TailwindIcon key={'tailwind'} />],
             githubProjectLink: 'github tailwind url',
             liveProjectLink: 'live tailwind url',
+            show: true,
         },
         // ,
         // {

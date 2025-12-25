@@ -22,7 +22,11 @@ function PortfolioPage() {
                     {portfolioItemsList.map(
                         (project, i) =>
                             portfolioitemTags.includes(...project.tags) && (
-                                <PortfolioItem key={i} projectKey={i}>
+                                <PortfolioItem
+                                    show={project.show}
+                                    key={i}
+                                    projectKey={i}
+                                >
                                     {/* item container within comp */}
                                     <PortfolioItem.ItemWrapper id={project.id}>
                                         <PortfolioItem.DivWrapper>

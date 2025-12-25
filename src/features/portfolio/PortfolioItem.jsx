@@ -1,6 +1,13 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, { createContext, useContext, useRef, useState } from 'react'
+import React, {
+    createContext,
+    // useCallback,
+    useContext,
+    // useEffect,
+    useRef,
+    useState,
+} from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
@@ -22,6 +29,7 @@ const itemPadding = 'px-[0.5rem]'
 function PortfolioItem({ children, projectKey }) {
     const [maximize, setMaximize] = useState(false)
     const curItem = useRef(null)
+    const [show, setShow] = useState(true)
 
     return (
         <PortfolioItemContext.Provider
@@ -30,6 +38,8 @@ function PortfolioItem({ children, projectKey }) {
                 setMaximize,
                 projectKey,
                 curItem,
+                show,
+                setShow,
             }}
         >
             {/* wrapper for all currently displayed items */}
@@ -53,14 +63,14 @@ function BgItemsWrapper({ maximize }) {
 
 // item container
 function ItemWrapper({ children, id }) {
-    const { maximize, curItem } = useContext(PortfolioItemContext)
+    const { maximize, curItem, show } = useContext(PortfolioItemContext)
     // console.log(curItem.current.id)
 
     return (
         <div
             id={id}
             ref={curItem}
-            className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-[0.09rem] border hover:brightness-110 ${maximize && 'absolute inset-0 mx-auto h-max w-[80%] md:w-[70%] lg:w-[50%]'}`}
+            className={`${show ? '' : 'hidden'} border-grey-04 text-grey-02 bg-black-01 flex rounded-[0.09rem] border hover:brightness-110 ${maximize ? 'absolute inset-0 mx-auto h-max w-[80%] md:w-[70%] lg:w-[50%]' : ''}`}
             // className={`border-grey-04 text-grey-02 bg-black-01 flex rounded-sm border hover:brightness-110 ${maximize && 'absolute inset-0 mx-auto h-max w-[min(200px_500px)]'}`}
         >
             {children}
@@ -119,15 +129,19 @@ function Title({ title }) {
 
 // minimize, restore/maximize and Close buttons within here
 function PortfolioCardButtons() {
-    const { maximize, setMaximize, curItem } = useContext(PortfolioItemContext)
+    const { maximize, setMaximize, show, setShow } =
+        useContext(PortfolioItemContext)
+    // const { maximize, setMaximize } = useContext(PortfolioItemContext)
 
     // handle click outside of portfolio item in specific areas i.e. not the filter items section
     const handleMaximize = useOutsideClick(maximize, setMaximize)
 
     // test
     const deleteItem = function () {
+        setShow(false)
         // console.log(e.target.parentNode)
-        console.log(curItem.current.id)
+        // console.log(curItem.current.id)
+        console.log(show)
     }
 
     return (
@@ -135,7 +149,9 @@ function PortfolioCardButtons() {
             portfolioItemStyles={true}
             maximize={maximize}
             handleMaximize={handleMaximize}
-            deleteItem={deleteItem}
+            // onClick={deleteTest}
+            onClick={deleteItem}
+            // deleteItemId={curItem}
             // onClick={[handleMaximize, testLog]}
             id={'portfolio-card-buttons'}
         />

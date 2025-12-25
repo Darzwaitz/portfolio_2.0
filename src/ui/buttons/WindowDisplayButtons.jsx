@@ -3,16 +3,21 @@ import SvgSectionWrapper from '@/assets/imgs/svg/components/SvgSectionWrapper'
 import MinimizeButton from './MinimizeButton'
 import MaximizeRestoreButton from './MaximizeRestoreButton'
 import CloseButton from './CloseButton'
+// import useDeleteItem from '../../hooks/useDeleteItem'
 
 function WindowDisplayButtons({
     headerWindowStyles,
     portfolioItemStyles,
     maximize,
     handleMaximize,
-    deleteItem,
-    // onClick,
+    // deleteItem,
+    // deleteItemId,
+    onClick,
     id,
 }) {
+    // const deleteItem = useDeleteItem(deleteItemId)
+    // console.log(deleteItemId)
+
     let customStyles = ''
     if (headerWindowStyles) customStyles = 'hidden h-full pl-1 lg:flex'
     if (portfolioItemStyles) customStyles = 'col-span-2 ml-auto flex gap-0.5'
@@ -35,7 +40,7 @@ function WindowDisplayButtons({
                 headerStyles={headerWindowStyles}
                 portfolioStyles={portfolioItemStyles}
                 showTooltip={true}
-                onClick={deleteItem}
+                onClick={onClick}
             />
         </SvgSectionWrapper>
     )
