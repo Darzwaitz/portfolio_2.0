@@ -14,8 +14,8 @@ function GoLiveButton({
     iconHeight,
 }) {
     let customStyles = 'hover:bg-grey-04b hover:text-grey-02 w-fit p-1 mx-1'
-    let arrowDirection = 'down'
-    let tooltipStyles = '-left-[0.8rem]'
+    let arrowDirection = 'down-social-icon'
+    let tooltipStyles = 'left-[3.5rem]'
 
     return (
         <Link to={liveProjectLink}>

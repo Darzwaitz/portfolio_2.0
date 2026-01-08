@@ -26,7 +26,8 @@ function Header() {
             <WindowDisplayButtons
                 headerWindowStyles={true}
                 maximize={maximize}
-                onClick={() => setMaximize(!maximize)}
+                // onClick={() => setMaximize(!maximize)}
+                onClick={setMaximize}
                 id={'main-page-display-buttons'}
             />
         </header>

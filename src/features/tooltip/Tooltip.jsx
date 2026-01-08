@@ -31,7 +31,9 @@ function Tooltip({
     // negative left attribute only changed here
     if (arrowDirection === 'down-social-icon')
         return (
-            <pre className="tooltip before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b bottom-[2rem] left-[1.5rem] ml-0 px-2.5 pt-2 pb-[0.688rem] group-hover:delay-500 before:absolute before:top-[153%] before:right-[75%] before:-mt-4 before:border-[0.438rem] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[119%] after:right-[75%] after:mt-[-0.438rem] after:border-[0.438rem] after:border-r-transparent after:border-b-transparent after:border-l-transparent">
+            <pre
+                className={`tooltip ${tooltipStyles} before:solid after:solid before:border-t-grey-04b after:border-t-black-02b before:text-black-02b after:text-black-02b bottom-[2rem] left-[1.5rem] ml-0 px-2.5 pt-2 pb-[0.688rem] group-hover:delay-500 before:absolute before:top-[153%] before:right-[75%] before:-mt-4 before:border-[0.438rem] before:border-r-transparent before:border-b-transparent before:border-l-transparent after:absolute after:top-[119%] after:right-[75%] after:mt-[-0.438rem] after:border-[0.438rem] after:border-r-transparent after:border-b-transparent after:border-l-transparent`}
+            >
                 <div>{msg}</div>
             </pre>
         )
