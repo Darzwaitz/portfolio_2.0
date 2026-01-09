@@ -8,7 +8,9 @@ import { useState } from 'react'
 
 function Header() {
     // initially display 'restore' button
-    const [maximize, setMaximize] = useState(true)
+    const [maximize, setMaximize] = useState(false)
+    // update later to effect the UI when state changed
+    const handleMaximizeHeader = () => setMaximize(!maximize)
 
     return (
         <header className="border-grey-03 bg-black-01 text-grey-01 sticky top-0 z-100 flex items-center gap-2 border-b bg-neutral-300 px-3 lg:pr-0">
@@ -27,7 +29,8 @@ function Header() {
                 headerWindowStyles={true}
                 maximize={maximize}
                 // onClick={() => setMaximize(!maximize)}
-                onClick={setMaximize}
+                handleMaximizeHeader={handleMaximizeHeader}
+                // onClick={setMaximize}
                 id={'main-page-display-buttons'}
             />
         </header>

@@ -6,6 +6,7 @@ function MaximizeRestoreButton({
     onClick,
     headerStyles,
     portfolioStyles,
+    handleMaximizeHeader,
 }) {
     let buttonStyles = ''
     let iconStyles = ''
@@ -15,6 +16,8 @@ function MaximizeRestoreButton({
         iconStyles = 'm-auto h-6 p-1'
         commonStyles = 'flex w-[2.9rem] h-full self-center'
         buttonStyles = 'hover:text-grey-02b hover:bg-grey-08'
+        onClick = handleMaximizeHeader
+        maximize = !maximize
     }
     if (portfolioStyles) {
         iconStyles = 'm-auto h-6 p-1'

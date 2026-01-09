@@ -10,6 +10,7 @@ function WindowDisplayButtons({
     portfolioItemStyles,
     maximize,
     handleMaximize,
+    handleMaximizeHeader,
     // deleteItem,
     // deleteItemId,
     onClick,
@@ -32,6 +33,7 @@ function WindowDisplayButtons({
                 headerStyles={headerWindowStyles}
                 portfolioStyles={portfolioItemStyles}
                 maximize={maximize}
+                handleMaximizeHeader={handleMaximizeHeader}
                 onClick={handleMaximize}
             />
             {/* 2 different sets of styles conditional for CloseButton based 
