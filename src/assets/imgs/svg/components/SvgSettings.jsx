@@ -11,7 +11,7 @@ export function SvgSettingsMedium() {
     return {
         defaultColor: 'currentColor',
         hover: 'hover:bg-grey-08 ',
-        svgStylesMedium: 'w-5',
+        svgStylesMedium: 'w-6',
         iconSize: 'medium',
         // for ToolTtip comp
         arrowDirection: 'up',
