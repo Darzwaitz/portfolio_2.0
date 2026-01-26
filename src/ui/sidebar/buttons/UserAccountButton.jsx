@@ -8,7 +8,7 @@ import UserAccountIcon from '../assets/imgs/svg/components/UserAccountIcon'
 import Tooltip from '@/features/tooltip/Tooltip'
 
 import { usePanels } from '@/contexts/PanelsContext'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 function UserAccountButton() {
     const { handleCurPageName } = useCurPage()

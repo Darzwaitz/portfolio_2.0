@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router'
 import ArrowIcon from '../sidebar/assets/imgs/svg/components/ArrowIcon'
 
 function NavItems({

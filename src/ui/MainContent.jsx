@@ -1,5 +1,5 @@
 // import { Outlet, useOutletContext } from 'react-router-dom'
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router'
 import Terminal from '../features/terminal/Terminal'
 import { usePanels } from '../contexts/PanelsContext'
 

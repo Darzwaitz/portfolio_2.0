@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useFilter } from '../../contexts/FilteritemsContext'
 import { useCurPage } from '@/contexts/CurPageContext'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router'
 
 import ArrowIcon from './assets/imgs/svg/components/ArrowIcon'
 import PortfolioFilteritems from '@/features/portfolio/PortfolioFilteritems'

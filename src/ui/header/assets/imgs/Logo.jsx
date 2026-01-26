@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 // search bar / current page notification
 import { useCurPage } from '@/contexts/CurPageContext'
 
