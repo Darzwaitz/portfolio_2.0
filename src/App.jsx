@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import PortfolioPage from './pages/PortfolioPage'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <Contact />,
+            },
+            {
+                path: '*',
+                element: <NotFound />,
             },
         ],
     },
