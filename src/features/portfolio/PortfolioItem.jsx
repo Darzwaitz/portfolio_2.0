@@ -1,23 +1,13 @@
 // import placeholder from '@/assets/imgs/image-placeholder-square.png'
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
-import React, {
-    createContext,
-    // useCallback,
-    useContext,
-    // useEffect,
-    useRef,
-    useState,
-} from 'react'
+import React, { createContext, useContext, useRef, useState } from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
+import useDeletePortfolioItem from './hooks/useDeletePortfolioItem'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
 
 import GithubButton from '@/ui/buttons/GitHubButton'
 import GoLiveButton from './buttons/GoLiveButton'
-// import SvgIconwrapper from '../../assets/imgs/svg/components/SvgIconwrapper'
-// import { Link } from 'react-router-dom'
-// import Tooltip from '@/features/tooltip/Tooltip'
-// import GithubIcon from '../../ui/buttons/assets/imgs/svgs/components/GithubIcon'
 
 import { SvgSettingsSmall } from '../../assets/imgs/svg/components/SvgSettings'
 const { defaultColor, iconSize, hover } = SvgSettingsSmall()
@@ -64,7 +54,6 @@ function BgItemsWrapper({ maximize }) {
 // item container
 function ItemWrapper({ children, id }) {
     const { maximize, curItem, show } = useContext(PortfolioItemContext)
-    // console.log(curItem.current.id)
 
     return (
         <div
@@ -119,40 +108,41 @@ function TagList({ icon }) {
 
 function Title({ title }) {
     return (
-        <h1
+        <h2
             className={`${itemPadding} col-span-2 py-1.5 leading-none text-wrap`}
         >
             {title}
-        </h1>
+        </h2>
     )
 }
 
 // minimize, restore/maximize and Close buttons within here
 function PortfolioCardButtons() {
-    const { maximize, setMaximize, show, setShow } =
-        useContext(PortfolioItemContext)
-    // const { maximize, setMaximize } = useContext(PortfolioItemContext)
+    // const { maximize, setMaximize, show, setShow } = useContext(PortfolioItemContext)
+    const { maximize, setMaximize } = useContext(PortfolioItemContext)
 
     // handle click outside of portfolio item in specific areas i.e. not the filter items section
     const handleMaximize = useOutsideClick(maximize, setMaximize)
 
-    // test
+    const curFilteredItemList = useDeletePortfolioItem()
+
     const deleteItem = function () {
-        setShow(false)
-        // console.log(e.target.parentNode)
-        // console.log(curItem.current.id)
-        console.log(show)
+        curFilteredItemList()
     }
+    // // test - this works for displaying non of an item - doesn't update item list state
+    // const deleteItem = function () {
+    //     setShow(false)
+    //     // console.log(e.target.parentNode)
+    //     // console.log(curItem.current.id)
+    //     console.log(show)
+    // }
 
     return (
         <WindowDisplayButtons
             portfolioItemStyles={true}
             maximize={maximize}
             handleMaximize={handleMaximize}
-            // onClick={deleteTest}
             onClick={deleteItem}
-            // deleteItemId={curItem}
-            // onClick={[handleMaximize, testLog]}
             id={'portfolio-card-buttons'}
         />
     )

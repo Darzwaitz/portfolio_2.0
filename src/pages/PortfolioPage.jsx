@@ -1,10 +1,9 @@
-import portfolioItemsList from '../data/portfolioItemsList'
 import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
-import usePortfolioitemTags from '../hooks/usePortfolioitemTags'
+import useCurPortfolioList from '../features/portfolio/hooks/useCurPortfolioList'
 
 function PortfolioPage() {
-    const portfolioitemTags = usePortfolioitemTags()
+    const filteredItemList = useCurPortfolioList()
 
     return (
         <>
@@ -19,51 +18,46 @@ function PortfolioPage() {
                     id="itemsdisplay"
                     className="relative grid grid-cols-(--item-grid-cols) gap-2"
                 >
-                    {portfolioItemsList.map(
-                        (project, i) =>
-                            portfolioitemTags.includes(...project.tags) && (
-                                <PortfolioItem
-                                    show={project.show}
-                                    key={i}
-                                    projectKey={i}
-                                >
-                                    {/* item container within comp */}
-                                    <PortfolioItem.ItemWrapper id={project.id}>
-                                        <PortfolioItem.DivWrapper>
-                                            <PortfolioItem.TagList
-                                                // tags={project.tags}
-                                                icon={project.icon}
-                                            />
-                                        </PortfolioItem.DivWrapper>
+                    {filteredItemList.map((project, i) => (
+                        <PortfolioItem
+                            show={project.show}
+                            key={i}
+                            projectKey={i}
+                        >
+                            {/* item container within comp */}
+                            <PortfolioItem.ItemWrapper id={project.id}>
+                                <PortfolioItem.DivWrapper>
+                                    <PortfolioItem.TagList
+                                        // tags={project.tags}
+                                        icon={project.icon}
+                                    />
+                                </PortfolioItem.DivWrapper>
 
-                                        <PortfolioItem.GridWrapper>
-                                            {/* maximize restore etc. buttonz */}
-                                            <PortfolioItem.PortfolioCardButtons />
-                                            <PortfolioItem.Img />
-                                            <PortfolioItem.Title
-                                                title={project.title}
-                                            />
+                                <PortfolioItem.GridWrapper>
+                                    {/* maximize restore etc. buttonz */}
+                                    <PortfolioItem.PortfolioCardButtons />
+                                    <PortfolioItem.Img />
+                                    <PortfolioItem.Title
+                                        title={project.title}
+                                    />
 
-                                            {/* show on condition in portfolioitem */}
-                                            <PortfolioItem.Description
-                                                description={
-                                                    project.description
-                                                }
-                                            />
-                                            <PortfolioItem.ItemFooter
-                                                githubProjectLink={
-                                                    project.githubProjectLink
-                                                }
-                                                liveProjectLink={
-                                                    project.liveProjectLink
-                                                }
-                                            />
-                                            {/* <PortfolioItem.PaddingBottom /> */}
-                                        </PortfolioItem.GridWrapper>
-                                    </PortfolioItem.ItemWrapper>
-                                </PortfolioItem>
-                            )
-                    )}
+                                    {/* show on condition in portfolioitem */}
+                                    <PortfolioItem.Description
+                                        description={project.description}
+                                    />
+                                    <PortfolioItem.ItemFooter
+                                        githubProjectLink={
+                                            project.githubProjectLink
+                                        }
+                                        liveProjectLink={
+                                            project.liveProjectLink
+                                        }
+                                    />
+                                    {/* <PortfolioItem.PaddingBottom /> */}
+                                </PortfolioItem.GridWrapper>
+                            </PortfolioItem.ItemWrapper>
+                        </PortfolioItem>
+                    ))}
                 </div>
             </div>
         </>
