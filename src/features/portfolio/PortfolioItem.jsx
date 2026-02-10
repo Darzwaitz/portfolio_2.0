@@ -2,6 +2,7 @@
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useRef, useState } from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
+import useCurPortfolioList from './hooks/useCurPortfolioList'
 import useDeletePortfolioItem from './hooks/useDeletePortfolioItem'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
@@ -20,6 +21,8 @@ function PortfolioItem({ children, projectKey }) {
     const [maximize, setMaximize] = useState(false)
     const curItem = useRef(null)
     const [show, setShow] = useState(true)
+
+    console.log(curItem.current)
 
     return (
         <PortfolioItemContext.Provider
@@ -119,16 +122,32 @@ function Title({ title }) {
 // minimize, restore/maximize and Close buttons within here
 function PortfolioCardButtons() {
     // const { maximize, setMaximize, show, setShow } = useContext(PortfolioItemContext)
-    const { maximize, setMaximize } = useContext(PortfolioItemContext)
+    const { maximize, setMaximize, curItem } = useContext(PortfolioItemContext)
 
     // handle click outside of portfolio item in specific areas i.e. not the filter items section
     const handleMaximize = useOutsideClick(maximize, setMaximize)
 
-    const curFilteredItemList = useDeletePortfolioItem()
+    // const curFilteredItemList = useDeletePortfolioItem()
+    const deleteId = curItem.current?.id
+    const curDeleteItem = useDeletePortfolioItem(deleteId)
+    const curFilteredItemList = useCurPortfolioList()
+    console.log(curFilteredItemList)
 
-    const deleteItem = function () {
-        curFilteredItemList()
-    }
+    // const deleteItem = function () {
+    //     // console.log('ok')
+
+    //     curFilteredItemList(deleteId)
+    // }
+    // const deleteItemB = function () {
+    //     console.log(deleteId)
+
+    //     curDeleteItem
+
+    //     // console.log(curFilteredItemList)
+
+    //     // console.log(deleteId)
+    //     // return deleteId
+    // }
     // // test - this works for displaying non of an item - doesn't update item list state
     // const deleteItem = function () {
     //     setShow(false)
@@ -142,7 +161,10 @@ function PortfolioCardButtons() {
             portfolioItemStyles={true}
             maximize={maximize}
             handleMaximize={handleMaximize}
-            onClick={deleteItem}
+            // ref={curItem.current.id}
+            // onClick={deleteItemB}
+            onClick={() => curDeleteItem}
+            // onClick={() => curDeleteItem, () => curFilteredItemList}
             id={'portfolio-card-buttons'}
         />
     )

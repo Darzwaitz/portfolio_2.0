@@ -1,7 +1,10 @@
 import useCurPortfolioList from './useCurPortfolioList'
 
-export default function useDeletePortfolioItem() {
+export default function useDeletePortfolioItem(deleteId) {
     const curFilteredItemsList = useCurPortfolioList()
+    // console.log('this ' + curFilteredItemsList)
+
+    // const curItemsListRaw = []
 
     const curEditedItemsList = []
 
@@ -12,14 +15,9 @@ export default function useDeletePortfolioItem() {
         curEditedItemsList.push(project)
         // console.log(project.id)
     })
+    console.log(curEditedItemsList)
 
-    // curItemsList.map((item) => item.id)
-    // intruction && curItemsList.map((item) => console.log(item.id))
-    // console.log(curEditedItemsList)
-
-    // return curEditedItemsList
-    // return
-
-    // console.log('cld')
-    return () => console.log('cld')
+    // return () => console.log(curEditedItemsList)
+    // return () => console.log(curFilteredItemsList)
+    return () => console.log(deleteId)
 }
