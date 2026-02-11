@@ -43,6 +43,7 @@
     --pink-01: #b24db2;
     --red-01: #f04e1f;
     --yellow-01: #d8d610;
+    --brown-01: #e5af99;
 }
 
 /* light mode colourz */
@@ -131,6 +132,7 @@
     --color-pink-01: var(--pink-01);
     --color-red-01: var(--red-01);
     --color-yellow-01: var(--yellow-01);
+    --color-brown-01: var(--brown-01);
 
     /* // Text colors
     "textBlockQuote.background": "#7f7f7f1a",

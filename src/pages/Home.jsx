@@ -1,5 +1,7 @@
+import PageHeading from './PageHeading'
+
 function Home() {
-    return <div>Home Page</div>
+    return <PageHeading title={'Home Page'} />
 }
 
 export default Home

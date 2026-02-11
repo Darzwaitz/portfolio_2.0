@@ -1,13 +1,14 @@
 import PortfolioItem from '../features/portfolio/PortfolioItem'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
 import useCurPortfolioList from '../features/portfolio/hooks/useCurPortfolioList'
+import PageHeading from './PageHeading'
 
 function PortfolioPage() {
     const filteredItemList = useCurPortfolioList()
 
     return (
         <>
-            <h1>Portfolio Page</h1>
+            <PageHeading title={'Portfolio Page'} />
 
             {/* choose filter items section */}
             <PortfolioFilteritems />

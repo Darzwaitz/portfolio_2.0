@@ -14,7 +14,7 @@ export default function MainContent() {
         <main
             className={`bg-black-01 text-grey-01 grid w-full ${togglePanels.toggleTerminal ? 'grid-rows-[1fr]' : 'grid-rows-[1fr]_auto'}`}
         >
-            <div
+            <section
                 id="outlet"
                 // hide scrollbar
                 style={{ scrollbarWidth: 'none' }}
@@ -22,7 +22,7 @@ export default function MainContent() {
             >
                 {/* <Outlet context={{ testFunc }} /> */}
                 <Outlet />
-            </div>
+            </section>
             <Terminal />
         </main>
     )

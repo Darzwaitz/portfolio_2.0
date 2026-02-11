@@ -1,5 +1,7 @@
+import PageHeading from './PageHeading'
+
 function NotFound() {
-    return <div>Page Not Found</div>
+    return <PageHeading title={'Page Not Found'} />
 }
 
 export default NotFound

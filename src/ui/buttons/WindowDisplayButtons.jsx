@@ -20,8 +20,10 @@ function WindowDisplayButtons({
     // console.log(deleteItemId)
 
     let customStyles = ''
-    if (headerWindowStyles) customStyles = 'hidden h-full pl-1 lg:flex'
-    if (portfolioItemStyles) customStyles = 'col-span-2 ml-auto flex gap-0.5'
+    if (headerWindowStyles)
+        customStyles = 'hidden h-full pl-1 lg:flex cursor-pointer'
+    if (portfolioItemStyles)
+        customStyles = 'col-span-2 ml-auto flex gap-0.5 cursor-pointer'
 
     return (
         <SvgSectionWrapper id={id} customStyles={customStyles}>
