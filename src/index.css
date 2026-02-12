@@ -40,10 +40,13 @@
     --grey-08: #2c2c2c;
     --grey-09: #c3c3c3ed;
     --green-01: #0dac6e;
-    --pink-01: #b24db2;
+    /* --pink-01: #b24db2; */
+    --pink-01: #c586c0;
     --red-01: #f04e1f;
     --yellow-01: #d8d610;
-    --brown-01: #e5af99;
+    /* --brown-01: #e5af99; */
+    /* --brown-01: #c48a59; */
+    --brown-01: #d7ba7d;
 }
 
 /* light mode colourz */
@@ -79,7 +82,8 @@
     /* --grey-04: red; */
 
     /* tooltip outline */
-    --grey-04b: #c0c0c0;
+    /* --grey-04b: #c0c0c0; */
+    --grey-04b: #cccccc;
     --grey-04c: #e0dac9;
     --grey-05: green;
     --grey-06: #7f7d79;
@@ -90,6 +94,7 @@
     --grey-08: #86868633;
     /* tooltip text */
     --grey-09: rgba(58, 48, 18, 0.665);
+    /* --grey-10: #CCCCCC; */
 }
 
 @theme {
@@ -144,6 +149,7 @@
 
     /* fontz */
     --font-sans: 'CascadiaMono';
+    --font-code: 'Consolas';
 
     /* custom sizes */
     --item-grid-cols: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
@@ -193,4 +199,9 @@
 
         src: local('CascadiaMono'), url('./assets/fonts/CascadiaMono.ttf');
     }
+    /* section #outlet {
+        font-family: 'Consolas', system-ui, sans-serif;
+
+        src: local('Consolas'), url('./assets/fonts/CONSOLAB.TTF');
+    } */
 }

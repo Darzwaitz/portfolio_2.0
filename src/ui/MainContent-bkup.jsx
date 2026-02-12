@@ -2,7 +2,6 @@
 import { Outlet } from 'react-router'
 import Terminal from '../features/terminal/Terminal'
 import { usePanels } from '../contexts/PanelsContext'
-import AsideNumbers from './AsideNumbers'
 
 export default function MainContent() {
     const { togglePanels } = usePanels()
@@ -10,7 +9,6 @@ export default function MainContent() {
     // const testFunc = function () {
     //     console.log('testFunc CALLED')
     // }
-    const sidetrackNumbers = 30
 
     return (
         <main
@@ -20,18 +18,28 @@ export default function MainContent() {
                 id="outlet"
                 // hide scrollbar
                 style={{ scrollbarWidth: 'none' }}
-                // className="bg-black-02 grid grid-cols-2 grid-cols-[] overflow-auto"
-                className="bg-black-02 flex overflow-auto"
+                className="bg-black-02 overflow-auto p-4 sm:p-5 md:p-6 lg:p-8"
             >
-                {/* sidebar numbers */}
-                <AsideNumbers sidetrackNumbers={sidetrackNumbers} />
                 {/* <Outlet context={{ testFunc }} /> */}
-                {/* <div className="w-fit p-4"> */}
-                <div className="w-fit">
-                    <Outlet />
-                </div>
+                <Outlet />
             </section>
             <Terminal />
         </main>
     )
 }
+
+// export function useTestFunc() {
+//     return useOutletContext()
+// }
+
+//   <div className="font-code bg-grey-04c absolute inset-0 h-fit w-12 overflow-hidden">
+//       {/* .map(x => x++) */}
+//       {[...Array(sidetrackNumbers).keys()].map((number, i) => (
+//           <div
+//               className="text-grey-01 my-auto flex flex-col items-center"
+//               key={i}
+//           >
+//               <span>{number}</span>
+//           </div>
+//       ))}
+//   </div>

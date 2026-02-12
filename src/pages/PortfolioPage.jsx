@@ -7,7 +7,7 @@ function PortfolioPage() {
     const filteredItemList = useCurPortfolioList()
 
     return (
-        <>
+        <div>
             <PageHeading title={'Portfolio Page'} />
 
             {/* choose filter items section */}
@@ -61,7 +61,7 @@ function PortfolioPage() {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
