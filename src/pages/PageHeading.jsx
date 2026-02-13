@@ -5,7 +5,7 @@ function PageHeading({ title }) {
     // const splitTitle = title.split(' ')
 
     return (
-        <h1 className="font-code mb-4 cursor-default">
+        <h1 className="font-code mb-6 cursor-default">
             <span className="text-pink-01">{'import'}&nbsp;</span>
             <span className="text-blue-03">{title.split(' ').join('')}</span>
             <span className="text-pink-01">&nbsp;{'from'}</span>

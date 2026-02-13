@@ -21,14 +21,20 @@ export default function MainContent() {
                 // hide scrollbar
                 style={{ scrollbarWidth: 'none' }}
                 // className="bg-black-02 grid grid-cols-2 grid-cols-[] overflow-auto"
-                className="bg-black-02 flex overflow-auto"
+                className="bg-black-02 flex flex-col overflow-auto"
             >
-                {/* sidebar numbers */}
-                <AsideNumbers sidetrackNumbers={sidetrackNumbers} />
-                {/* <Outlet context={{ testFunc }} /> */}
-                {/* <div className="w-fit p-4"> */}
-                <div className="w-fit">
-                    <Outlet />
+                {/* breadcrumb nav to go here */}
+                {/* <div>
+                    <span className="pl-1"></span>
+                </div> */}
+                <div className="flex">
+                    {/* sidebar numbers */}
+                    <AsideNumbers sidetrackNumbers={sidetrackNumbers} />
+                    {/* / sidebar numbers */}
+
+                    <div className="w-fit pt-6">
+                        <Outlet />
+                    </div>
                 </div>
             </section>
             <Terminal />

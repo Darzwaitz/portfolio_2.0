@@ -1,38 +1,62 @@
-// import React from 'react'
-
 import PageHeading from '../PageHeading'
+import TagColor from '../../ui/codecolours/TagColor'
+import ProfileBlurb from '../../../private/ProfileBlurb'
+const profileInfo = ProfileBlurb()
 
 function About() {
     return (
-        // <section className="bg-green-01 flex">
-        // <div>
         <article className="flex w-fit flex-col">
             <PageHeading title={'About Page'} />
-            <div className="font-code mx-auto flex w-[90%]">
+            <div className="font-code flex w-[90%]">
                 <div className="cursor-default">
-                    <h2>
-                        <span> &lt;</span>
-                        <span className="text-blue-02">profile</span>
-                        <span>&gt;</span>
+                    <h2 className="w-max">
+                        <TagColor.SpanGrey01 textValue={'<'} />
+                        <TagColor.SpanBlue02 textValue={'profile '} />
+                        <TagColor.SpanBlue03 textValue={'name='} />
+                        <TagColor.SpanBrown01 textValue={profileInfo.name} />
+                        <TagColor.SpanGrey01 textValue={'>'} />
                     </h2>
-                    <p className="text-brown-01 pl-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Beatae, expedita at rerum pariatur quae libero qui
-                        perspiciatis eaque reprehenderit. Quia quidem dolorum
-                        laboriosam quasi, numquam expedita, adipisci eligendi
-                        soluta dolore tempora quod, minima dolorem esse magnam
-                        mollitia eum dolor doloremque id! Unde culpa distinctio,
-                        nulla obcaecati eaque illo voluptatem deleniti.
-                    </p>
-                    <span> &lt;</span>
-                    <span className="text-blue-02">/profile</span>
-                    <span>&gt;</span>
+
+                    <div className="border-l pl-6">
+                        <h3>
+                            <TagColor.SpanGrey01 textValue={'<'} />
+                            <TagColor.SpanBlue02 textValue={'description'} />
+                            <TagColor.SpanGrey01 textValue={'>'} />
+                        </h3>
+                        <TagColor.ParagraphBrown01>
+                            {profileInfo.description}
+                        </TagColor.ParagraphBrown01>
+
+                        <TagColor.SpanGrey01 textValue={'<'} />
+                        <TagColor.SpanBlue02 textValue={'/description'} />
+
+                        <TagColor.SpanGrey01 textValue={'>'} />
+                        <br />
+                    </div>
+
+                    {/* Profile img */}
+                    <div className="border-grey-01 border-l pl-6">
+                        <TagColor.SpanGrey01 textValue={'<'} />
+                        <TagColor.SpanBlue02 textValue={'profile-img'} />
+                        <TagColor.SpanGrey01 textValue={'>'} />
+                        <div className="border-grey-01 border-l pt-1 pl-6">
+                            <img
+                                // src="/imgs/portfolio-image-1.png"
+                                src="/imgs/portfolio_img-colour-1.png"
+                                alt="profile-picture"
+                                className="ml-1 h-23 w-23 cursor-zoom-in rounded border-3 saturate-50 hover:h-53 hover:w-53"
+                            />
+                        </div>
+                        <TagColor.SpanGrey01 textValue={'<'} />
+                        <TagColor.SpanBlue02 textValue={'/profile-img'} />
+                        <TagColor.SpanGrey01 textValue={'>'} />
+                    </div>
+                    {/* / Profile img */}
+
+                    <TagColor.SpanGrey01 textValue={'<'} />
+                    <TagColor.SpanBlue02 textValue={'/profile'} />
+                    <TagColor.SpanGrey01 textValue={'>'} />
                 </div>
-                <img
-                    src="/imgs/portfolio-image-1.png"
-                    alt="profile-picture"
-                    className="h-45 w-45 rounded border"
-                />
             </div>
         </article>
     )
