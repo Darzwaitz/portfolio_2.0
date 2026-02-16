@@ -15,7 +15,7 @@ export default function useDeletePortfolioItem(deleteId) {
         curEditedItemsList.push(project)
         // console.log(project.id)
     })
-    console.log(curEditedItemsList)
+    // console.log(curEditedItemsList)
 
     // return () => console.log(curEditedItemsList)
     // return () => console.log(curFilteredItemsList)

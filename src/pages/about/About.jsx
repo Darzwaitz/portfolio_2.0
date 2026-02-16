@@ -1,6 +1,7 @@
 import PageHeading from '../PageHeading'
 import TagColor from '../../ui/codecolours/TagColor'
 import ProfileBlurb from '../../../private/ProfileBlurb'
+
 const profileInfo = ProfileBlurb()
 
 function About() {
@@ -16,24 +17,6 @@ function About() {
                         <TagColor.SpanBrown01 textValue={profileInfo.name} />
                         <TagColor.SpanGrey01 textValue={'>'} />
                     </h2>
-
-                    <div className="border-l pl-6">
-                        <h3>
-                            <TagColor.SpanGrey01 textValue={'<'} />
-                            <TagColor.SpanBlue02 textValue={'description'} />
-                            <TagColor.SpanGrey01 textValue={'>'} />
-                        </h3>
-                        <TagColor.ParagraphBrown01>
-                            {profileInfo.description}
-                        </TagColor.ParagraphBrown01>
-
-                        <TagColor.SpanGrey01 textValue={'<'} />
-                        <TagColor.SpanBlue02 textValue={'/description'} />
-
-                        <TagColor.SpanGrey01 textValue={'>'} />
-                        <br />
-                    </div>
-
                     {/* Profile img */}
                     <div className="border-grey-01 border-l pl-6">
                         <TagColor.SpanGrey01 textValue={'<'} />
@@ -52,6 +35,25 @@ function About() {
                         <TagColor.SpanGrey01 textValue={'>'} />
                     </div>
                     {/* / Profile img */}
+
+                    {/* Description */}
+                    <div className="border-l pl-6">
+                        <h3>
+                            <TagColor.SpanGrey01 textValue={'<'} />
+                            <TagColor.SpanBlue02 textValue={'description'} />
+                            <TagColor.SpanGrey01 textValue={'>'} />
+                        </h3>
+                        <TagColor.ParagraphBrown01>
+                            {profileInfo.description}
+                        </TagColor.ParagraphBrown01>
+
+                        <TagColor.SpanGrey01 textValue={'<'} />
+                        <TagColor.SpanBlue02 textValue={'/description'} />
+
+                        <TagColor.SpanGrey01 textValue={'>'} />
+                        <br />
+                    </div>
+                    {/* / Description */}
 
                     <TagColor.SpanGrey01 textValue={'<'} />
                     <TagColor.SpanBlue02 textValue={'/profile'} />

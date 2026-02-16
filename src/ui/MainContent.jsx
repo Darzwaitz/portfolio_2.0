@@ -1,5 +1,5 @@
 // import { Outlet, useOutletContext } from 'react-router-dom'
-import { Outlet } from 'react-router'
+import { Outlet, useLocation } from 'react-router'
 import Terminal from '../features/terminal/Terminal'
 import { usePanels } from '../contexts/PanelsContext'
 import AsideNumbers from './AsideNumbers'
@@ -10,7 +10,10 @@ export default function MainContent() {
     // const testFunc = function () {
     //     console.log('testFunc CALLED')
     // }
-    const sidetrackNumbers = 30
+    const sidetrackNumbers = 50
+    // get nav object
+    let urlLocation = useLocation().pathname
+    // console.log(urlLocation)
 
     return (
         <main
@@ -28,11 +31,15 @@ export default function MainContent() {
                     <span className="pl-1"></span>
                 </div> */}
                 <div className="flex">
-                    {/* sidebar numbers */}
-                    <AsideNumbers sidetrackNumbers={sidetrackNumbers} />
+                    {/* sidebar numbers  - don't show on Landing Page*/}
+                    {urlLocation === '/' ? (
+                        ''
+                    ) : (
+                        <AsideNumbers sidetrackNumbers={sidetrackNumbers} />
+                    )}
                     {/* / sidebar numbers */}
 
-                    <div className="w-fit pt-6">
+                    <div className="w-full pt-6 pr-10">
                         <Outlet />
                     </div>
                 </div>

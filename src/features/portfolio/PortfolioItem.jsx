@@ -2,7 +2,7 @@
 import placeholder from '@/assets/imgs/image-placeholder-landscape.png'
 import React, { createContext, useContext, useRef, useState } from 'react'
 import useOutsideClick from '@/hooks/useOutsideClick'
-import useCurPortfolioList from './hooks/useCurPortfolioList'
+// import useCurPortfolioList from './hooks/useCurPortfolioList'
 import useDeletePortfolioItem from './hooks/useDeletePortfolioItem'
 
 import WindowDisplayButtons from '@/ui/buttons/WindowDisplayButtons'
@@ -22,7 +22,7 @@ function PortfolioItem({ children, projectKey }) {
     const curItem = useRef(null)
     const [show, setShow] = useState(true)
 
-    console.log(curItem.current)
+    // console.log(curItem.current)
 
     return (
         <PortfolioItemContext.Provider
@@ -130,8 +130,8 @@ function PortfolioCardButtons() {
     // const curFilteredItemList = useDeletePortfolioItem()
     const deleteId = curItem.current?.id
     const curDeleteItem = useDeletePortfolioItem(deleteId)
-    const curFilteredItemList = useCurPortfolioList()
-    console.log(curFilteredItemList)
+    // const curFilteredItemList = useCurPortfolioList()
+    // console.log(curFilteredItemList)
 
     // const deleteItem = function () {
     //     // console.log('ok')
