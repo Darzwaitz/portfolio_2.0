@@ -7,6 +7,9 @@ import PortfolioPage from './pages/PortfolioPage'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 
+import PageTemplate from './pages/PageTemplate'
+import AboutPage from './pages/about/AboutPage'
+
 const router = createBrowserRouter([
     {
         element: <AppLayout />,
@@ -14,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <LandingPage />,
+            },
+            {
+                path: '/test',
+                element: <PageTemplate pageContent={<AboutPage />} />,
             },
             {
                 path: 'home',

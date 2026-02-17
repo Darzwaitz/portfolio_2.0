@@ -43,6 +43,7 @@
     /* --pink-01: #b24db2; */
     --pink-01: #c586c0;
     --red-01: #f04e1f;
+    --red-02: #6b1d07;
     --yellow-01: #d8d610;
     /* --brown-01: #e5af99; */
     /* --brown-01: #c48a59; */
@@ -136,6 +137,7 @@
     --color-green-01: var(--green-01);
     --color-pink-01: var(--pink-01);
     --color-red-01: var(--red-01);
+    --color-red-02: var(--red-02);
     --color-yellow-01: var(--yellow-01);
     --color-brown-01: var(--brown-01);
 

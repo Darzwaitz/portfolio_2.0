@@ -6,8 +6,13 @@ function TagColor({ children }) {
     return <SpanColoredContext.Provider>{children}</SpanColoredContext.Provider>
 }
 
-function SpanBlue02({ textValue }) {
-    return <span className="text-blue-02">{textValue}</span>
+function SpanBlue02({ textValue, children }) {
+    let output = textValue ? (
+        <span className="text-blue-02">{textValue}</span>
+    ) : (
+        <span className="text-blue-02">{children}</span>
+    )
+    return output
 }
 function SpanBlue03({ textValue }) {
     return <span className="text-blue-03">{textValue}</span>
