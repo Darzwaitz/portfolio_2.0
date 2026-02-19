@@ -1,53 +1,25 @@
-import PageHeading from '../PageHeading'
-import TagColor from '../../ui/codecolours/TagColor'
-import ProfileBlurb from '../../../private/ProfileBlurb'
+import ProfileBlurb from '../../../private/PageBlurbs'
 import DescriptionDiv from '../page-components/DescriptionDiv'
+import PageTemplate from '../PageTemplate'
+import ProfileDiv from '../page-components/ProfileDiv'
+import ProfileImg from '../page-components/ProfileImg'
+
+// import useUrlChange from '../../hooks/useUrlChange'
 
 const profileInfo = ProfileBlurb()
 
 function About() {
+    // useUrlChange()
+
     return (
-        <article className="flex w-fit flex-col">
-            <PageHeading title={'About Page'} />
-            <div className="font-code flex w-[90%]">
-                <div className="cursor-default">
-                    <h2 className="w-max">
-                        <TagColor.SpanGrey01 textValue={'<'} />
-                        <TagColor.SpanBlue02 textValue={'profile '} />
-                        <TagColor.SpanBlue03 textValue={'name='} />
-                        <TagColor.SpanBrown01 textValue={profileInfo.name} />
-                        <TagColor.SpanGrey01 textValue={'>'} />
-                    </h2>
-                    {/* Profile img */}
-                    <div className="border-grey-01 border-l pl-6">
-                        <TagColor.SpanGrey01 textValue={'<'} />
-                        {/* <TagColor.SpanBlue02 textValue={'profile-img'} /> */}
-                        <TagColor.SpanBlue02 textValue={'profile-img'} />
-                        <TagColor.SpanGrey01 textValue={'>'} />
-                        <div className="border-grey-01 border-l pt-1 pl-6">
-                            <img
-                                // src="/imgs/portfolio-image-1.png"
-                                src="/imgs/portfolio_img-colour-1.png"
-                                alt="profile-picture"
-                                className="ml-1 h-23 w-23 cursor-zoom-in rounded border-3 saturate-50 hover:h-53 hover:w-53"
-                            />
-                        </div>
-                        <TagColor.SpanGrey01 textValue={'<'} />
-                        <TagColor.SpanBlue02 textValue={'/profile-img'} />
-                        <TagColor.SpanGrey01 textValue={'>'} />
-                    </div>
-                    {/* / Profile img */}
-
-                    {/* Description */}
-                    <DescriptionDiv description={profileInfo.homeDescription} />
-                    {/* / Description */}
-
-                    <TagColor.SpanGrey01 textValue={'<'} />
-                    <TagColor.SpanBlue02 textValue={'/profile'} />
-                    <TagColor.SpanGrey01 textValue={'>'} />
-                </div>
-            </div>
-        </article>
+        <PageTemplate pageTitle={'About Page'} id={'profile'}>
+            <ProfileDiv profileInfo={profileInfo.name}>
+                <ProfileImg src={'/imgs/portfolio_img-colour-1.png'} />
+                <DescriptionDiv border={true}>
+                    {profileInfo.aboutDescription}
+                </DescriptionDiv>
+            </ProfileDiv>
+        </PageTemplate>
     )
 }
 

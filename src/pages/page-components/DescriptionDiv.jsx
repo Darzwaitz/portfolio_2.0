@@ -1,14 +1,17 @@
 import TagColor from '@/ui/codecolours/TagColor'
 
-function DescriptionDiv(description) {
+function DescriptionDiv({ border, children }) {
     return (
-        <div className="border-l pl-6">
+        <div
+            id="description"
+            className={`${border ? `${'border-l'}` + ' ' : ''}pl-6`}
+        >
             <h3>
                 <TagColor.SpanGrey01 textValue={'<'} />
                 <TagColor.SpanBlue02 textValue={'description'} />
                 <TagColor.SpanGrey01 textValue={'>'} />
             </h3>
-            <TagColor.ParagraphBrown01>{description}</TagColor.ParagraphBrown01>
+            <TagColor.ParagraphBrown01>{children}</TagColor.ParagraphBrown01>
 
             <TagColor.SpanGrey01 textValue={'<'} />
             <TagColor.SpanBlue02 textValue={'/description'} />
