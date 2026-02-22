@@ -2,7 +2,8 @@ import { usePanels } from '@/contexts/PanelsContext'
 
 function useGetDataAttr() {
     const { onTogglePanels } = usePanels()
-
+    console.log('useGettr called')
+    // console.trace()
     return function getChildSvgData(e) {
         // don't fire on section container
         if (e.target.id === 'panels-svg-wrapper') return

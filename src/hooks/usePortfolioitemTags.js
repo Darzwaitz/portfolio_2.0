@@ -9,7 +9,7 @@ export default function usePortfolioitemTags() {
             // item.checked === true ? checkStateTags.push(item.name) : ''
             item.checked && checkStateTags.push(item.name)
     )
-    // console.log('checkStateList RUN')
+    // console.log('checkStateList js RUN')
     // console.log(checkStateTags)
 
     return checkStateTags
