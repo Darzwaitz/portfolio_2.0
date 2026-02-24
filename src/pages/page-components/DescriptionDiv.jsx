@@ -1,4 +1,4 @@
-import TagColor from '@/ui/codecolours/TagColor'
+import TagColor from '@/ui/codecolours/TagColorContext'
 
 function DescriptionDiv({ border, children }) {
     return (

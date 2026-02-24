@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default function useToggleNav() {
     const [toggleNav, setToggleNav] = useState(false)
-    console.trace()
+    // console.trace()
 
     const onHandleToggleNav = () => {
         if (toggleNav === true) {

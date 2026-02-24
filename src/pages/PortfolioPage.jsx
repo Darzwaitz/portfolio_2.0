@@ -1,4 +1,4 @@
-import PortfolioItem from '../features/portfolio/PortfolioItem'
+import PortfolioItem from '../features/portfolio/PortfolioItemContext'
 import PortfolioFilteritems from '../features/portfolio/PortfolioFilteritems'
 import useCurPortfolioList from '../features/portfolio/hooks/useCurPortfolioList'
 import PageHeading from './PageHeading'
