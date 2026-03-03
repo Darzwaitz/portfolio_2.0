@@ -39,7 +39,7 @@ export default function MainContent() {
                     )}
                     {/* / sidebar numbers */}
 
-                    <div className="w-full pt-6 pr-10">
+                    <div className="w-full pt-6">
                         <Outlet />
                     </div>
                 </div>

@@ -4,7 +4,7 @@ function DescriptionDiv({ border, children }) {
     return (
         <div
             id="description"
-            className={`${border ? `${'border-l'}` + ' ' : ''}pl-6`}
+            className={`${border ? `${'border-l'}` + ' ' : ''}`}
         >
             <h3>
                 <TagColor.SpanGrey01 textValue={'<'} />

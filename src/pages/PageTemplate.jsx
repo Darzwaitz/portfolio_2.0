@@ -6,8 +6,8 @@ function PageTemplate({ pageTitle, id, children }) {
         <article className="mx-auto flex flex-col">
             <PageHeading title={pageTitle} />
 
-            <div className="font-code flex w-[90%]">
-                <div id={id} className="cursor-default">
+            <div className="font-code mr-auto flex w-full">
+                <div id={id} className="w-full cursor-default">
                     {children}
                 </div>
             </div>
