@@ -15,9 +15,11 @@ function About() {
         <PageTemplate pageTitle={'About Page'} id={'profile'}>
             <ProfileDiv profileInfo={profileInfo.name}>
                 <ProfileImg src={'/imgs/portfolio_img-colour-1.png'} />
-                <DescriptionDiv border={true}>
-                    {profileInfo.aboutDescription}
-                </DescriptionDiv>
+                <DescriptionDiv
+                    id={'description'}
+                    border={true}
+                    textContent={profileInfo.aboutDescription}
+                />
             </ProfileDiv>
         </PageTemplate>
     )

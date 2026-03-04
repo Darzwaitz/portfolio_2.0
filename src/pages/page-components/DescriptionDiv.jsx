@@ -1,23 +1,25 @@
-import TagColor from '@/ui/codecolours/TagColorContext'
+// import TagColor from '@/ui/codecolours/TagColorContext'
+import TagBrackets from './TagBrackets'
 
-function DescriptionDiv({ border, children }) {
+function DescriptionDiv({ id, border, textContent }) {
     return (
-        <div
-            id="description"
-            className={`${border ? `${'border-l'}` + ' ' : ''}`}
-        >
-            <h3>
-                <TagColor.SpanGrey01 textValue={'<'} />
-                <TagColor.SpanBlue02 textValue={'description'} />
-                <TagColor.SpanGrey01 textValue={'>'} />
-            </h3>
-            <TagColor.ParagraphBrown01>{children}</TagColor.ParagraphBrown01>
-
-            <TagColor.SpanGrey01 textValue={'<'} />
-            <TagColor.SpanBlue02 textValue={'/description'} />
-
-            <TagColor.SpanGrey01 textValue={'>'} />
-            <br />
+        <div id={id} className={`${border ? `${'border-l'}` + ' ' : ''}pl-6`}>
+            {/* <TagBrackets htmlTags={'p'} tagValue={'descriptionzzzzz'}> */}
+            <TagBrackets
+                htmlTags={['h3', 'test']}
+                tagValue={'descriptionTest'}
+                textContent={textContent}
+            />
+            {/* <TagBrackets
+                htmlTags={['h3']}
+                tagValue={'descriptionzzzzz'}
+                textContent={textContent}
+            /> */}
+            {/* <TagBrackets htmlTags={['h3']} tagValue={'descriptionzzzzz'}> */}
+            {/* <TagColor.ParagraphBrown01> */}
+            {/* {textContent} */}
+            {/* </TagColor.ParagraphBrown01> */}
+            {/* </TagBrackets> */}
         </div>
     )
 }
