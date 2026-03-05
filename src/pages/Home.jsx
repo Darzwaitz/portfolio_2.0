@@ -8,7 +8,7 @@ const profileInfo = PageBlurbs()
 function Home() {
     return (
         <PageTemplate pageTitle={'Home Page'}>
-            <DescriptionDiv>{profileInfo.homeDescription}</DescriptionDiv>
+            <DescriptionDiv textContent={profileInfo.homeDescription} />
         </PageTemplate>
     )
 }

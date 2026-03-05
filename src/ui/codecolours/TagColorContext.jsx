@@ -21,10 +21,15 @@ function SpanBrown01({ textValue }) {
     return <span className="text-brown-01">{textValue}</span>
 }
 
-function ParagraphBrown01({ children }) {
-    return (
+function ParagraphBrown01({ textValue, children }) {
+    let output = textValue ? (
+        <p className="text-brown-01 border-grey-01 border-l pl-6">
+            {textValue}
+        </p>
+    ) : (
         <p className="text-brown-01 border-grey-01 border-l pl-6">{children}</p>
     )
+    return output
 }
 
 function SpanGrey01({ textValue }) {

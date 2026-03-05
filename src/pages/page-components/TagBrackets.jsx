@@ -1,14 +1,14 @@
-import TagColor from '../../ui/codecolours/TagColorContext'
+import TagColor from '@/ui/codecolours/TagColorContext'
 
-function TagBrackets({ htmlTags, tagValue, textContent, children }) {
+function TagBrackets({ htmlTags, tagValue, textContent }) {
+    // function OpenCloseTag() {
     function OpenCloseTag({ innerTag }) {
         return (
             <>
                 <TagColor.SpanGrey01 textValue={'<'} />
                 <TagColor.SpanBlue02 textValue={tagValue} />
                 <TagColor.SpanGrey01 textValue={'>'} />
-                {innerTag ? children : textContent}
-                {/* { textContent} */}
+                {innerTag ? innerTag : textContent}
                 <TagColor.SpanGrey01 textValue={'<'} />
                 <TagColor.SpanBlue02 textValue={`/${tagValue}`} />
                 <TagColor.SpanGrey01 textValue={'>'} />
@@ -32,17 +32,26 @@ function TagBrackets({ htmlTags, tagValue, textContent, children }) {
                     <OpenCloseTag />
                 </h3>
             )}
+            {htmlTags == 'h4' && (
+                <h4>
+                    <OpenCloseTag
+                        innerTag={
+                            <TagColor.SpanBlue03 textValue={textContent} />
+                        }
+                    />
+                </h4>
+            )}
             {htmlTags == 'span' && (
                 <span>
                     <OpenCloseTag />
                 </span>
             )}
-            {htmlTags.includes('h3') && htmlTags.includes('test') && (
-                <OpenCloseTag innerTag={true}>
-                    <TagColor.ParagraphBrown01 />
-                    {/* {textContent} */}
-                    {/* </TagColor.ParagraphBrown01> */}
-                </OpenCloseTag>
+            {htmlTags.includes('h3') && htmlTags.includes('p') && (
+                <OpenCloseTag
+                    innerTag={
+                        <TagColor.ParagraphBrown01 textValue={textContent} />
+                    }
+                />
             )}
         </>
     )
