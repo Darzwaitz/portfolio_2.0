@@ -13,7 +13,7 @@ function ContactForm() {
                             <input
                                 name={name}
                                 type={type}
-                                className=""
+                                className="cursor-pointer"
                                 value={value}
                                 placeholder={`<${name} here>`}
                             />

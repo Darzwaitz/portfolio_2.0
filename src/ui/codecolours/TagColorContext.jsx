@@ -7,12 +7,9 @@ function TagColor({ children }) {
 }
 
 function SpanBlue02({ textValue, children }) {
-    let output = textValue ? (
-        <span className="text-blue-02">{textValue}</span>
-    ) : (
-        <span className="text-blue-02">{children}</span>
+    return (
+        <span className="text-blue-02">{textValue ? textValue : children}</span>
     )
-    return output
 }
 function SpanBlue03({ textValue }) {
     return <span className="text-blue-03">{textValue}</span>
@@ -22,14 +19,11 @@ function SpanBrown01({ textValue }) {
 }
 
 function ParagraphBrown01({ textValue, children }) {
-    let output = textValue ? (
+    return (
         <p className="text-brown-01 border-grey-01 border-l pl-6">
-            {textValue}
+            {textValue ? textValue : children}
         </p>
-    ) : (
-        <p className="text-brown-01 border-grey-01 border-l pl-6">{children}</p>
     )
-    return output
 }
 
 function SpanGrey01({ textValue }) {

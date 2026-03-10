@@ -2,65 +2,46 @@ import TagColor from '@/ui/codecolours/TagColorContext'
 
 function TagBrackets({ htmlTags, tagValue, textContent, children }) {
     // function OpenCloseTag() {
-    function OpenTag({ tagValue }) {
-        return (
+    function OpenCloseTag({ innerTag, H2Tag }) {
+        return H2Tag ? (
+            <>
+                <h2>
+                    <TagColor.SpanGrey01 textValue={'<'} />
+                    <TagColor.SpanBlue02 textValue={tagValue} />
+                    <TagColor.SpanGrey01 textValue={'>'} />
+                </h2>
+                {innerTag ? innerTag : textContent}
+                {children}
+                <TagColor.SpanGrey01 textValue={'<'} />
+                <TagColor.SpanBlue02 textValue={`/${tagValue}`} />
+                <TagColor.SpanGrey01 textValue={'>'} />
+            </>
+        ) : (
             <>
                 <TagColor.SpanGrey01 textValue={'<'} />
                 <TagColor.SpanBlue02 textValue={tagValue} />
                 <TagColor.SpanGrey01 textValue={'>'} />
-            </>
-        )
-    }
-    function CloseTag({ tagValue }) {
-        return (
-            <>
+                {innerTag ? innerTag : textContent}
+                {children}
                 <TagColor.SpanGrey01 textValue={'<'} />
                 <TagColor.SpanBlue02 textValue={`/${tagValue}`} />
                 <TagColor.SpanGrey01 textValue={'>'} />
             </>
         )
     }
-    // function OpenCloseTag({ innerTag, H2Tag }) {
-    function OpenCloseTag({ H2Tag, innerTag }) {
-        return H2Tag == 'show' ? (
-            <>
-                <h4>
-                    <OpenTag tagValue={tagValue} />
-                </h4>
-
-                {innerTag ? innerTag : children}
-                {/* {children} */}
-                <div>TEST SHOW</div>
-
-                <CloseTag tagValue={tagValue} />
-            </>
-        ) : (
-            <>
-                <h2>
-                    <OpenTag tagValue={tagValue} />
-                </h2>
-
-                {/* {innerTag ? innerTag : textContent} */}
-                {children}
-                <div>TESTY</div>
-                <CloseTag tagValue={tagValue} />
-            </>
-        )
-    }
-
     return (
         <>
-            {htmlTags === 'h1' && (
+            {htmlTags == 'h1' && (
                 <h1>
                     <OpenCloseTag />
                 </h1>
             )}
-            {htmlTags === 'h2' && (
+            {htmlTags == 'h2' && (
                 <h2>
                     <OpenCloseTag />
                 </h2>
             )}
-            {htmlTags === 'h2' && (
+            {htmlTags == 'h2' && (
                 <h2>
                     <OpenCloseTag />
                 </h2>
@@ -77,12 +58,12 @@ function TagBrackets({ htmlTags, tagValue, textContent, children }) {
                     ></OpenCloseTag>
                 </h2>
             )}
-            {htmlTags === 'h3' && (
+            {htmlTags == 'h3' && (
                 <h3>
                     <OpenCloseTag />
                 </h3>
             )}
-            {htmlTags === 'h4' && (
+            {htmlTags == 'h4' && (
                 <h4>
                     <OpenCloseTag
                         innerTag={
@@ -91,7 +72,7 @@ function TagBrackets({ htmlTags, tagValue, textContent, children }) {
                     />
                 </h4>
             )}
-            {htmlTags === 'span' && (
+            {htmlTags == 'span' && (
                 <span>
                     <OpenCloseTag />
                 </span>
@@ -103,8 +84,8 @@ function TagBrackets({ htmlTags, tagValue, textContent, children }) {
                     }
                 />
             )}
-            {htmlTags.includes('h2') && htmlTags.includes('openTagOnly') && (
-                <OpenCloseTag H2Tag={'show'} />
+            {htmlTags.includes('h2OpenTagOnly') && (
+                <OpenCloseTag H2Tag={true} />
             )}
         </>
     )

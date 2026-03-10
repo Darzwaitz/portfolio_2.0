@@ -1,20 +1,17 @@
 import TagBrackets from './TagBrackets'
 
-function DescriptionDiv({ id, border, textContent }) {
+function DescriptionDiv({ id, border, textContent, htmlTags }) {
     return (
-        <div id={id} className={`${border ? `${'border-l'}` + ' ' : ''}pl-6`}>
+        <article
+            id={id}
+            className={`${border ? `${'border-l'}` + ' ' : ''}pl-6`}
+        >
             <TagBrackets
-                htmlTags={['h3', 'p']}
+                htmlTags={htmlTags}
                 tagValue={'description'}
                 textContent={textContent}
             />
-            {/* <br />
-            <TagBrackets
-                htmlTags={['h4']}
-                tagValue={'description'}
-                textContent={textContent}
-            /> */}
-        </div>
+        </article>
     )
 }
 

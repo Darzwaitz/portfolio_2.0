@@ -13,7 +13,7 @@ function PortfolioPage() {
             {/* choose filter items section */}
             <PortfolioFilteritems />
 
-            <div id="itemscontainerwrapper" className="h-full pr-6">
+            <div id="itemscontainerwrapper" className="h-full">
                 {/* items container */}
                 <div
                     id="itemsdisplay"

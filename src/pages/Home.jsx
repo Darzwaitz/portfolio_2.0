@@ -7,7 +7,12 @@ const profileInfo = PageBlurbs()
 function Home() {
     return (
         <PageTemplate pageTitle={'Home Page'}>
-            <DescriptionDiv textContent={profileInfo.homeDescription} />
+            <DescriptionDiv
+                id={'test description'}
+                textContent={profileInfo.homeDescription}
+                // htmlTags={'h2OpenTagOnly'}
+                htmlTags={['h3', 'p']}
+            />
         </PageTemplate>
     )
 }
