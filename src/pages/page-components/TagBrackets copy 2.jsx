@@ -48,23 +48,66 @@ function TagBrackets({ htmlTags, tagValue, textContent, children }) {
         )
     }
 
-    switch (htmlTags) {
-        case htmlTags === 'h1':
-            return (
+    return (
+        <>
+            {htmlTags === 'h1' && (
                 <h1>
                     <OpenCloseTag />
                 </h1>
-            )
-        case htmlTags === 'h2':
-            return (
+            )}
+            {htmlTags === 'h2' && (
                 <h2>
                     <OpenCloseTag />
                 </h2>
-            )
-
-        default:
-            break
-    }
+            )}
+            {htmlTags === 'h2' && (
+                <h2>
+                    <OpenCloseTag />
+                </h2>
+            )}
+            {htmlTags.includes('h2') && htmlTags.includes('openTagOnly') && (
+                <h2>
+                    {' '}
+                    <OpenCloseTag
+                        innerTag={
+                            <TagColor.ParagraphBrown01
+                                textValue={textContent}
+                            />
+                        }
+                    ></OpenCloseTag>
+                </h2>
+            )}
+            {htmlTags === 'h3' && (
+                <h3>
+                    <OpenCloseTag />
+                </h3>
+            )}
+            {htmlTags === 'h4' && (
+                <h4>
+                    <OpenCloseTag
+                        innerTag={
+                            <TagColor.SpanBlue03 textValue={textContent} />
+                        }
+                    />
+                </h4>
+            )}
+            {htmlTags === 'span' && (
+                <span>
+                    <OpenCloseTag />
+                </span>
+            )}
+            {htmlTags.includes('h3') && htmlTags.includes('p') && (
+                <OpenCloseTag
+                    innerTag={
+                        <TagColor.ParagraphBrown01 textValue={textContent} />
+                    }
+                />
+            )}
+            {htmlTags.includes('h2') && htmlTags.includes('openTagOnly') && (
+                <OpenCloseTag H2Tag={'show'} />
+            )}
+        </>
+    )
 }
 
 export default TagBrackets
