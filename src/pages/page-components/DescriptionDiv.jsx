@@ -1,17 +1,24 @@
-import TagBrackets from './TagBrackets'
+import TagColor from '@/ui/codecolours/TagColorContext'
 
-function DescriptionDiv({ id, border, textContent, htmlTags }) {
+function DescriptionDiv({ border, paddingLeft, children }) {
     return (
-        <article
-            id={id}
-            className={`${border ? `${'border-l'}` + ' ' : ''}pl-6`}
+        <div
+            id="description"
+            className={`${border ? `${'border-l'}` + ' ' : ''}${paddingLeft ? 'pl-6' : ''}`}
         >
-            <TagBrackets
-                htmlTags={htmlTags}
-                tagValue={'description'}
-                textContent={textContent}
-            />
-        </article>
+            <h3>
+                <TagColor.SpanGrey01 textValue={'<'} />
+                <TagColor.SpanBlue02 textValue={'description'} />
+                <TagColor.SpanGrey01 textValue={'>'} />
+            </h3>
+            <TagColor.ParagraphBrown01>{children}</TagColor.ParagraphBrown01>
+
+            <TagColor.SpanGrey01 textValue={'<'} />
+            <TagColor.SpanBlue02 textValue={'/description'} />
+
+            <TagColor.SpanGrey01 textValue={'>'} />
+            <br />
+        </div>
     )
 }
 
